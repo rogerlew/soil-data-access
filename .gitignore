@@ -1,0 +1,31 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Source datasets, imports, and local evidence
+/data/
+/artifacts/raw/
+*.gpkg
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.dump
+
+# Rust and Go build output
+/target/
+/bin/
+/coverage/
+*.prof
+
+# Python tooling and editor state
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/

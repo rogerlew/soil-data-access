@@ -1,0 +1,77 @@
+{
+  "source_file": "/workdir/wepppy/wepppy/soils/ssurgo/ssurgo.py",
+  "source_git_revision": "3950b57520c029c75df67565238b94543a31b03a",
+  "source_sha256": "faf634d3a1e680510759155dd7c673b073a64daace3bd862d16f1a05986c57ab",
+  "queries": [
+    {
+      "id": "_fetch_components",
+      "request": {
+        "method": "POST",
+        "path": "/Tabular/post.rest",
+        "content_type": "application/x-www-form-urlencoded; charset=utf-8",
+        "form": {
+          "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1001,1002 ) ORDER BY mukey",
+          "format": "xml"
+        }
+      },
+      "key_status": "synthetic; not verified source keys",
+      "response_fixture": null
+    },
+    {
+      "id": "_fetch_chorizon",
+      "request": {
+        "method": "POST",
+        "path": "/Tabular/post.rest",
+        "content_type": "application/x-www-form-urlencoded; charset=utf-8",
+        "form": {
+          "query": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (1001,1002) ORDER BY cokey",
+          "format": "xml"
+        }
+      },
+      "key_status": "synthetic; not verified source keys",
+      "response_fixture": null
+    },
+    {
+      "id": "_fetch_chfrags",
+      "request": {
+        "method": "POST",
+        "path": "/Tabular/post.rest",
+        "content_type": "application/x-www-form-urlencoded; charset=utf-8",
+        "form": {
+          "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (1001,1002) ORDER BY chkey",
+          "format": "xml"
+        }
+      },
+      "key_status": "synthetic; not verified source keys",
+      "response_fixture": null
+    },
+    {
+      "id": "_fetch_chtexturegrp",
+      "request": {
+        "method": "POST",
+        "path": "/Tabular/post.rest",
+        "content_type": "application/x-www-form-urlencoded; charset=utf-8",
+        "form": {
+          "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (1001,1002) ORDER BY chkey",
+          "format": "xml"
+        }
+      },
+      "key_status": "synthetic; not verified source keys",
+      "response_fixture": null
+    },
+    {
+      "id": "_fetch_corestrictions",
+      "request": {
+        "method": "POST",
+        "path": "/Tabular/post.rest",
+        "content_type": "application/x-www-form-urlencoded; charset=utf-8",
+        "form": {
+          "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (1001,1002) ORDER BY cokey",
+          "format": "xml"
+        }
+      },
+      "key_status": "synthetic; not verified source keys",
+      "response_fixture": null
+    }
+  ]
+}
