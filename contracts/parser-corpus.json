@@ -1,0 +1,158 @@
+[
+  {
+    "id": "_fetch_components",
+    "sql": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1001,1002 ) ORDER BY mukey",
+    "category": "core",
+    "origin": "WEPPpy extracted query"
+  },
+  {
+    "id": "_fetch_chorizon",
+    "sql": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (1001,1002) ORDER BY cokey",
+    "category": "core",
+    "origin": "WEPPpy extracted query"
+  },
+  {
+    "id": "_fetch_chfrags",
+    "sql": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (1001,1002) ORDER BY chkey",
+    "category": "core",
+    "origin": "WEPPpy extracted query"
+  },
+  {
+    "id": "_fetch_chtexturegrp",
+    "sql": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (1001,1002) ORDER BY chkey",
+    "category": "core",
+    "origin": "WEPPpy extracted query"
+  },
+  {
+    "id": "_fetch_corestrictions",
+    "sql": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (1001,1002) ORDER BY cokey",
+    "category": "core",
+    "origin": "WEPPpy extracted query"
+  },
+  {
+    "id": "top",
+    "sql": "SELECT TOP 10 mukey, muname FROM mapunit ORDER BY mukey",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "brackets",
+    "sql": "SELECT [mukey], [muname] FROM [mapunit] WHERE [mukey] = 465524",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "isnull",
+    "sql": "SELECT mukey, ISNULL(muname, 'unknown') AS name FROM mapunit",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "string_concat",
+    "sql": "SELECT musym + ':' + muname AS label FROM mapunit",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "aggregate",
+    "sql": "SELECT mukey, SUM(comppct_r) AS total FROM component GROUP BY mukey",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "cte",
+    "sql": "WITH c AS (SELECT mukey, COUNT(*) AS n FROM component GROUP BY mukey) SELECT mukey,n FROM c",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "spatial_function",
+    "sql": "SELECT * FROM SDA_Get_Mukey_from_intersection_with_WktWgs84('POINT(-116.7 46.7)')",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "spatial_method",
+    "sql": "SELECT mukey, mupolygongeo.STAsText() AS wkt FROM mupolygon",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "spatial_intersects",
+    "sql": "SELECT mukey FROM mupolygon WHERE mupolygongeo.STIntersects(geometry::STGeomFromText('POINT(-116.7 46.7)',4326))=1",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "empty",
+    "sql": "SELECT mukey FROM mapunit WHERE mukey='nonexistent-fixture-key'",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "nulls",
+    "sql": "SELECT CAST(NULL AS decimal(10,3)) AS missing, CAST(0.125 AS decimal(10,3)) AS value",
+    "category": "candidate",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "multiple",
+    "sql": "SELECT mukey FROM mapunit; SELECT cokey FROM component",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "write",
+    "sql": "DELETE FROM component",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "select_into",
+    "sql": "SELECT mukey INTO copied FROM mapunit",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "dangerous_function",
+    "sql": "SELECT pg_read_file('/etc/passwd')",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "catalog",
+    "sql": "SELECT * FROM pg_catalog.pg_authid",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "sleep",
+    "sql": "SELECT pg_sleep(60)",
+    "category": "reject",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "bad_syntax",
+    "sql": "SELECT FROM WHERE",
+    "category": "malformed",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "trailing_garbage",
+    "sql": "SELECT mukey FROM mapunit THIS IS NOT SQL",
+    "category": "malformed",
+    "origin": "authored assessment case; not an observed SDA response"
+  },
+  {
+    "id": "soildb_survey_join",
+    "category": "candidate",
+    "origin": "Adapted from soilDB R/SDA_query.R at 1eaa07178311a4ad3b80842e1ff4f10149733544",
+    "sql": "SELECT component.mukey, cokey, comppct_r, compname, taxclname, taxorder, taxsuborder, taxgrtgroup, taxsubgrp FROM legend INNER JOIN mapunit ON mapunit.lkey = legend.lkey LEFT OUTER JOIN component ON component.mukey = mapunit.mukey WHERE legend.areasymbol = 'CA113';"
+  },
+  {
+    "id": "soildb_spatial_subquery",
+    "category": "candidate",
+    "origin": "Adapted from soilDB R/SDA_query.R at 1eaa07178311a4ad3b80842e1ff4f10149733544",
+    "sql": "SELECT mukey, cokey, compname, comppct_r FROM component WHERE mukey IN (SELECT DISTINCT mukey FROM SDA_Get_Mukey_from_intersection_with_WktWgs84('POINT(-121.771 37.368402)')) ORDER BY mukey, cokey, comppct_r DESC"
+  }
+]

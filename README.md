@@ -5,11 +5,13 @@ An independent soil-data API intended to remain usable during USDA service outag
 ## Status
 
 Contract-first assessment. No API, importer, database, or Compose stack is
-implemented yet. This repository contains the initial contracts and query inventory.
+implemented yet. Milestone 1 has an offline source audit and language assessment;
+live SDA wire-parity capture is blocked by upstream 502 responses.
 
 ## Architecture and API direction
 
-Evaluate PostgreSQL/PostGIS and a Rust or Go API, with Docker Compose deployment.
+The assessment recommends Rust with PostgreSQL/PostGIS and Docker Compose
+deployment. The complete runtime stack is not yet adopted.
 Start with a documented subset of SDA's `/Tabular/post.rest` query behavior and
 JSON responses. Coordinate a WEPPpy XML-to-JSON migration with parser and final
 soil-file parity tests. XML compatibility remains a separate assessment item.
@@ -21,6 +23,8 @@ and performance require evidence. This is not an official USDA service.
 
 - [Behavior contract](docs/contract.md): scope, data, security, and acceptance.
 - [Implementation plan](docs/implementation-plan.md): milestones and current state.
+- [Milestone 1 assessment](docs/milestone-1-assessment.md): source audit and remaining gaps.
+- [Rust/Go recommendation](docs/dependency-evaluation.md): reproducible probes and tradeoffs.
 - [Current WEPPpy queries](contracts/wepppy-queries.json): five extracted query
   families with provenance; synthetic keys and no captured responses yet.
 - [Contributor guidance](AGENTS.md).
@@ -28,7 +32,8 @@ and performance require evidence. This is not an official USDA service.
 Validate the initial inventory from this repository:
 
 ```bash
-python3 -m json.tool contracts/wepppy-queries.json > /dev/null
+python3 -m unittest discover -s tests -v
+python3 scripts/verify_assessment.py
 ```
 
 ## Operations and licensing

@@ -1,0 +1,54 @@
+[
+  {
+    "repository": "apache/datafusion-sqlparser-rs",
+    "top_five_contributors": [
+      {
+        "login": "nickolay",
+        "contributions": 246
+      },
+      {
+        "login": "LucaCappelletti94",
+        "contributions": 226
+      },
+      {
+        "login": "alamb",
+        "contributions": 204
+      },
+      {
+        "login": "andygrove",
+        "contributions": 167
+      },
+      {
+        "login": "benesch",
+        "contributions": 93
+      }
+    ],
+    "note": "Contributions are repository-wide, not active maintainer headcount or guaranteed bus factor."
+  },
+  {
+    "repository": "ajitpratap0/GoSQLX",
+    "top_five_contributors": [
+      {
+        "login": "ajitpratap0",
+        "contributions": 586
+      },
+      {
+        "login": "basili4-1982",
+        "contributions": 4
+      },
+      {
+        "login": "mem",
+        "contributions": 3
+      },
+      {
+        "login": "SunnysideAaron",
+        "contributions": 2
+      },
+      {
+        "login": "jay23606",
+        "contributions": 1
+      }
+    ],
+    "note": "Contributions are repository-wide, not active maintainer headcount or guaranteed bus factor."
+  }
+]

@@ -1,0 +1,3113 @@
+{
+  "tables": {
+    "mapunit": {
+      "rows": 56,
+      "columns": [
+        {
+          "name": "musym",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mukind",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mustatus",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muacres",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitlfw_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitlfw_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitlfw_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitpfa_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitpfa_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mapunitpfa_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "farmlndcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muhelcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muwathelcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muwndhelcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "interpfocus",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "invesintens",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "iacornsr",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "nhiforsoigrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "nhspiagr",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "vtsepticsyscl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mucertstat",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "lkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mukey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "component": {
+      "rows": 220,
+      "columns": [
+        {
+          "name": "comppct_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "comppct_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "comppct_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "compname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "compkind",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "majcompflag",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "otherph",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "localphase",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slope_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slope_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slope_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slopelenusle_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slopelenusle_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slopelenusle_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "runoff",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tfact",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wei",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "weg",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "erocl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "earthcovkind1",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "earthcovkind2",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hydricon",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hydricrating",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "drainagecl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "elev_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "elev_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "elev_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aspectccwise",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aspectrep",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aspectcwise",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "geomdesc",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "albedodry_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "albedodry_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "albedodry_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "airtempa_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "airtempa_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "airtempa_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "map_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "map_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "map_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "reannualprecip_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "reannualprecip_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "reannualprecip_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ffd_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ffd_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ffd_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "nirrcapcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "nirrcapscl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "nirrcapunit",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "irrcapcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "irrcapscl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "irrcapunit",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cropprodindex",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "constreeshrubgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wndbrksuitgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "rsprod_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "rsprod_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "rsprod_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "foragesuitgrpid",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlgrain",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlgrass",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlherbaceous",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlshrub",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlconiferous",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlhardwood",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlwetplant",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlshallowwat",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlrangeland",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlopenland",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlwoodland",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wlwetland",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "soilslippot",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "frostact",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "initsub_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "initsub_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "initsub_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "totalsub_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "totalsub_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "totalsub_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hydgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "corcon",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "corsteel",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxclname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxorder",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxsuborder",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxgrtgroup",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxsubgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxpartsize",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxpartsizemod",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxceactcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxreaction",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxtempcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxmoistscl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "taxtempregime",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "soiltaxedition",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "castorieindex",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flecolcomnum",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flhe",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flphe",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flsoilleachpot",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flsoirunoffpot",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fltemik2use",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fltriumph2use",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "indraingrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "innitrateleachi",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "misoimgmtgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "vasoimgtgrp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mukey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cokey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "muaggatt": {
+      "rows": 56,
+      "columns": [
+        {
+          "name": "musym",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "muname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mustatus",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slopegraddcp",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "slopegradwta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "brockdepmin",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wtdepannmin",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wtdepaprjunmin",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flodfreqdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "flodfreqmax",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pondfreqprs",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aws025wta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aws050wta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aws0100wta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aws0150wta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "drclassdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "drclasswettest",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hydgrpdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "iccdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "iccdcdpct",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "niccdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "niccdcdpct",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engdwobdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engdwbdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engdwbll",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engdwbml",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engstafdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engstafll",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engstafml",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engsldcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engsldcp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "englrsdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engcmssdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "engcmssmp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "urbrecptdcd",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "urbrecptwta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "forpehrtdcp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hydclprs",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "awmmfpwwta",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "mukey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "chorizon": {
+      "rows": 543,
+      "columns": [
+        {
+          "name": "hzname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "desgndisc",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "desgnmaster",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "desgnmasterprime",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "desgnvert",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdept_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdept_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdept_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdepb_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdepb_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzdepb_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzthk_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzthk_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "hzthk_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fraggt10_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fraggt10_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fraggt10_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "frag3to10_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "frag3to10_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "frag3to10_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno4_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno4_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno4_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno10_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno10_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno10_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno40_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno40_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno40_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno200_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno200_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sieveno200_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandtotal_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandtotal_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandtotal_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvc_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvc_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvc_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandco_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandco_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandco_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandmed_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandmed_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandmed_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandfine_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandfine_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandfine_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvf_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvf_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sandvf_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "silttotal_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "silttotal_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "silttotal_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltco_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltco_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltco_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltfine_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltfine_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "siltfine_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claytotal_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claytotal_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claytotal_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claysizedcarb_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claysizedcarb_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "claysizedcarb_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "om_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "om_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "om_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbtenthbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbtenthbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbtenthbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbthirdbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbthirdbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbthirdbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbfifteenbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbfifteenbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbfifteenbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbovendry_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbovendry_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "dbovendry_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "partdensity",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ksat_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ksat_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ksat_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "awc_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "awc_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "awc_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wtenthbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wtenthbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wtenthbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wthirdbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wthirdbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wthirdbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wfifteenbar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wfifteenbar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wfifteenbar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wsatiated_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wsatiated_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "wsatiated_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "lep_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "lep_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "lep_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ll_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ll_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ll_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pi_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pi_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pi_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aashind_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aashind_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aashind_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "kwfact",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "kffact",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "caco3_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "caco3_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "caco3_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "gypsum_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "gypsum_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "gypsum_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sar_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sar_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sar_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ec_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ec_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ec_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cec7_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cec7_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cec7_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ecec_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ecec_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ecec_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sumbases_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sumbases_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sumbases_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph1to1h2o_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph1to1h2o_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph1to1h2o_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph01mcacl2_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph01mcacl2_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph01mcacl2_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "freeiron_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "freeiron_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "freeiron_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "feoxalate_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "feoxalate_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "feoxalate_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extracid_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extracid_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extracid_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extral_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extral_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "extral_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aloxalate_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aloxalate_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "aloxalate_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pbray1_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pbray1_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "pbray1_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "poxalate_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "poxalate_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "poxalate_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph2osoluble_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph2osoluble_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ph2osoluble_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ptotal_l",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ptotal_r",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "ptotal_h",
+          "storage_type": "REAL",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "excavdifcl",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "excavdifms",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cokey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "chkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "chfrags": {
+      "rows": 231,
+      "columns": [
+        {
+          "name": "fragvol_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragvol_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragvol_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragkind",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragsize_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragsize_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragsize_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fragshp",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fraground",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fraghard",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "chkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "chfragskey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "chtexturegrp": {
+      "rows": 664,
+      "columns": [
+        {
+          "name": "texture",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "stratextsflag",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "rvindicator",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "texdesc",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "chkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "chtgkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "corestrictions": {
+      "rows": 154,
+      "columns": [
+        {
+          "name": "reskind",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "reshard",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdept_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdept_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdept_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdepb_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdepb_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resdepb_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resthk_l",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resthk_r",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "resthk_h",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "cokey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "corestrictkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 1
+        }
+      ]
+    },
+    "sacatalog": {
+      "rows": 1,
+      "columns": [
+        {
+          "name": "areasymbol",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 1
+        },
+        {
+          "name": "areaname",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "saversion",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "saverest",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tabularversion",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tabularverest",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tabnasisexportdate",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tabcertstatus",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "tabcertstatusdesc",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "fgdcmetadata",
+          "storage_type": "TEXT",
+          "not_null": false,
+          "primary_key_position": 0
+        },
+        {
+          "name": "sacatalogkey",
+          "storage_type": "INTEGER",
+          "not_null": false,
+          "primary_key_position": 0
+        }
+      ]
+    }
+  },
+  "orphan_counts": {
+    "component.mukey->mapunit.mukey": 0,
+    "muaggatt.mukey->mapunit.mukey": 0,
+    "chorizon.cokey->component.cokey": 0,
+    "chfrags.chkey->chorizon.chkey": 0,
+    "chtexturegrp.chkey->chorizon.chkey": 0,
+    "corestrictions.cokey->component.cokey": 0
+  },
+  "survey_catalog": [
+    [
+      "GU640",
+      11,
+      "09/11/2026 21:15:28"
+    ]
+  ],
+  "geometry_columns": [
+    [
+      "featline",
+      "shape",
+      "LINESTRING",
+      4326,
+      0,
+      0
+    ],
+    [
+      "featpoint",
+      "shape",
+      "POINT",
+      4326,
+      0,
+      0
+    ],
+    [
+      "sapolygon",
+      "shape",
+      "POLYGON",
+      4326,
+      0,
+      0
+    ],
+    [
+      "muline",
+      "shape",
+      "LINESTRING",
+      4326,
+      0,
+      0
+    ],
+    [
+      "mupoint",
+      "shape",
+      "POINT",
+      4326,
+      0,
+      0
+    ],
+    [
+      "mupolygon",
+      "shape",
+      "MULTIPOLYGON",
+      4326,
+      0,
+      0
+    ]
+  ],
+  "query_examples": {
+    "evidence_kind": "official_download_query_results_not_sda_wire_fixture",
+    "mukey": "465534",
+    "cokeys": [
+      "29248556",
+      "29248557",
+      "29248558",
+      "29248559",
+      "29248560"
+    ],
+    "chkeys": [
+      "87934168",
+      "87934169",
+      "87934170",
+      "87934171",
+      "87934172",
+      "87934173",
+      "87934174",
+      "87934175",
+      "87934176",
+      "87934177",
+      "87934178",
+      "87934179",
+      "87934180",
+      "87934181",
+      "87934182",
+      "87934183"
+    ],
+    "queries": [
+      {
+        "id": "ssurgo_fetch_components",
+        "sql": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY mukey",
+        "audit_execution_sql": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY component.mukey",
+        "audit_adaptation": "Qualify ambiguous joined ORDER BY mukey for SQLite; original SQL retained.",
+        "columns": [
+          "mukey",
+          "cokey",
+          "compname",
+          "comppct_r",
+          "albedodry_r",
+          "hydricrating",
+          "drainagecl",
+          "muname",
+          "wtdepannmin",
+          "flodfreqdcd",
+          "aws025wta",
+          "aws0150wta",
+          "hydgrpdcd",
+          "drclassdcd",
+          "taxclname",
+          "geomdesc",
+          "taxorder",
+          "taxsuborder"
+        ],
+        "rows": [
+          [
+            465534,
+            29248556,
+            "Akina",
+            65,
+            0.16,
+            "No",
+            "Well drained",
+            "Akina-Badland complex, 15 to 30 percent slopes, MLRA 192",
+            null,
+            "None",
+            3.04,
+            18.79,
+            "C",
+            "Well drained",
+            "Very-fine, kaolinitic, isohyperthermic Inceptic Haplustox",
+            "hillslopes on islands",
+            "Oxisols",
+            "Ustox"
+          ],
+          [
+            465534,
+            29248557,
+            "Atate",
+            2,
+            0.16,
+            "No",
+            "Well drained",
+            "Akina-Badland complex, 15 to 30 percent slopes, MLRA 192",
+            null,
+            "None",
+            3.04,
+            18.79,
+            "C",
+            "Well drained",
+            "Very-fine, kaolinitic, isohyperthermic Oxic Haplustalfs",
+            "islands, plateaus, ridges",
+            "Alfisols",
+            "Ustalfs"
+          ],
+          [
+            465534,
+            29248558,
+            "Togcha",
+            2,
+            0.16,
+            "No",
+            "Well drained",
+            "Akina-Badland complex, 15 to 30 percent slopes, MLRA 192",
+            null,
+            "None",
+            3.04,
+            18.79,
+            "C",
+            "Well drained",
+            "Very-fine, mixed, isohyperthermic Ultic Paleustalfs",
+            "islands, plateaus, ridges",
+            "Alfisols",
+            "Ustalfs"
+          ],
+          [
+            465534,
+            29248559,
+            "Badland",
+            30,
+            null,
+            "Unranked",
+            "Well drained",
+            "Akina-Badland complex, 15 to 30 percent slopes, MLRA 192",
+            null,
+            "None",
+            3.04,
+            18.79,
+            "C",
+            "Well drained",
+            null,
+            "islands, ravines, rotational slides",
+            null,
+            null
+          ],
+          [
+            465534,
+            29248560,
+            "Agfayan",
+            1,
+            0.09,
+            "No",
+            "Well drained",
+            "Akina-Badland complex, 15 to 30 percent slopes, MLRA 192",
+            null,
+            "None",
+            3.04,
+            18.79,
+            "C",
+            "Well drained",
+            "Clayey, montmorillonitic, isohyperthermic, shallow Udic Haplustolls",
+            "islands, plateaus, ridges",
+            "Mollisols",
+            "Ustolls"
+          ]
+        ]
+      },
+      {
+        "id": "ssurgo_fetch_chorizon",
+        "sql": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+        "audit_execution_sql": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+        "audit_adaptation": null,
+        "columns": [
+          "cokey",
+          "chkey",
+          "hzname",
+          "hzdepb_r",
+          "hzdept_r",
+          "hzthk_r",
+          "dbthirdbar_r",
+          "ksat_r",
+          "sandtotal_r",
+          "claytotal_r",
+          "om_r",
+          "cec7_r",
+          "awc_l",
+          "fraggt10_r",
+          "frag3to10_r",
+          "desgnmaster",
+          "sieveno10_r",
+          "wthirdbar_r",
+          "wfifteenbar_r",
+          "sandvf_r",
+          "ll_r"
+        ],
+        "rows": [
+          [
+            29248556,
+            87934168,
+            "A",
+            10,
+            0,
+            10,
+            0.85,
+            2.82,
+            6.0,
+            66.0,
+            8.7,
+            29.0,
+            0.17,
+            0,
+            0,
+            "A",
+            100.0,
+            57.8,
+            33.4,
+            2.0,
+            85.0
+          ],
+          [
+            29248556,
+            87934169,
+            "Bto1",
+            20,
+            10,
+            10,
+            1.03,
+            2.82,
+            6.0,
+            69.0,
+            4.8,
+            21.0,
+            0.08,
+            0,
+            0,
+            "B",
+            100.0,
+            49.7,
+            33.5,
+            3.0,
+            80.0
+          ],
+          [
+            29248556,
+            87934170,
+            "BC",
+            110,
+            60,
+            50,
+            1.02,
+            21.88,
+            20.0,
+            50.0,
+            0.4,
+            20.0,
+            0.0,
+            0,
+            0,
+            "BC",
+            100.0,
+            52.9,
+            35.5,
+            7.0,
+            55.0
+          ],
+          [
+            29248556,
+            87934171,
+            "Cr",
+            150,
+            110,
+            40,
+            0.99,
+            21.88,
+            31.0,
+            36.0,
+            0.3,
+            12.0,
+            0.17,
+            0,
+            0,
+            "C",
+            100.0,
+            57.3,
+            33.7,
+            3.0,
+            43.0
+          ],
+          [
+            29248556,
+            87934172,
+            "Bto2",
+            40,
+            20,
+            20,
+            1.12,
+            2.82,
+            7.0,
+            62.0,
+            2.6,
+            16.0,
+            0.08,
+            0,
+            0,
+            "B",
+            100.0,
+            46.4,
+            35.4,
+            3.0,
+            70.0
+          ],
+          [
+            29248556,
+            87934173,
+            "Bto3",
+            60,
+            40,
+            20,
+            1.04,
+            2.82,
+            15.0,
+            50.0,
+            1.4,
+            11.0,
+            0.08,
+            0,
+            0,
+            "B",
+            100.0,
+            52.0,
+            35.8,
+            6.0,
+            57.0
+          ],
+          [
+            29248557,
+            87934175,
+            "A",
+            13,
+            0,
+            null,
+            1.0,
+            9.17,
+            6.0,
+            47.0,
+            7.0,
+            27.5,
+            0.15,
+            0,
+            0,
+            "A",
+            97.5,
+            33.1,
+            26.9,
+            null,
+            80.0
+          ],
+          [
+            29248557,
+            87934176,
+            "B",
+            109,
+            13,
+            null,
+            1.1,
+            9.17,
+            20.0,
+            60.0,
+            1.5,
+            15.0,
+            0.07,
+            0,
+            0,
+            "B",
+            100.0,
+            46.6,
+            30.4,
+            null,
+            80.0
+          ],
+          [
+            29248557,
+            87934177,
+            "C",
+            165,
+            109,
+            null,
+            1.1,
+            9.17,
+            20.0,
+            60.0,
+            0.6,
+            20.0,
+            0.07,
+            0,
+            2,
+            "C",
+            100.0,
+            46.2,
+            29.4,
+            null,
+            80.0
+          ],
+          [
+            29248558,
+            87934178,
+            "A",
+            13,
+            0,
+            null,
+            1.03,
+            9.17,
+            6.0,
+            47.0,
+            5.5,
+            35.0,
+            0.1,
+            0,
+            0,
+            "A",
+            100.0,
+            33.1,
+            26.5,
+            null,
+            67.5
+          ],
+          [
+            29248558,
+            87934179,
+            "Bt",
+            71,
+            13,
+            null,
+            1.03,
+            9.17,
+            6.0,
+            47.0,
+            2.0,
+            32.0,
+            0.08,
+            0,
+            0,
+            "B",
+            100.0,
+            31.6,
+            23.7,
+            null,
+            72.5
+          ],
+          [
+            29248558,
+            87934180,
+            "C",
+            152,
+            71,
+            null,
+            1.03,
+            9.17,
+            6.0,
+            47.0,
+            0.5,
+            44.0,
+            0.08,
+            0,
+            0,
+            "C",
+            100.0,
+            30.9,
+            22.4,
+            null,
+            72.5
+          ],
+          [
+            29248559,
+            87934174,
+            "Cr",
+            152,
+            0,
+            null,
+            null,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            null,
+            0.0,
+            0,
+            0,
+            "C",
+            0.0,
+            null,
+            null,
+            0.0,
+            0.0
+          ],
+          [
+            29248560,
+            87934181,
+            "A",
+            10,
+            0,
+            10,
+            0.88,
+            2.82,
+            20.0,
+            60.0,
+            3.5,
+            60.5,
+            0.2,
+            0,
+            3,
+            "A",
+            92.5,
+            47.4,
+            26.7,
+            null,
+            75.0
+          ],
+          [
+            29248560,
+            87934182,
+            "A/C",
+            36,
+            10,
+            20,
+            0.88,
+            2.82,
+            20.0,
+            60.0,
+            0.75,
+            69.5,
+            0.13,
+            0,
+            3,
+            "A/C",
+            92.5,
+            47.4,
+            25.1,
+            null,
+            75.0
+          ],
+          [
+            29248560,
+            87934183,
+            "C",
+            46,
+            36,
+            0,
+            null,
+            21.88,
+            0.0,
+            0.0,
+            0.0,
+            null,
+            0.0,
+            0,
+            0,
+            "C",
+            0.0,
+            null,
+            null,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "ssurgo_fetch_chfrags",
+        "sql": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+        "audit_execution_sql": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+        "audit_adaptation": null,
+        "columns": [
+          "chkey",
+          "fragvol_r"
+        ],
+        "rows": []
+      },
+      {
+        "id": "ssurgo_fetch_chtexturegrp",
+        "sql": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+        "audit_execution_sql": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+        "audit_adaptation": null,
+        "columns": [
+          "chkey",
+          "texture"
+        ],
+        "rows": [
+          [
+            87934168,
+            "C"
+          ],
+          [
+            87934169,
+            "C"
+          ],
+          [
+            87934170,
+            "C"
+          ],
+          [
+            87934171,
+            "C"
+          ],
+          [
+            87934171,
+            "CL"
+          ],
+          [
+            87934172,
+            "C"
+          ],
+          [
+            87934173,
+            "C"
+          ],
+          [
+            87934174,
+            "BR"
+          ],
+          [
+            87934175,
+            "SIC"
+          ],
+          [
+            87934176,
+            "C"
+          ],
+          [
+            87934177,
+            "C"
+          ],
+          [
+            87934178,
+            "SIC"
+          ],
+          [
+            87934179,
+            "SIC"
+          ],
+          [
+            87934179,
+            "C"
+          ],
+          [
+            87934180,
+            "C"
+          ],
+          [
+            87934180,
+            "SIC"
+          ],
+          [
+            87934181,
+            "C"
+          ],
+          [
+            87934182,
+            "C"
+          ],
+          [
+            87934183,
+            "BR"
+          ]
+        ]
+      },
+      {
+        "id": "ssurgo_fetch_corestrictions",
+        "sql": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+        "audit_execution_sql": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+        "audit_adaptation": null,
+        "columns": [
+          "cokey",
+          "reskind"
+        ],
+        "rows": [
+          [
+            29248556,
+            "Paralithic bedrock"
+          ],
+          [
+            29248557,
+            "Paralithic bedrock"
+          ],
+          [
+            29248559,
+            "Paralithic bedrock"
+          ],
+          [
+            29248560,
+            "Paralithic bedrock"
+          ]
+        ]
+      }
+    ]
+  },
+  "source_file": "SQLite_SSURGO_GU.gpkg",
+  "source_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f",
+  "source_bytes": 21622784
+}

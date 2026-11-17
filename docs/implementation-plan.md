@@ -15,9 +15,13 @@ portable Docker Compose stack and an environment-specific open-wepp-org handoff.
 - [x] Establish initial contract and extract five real query families.
 - [x] Scaffold separate soil-data-access repository for operator-requested main publication.
 - [ ] Confirm target deployment environment.
-- [ ] Capture response fixtures and audit SSURGO/STATSGO2 download schemas.
-- [ ] Freeze executable request/response contract and compatibility matrix.
-- [ ] Evaluate dependencies and select Rust or Go with recorded rationale.
+- [x] Audit official SSURGO Guam and STATSGO2 Virgin Islands downloads; retain schemas, hashes, keys, and ten query-family results.
+- [x] Capture availability failures on both SDA hosts; each returned 502.
+- [ ] Capture live success/empty/error fixtures and paired XML after SDA recovers.
+- [x] Define compatibility matrix and service-owned metadata/error schemas.
+- [ ] Freeze SDA wire response schemas and release-matched parity fixtures.
+- [x] Run pinned Rust/Go parser probes and dependency scans; recommend Rust.
+- [ ] Adopt and pin the complete runtime stack during milestone 2.
 - [ ] Implement importer and bounded API using PostgreSQL/PostGIS.
 - [ ] Validate Compose end-to-end, artifact parity, security, and performance.
 - [ ] Prepare reviewed infrastructure integration and public-release handoff.
@@ -28,9 +32,25 @@ WEPPpy currently uses form-encoded POST and XML. The operator is open to migrati
 it to JSON, so XML is an observed baseline rather than a mandatory first target. The open-wepp-org checkout is
 an existing Talos/Kubernetes infrastructure repository. Docker Compose support
 must not silently mutate that platform or assume Talos can host Docker.
-The 28 GB advertised download does not prove full SDA or STATSGO2 coverage.
+The current national SSURGO archive is listed at 31,549,528,132 compressed bytes;
+the official STATSGO2 download inspected is dated 2016. Neither a national listing
+nor sample coverage establishes full SDA parity. SQLite rejects the component
+query's unqualified ORDER BY mukey; the source audit records an explicit qualified
+adaptation. GoSQLX 1.17.0 rejects the tested geometry::STGeomFromText intersection;
+Rust sqlparser 0.64.0 parses it. Both parse unsafe constructs, so neither is an
+admission-control boundary.
 
 ## Decision Log
+
+2026-11-17: Recommend Rust after pinned probes (5/5 core queries for both;
+13/13 candidate queries for Rust, 12/13 for Go). This is a suitability decision,
+not a service-performance claim or blanket dependency approval. See
+[dependency evaluation](dependency-evaluation.md).
+
+2026-11-17: Keep milestone 1 open while upstream is unavailable. Download-derived
+results are explicitly not wire fixtures. Continue bounded offline work; do not
+invent null/error/empty-response semantics. Choose form-encoded JSON+COLUMNNAME
+for WEPPpy and record soilDB's metadata format as a separate compatibility target.
 
 2026-11-17: Operator selected MIT licensing and requested scaffold commit/push
 to main. Include LICENSE and keep third-party data attribution separate.
@@ -99,13 +119,16 @@ documentation use the operator-selected MIT License.
 
 ## Concrete Steps and Validation
 
-From /workdir/soil-data-access, run `python3 -m json.tool
-contracts/wepppy-queries.json` to validate the initial fixture inventory and
-`git diff --check` for tracked edits. Before runtime implementation, replace this
-paragraph with exact selected-toolchain test/import/serve commands. No runtime
-command or success result is claimed yet. Subsequent acceptance must include
-`docker compose config --quiet`, offline request/response contract tests, actual
-Compose execution, resource-bound tests, real data parity, and benchmark reports.
+From /workdir/soil-data-access, run `python3 -m unittest discover -s tests -v`
+and `python3 scripts/verify_assessment.py`; ten tests and offline evidence checks
+pass. `python3 scripts/verify_assessment.py --require-live` must currently exit 1.
+Run `cargo run --locked --manifest-path evaluation/rust/Cargo.toml --
+contracts/parser-corpus.json` and, from evaluation/go, `go run .
+../../contracts/parser-corpus.json` to reproduce parser probes. See the
+[milestone 1 report](milestone-1-assessment.md#reproduce-and-resume) for exact source
+audit and upstream recapture commands. No runtime command or success is claimed.
+Later acceptance includes Compose rendering/execution, real data parity,
+resource-bound tests, and benchmark reports.
 
 ## Idempotence and Recovery
 
@@ -117,19 +140,26 @@ persistent volumes as routine cleanup.
 
 ## Outcomes & Retrospective
 
-Initial contract and consumer query inventory established. No implementation,
-import, database benchmark, national coverage verification, parity validation,
-deployment has occurred. The operator has requested initial scaffold publication
-to main; that bootstrap is separate from runtime acceptance. The next executable work is the
-response-fixture and downloadable-schema audit in milestone 1.
+The repository scaffold is published on main. Milestone 1 now has a representative
+official source audit, live outage receipts, a compatibility matrix, service-owned
+schemas, ten offline tests, and reproducible Rust/Go suitability probes. Rust is
+recommended. Milestone 1 is partially complete because live SDA responses and
+matched release identity remain unavailable. No runtime implementation, national
+import, PostgreSQL semantic parity, benchmark, or deployment has occurred.
+Next: recapture live responses after recovery and freeze the remaining wire
+contract. Source and parser findings are retained in artifacts/assessment.
 
 ## Artifacts and Dependencies
 
 contracts/wepppy-queries.json records the WEPPpy Git revision and source-file hash.
-No new runtime dependencies have been adopted. PostgreSQL/PostGIS and Rust/Go
-remain assessment candidates. This plan does not authorize an unbounded SQL
+No new service runtime dependencies have been adopted. Pinned parser dependencies
+are confined to evaluation/rust and evaluation/go. Rust is recommended; the full
+HTTP/database stack and PostgreSQL/PostGIS versions await milestone 2 evaluation. This plan does not authorize an unbounded SQL
 service or a different deployment topology.
 
 Revision: 2026-11-17, initial baseline records operator intent and observed XML
 consumer behavior before runtime implementation; amended to record the operator
 permitting JSON migration rather than requiring XML-first compatibility.
+
+Revision: 2026-11-17, added sample audits, outage observations, service schemas,
+parser evidence, and Rust recommendation; left blocked wire-parity work open.

@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/ncss-tech/soilDB",
+  "revision": "1eaa07178311a4ad3b80842e1ff4f10149733544",
+  "inspected_files": [
+    "R/SDA_query.R",
+    "R/SDA-spatial.R",
+    "tests/testthat/test-SDA_query.R"
+  ],
+  "observed_at": "2026-11-17T20:44:07.429188+00:00",
+  "findings": [
+    "form-encoded format=json+columnname+metadata",
+    "first result row names; second row metadata strings; later rows values",
+    "SQL Server spatial methods and SDA helper functions",
+    "empty-result and multiple-result handling; both require live wire capture"
+  ]
+}

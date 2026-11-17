@@ -1,0 +1,100 @@
+{
+  "contract_version": "0.1-assessment",
+  "status": "partial_blocked_on_upstream_wire_capture",
+  "observed_at": "2026-11-17T20:44:07.429188+00:00",
+  "runtime_implemented": false,
+  "features": [
+    {
+      "id": "wepppy_five_query_families",
+      "scope": "initial_target",
+      "evidence": "source_download_results_available",
+      "notes": "five families across six tables; SQLServer-to-PostgreSQL semantics still unproven"
+    },
+    {
+      "id": "form_urlencoded_post",
+      "scope": "initial_target",
+      "evidence": "client_source_verified",
+      "notes": "query and format fields; explicitly decode plus signs in format values"
+    },
+    {
+      "id": "json_columnname",
+      "scope": "initial_target",
+      "evidence": "live_capture_blocked",
+      "notes": "select JSON+COLUMNNAME for WEPPpy migration; exact types/nulls/empty results not frozen"
+    },
+    {
+      "id": "json_columnname_metadata",
+      "scope": "next_target",
+      "evidence": "client_source_verified_wire_unverified",
+      "notes": "required by soilDB; do not claim soilDB compatibility without metadata serialization"
+    },
+    {
+      "id": "xml",
+      "scope": "deferred",
+      "evidence": "current_wepppy_client_verified",
+      "notes": "paired captures required for JSON migration parity; no initial public XML promise"
+    },
+    {
+      "id": "select_projection_join_in_order",
+      "scope": "initial_target",
+      "evidence": "syntax_probed",
+      "notes": "preserve column sequence, row multiplicity, qualified name resolution and key coercion"
+    },
+    {
+      "id": "top_brackets_isnull_concat",
+      "scope": "candidate",
+      "evidence": "syntax_probed",
+      "notes": "map syntax explicitly and test type/collation/null semantics"
+    },
+    {
+      "id": "aggregates_ctes",
+      "scope": "candidate",
+      "evidence": "syntax_probed",
+      "notes": "not automatically admitted because parser accepts them"
+    },
+    {
+      "id": "spatial_sda_function",
+      "scope": "candidate",
+      "evidence": "syntax_probed",
+      "notes": "map helper semantics with SSURGO versus STATSGO2 distinction"
+    },
+    {
+      "id": "spatial_sqlserver_methods",
+      "scope": "candidate",
+      "evidence": "rust_parses_go_rejects_intersection_case",
+      "notes": "shape is GeoPackage storage column; SDA exposes mupolygongeo; PostGIS mapping required"
+    },
+    {
+      "id": "multiple_statements",
+      "scope": "excluded_initial",
+      "evidence": "syntax_probed",
+      "notes": "soilDB has multipart use cases; explicit known compatibility gap"
+    },
+    {
+      "id": "writes_select_into_catalogs_unapproved_functions",
+      "scope": "reject",
+      "evidence": "syntax_probed_not_security_validated",
+      "notes": "parser accepts many unsafe constructs; owned semantic admission is required"
+    },
+    {
+      "id": "soap_wms_wfs_paoi_reports_interpretations",
+      "scope": "excluded_initial",
+      "evidence": "not_evaluated",
+      "notes": "separate service contracts required"
+    }
+  ],
+  "blocking_gaps": [
+    "Live success/empty/error JSON wire responses and paired XML",
+    "Matched release identification against SDA"
+  ],
+  "sources": [
+    "artifacts/assessment/ssurgo-gu.json",
+    "artifacts/assessment/statsgo2-vi.json",
+    "artifacts/assessment/sda-capture-01/observations.json",
+    "artifacts/assessment/soildb-source.json"
+  ],
+  "later_implementation_gates": [
+    "National coverage and STATSGO2 freshness verification",
+    "PostgreSQL/PostGIS semantic execution parity"
+  ]
+}

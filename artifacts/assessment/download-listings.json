@@ -1,0 +1,288 @@
+[
+  {
+    "url": "https://nrcs.app.box.com/s/w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i/folder/422964971445",
+    "scope": "SSURGO national",
+    "observed_at": "2026-11-17T20:44:07.429188+00:00",
+    "items": [
+      {
+        "id": 2495234965465,
+        "name": "SQLite_SSURGO_US.7z",
+        "type": "file",
+        "itemSize": 31549528132
+      },
+      {
+        "id": 2495121002109,
+        "name": "01_ReadMe.txt",
+        "type": "file",
+        "itemSize": 2385
+      }
+    ]
+  },
+  {
+    "url": "https://nrcs.app.box.com/s/w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i/folder/422965633902",
+    "scope": "SSURGO states first page",
+    "observed_at": "2026-11-17T20:44:07.429188+00:00",
+    "items": [
+      {
+        "id": 2517258364307,
+        "name": "01_ReadMe.txt",
+        "type": "file",
+        "itemSize": 2648
+      },
+      {
+        "id": 2517261224858,
+        "name": "02_State_Codes_And_Names.txt",
+        "type": "file",
+        "itemSize": 1141
+      },
+      {
+        "id": 2516986372040,
+        "name": "SQLite_SSURGO_ID.7z",
+        "type": "file",
+        "itemSize": 657494101
+      },
+      {
+        "id": 2516997594001,
+        "name": "SQLite_SSURGO_WY.7z",
+        "type": "file",
+        "itemSize": 867241082
+      },
+      {
+        "id": 2516980153809,
+        "name": "SQLite_SSURGO_GA.7z",
+        "type": "file",
+        "itemSize": 604790700
+      },
+      {
+        "id": 2517014764730,
+        "name": "SQLite_SSURGO_HI.7z",
+        "type": "file",
+        "itemSize": 45226569
+      },
+      {
+        "id": 2516770844656,
+        "name": "SQLite_SSURGO_WV.7z",
+        "type": "file",
+        "itemSize": 399027374
+      },
+      {
+        "id": 2516767270986,
+        "name": "SQLite_SSURGO_WI.7z",
+        "type": "file",
+        "itemSize": 1496101013
+      },
+      {
+        "id": 2516758244763,
+        "name": "SQLite_SSURGO_GU.7z",
+        "type": "file",
+        "itemSize": 4231766
+      },
+      {
+        "id": 2514538506863,
+        "name": "SQLite_SSURGO_WA.7z",
+        "type": "file",
+        "itemSize": 765674097
+      },
+      {
+        "id": 2514358998335,
+        "name": "SQLite_SSURGO_VA.7z",
+        "type": "file",
+        "itemSize": 835841228
+      },
+      {
+        "id": 2514350807645,
+        "name": "SQLite_SSURGO_UT.7z",
+        "type": "file",
+        "itemSize": 475952028
+      },
+      {
+        "id": 2514304916922,
+        "name": "SQLite_SSURGO_OH.7z",
+        "type": "file",
+        "itemSize": 1330238501
+      },
+      {
+        "id": 2514302737883,
+        "name": "SQLite_SSURGO_TN.7z",
+        "type": "file",
+        "itemSize": 955727344
+      },
+      {
+        "id": 2514300553514,
+        "name": "SQLite_SSURGO_FL.7z",
+        "type": "file",
+        "itemSize": 738997670
+      },
+      {
+        "id": 2514295175429,
+        "name": "SQLite_SSURGO_VT.7z",
+        "type": "file",
+        "itemSize": 206759251
+      },
+      {
+        "id": 2514289394139,
+        "name": "SQLite_SSURGO_SD.7z",
+        "type": "file",
+        "itemSize": 1206396416
+      },
+      {
+        "id": 2514288942693,
+        "name": "SQLite_SSURGO_SC.7z",
+        "type": "file",
+        "itemSize": 467416017
+      },
+      {
+        "id": 2514178513525,
+        "name": "SQLite_SSURGO_VI.7z",
+        "type": "file",
+        "itemSize": 4900441
+      },
+      {
+        "id": 2514096536658,
+        "name": "SQLite_SSURGO_RI.7z",
+        "type": "file",
+        "itemSize": 31703704
+      }
+    ]
+  },
+  {
+    "url": "https://nrcs.app.box.com/v/soils/folder/20890497120",
+    "scope": "STATSGO2 CONUS",
+    "observed_at": "2026-11-17T20:44:07.429188+00:00",
+    "items": [
+      {
+        "id": 157053109886,
+        "name": "wss_gsmsoil_US_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 446108728
+      }
+    ]
+  },
+  {
+    "url": "https://nrcs.app.box.com/v/soils/folder/18247487156",
+    "scope": "STATSGO2 states first page",
+    "observed_at": "2026-11-17T20:44:07.429188+00:00",
+    "items": [
+      {
+        "id": 144167772082,
+        "name": "wss_gsmsoil_AK_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 79575225
+      },
+      {
+        "id": 144173590125,
+        "name": "wss_gsmsoil_TX_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 21749908
+      },
+      {
+        "id": 144173732350,
+        "name": "wss_gsmsoil_WA_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 16425643
+      },
+      {
+        "id": 144173758635,
+        "name": "wss_gsmsoil_WY_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 10427174
+      },
+      {
+        "id": 144173557572,
+        "name": "wss_gsmsoil_SD_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 15226127
+      },
+      {
+        "id": 144173417379,
+        "name": "wss_gsmsoil_WI_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 8497368
+      },
+      {
+        "id": 144173201109,
+        "name": "wss_gsmsoil_UT_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 12969035
+      },
+      {
+        "id": 144172925710,
+        "name": "wss_gsmsoil_WV_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 5460435
+      },
+      {
+        "id": 144172640297,
+        "name": "wss_gsmsoil_VT_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 4592604
+      },
+      {
+        "id": 144172863300,
+        "name": "wss_gsmsoil_TN_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 10430878
+      },
+      {
+        "id": 144172246593,
+        "name": "wss_gsmsoil_VA_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 6826459
+      },
+      {
+        "id": 144171994642,
+        "name": "wss_gsmsoil_SC_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 8001859
+      },
+      {
+        "id": 144172089430,
+        "name": "wss_gsmsoil_NV_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 17869354
+      },
+      {
+        "id": 144172184525,
+        "name": "wss_gsmsoil_VI_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 2685941
+      },
+      {
+        "id": 144171924050,
+        "name": "wss_gsmsoil_OR_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 11829825
+      },
+      {
+        "id": 144171577921,
+        "name": "wss_gsmsoil_MT_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 20757043
+      },
+      {
+        "id": 144171593460,
+        "name": "wss_gsmsoil_MO_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 26480462
+      },
+      {
+        "id": 144171811311,
+        "name": "wss_gsmsoil_NY_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 12094658
+      },
+      {
+        "id": 144171579892,
+        "name": "wss_gsmsoil_NM_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 13316459
+      },
+      {
+        "id": 144171763198,
+        "name": "wss_gsmsoil_RI_[2016-10-13].zip",
+        "type": "file",
+        "itemSize": 2935848
+      }
+    ]
+  }
+]

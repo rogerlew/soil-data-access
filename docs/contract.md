@@ -1,6 +1,7 @@
 # Unofficial Soil Data Access contract
 
-Status: initial contract baseline, 2026-11-17. No runtime is implemented.
+Status: assessment baseline, 2026-11-17. No runtime is implemented. Live SDA wire
+parity is blocked by observed 502 responses; see [milestone 1 assessment](milestone-1-assessment.md).
 
 ## Purpose and ownership
 
@@ -30,7 +31,10 @@ part of the initial complexity budget.
 Initial integration direction: POST /Tabular/post.rest using an explicitly selected
 SDA JSON response format, with a coordinated WEPPpy parser migration. Capture the
 actual upstream JSON envelope, column metadata, types and null behavior before
-freezing the executable schema. Request encoding remains to be selected and tested.
+freezing the executable schema. Use application/x-www-form-urlencoded requests with query and format fields;
+percent-encode the plus signs in JSON+COLUMNNAME. Exact response behavior remains
+pending live capture. The [compatibility matrix](../contracts/compatibility.json)
+is the machine-readable scope/evidence inventory.
 Current WEPPpy uses form-encoded requests with format=xml; the extracted queries
 record that baseline, not a requirement that the new service implement XML first.
 XML support is a separate compatibility-matrix decision based on public clients.
@@ -44,7 +48,7 @@ Preserve ordered columns, null representation, numeric precision, aliases,
 response structure and escaping, and explicitly requested row ordering. Preserve row
 multiplicity. Unordered results are compared as multisets; ties in an incomplete
 ORDER BY have no implied stable ordering. Capture upstream success, empty, and
-error responses before freezing exact response schemas. Do not invent upstream
+error responses before freezing exact SDA-compatible response schemas. Do not invent upstream
 error codes or label locally designed errors compatible.
 
 SQL Server/T-SQL compatibility is bounded by a published feature matrix.
@@ -53,6 +57,28 @@ and spatial semantics explicitly. PostgreSQL accepting a query is not parity.
 Initial scope excludes SOAP, WMS/WFS, persistent AOIs, interpretation/report
 engines, arbitrary multi-statement T-SQL, and unrestricted SQL passthrough.
 These remain discoverable gaps, not successful empty responses.
+
+## Service-owned metadata and errors
+
+These operational contracts are our own design, not observed USDA error parity.
+GET /v1/metadata returns HTTP 200 with application/json matching
+[metadata.schema.json](../contracts/metadata.schema.json). It identifies the
+unofficial service, contract version, code revision, readiness, and one active
+release manifest containing individually identified SSURGO/STATSGO2 source releases.
+Before data activation, ready is false and active_release is null. Ready true
+requires a validated active release; a responding process alone is not ready.
+Scope labels must describe actual coverage, never infer nationwide completeness.
+
+Rejected requests return application/json matching
+[error.schema.json](../contracts/error.schema.json). Codes map to HTTP status:
+invalid_request=400, unsupported_query=422, request_too_large=413,
+rate_limited=429, overloaded=503, not_ready=503, query_timeout=504,
+internal_error=500. Messages must not expose SQL text, credentials, internal
+paths, or database exception details; request_id permits correlation with
+restricted diagnostics. Do not return an empty successful table for failures.
+These explicit codes permit callers to distinguish invalid requests from temporary
+capacity or readiness failures without pretending to duplicate USDA's errors.
+[Service examples](../contracts/service-examples.json) are authored examples.
 
 ## Data contract
 
@@ -123,3 +149,11 @@ full SDA compatibility without evidence.
 - https://ncss-tech.github.io/soilDB/articles/sda.html
 - https://www.nrcs.usda.gov/resources/data-and-reports/ssurgo-portal
 - /workdir/wepppy/wepppy/soils/ssurgo/ssurgo.py
+
+## Assessment recommendation
+
+[The Rust/Go evaluation](dependency-evaluation.md) recommends Rust based on the
+26-query syntax probe and parser maintenance breadth. The full runtime stack is
+not adopted yet. Rust sqlparser parses the tested SQL Server spatial intersection
+expression that GoSQLX rejects. Neither parser translates semantics or enforces
+query safety; PostgreSQL/PostGIS parity and resource containment remain gates.

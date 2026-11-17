@@ -16,7 +16,7 @@
 *.dump
 
 # Rust and Go build output
-/target/
+**/target/
 /bin/
 /coverage/
 *.prof

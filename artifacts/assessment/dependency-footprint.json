@@ -1,0 +1,235 @@
+{
+  "observed_at": "2026-11-17T20:44:21.771974+00:00",
+  "purpose": "parser suitability probe; no service throughput benchmark",
+  "host": {
+    "os": "Linux",
+    "machine": "x86_64",
+    "rustc": "rustc 1.92.0 (ded5c06cf 2025-12-08)",
+    "go": "go version go1.26.11 linux/amd64"
+  },
+  "rust": {
+    "locked_dependency_count": 27,
+    "packages": [
+      {
+        "name": "ar_archive_writer",
+        "version": "0.5.5",
+        "license": "Apache-2.0 WITH LLVM-exception"
+      },
+      {
+        "name": "cc",
+        "version": "1.11.2",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "cfg-if",
+        "version": "1.0.5",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "find-msvc-tools",
+        "version": "0.1.15",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "itoa",
+        "version": "1.0.19",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "libc",
+        "version": "0.2.191",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "log",
+        "version": "0.4.35",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "memchr",
+        "version": "2.8.3",
+        "license": "Unlicense OR MIT"
+      },
+      {
+        "name": "object",
+        "version": "0.39.1",
+        "license": "Apache-2.0 OR MIT"
+      },
+      {
+        "name": "proc-macro2",
+        "version": "1.0.107",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "psm",
+        "version": "0.1.32",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "quote",
+        "version": "1.0.47",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "recursive",
+        "version": "0.1.1",
+        "license": "MIT"
+      },
+      {
+        "name": "recursive-proc-macro-impl",
+        "version": "0.1.1",
+        "license": "MIT"
+      },
+      {
+        "name": "ryu",
+        "version": "1.0.23",
+        "license": "Apache-2.0 OR BSL-1.0"
+      },
+      {
+        "name": "serde",
+        "version": "1.0.229",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "serde_core",
+        "version": "1.0.229",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "serde_derive",
+        "version": "1.0.229",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "serde_json",
+        "version": "1.0.145",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "shlex",
+        "version": "2.0.1",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "sqlparser",
+        "version": "0.64.0",
+        "license": "Apache-2.0"
+      },
+      {
+        "name": "stacker",
+        "version": "0.1.25",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "syn",
+        "version": "2.0.119",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "syn",
+        "version": "3.0.10",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "unicode-ident",
+        "version": "1.0.27",
+        "license": "(MIT OR Apache-2.0) AND Unicode-3.0"
+      },
+      {
+        "name": "windows-link",
+        "version": "0.2.1",
+        "license": "MIT OR Apache-2.0"
+      },
+      {
+        "name": "windows-sys",
+        "version": "0.61.2",
+        "license": "MIT OR Apache-2.0"
+      }
+    ]
+  },
+  "go": {
+    "module_graph_dependency_count": 76,
+    "compiled_external_modules": [
+      "github.com/ajitpratap0/GoSQLX"
+    ],
+    "module_graph": [
+      "soil-data-access/evaluation",
+      "dario.cat/mergo v1.0.2",
+      "filippo.io/edwards25519 v1.1.1",
+      "github.com/Azure/go-ansiterm v0.0.0-20250102033503-faa5f7b0171c",
+      "github.com/Microsoft/go-winio v0.6.2",
+      "github.com/ajitpratap0/GoSQLX v1.17.0",
+      "github.com/bahlo/generic-list-go v0.2.0",
+      "github.com/buger/jsonparser v1.6.1",
+      "github.com/cenkalti/backoff/v4 v4.3.0",
+      "github.com/cespare/xxhash/v2 v2.3.0",
+      "github.com/containerd/errdefs v1.0.0",
+      "github.com/containerd/errdefs/pkg v0.3.0",
+      "github.com/containerd/log v0.1.0",
+      "github.com/containerd/platforms v0.2.1",
+      "github.com/cpuguy83/dockercfg v0.3.2",
+      "github.com/distribution/reference v0.6.0",
+      "github.com/docker/go-connections v0.7.0",
+      "github.com/docker/go-units v0.5.0",
+      "github.com/dustin/go-humanize v1.0.1",
+      "github.com/ebitengine/purego v0.10.1",
+      "github.com/felixge/httpsnoop v1.1.0",
+      "github.com/fsnotify/fsnotify v1.9.0",
+      "github.com/go-logr/logr v1.4.4",
+      "github.com/go-logr/stdr v1.2.2",
+      "github.com/go-ole/go-ole v1.3.0",
+      "github.com/go-sql-driver/mysql v1.9.3",
+      "github.com/google/uuid v1.6.0",
+      "github.com/inconshreveable/mousetrap v1.1.0",
+      "github.com/invopop/jsonschema v0.13.0",
+      "github.com/klauspost/compress v1.18.7",
+      "github.com/lib/pq v1.12.0",
+      "github.com/lufia/plan9stats v0.0.0-20260330125221-c963978e514e",
+      "github.com/magiconair/properties v1.8.10",
+      "github.com/mailru/easyjson v0.7.7",
+      "github.com/mark3labs/mcp-go v0.45.0",
+      "github.com/mattn/go-isatty v0.0.20",
+      "github.com/moby/docker-image-spec v1.3.1",
+      "github.com/moby/go-archive v0.3.3",
+      "github.com/moby/moby/api v1.55.0",
+      "github.com/moby/moby/client v0.5.0",
+      "github.com/moby/patternmatcher v0.6.1",
+      "github.com/moby/sys/sequential v0.7.0",
+      "github.com/moby/sys/user v0.4.1",
+      "github.com/moby/sys/userns v0.1.0",
+      "github.com/moby/term v0.5.2",
+      "github.com/ncruces/go-strftime v1.0.0",
+      "github.com/opencontainers/go-digest v1.0.0",
+      "github.com/opencontainers/image-spec v1.1.1",
+      "github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55",
+      "github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec",
+      "github.com/shirou/gopsutil/v4 v4.26.6",
+      "github.com/sirupsen/logrus v1.9.4",
+      "github.com/spf13/cast v1.7.1",
+      "github.com/spf13/cobra v1.10.1",
+      "github.com/spf13/pflag v1.0.9",
+      "github.com/stretchr/testify v1.12.1",
+      "github.com/testcontainers/testcontainers-go v0.44.0",
+      "github.com/tklauser/go-sysconf v0.4.0",
+      "github.com/tklauser/numcpus v0.12.0",
+      "github.com/wk8/go-ordered-map/v2 v2.1.8",
+      "github.com/yosida95/uritemplate/v3 v3.0.2",
+      "github.com/yusufpapurcu/wmi v1.2.4",
+      "go.opentelemetry.io/auto/sdk v1.2.1",
+      "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.72.0",
+      "go.opentelemetry.io/otel v1.47.0",
+      "go.opentelemetry.io/otel/log v1.47.0",
+      "go.opentelemetry.io/otel/metric v1.47.0",
+      "go.opentelemetry.io/otel/trace v1.47.0",
+      "go.yaml.in/yaml/v3 v3.0.5",
+      "golang.org/x/crypto v0.58.0",
+      "golang.org/x/sys v0.49.0",
+      "golang.org/x/term v0.47.0",
+      "gopkg.in/yaml.v3 v3.0.1",
+      "modernc.org/libc v1.70.0",
+      "modernc.org/mathutil v1.7.1",
+      "modernc.org/memory v1.11.0",
+      "modernc.org/sqlite v1.48.0"
+    ]
+  }
+}
