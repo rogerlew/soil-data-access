@@ -30,3 +30,18 @@ Do not use the candidate importer to generate expected rows. Compare unordered r
 row multisets with exact numeric equality, no tolerance. Retain first-row selection
 and final-artifact checks separately under the actual worker environment. Existing
 processed-cache replay remains a regression tool, not an official-source oracle.
+
+## Container readiness and credentials
+
+The API accepts exactly one of DATABASE_URL or DATABASE_URL_FILE; file credentials
+are read once at startup, trimmed, and never logged. The PostgreSQL initializer
+similarly accepts exactly one of SOIL_SERVE_PASSWORD or SOIL_SERVE_PASSWORD_FILE.
+Existing environment configuration remains supported. Forest mounts credentials
+from ignored host secret files, readable by the existing container identities.
+
+The API's --healthcheck command probes local /v1/metadata with a three-second
+absolute deadline and a 64 KiB response limit. Success requires HTTP 200, ready=true,
+and, when SOIL_DATA_RELEASE is configured, that exact active release. It returns a
+nonzero exit status without response/credential logging on failure. A missing or
+wrong release must not appear healthy. Clients do not depend on API health for
+startup: their bounded SDA fallback must remain available during mirror outages.
