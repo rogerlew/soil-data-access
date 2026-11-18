@@ -30,8 +30,10 @@ still deployment prerequisites.
 - [x] (2026-11-18 UTC) Acquire and validate three selected SSURGO cache snapshots.
 - [x] (2026-11-18 UTC) Implement WAL-aware acquisition, clean logical reconstruction, and LFS fixture verification.
 - [x] (2026-11-18 UTC) Find positive STATSGO model inputs through an SSURGO-named project cache; retain paired artifacts and shared STATSGO cache.
-- [ ] Complete coverage-directed discovery, configuration/assignment lineage, and offline reference rebuild.
-- [ ] Freeze corpus manifest, reference build, JSON profile, and comparison rules.
+- [x] (2026-11-18 UTC) Capture allowlisted paired-project configuration and actual treatment lookup.
+- [x] (2026-11-18 UTC) Repeat pinned offline reference builds: 499 valid soils, six non-valid outcomes, 501 matching canonical artifacts.
+- [x] (2026-11-18 UTC) Freeze authored JSON profile, eleven legacy extraction cases, reference schema, and comparison rules.
+- [ ] Complete workflow coverage: fallback/assignment execution, treatment variants, and full historical/native lineage gaps.
 - [ ] Implement Rust/PostgreSQL/PostGIS service and test-only cache replay adapter.
 - [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
 - [ ] Verify official-data import independently from historical cache replay.
@@ -70,6 +72,14 @@ which manages Talos/Kubernetes; do not assume those nodes run Docker Compose.
 ## Surprises & Discoveries
 
 
+The offline reference repeats exactly after the two declared metadata exclusions.
+The paired historical base soil predates the October 200 mm writer boundary change;
+its treated and model-input artifacts already contain that boundary and match.
+One legacy builder exception comes from null sand combined with high clay; five
+other keys lack valid horizons. The shared STATSGO cache lacks restriction coverage
+for COKEY 14179042 and cannot be a complete reference. No missing row was invented.
+Details and dispositions are in docs/reference-deviations.md.
+
 SDA remains unavailable in retained observations. Independent official downloads
 are reachable. The national SSURGO archive is listed at 31,549,528,132 compressed
 bytes; the inspected STATSGO2 archive is dated 2016. Sample contents do not prove
@@ -104,6 +114,14 @@ docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
 
+
+2026-11-18 UTC: pin the observed production checkout revision for the legacy
+reference, with networking blocked by a Linux network namespace. Preserve only
+Build Date and Source File comment-value exclusions; repeatability compares all
+remaining bytes. Use authored profiles for unpaired caches, actual captured values
+for the paired forest case, and keep historical unknowns explicit. Preserve the
+known 200 mm change and invalid/error outcomes instead of changing model defaults
+or historical fixtures. The JSON contract is service-owned, not live SDA evidence.
 
 2026-11-18 UTC: the operator clarified that gNATSGO and the shared SDA queries
 cover both source families. Code, NRCS documentation, and project artifacts confirm
@@ -150,9 +168,10 @@ dependency selection and numerical capacity targets remain to be completed.
 scripts/snapshot_project_corpus.py now acquires private read-only-source backups;
 scripts/publish_cache_fixture.py publishes clean logical copies against
 contracts/wepppy-cache-schema.json; scripts/verify_corpus.py verifies their hashes,
-records, and integrity. See docs/wepppy-corpus.md for commands. The broader
-contracts/wepppy-corpus.schema.json and configuration/artifact capture remain to
-be defined before freezing the complete replay corpus.
+records, and integrity. See docs/wepppy-corpus.md for commands. The reference schema is now contracts/wepppy-corpus.schema.json; the paired project
+has captured scientific configuration/assignments and an actual treatment CSV.
+The complete workflow corpus remains open; see docs/offline-reference-contract.md
+for the frozen reference subset, commands, and retained deviations.
 Inventory cache-bearing runs read-only; select SSURGO and STATSGO2 plus restrictive
 layers, shallow profiles, multiple components/horizons/textures/fragments, null and
 missing fields, invalid soils, missing keys, fallback behavior, and relevant burn
@@ -350,18 +369,23 @@ STATSGO cache. Three paired historical soil files for the fourth project include
 an actual WEPP model input. Publication strips only the private project path in
 two Source File comments; numeric/model payload bytes remain exact.
 
-Nineteen tests, fixture verification, documentation lint, and a fresh remote
-LFS checkout passed; artifacts/wepppy-parity/snapshot-validation.json pins the
-validated code and object hashes. Source fingerprints, logical comparisons,
-integrity checks, and unknown historical
-revision/configuration are explicit. Raw acquisition and private run mapping stay
-outside Git. No reference soils have been rebuilt, no complete workflow corpus
-frozen, no server implemented, and no deployment validated. Complete configuration,
-assignment and native-library lineage, behavioral coverage, and the reference/JSON
-contract next. The SQLite sidecar incident motivated a pre-open guard and regression
-test; the snapshot contract records that filesystem effect. Collection/cache labels
-cannot distinguish source families; the positive STATSGO evidence resolved the
-misleading result of searching only STATSGO-named cache files.
+The earlier snapshot validation is retained in snapshot-validation.json. The new
+reference repeats 499 valid soils plus two paired downstream files, with five
+invalid-horizon outcomes and one legacy builder error retained. Twenty-seven tests
+cover acquisition, canonicalization, missing cache coverage, report/archive
+integrity, and transport shapes. Eleven authored synthetic XML cases passed through
+the actual pinned legacy extractors. Canonical output is in the LFS archive
+fixtures/wepppy/reference-v1.tar.gz; reports retain selections, hashes, environment,
+coverage, and separate historical comparisons. See docs/reference-deviations.md.
+
+The next implementation step is the bounded Rust/PostgreSQL service and test-only
+cache replay, after dependency evaluation, while completing declared workflow
+coverage. This reference is a useful baseline, not full NoDb/RQ/raster execution or
+mirror parity. Only one captured forest treatment profile is paired downstream;
+other treatment/fallback/assignment behaviors still need evidence or explicit scope
+exclusion before release. Historical commit/native lineage remains unknown. No API,
+production importer, migrated client, Compose acceptance, or deployment exists.
+The source caches, historical files, and WEPPpy production behavior remain intact.
 
 ## Artifacts and Dependencies
 
@@ -387,3 +411,6 @@ snapshot tools, historical schema preservation, and the sidecar creation guard.
 
 Revision: 2026-11-18 UTC. Retain positive STATSGO project model inputs and clarify
 that unified SDA queries and gNATSGO coverage cross cache/collection labels.
+
+Revision: 2026-11-18 UTC. Retain two offline reference runs and authored JSON
+contracts; document historical drift, incomplete cache, and workflow coverage gaps.

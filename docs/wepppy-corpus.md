@@ -118,3 +118,14 @@ detection; the cache and file acquisitions are not an atomic whole-project snaps
 Rebuild the reference offline, classify historical differences, and measure case
 coverage (shallow/null/restriction/missing/fallback/treatments) before freezing the
 complete corpus. Snapshot integrity alone cannot close that release gate.
+
+## Offline reference extension
+
+The paired ssurgo-004 case now includes an allowlisted reference-inputs.json and
+the captured treatment-lookup.csv (LFS). Raw NoDb files and source paths remain
+private. Other caches use explicitly authored profiles. The canonical generated
+reference is fixtures/wepppy/reference-v1.tar.gz (LFS), with two complete reports
+and a member-hash receipt under artifacts/wepppy-parity. See the
+[reference contract](offline-reference-contract.md) for reproduction and
+[deviation ledger](reference-deviations.md) for the incomplete shared cache,
+legacy invalid/error outcomes, historical writer drift, and coverage gaps.

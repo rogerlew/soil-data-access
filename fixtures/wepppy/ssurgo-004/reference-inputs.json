@@ -1,0 +1,130 @@
+{
+  "case_id": "ssurgo-004",
+  "profile_basis": "captured_project_state_not_historical_commit_proof",
+  "historical_commit": "unknown",
+  "source_hashes": {
+    "soils.nodb": {
+      "sha256": "65ac0c3d9ffe09db0c0855b8ea473df60ba92ea135aa4f7859285bf19d08627c",
+      "bytes": 3864,
+      "mtime_ns": 1789868725660415000
+    },
+    "disturbed.nodb": {
+      "sha256": "ae86cb7a6849a4817ef29eff38d14526a904c834740af4bb8638ae04026caf91",
+      "bytes": 684,
+      "mtime_ns": 1789867666189690000
+    },
+    "wepp.nodb": {
+      "sha256": "345e8a788152e8c652b6ce9e305d4377f1427de4dc79b5a4cab45d69e080981d",
+      "bytes": 2332,
+      "mtime_ns": 1789868732501395000
+    },
+    "landuse.nodb": {
+      "sha256": "90eba0632bc217aed61e95a80202498c05dd4f48d2d1fb4b73142edec9940f26",
+      "bytes": 1557,
+      "mtime_ns": 1789867589214480000
+    },
+    "disturbed/disturbed_land_soil_lookup.csv": {
+      "sha256": "bf4b38fbcb16643345b29e24a1ace6afd8409695cf0b27dbbb707e4707620a67",
+      "bytes": 9065,
+      "mtime_ns": 1789854912793580000
+    }
+  },
+  "base": {
+    "use_statsgo": false,
+    "initial_sat": 0.75,
+    "ksflag": false,
+    "version": "7778"
+  },
+  "preparation": {
+    "kslast": null,
+    "clip_soils": false,
+    "clip_soils_depth": 1000,
+    "clip_soils_minimum": false,
+    "clip_soils_minimum_depth": 0.0
+  },
+  "treatment": {
+    "version": 9002.0,
+    "disturbed_class": "forest",
+    "h0_max_om": null,
+    "recompute_wp_fc_using_rosetta_on_bd_override": false,
+    "lookup_file": "treatment-lookup.csv"
+  },
+  "assignments": {
+    "raw_mukeys": {
+      "22": "667005",
+      "23": "667005",
+      "32": "667005",
+      "33": "667005",
+      "41": "667005",
+      "42": "667005",
+      "43": "667005",
+      "51": "667005",
+      "53": "667005",
+      "62": "667005",
+      "63": "667005",
+      "71": "667003",
+      "81": "667005",
+      "82": "667005",
+      "83": "667005"
+    },
+    "base_mukeys": {
+      "22": "667005",
+      "23": "667005",
+      "32": "667005",
+      "33": "667005",
+      "41": "667005",
+      "42": "667005",
+      "43": "667005",
+      "51": "667005",
+      "53": "667005",
+      "62": "667005",
+      "63": "667005",
+      "71": "667003",
+      "81": "667005",
+      "82": "667005",
+      "83": "667005"
+    },
+    "treated_soil_keys": {
+      "22": "667005-sand loam-forest",
+      "23": "667005-sand loam-forest",
+      "32": "667005-sand loam-forest",
+      "33": "667005-sand loam-forest",
+      "41": "667005-sand loam-forest",
+      "42": "667005-sand loam-forest",
+      "43": "667005-sand loam-forest",
+      "51": "667005-sand loam-forest",
+      "53": "667005-sand loam-forest",
+      "62": "667005-sand loam-forest",
+      "63": "667005-sand loam-forest",
+      "71": "667003-sand loam-forest",
+      "81": "667005-sand loam-forest",
+      "82": "667005-sand loam-forest",
+      "83": "667005-sand loam-forest"
+    },
+    "landuse": {
+      "22": "42",
+      "23": "42",
+      "32": "42",
+      "33": "42",
+      "41": "42",
+      "42": "42",
+      "43": "42",
+      "51": "42",
+      "53": "42",
+      "62": "42",
+      "63": "42",
+      "71": "42",
+      "81": "42",
+      "82": "42",
+      "83": "42"
+    },
+    "substitutions": {}
+  },
+  "historical_artifact_mukey": 667003,
+  "historical_model_topaz_id": "71",
+  "scope_exclusions": [
+    "No raster delineation or assignment recomputation",
+    "No historical native dependency revision available",
+    "No proof current NoDb values equal original build-time values"
+  ]
+}

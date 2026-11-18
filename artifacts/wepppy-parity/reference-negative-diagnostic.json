@@ -1,0 +1,25 @@
+{
+  "case_id": "ssurgo-001",
+  "mukey": 474429,
+  "reference_revision": "917708c90dce46bbab920ecf9ce5f315e8611290",
+  "exception": "ValueError",
+  "message": "Rosetta texture fractions must be finite percentages that sum to 100 with non-negative silt, got sand=66.8, silt=-14.299999999999997, clay=47.5.",
+  "source_rows": {
+    "columns": [
+      "cokey",
+      "chkey",
+      "sandtotal_r",
+      "claytotal_r"
+    ],
+    "rows": [
+      [
+        28482446,
+        85480619,
+        null,
+        47.5
+      ]
+    ]
+  },
+  "classification": "legacy_model_rejection_reproduced_directly_with_network_disabled",
+  "disposition": "Retain as a negative reference case. Do not modify cached values, defaults, or the reference to obtain a valid soil."
+}

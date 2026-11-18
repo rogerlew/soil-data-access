@@ -1,0 +1,496 @@
+{
+  "evidence_kind": "authored_contract_and_synthetic_xml_not_live_sda",
+  "cases": [
+    {
+      "id": "component-empty",
+      "query_family": "component",
+      "extractor": "_extract_table",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "mukey",
+            "cokey",
+            "compname",
+            "comppct_r",
+            "albedodry_r",
+            "hydricrating",
+            "drainagecl",
+            "muname",
+            "wtdepannmin",
+            "flodfreqdcd",
+            "aws025wta",
+            "aws0150wta",
+            "hydgrpdcd",
+            "drclassdcd",
+            "taxclname",
+            "geomdesc",
+            "taxorder",
+            "taxsuborder"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet />",
+      "expected_rows": []
+    },
+    {
+      "id": "chorizon-empty",
+      "query_family": "chorizon",
+      "extractor": "_extract_table",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "cokey",
+            "chkey",
+            "hzname",
+            "hzdepb_r",
+            "hzdept_r",
+            "hzthk_r",
+            "dbthirdbar_r",
+            "ksat_r",
+            "sandtotal_r",
+            "claytotal_r",
+            "om_r",
+            "cec7_r",
+            "awc_l",
+            "fraggt10_r",
+            "frag3to10_r",
+            "desgnmaster",
+            "sieveno10_r",
+            "wthirdbar_r",
+            "wfifteenbar_r",
+            "sandvf_r",
+            "ll_r"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet />",
+      "expected_rows": []
+    },
+    {
+      "id": "chfrags-empty",
+      "query_family": "chfrags",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "chkey",
+            "fragvol_r"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet />",
+      "expected_rows": []
+    },
+    {
+      "id": "chtexturegrp-empty",
+      "query_family": "chtexturegrp",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "chkey",
+            "texture"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet />",
+      "expected_rows": []
+    },
+    {
+      "id": "corestrictions-empty",
+      "query_family": "corestrictions",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "cokey",
+            "reskind"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet />",
+      "expected_rows": []
+    },
+    {
+      "id": "component-exact-id-null-decimal",
+      "query_family": "component",
+      "extractor": "_extract_table",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "mukey",
+            "cokey",
+            "compname",
+            "comppct_r",
+            "albedodry_r",
+            "hydricrating",
+            "drainagecl",
+            "muname",
+            "wtdepannmin",
+            "flodfreqdcd",
+            "aws025wta",
+            "aws0150wta",
+            "hydgrpdcd",
+            "drclassdcd",
+            "taxclname",
+            "geomdesc",
+            "taxorder",
+            "taxsuborder"
+          ],
+          [
+            "9007199254740993",
+            "1002",
+            "Loam & café",
+            "0.125",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><mukey>9007199254740993</mukey><cokey>1002</cokey><compname>Loam &amp; café</compname><comppct_r>0.125</comppct_r><albedodry_r /><hydricrating /><drainagecl /><muname /><wtdepannmin /><flodfreqdcd /><aws025wta /><aws0150wta /><hydgrpdcd /><drclassdcd /><taxclname /><geomdesc /><taxorder /><taxsuborder /></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          9007199254740993,
+          1002,
+          "Loam & café",
+          0.125,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "component-first-pair-wins",
+      "query_family": "component",
+      "extractor": "_extract_table",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "mukey",
+            "cokey",
+            "compname",
+            "comppct_r",
+            "albedodry_r",
+            "hydricrating",
+            "drainagecl",
+            "muname",
+            "wtdepannmin",
+            "flodfreqdcd",
+            "aws025wta",
+            "aws0150wta",
+            "hydgrpdcd",
+            "drclassdcd",
+            "taxclname",
+            "geomdesc",
+            "taxorder",
+            "taxsuborder"
+          ],
+          [
+            "1001",
+            "1002",
+            "first",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "1001",
+            "1002",
+            "second",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><mukey>1001</mukey><cokey>1002</cokey><compname>first</compname><comppct_r /><albedodry_r /><hydricrating /><drainagecl /><muname /><wtdepannmin /><flodfreqdcd /><aws025wta /><aws0150wta /><hydgrpdcd /><drclassdcd /><taxclname /><geomdesc /><taxorder /><taxsuborder /></Table><Table><mukey>1001</mukey><cokey>1002</cokey><compname>second</compname><comppct_r /><albedodry_r /><hydricrating /><drainagecl /><muname /><wtdepannmin /><flodfreqdcd /><aws025wta /><aws0150wta /><hydgrpdcd /><drclassdcd /><taxclname /><geomdesc /><taxorder /><taxsuborder /></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          1001,
+          1002,
+          "first",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "texture-first-key-wins",
+      "query_family": "chtexturegrp",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "chkey",
+            "texture"
+          ],
+          [
+            "1003",
+            "loam"
+          ],
+          [
+            "1003",
+            "clay"
+          ],
+          [
+            "1004",
+            ""
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><chkey>1003</chkey><texture>loam</texture></Table><Table><chkey>1003</chkey><texture>clay</texture></Table><Table><chkey>1004</chkey><texture /></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          1003,
+          "loam"
+        ],
+        [
+          1004,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "restriction-null-and-text",
+      "query_family": "corestrictions",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "cokey",
+            "reskind"
+          ],
+          [
+            "1002",
+            null
+          ],
+          [
+            "1005",
+            "  Lithic bedrock  "
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><cokey>1002</cokey><reskind /></Table><Table><cokey>1005</cokey><reskind>  Lithic bedrock  </reskind></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          1002,
+          null
+        ],
+        [
+          1005,
+          "  Lithic bedrock  "
+        ]
+      ]
+    },
+    {
+      "id": "fragments-decimal",
+      "query_family": "chfrags",
+      "extractor": "_extract_unique",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "chkey",
+            "fragvol_r"
+          ],
+          [
+            "1003",
+            "12.50"
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><chkey>1003</chkey><fragvol_r>12.50</fragvol_r></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          1003,
+          12.5
+        ]
+      ]
+    },
+    {
+      "id": "horizon-decimal-and-null",
+      "query_family": "chorizon",
+      "extractor": "_extract_table",
+      "response_headers": {
+        "X-Soil-Profile": "wepppy-json-v1",
+        "X-Soil-Release": "authored-fixture-release"
+      },
+      "response": {
+        "Table": [
+          [
+            "cokey",
+            "chkey",
+            "hzname",
+            "hzdepb_r",
+            "hzdept_r",
+            "hzthk_r",
+            "dbthirdbar_r",
+            "ksat_r",
+            "sandtotal_r",
+            "claytotal_r",
+            "om_r",
+            "cec7_r",
+            "awc_l",
+            "fraggt10_r",
+            "frag3to10_r",
+            "desgnmaster",
+            "sieveno10_r",
+            "wthirdbar_r",
+            "wfifteenbar_r",
+            "sandvf_r",
+            "ll_r"
+          ],
+          [
+            "1002",
+            "1003",
+            "H1",
+            "20.0",
+            "0.0",
+            "20.0",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "synthetic_xml": "<NewDataSet><Table><cokey>1002</cokey><chkey>1003</chkey><hzname>H1</hzname><hzdepb_r>20.0</hzdepb_r><hzdept_r>0.0</hzdept_r><hzthk_r>20.0</hzthk_r><dbthirdbar_r /><ksat_r /><sandtotal_r /><claytotal_r /><om_r /><cec7_r /><awc_l /><fraggt10_r /><frag3to10_r /><desgnmaster /><sieveno10_r /><wthirdbar_r /><wfifteenbar_r /><sandvf_r /><ll_r /></Table></NewDataSet>",
+      "expected_rows": [
+        [
+          1002,
+          1003,
+          "H1",
+          20.0,
+          0.0,
+          20.0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    }
+  ]
+}

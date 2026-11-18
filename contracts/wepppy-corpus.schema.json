@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rogerlew/soil-data-access/contracts/wepppy-corpus.schema.json",
+  "title": "Offline reference report; not release acceptance",
+  "type": "object",
+  "required": ["claim", "environment", "network", "cases"],
+  "properties": {
+    "claim": {"const": "legacy_reference_only_not_mirror_parity"},
+    "environment": {"type": "object", "required": ["wepppy_revision", "python", "numpy", "rosetta_files"]},
+    "network": {"type": "object", "required": ["parent_namespace", "worker_namespace", "external_connect_errno"], "properties": {"external_connect_errno": {"const": 101}}},
+    "transport_contract": {"type": "array"},
+    "cases": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["case_id", "snapshot_sha256", "status", "cache_gaps", "coverage"],
+        "properties": {
+          "case_id": {"type": "string", "pattern": "^(ssurgo|statsgo)-[0-9]{3}$"},
+          "snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "status": {"enum": ["incomplete_cache_not_a_reference", "reference_built_historical_comparison_separate"]},
+          "cache_gaps": {"type": "object"},
+          "coverage": {"type": "object"},
+          "decisions": {"type": "array"},
+          "artifacts": {"type": "array"},
+          "historical_comparisons": {"type": "array"}
+        },
+        "allOf": [{"if": {"properties": {"status": {"const": "reference_built_historical_comparison_separate"}}}, "then": {"required": ["profile", "profile_basis", "decisions", "valid_count", "invalid_count", "artifacts", "historical_comparisons"]}}]
+      }
+    }
+  },
+  "$comment": "Semantic validator must verify namespace separation, exact fixture/config/code hashes, key decision completeness, artifacts, and two-run comparison. Empty/incomplete caches cannot stand in for positive coverage."
+}

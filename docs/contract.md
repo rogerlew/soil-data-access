@@ -31,9 +31,10 @@ part of the initial complexity budget.
 ## Compatibility scope
 
 Initial integration direction: POST /Tabular/post.rest with a coordinated WEPPpy
-JSON client migration. Freeze an explicitly service-owned JSON+COLUMNNAME profile
-from the pinned WEPPpy contract and offline fixtures before implementation, including
-column order, types, nulls, empty results, and errors. Live SDA capture is not a
+JSON client migration. The service-owned [wepppy-json-v1 profile](wepppy-json-profile.md) freezes
+column order, string/null cells, exact identifiers, empty results, release headers,
+and legacy duplicate handling against authored fixtures before implementation.
+The existing error schema governs non-success responses. Live SDA capture is not a
 prerequisite; do not describe authored response fixtures as observed SDA parity.
 Use application/x-www-form-urlencoded query and format fields, percent-encoding
 plus signs. The [compatibility matrix](../contracts/compatibility.json) distinguishes
@@ -149,7 +150,8 @@ releases. Existing project caches and upstream XML behavior remain intact.
 
 Full live SDA and general public-client parity are deferred. Passing this gate
 permits only the published WEPPpy workflow/source-release claim. No gate has passed
-yet; the corpus and runtime remain unimplemented.
+yet; the [offline reference](offline-reference-contract.md) is reproducible,
+but complete workflow coverage and the runtime remain pending.
 
 Benchmarks report hardware, image/code revisions, dataset/checksums, indexes,
 connection limits, concurrency, warm/cold conditions, throughput, error rate,

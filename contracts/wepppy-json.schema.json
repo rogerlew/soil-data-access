@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rogerlew/soil-data-access/contracts/wepppy-json.schema.json",
+  "title": "Service-owned WEPPpy JSON profile v1 (not observed SDA wire parity)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["Table"],
+  "properties": {
+    "Table": {
+      "type": "array",
+      "minItems": 1,
+      "prefixItems": [{"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}],
+      "items": {"type": "array", "minItems": 1, "items": {"type": ["string", "null"]}}
+    }
+  },
+  "$comment": "All data rows must have header width and exact query column order; enforce semantically. Numeric database values serialize as finite decimal strings. HTTP success must identify profile and source release. See docs/wepppy-json-profile.md."
+}

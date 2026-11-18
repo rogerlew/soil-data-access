@@ -71,5 +71,6 @@ The paired historical artifacts for ssurgo-004 preserve all model-consumed bytes
 Only the project path in the single `Source File` comment is replaced with
 `:<project>/soils/667003.sol` in treated/model files. The base file is unchanged.
 Original and published hashes are retained; raw originals remain private. This
-specific non-model path field is the sole declared comparison exclusion for these
-fixtures. It does not permit blanket comment removal or numerical normalization.
+specific non-model path field is the only publication redaction for these
+historical fixtures. Offline repeatability additionally treats Build Date as a
+volatile comment value under docs/offline-reference-contract.md. It does not permit blanket comment removal or numerical normalization.

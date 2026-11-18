@@ -1,6 +1,6 @@
 {
-  "contract_version": "0.2-wepppy-first-planned",
-  "status": "initial_wepppy_release_planning",
+  "contract_version": "0.3-wepppy-json-v1-reference",
+  "status": "offline_reference_and_authored_json_contract",
   "observed_at": "2026-11-17T20:44:07.429188+00:00",
   "runtime_implemented": false,
   "features": [
@@ -19,8 +19,8 @@
     {
       "id": "json_columnname",
       "scope": "initial_target",
-      "evidence": "service_owned_profile_to_be_frozen",
-      "notes": "offline WEPPpy profile may be frozen without live SDA; exact USDA wire parity deferred"
+      "evidence": "authored_profile_frozen_legacy_extraction_verified",
+      "notes": "wepppy-json-v1; 11 authored examples checked against pinned legacy extraction; runtime and live USDA wire parity unimplemented"
     },
     {
       "id": "json_columnname_metadata",
@@ -87,9 +87,11 @@
     "artifacts/assessment/ssurgo-gu.json",
     "artifacts/assessment/statsgo2-vi.json",
     "artifacts/assessment/sda-capture-01/observations.json",
-    "artifacts/assessment/soildb-source.json"
+    "artifacts/assessment/soildb-source.json",
+    "artifacts/wepppy-parity/reference-repeatability.json",
+    "artifacts/wepppy-parity/reference-run-b.json"
   ],
-  "policy_updated_at": "2026-11-18T00:09:37.172413+00:00",
+  "policy_updated_at": "2026-11-18",
   "initial_release_policy": "docs/wepppy-release-gate.md",
   "initial_release_ready": false,
   "deferred_sda_parity_gaps": [
@@ -99,11 +101,11 @@
   "initial_release_gates": [
     {
       "id": "frozen_project_cache_corpus_and_reference",
-      "status": "pending"
+      "status": "repeatable_reference_available_workflow_coverage_pending"
     },
     {
       "id": "service_owned_json_profile",
-      "status": "pending"
+      "status": "contract_frozen_runtime_pending"
     },
     {
       "id": "matched_input_end_to_end_soil_parity",
