@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "job_id": "a334f0d2-6ab9-420f-b9d1-d4ed397bb07c",
+      "status": "JobStatus.FINISHED",
+      "seconds": 23.571145
+    },
+    {
+      "job_id": "6b569d94-d1e9-473f-ab4a-0d42f74af2bf",
+      "status": "JobStatus.FINISHED",
+      "seconds": 22.706317
+    },
+    {
+      "job_id": "2a809701-00f1-4e64-aa49-20a287707761",
+      "status": "JobStatus.FINISHED",
+      "seconds": 8.88535
+    },
+    {
+      "job_id": "49002546-638b-4dff-9cb9-7eb967e2d52b",
+      "status": "JobStatus.FINISHED",
+      "seconds": 27.116464
+    },
+    {
+      "job_id": "31a341c2-b46b-48b8-b7c4-79a07d9ee6bf",
+      "status": "JobStatus.FINISHED",
+      "seconds": 5.861492
+    },
+    {
+      "job_id": "b649f9a0-776d-401d-b0e6-82e2ddbe2951",
+      "status": "JobStatus.FINISHED",
+      "seconds": 25.11944
+    }
+  ],
+  "rq_suspended": false,
+  "deployment_fence_present": false
+}

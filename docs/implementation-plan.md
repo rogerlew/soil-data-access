@@ -23,7 +23,7 @@ still deployment prerequisites.
 
 ## Progress
 
-- [ ] (2026-11-18) Incident recovery: import nationwide SSURGO and STATSGO2, transition forest release pins, and rebuild cavernous-oxygen. Execute docs/nationwide-recovery-plan.md.
+- [x] (2026-11-18) Incident recovery: national SSURGO and STATSGO2 active on forest; 22,073,263 imported rows; staged/HTTP parity for both datasets; cavernous-oxygen rebuilt with 32 verified prepared soils; 152 canary inputs match references. See docs/nationwide-recovery-plan.md and artifacts/national.
 
 
 - [x] Inspect current WEPPpy requests and infrastructure ownership.

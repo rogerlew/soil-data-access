@@ -20,7 +20,7 @@ artifacts, plus independent source/import checks for both national datasets.
 - [x] Staged COPY committed; all six table counts and relationship checks passed; independent projections for both datasets and all 22 incident keys matched.
 - [x] Activate national release, refresh six services, and migrate the sole user-project regional pin; preserve 13 historical qualification runs.
 - [x] Rebuild cavernous-oxygen through RQ: 21 base provenance hashes and all 32 prepared hillslope inputs verified; no SDA fallback.
-- [ ] Retain SSURGO/STATSGO2 direct-source parity, timings and operational evidence.
+- [x] Retain SSURGO/STATSGO2 HTTP parity (100 keys each, five query families), unchanged source fingerprints, timings, six successful jobs and operational evidence.
 
 ## Context
 
@@ -115,7 +115,7 @@ location-by-location live SDA comparison is required.
 
 National data is active on forest. The failed project rebuilt successfully; its
 21 base provenance records and complete set of 32 prepared hillslope inputs passed
-readback. Both dataset canaries passed exact reference comparison for 152 prepared files. Eighty local HTTP benchmark requests passed with zero errors and p95 below 47 ms. Authenticated homepage, profile and project requests returned 200. HTTP source fingerprint readback and final evidence publication are completing. Both archives and extraction are complete. Import preparation completed with 22,073,263 rows and a retained SQL checksum. Staged PostgreSQL execution and independent projection checks passed; database size is 5,187,139,251 bytes including the retained regional release. Inventory found one user project on the regional pin; the other 13 runs are historical qualification fixtures whose accepted evidence will remain unchanged.
+readback. Both dataset canaries passed exact reference comparison for 152 prepared files. Eighty local HTTP benchmark requests passed with zero errors and p95 below 47 ms. Authenticated homepage, profile and project requests returned 200. HTTP source projection checks passed for 100 map units per dataset across all five query families, and source fingerprints remained unchanged. All six normal-queue jobs finished; neither the RQ suspension key nor deployment fence remains. Evidence is retained under artifacts/national. Both archives and extraction are complete. Import preparation completed with 22,073,263 rows and a retained SQL checksum. Staged PostgreSQL execution and independent projection checks passed; database size is 5,187,139,251 bytes including the retained regional release. Inventory found one user project on the regional pin; the other 13 runs are historical qualification fixtures whose accepted evidence will remain unchanged.
 
 Revision note: created after the operator corrected the regional deployment scope.
 
@@ -124,3 +124,17 @@ the canonical shared checkout. Credential bytes, file mode, read-only mount and
 API user remained unchanged; database access and health passed. All five WEPPpy
 consumer images, users and mounts remained identical. The owned RQ fence was
 released after readiness and source-pin migration; it is not retained.
+
+## Final acceptance
+
+The user can now rebuild cavernous-oxygen through the shared national mirror.
+Job a334f0d2-6ab9-420f-b9d1-d4ed397bb07c built soils and
+6b569d94-d1e9-473f-ab4a-0d42f74af2bf prepared all 32 hillslope inputs. All generated
+base provenance records identify the national mirror and verify against file
+hashes. Both national-release canaries preserve the accepted scientific results.
+No software soil formulas, user overrides, or historical qualification artifacts
+were changed. National data loading is complete; live SDA comparison and other
+host deployments remain separate follow-ups.
+
+Revision note: final acceptance records staged/HTTP source parity, coordinated
+activation, recovered project artifacts, canary parity and released worker fence.
