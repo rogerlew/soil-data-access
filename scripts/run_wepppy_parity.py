@@ -84,7 +84,7 @@ def environment_receipt(wepppy_root):
             'thread_environment':{k:os.environ[k] for k in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS')}}
 
 
-def run_case(case, output, ssurgo):
+def run_case(case, output, ssurgo, *, source_identity=None):
     manifest=json.loads((case/'cache.manifest.json').read_text())
     source=case/'cache.sqlite'; before=digest(source.read_bytes())
     if before!=manifest['snapshot']['sha256']:raise ValueError('Fixture hash mismatch')
@@ -102,10 +102,21 @@ def run_case(case, output, ssurgo):
         report['configuration_sha256']=digest(config_path.read_bytes())
         report['captured_assignments']=config['assignments']
     work=output/case.name; work.mkdir()
-    cache=work/'working.sqlite'; shutil.copyfile(source,cache)
+    cache=work/'working.sqlite'
+    if source_identity is None:
+        shutil.copyfile(source, cache)
+    elif cache.exists():
+        raise FileExistsError('JSON candidate cache must start absent')
     soils=work/'base';soils.mkdir()
-    collection=ssurgo.SurgoSoilCollection(mukeys,use_statsgo=profile['use_statsgo'],cache_db_path=str(cache))
-    if collection._sync_n!=0:raise ValueError('Unexpected cache synchronization miss')
+    collection=ssurgo.SurgoSoilCollection(mukeys,use_statsgo=profile['use_statsgo'],cache_db_path=str(cache), **(source_identity or {}))
+    if source_identity is None and collection._sync_n!=0:
+        raise ValueError('Unexpected cache synchronization miss')
+    if source_identity is not None:
+        from wepppy.soils.ssurgo.source import cache_evidence
+        report['retrieval'] = cache_evidence(collection.conn)
+        report['cache_started_absent'] = True
+        if mukeys and not report['retrieval']['fetches']:
+            raise ValueError('No HTTP retrieval evidence for candidate')
     collection.makeWeppSoils(initial_sat=profile['initial_sat'],ksflag=profile['ksflag'],max_workers=1)
     collection.writeWeppSoils(wd=str(soils),version=profile['version'])
     decisions=[]
@@ -149,7 +160,7 @@ def run_case(case, output, ssurgo):
             old=historical.read_bytes();new=current.read_bytes()
             report['historical_comparisons'].append({'role':role,'historical_sha256':digest(old),'rebuilt_sha256':digest(new),'canonical_equal':canonical(old)==canonical(new),'historical_canonical_sha256':digest(canonical(old)),'rebuilt_canonical_sha256':digest(canonical(new))})
     report['artifacts']=[artifact_info(p,work) for p in sorted(work.rglob('*.sol'))]
-    report['status']='reference_built_historical_comparison_separate'
+    report['status']=('reference_built_historical_comparison_separate' if source_identity is None else 'json_candidate_built_historical_comparison_separate')
     collection.conn.close()
     if digest(source.read_bytes())!=before:raise ValueError('Frozen fixture changed')
     return report

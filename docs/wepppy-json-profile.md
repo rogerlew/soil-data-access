@@ -57,3 +57,11 @@ The exact column/extraction/order mapping is contracts/wepppy-query-profiles.jso
 For the component join, resolve the existing ambiguous `ORDER BY mukey` to the
 selected `component.mukey`, consistent with the retained source audit. Do not
 invent secondary sort columns to choose a different duplicate winner.
+
+## Coordinated client
+
+The [WEPPpy integration](wepppy-client-integration.md) selects a release explicitly,
+uses isolated cache identities, and retains server/retrieval provenance. Its strict
+client limits are 64 KiB metadata, 16 MiB query responses, 64 JSON nesting levels,
+and an absolute 30-second request deadline. These are explicit client constraints,
+not broader SDA compatibility claims.
