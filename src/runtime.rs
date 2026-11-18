@@ -86,7 +86,8 @@ mod tests {
         let task = std::thread::spawn(move || {
             let (mut socket, _) = listener.accept().unwrap();
             let mut request = [0; 1024];
-            socket.read(&mut request).unwrap();
+            let count = socket.read(&mut request).unwrap();
+            assert!(count > 0);
             write!(
                 socket,
                 "HTTP/1.0 200 OK\r\nContent-Length: {}\r\n\r\n{}",
