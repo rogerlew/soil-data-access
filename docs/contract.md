@@ -17,6 +17,14 @@ Repository: https://github.com/rogerlew/soil-data-access.
 Code and documentation use the MIT License, selected by the operator.
 The code license does not relicense third-party datasets. Clearly identify the service as unofficial and attribute USDA data.
 
+## Revised rollout direction
+
+The operator approved [mirror-first with SDA fallback](mirror-first-rollout.md).
+Treat retained SSURGO/STATSGO fixture parity as sufficient to proceed with a bounded
+rollout; defer comprehensive geographic/live parity until SDA recovers. Implement
+broader data loading, observable source-separated fallback, and environment defaults.
+The current explicit-selection client has not yet implemented this amendment.
+
 ## Architecture and deployment
 
 Use the Rust recommendation as the implementation direction with PostgreSQL/PostGIS;

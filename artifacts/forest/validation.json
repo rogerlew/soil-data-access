@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-18T03:05:51.857096+00:00",
+  "claim": "forest regional official import and bounded queued soil parity; shared defaults not activated",
+  "datasets": [
+    "SSURGO",
+    "STATSGO2"
+  ],
+  "mukeys_outside_all_replay_caches": [
+    78905,
+    1390208
+  ],
+  "worker_image": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+  "worker_user": "1000:993",
+  "api_user": "10001:10001",
+  "api_code_revision": "9d09f7ff3bca5d243075763055155c721d84b065",
+  "source_files": {
+    "scripts/forest_qualification.py": "70db4b5ce650592cbaa4394407f4b682d70f8528412dbecf6774610a8753e812",
+    "scripts/verify_qualification.py": "2d2074f2cc8cdb21899c9ec0d16019e8a7e9a78b88199210a8fb0b3cb393cf0b",
+    "scripts/measure_forest.py": "83188587908e59698e0f0626d7710f724666e6c6737f4467941cbc97961f6413",
+    "scripts/import_official.py": "ca254adbc6df22d84b74fe5ce541b87ae489ed7cb255c720bb06501c8cb8c635",
+    "scripts/verify_official.py": "534139b32dcc54b2cb77e30182cca75a73e885d92134f5415755fae1e1072b8d"
+  },
+  "wepppy_files": {
+    "wepppy/soils/ssurgo/source.py": "33e4b4af598bb03a05d6317113d3ea96b6aa4bd192fcac3c09ded46e3701b8d7",
+    "wepppy/soils/ssurgo/selection.py": "871d71ec05829e9d4565181ae14544df283952ba6b13d07037454c6115daf6e3",
+    "wepppy/soils/ssurgo/ssurgo.py": "a384f279102594ae481526aebf0f46ac9be1140f552de47ca1507cc91ca0e744",
+    "wepppy/nodb/core/soils.py": "42de5560ab10ca477e1508611bce95b82771b2e65f7dcb8c5c3967dcaeb8e665",
+    "docker/docker-compose.dev.yml": "f9e38d5c0ced0f973d2c23d637a8261aed531f495e7e73098b354aaac22f49b0"
+  },
+  "wepppy_candidate_revision": "09f6633e660c73570cc3f181bef75c6b49853ef3",
+  "source_binding_scope": "Publication snapshot. Queued builds preceded the additive selected-cache selection.json cleanup and TCP database health refinements. Scientific builder and acquisition paths are unchanged; four real NoDb tests cover cleanup and forest DB restart/readiness confirms the health refinement.",
+  "forest_database_restart_preserves_release": true
+}

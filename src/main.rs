@@ -1,4 +1,5 @@
 mod planner;
+mod runtime;
 
 use axum::{
     extract::{rejection::FormRejection, DefaultBodyLimit, State},
@@ -242,6 +243,15 @@ async fn invalid(State(app): State<Arc<App>>) -> Response {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    if std::env::args().nth(1).as_deref() == Some("--healthcheck") {
+        let release = std::env::var("SOIL_DATA_RELEASE").ok();
+        return runtime::probe(
+            "127.0.0.1:8080".parse()?,
+            release.as_deref(),
+            Duration::from_secs(3),
+        )
+        .map_err(|_| "Soil service is not ready".into());
+    }
     let code_revision = std::env::var("CODE_REVISION")?;
     if code_revision.len() != 40
         || !code_revision
@@ -251,7 +261,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         return Err("CODE_REVISION must be a lowercase commit hash".into());
     }
     let app = Arc::new(App {
-        database_url: std::env::var("DATABASE_URL")?,
+        database_url: runtime::database_url()?,
         code_revision,
         slots: Semaphore::new(8),
         counter: AtomicU64::new(0),

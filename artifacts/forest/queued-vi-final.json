@@ -1,0 +1,927 @@
+{
+  "scope": "single-soil-mode real queued qualification; direct official reference; no live SDA claim",
+  "mukey": 1390208,
+  "dataset": "STATSGO2",
+  "release": "forest-id-20261001-vi-20161013-v1",
+  "cases": {
+    "primary_cold": {
+      "job_id": "18bdd8a6-121f-44f6-b008-5a322b89cb45",
+      "base_file": "/wc1/runs/so/soil-mirror-qualification-vi-final-primary/soils/1390208.sol",
+      "provenance": {
+        "cache_file": "ssurgo_tabular_cache.c36da0938b83867a3b40935d0e4906a3ceb90dc17b562a3a0a8c6e8e909ce676.sqlite",
+        "cokey": 14276903,
+        "mukey": 1390208,
+        "schema_version": 1,
+        "selection": {
+          "actual_supplier": {
+            "endpoint": "http://soil-api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-id-20261001-vi-20161013-v1"
+          },
+          "attempts": [
+            {
+              "ended_at": "2026-11-18T03:02:14.087411+00:00",
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "outcome": "success",
+              "reason": "selected",
+              "started_at": "2026-11-18T03:02:13.842682+00:00"
+            }
+          ],
+          "configured_primary": {
+            "endpoint": "http://soil-api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-id-20261001-vi-20161013-v1"
+          },
+          "historical_rows_unknown": false,
+          "policy": "mirror-first",
+          "schema_version": 1,
+          "selected_at": "2026-11-18T03:02:14.087423+00:00"
+        },
+        "soil_sha256": "f63d9c8c6efd5b00be74e1a2964c67795bff0470f8a1d18d8a7a8d285db06bfa",
+        "source": {
+          "binding": {
+            "historical_rows_unknown": false,
+            "identity": {
+              "endpoint": "http://soil-api:8080/Tabular/post.rest",
+              "profile": "wepppy-json-v1",
+              "release": "forest-id-20261001-vi-20161013-v1"
+            },
+            "schema_version": 1
+          },
+          "fetches": [
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 1,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:13.981662+00:00",
+              "processed_records_sha256": "97f58a39c1425bab2e5366a70abfbbb3942fa3a767f3bfc83c287f0c7744e010",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "0014f1bb4a01d8e62487e9b12c7d0d8996b9544f6bc0a7945f26c9c3970ce914",
+              "row_count": 19,
+              "table": "component"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 19,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.019642+00:00",
+              "processed_records_sha256": "bb2d0881abc23919becf3ded05366438deea4575bfd0b4546decd27a3cf5ce45",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "fa30e31a3c9e41113c30b97fcc8c7478f2c0fa2b5357e9fcc8c6b0dadf33258d",
+              "row_count": 76,
+              "table": "chorizon"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 19,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.043855+00:00",
+              "processed_records_sha256": "b8304d075e61cb2c25a0dd5350ccfa4198dc1d535ccc1c5426e59e6b4ed992ba",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "83669c04135b23b1e965a3b0664a34ffa1f57b4ee3d21fce5a73c3ecaead37b5",
+              "row_count": 19,
+              "table": "corestrictions"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 76,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.062547+00:00",
+              "processed_records_sha256": "73a30b503205f5f04f08b2dcf0ba1ab1183f3955c2f500e3b967b926d4aab0b6",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "39eec1eae1f566a7c603f6db107225274950cd9a3eb866c7d73335ec5402ce4c",
+              "row_count": 38,
+              "table": "chfrags"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 76,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.081359+00:00",
+              "processed_records_sha256": "2dd79a8e2cc96a19460c9490825c2330039e5bdd9e56b6afe6831dd31f047201",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "ccd80ae60b533800ed9f705a0b49f7a68b466a49fe547d57ce7983aa30294e9a",
+              "row_count": 76,
+              "table": "chtexturegrp"
+            }
+          ]
+        }
+      },
+      "base_canonical_sha256": "f372085cdf15f6d73a1861e7126b1f80314fafc33ecf51cbd3314943cbbffb9f",
+      "prepared": {
+        "p1.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p10.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p11.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p12.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p13.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p14.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p15.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p16.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p17.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p18.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p19.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p2.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p20.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p21.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p22.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p23.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p24.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p25.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p26.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p27.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p28.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p29.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p3.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p30.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p31.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p32.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p33.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p34.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p35.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p36.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p37.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p38.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p39.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p4.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p40.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p41.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p42.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p43.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p44.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p45.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p46.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p47.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p48.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p49.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p5.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p50.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p51.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p52.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p53.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p54.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p55.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p56.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p57.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p58.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p59.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p6.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p60.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p61.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p62.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p63.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p64.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p65.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p66.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p67.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p68.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p69.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p7.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p70.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p71.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p72.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p73.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p74.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p75.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p76.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p8.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p9.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40"
+      }
+    },
+    "primary_warm": {
+      "job_id": "61932078-5342-4a8d-832e-56bc19ec4f3f",
+      "base_file": "/wc1/runs/so/soil-mirror-qualification-vi-final-primary/soils/1390208.sol",
+      "provenance": {
+        "cache_file": "ssurgo_tabular_cache.c36da0938b83867a3b40935d0e4906a3ceb90dc17b562a3a0a8c6e8e909ce676.sqlite",
+        "cokey": 14276903,
+        "mukey": 1390208,
+        "schema_version": 1,
+        "selection": {
+          "actual_supplier": {
+            "endpoint": "http://soil-api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-id-20261001-vi-20161013-v1"
+          },
+          "attempts": [
+            {
+              "ended_at": "2026-11-18T03:02:36.961713+00:00",
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "outcome": "success",
+              "reason": "cache_reused",
+              "started_at": "2026-11-18T03:02:36.948132+00:00"
+            }
+          ],
+          "configured_primary": {
+            "endpoint": "http://soil-api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-id-20261001-vi-20161013-v1"
+          },
+          "historical_rows_unknown": false,
+          "policy": "mirror-first",
+          "schema_version": 1,
+          "selected_at": "2026-11-18T03:02:36.961726+00:00"
+        },
+        "soil_sha256": "7203c79a47e272e37ed311e72f510afb7e1d7f05a60aed695a04034b3f97f155",
+        "source": {
+          "binding": {
+            "historical_rows_unknown": false,
+            "identity": {
+              "endpoint": "http://soil-api:8080/Tabular/post.rest",
+              "profile": "wepppy-json-v1",
+              "release": "forest-id-20261001-vi-20161013-v1"
+            },
+            "schema_version": 1
+          },
+          "fetches": [
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 1,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:13.981662+00:00",
+              "processed_records_sha256": "97f58a39c1425bab2e5366a70abfbbb3942fa3a767f3bfc83c287f0c7744e010",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "0014f1bb4a01d8e62487e9b12c7d0d8996b9544f6bc0a7945f26c9c3970ce914",
+              "row_count": 19,
+              "table": "component"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 19,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.019642+00:00",
+              "processed_records_sha256": "bb2d0881abc23919becf3ded05366438deea4575bfd0b4546decd27a3cf5ce45",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "fa30e31a3c9e41113c30b97fcc8c7478f2c0fa2b5357e9fcc8c6b0dadf33258d",
+              "row_count": 76,
+              "table": "chorizon"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 19,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.043855+00:00",
+              "processed_records_sha256": "b8304d075e61cb2c25a0dd5350ccfa4198dc1d535ccc1c5426e59e6b4ed992ba",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "83669c04135b23b1e965a3b0664a34ffa1f57b4ee3d21fce5a73c3ecaead37b5",
+              "row_count": 19,
+              "table": "corestrictions"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 76,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.062547+00:00",
+              "processed_records_sha256": "73a30b503205f5f04f08b2dcf0ba1ab1183f3955c2f500e3b967b926d4aab0b6",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "39eec1eae1f566a7c603f6db107225274950cd9a3eb866c7d73335ec5402ce4c",
+              "row_count": 38,
+              "table": "chfrags"
+            },
+            {
+              "identity": {
+                "endpoint": "http://soil-api:8080/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "key_count": 76,
+              "metadata": {
+                "observed_at": "2026-11-18T03:02:13.954690+00:00",
+                "release_manifest": {
+                  "datasets": [
+                    {
+                      "dataset": "SSURGO",
+                      "release_id": "2026-10-01",
+                      "scope": "Idaho SSURGO official state GeoPackage",
+                      "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040"
+                    },
+                    {
+                      "dataset": "STATSGO2",
+                      "release_id": "2016-10-13",
+                      "scope": "Virgin Islands STATSGO2 official archive",
+                      "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e",
+                      "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525"
+                    }
+                  ],
+                  "id": "forest-id-20261001-vi-20161013-v1"
+                },
+                "server_code_revision_observed": "9d09f7ff3bca5d243075763055155c721d84b065"
+              },
+              "observed_at": "2026-11-18T03:02:14.081359+00:00",
+              "processed_records_sha256": "2dd79a8e2cc96a19460c9490825c2330039e5bdd9e56b6afe6831dd31f047201",
+              "response_origin": "http://soil-api:8080",
+              "response_sha256": "ccd80ae60b533800ed9f705a0b49f7a68b466a49fe547d57ce7983aa30294e9a",
+              "row_count": 76,
+              "table": "chtexturegrp"
+            }
+          ]
+        }
+      },
+      "base_canonical_sha256": "f372085cdf15f6d73a1861e7126b1f80314fafc33ecf51cbd3314943cbbffb9f",
+      "prepared": {
+        "p1.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p10.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p11.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p12.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p13.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p14.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p15.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p16.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p17.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p18.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p19.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p2.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p20.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p21.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p22.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p23.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p24.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p25.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p26.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p27.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p28.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p29.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p3.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p30.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p31.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p32.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p33.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p34.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p35.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p36.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p37.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p38.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p39.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p4.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p40.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p41.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p42.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p43.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p44.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p45.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p46.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p47.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p48.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p49.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p5.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p50.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p51.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p52.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p53.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p54.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p55.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p56.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p57.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p58.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p59.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p6.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p60.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p61.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p62.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p63.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p64.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p65.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p66.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p67.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p68.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p69.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p7.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p70.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p71.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p72.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p73.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p74.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p75.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p76.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p8.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p9.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40"
+      }
+    },
+    "official_reference": {
+      "job_id": "b821d385-bab5-401e-9ab4-4d6d8d435e0f",
+      "base_file": "/wc1/runs/so/soil-mirror-qualification-vi-final-reference/soils/1390208.sol",
+      "provenance": {
+        "cache_file": "ssurgo_tabular_cache.sqlite",
+        "cokey": 14276903,
+        "mukey": 1390208,
+        "schema_version": 1,
+        "soil_sha256": "937979574b771a5ef5d231f39298e3b780e6420e9c2a30223c8633fe644d3837",
+        "source": {
+          "binding": {
+            "historical_rows_unknown": true,
+            "identity": {
+              "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+              "profile": "legacy-xml",
+              "release": null
+            },
+            "schema_version": 1
+          },
+          "fetches": []
+        }
+      },
+      "base_canonical_sha256": "f372085cdf15f6d73a1861e7126b1f80314fafc33ecf51cbd3314943cbbffb9f",
+      "prepared": {
+        "p1.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p10.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p11.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p12.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p13.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p14.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p15.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p16.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p17.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p18.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p19.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p2.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p20.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p21.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p22.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p23.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p24.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p25.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p26.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p27.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p28.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p29.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p3.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p30.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p31.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p32.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p33.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p34.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p35.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p36.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p37.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p38.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p39.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p4.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p40.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p41.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p42.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p43.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p44.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p45.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p46.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p47.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p48.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p49.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p5.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p50.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p51.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p52.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p53.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p54.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p55.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p56.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p57.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p58.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p59.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p6.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p60.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p61.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p62.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p63.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p64.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p65.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p66.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p67.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p68.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p69.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p7.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p70.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p71.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p72.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p73.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p74.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p75.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p76.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p8.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p9.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40"
+      }
+    },
+    "fallback_warm": {
+      "job_id": "4bfe5073-e633-4512-8dc1-2465b8ab2798",
+      "base_file": "/wc1/runs/so/soil-mirror-qualification-vi-final-fallback/soils/1390208.sol",
+      "provenance": {
+        "cache_file": "ssurgo_tabular_cache.sqlite",
+        "cokey": 14276903,
+        "mukey": 1390208,
+        "schema_version": 1,
+        "selection": {
+          "actual_supplier": {
+            "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+            "profile": "legacy-xml",
+            "release": null
+          },
+          "attempts": [
+            {
+              "ended_at": "2026-11-18T03:03:25.880349+00:00",
+              "identity": {
+                "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+                "profile": "wepppy-json-v1",
+                "release": "forest-id-20261001-vi-20161013-v1"
+              },
+              "outcome": "unavailable",
+              "reason": "connection_failed",
+              "started_at": "2026-11-18T03:03:25.794247+00:00"
+            },
+            {
+              "ended_at": "2026-11-18T03:03:25.895335+00:00",
+              "identity": {
+                "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+                "profile": "legacy-xml",
+                "release": null
+              },
+              "outcome": "success",
+              "reason": "cache_reused",
+              "started_at": "2026-11-18T03:03:25.880387+00:00"
+            }
+          ],
+          "configured_primary": {
+            "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-id-20261001-vi-20161013-v1"
+          },
+          "historical_rows_unknown": true,
+          "policy": "mirror-first",
+          "schema_version": 1,
+          "selected_at": "2026-11-18T03:03:25.895348+00:00"
+        },
+        "soil_sha256": "e11d97f085719102cfb4f12489c389cadc4b76265f6a60ec535c1f0e0da292bc",
+        "source": {
+          "binding": {
+            "historical_rows_unknown": true,
+            "identity": {
+              "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+              "profile": "legacy-xml",
+              "release": null
+            },
+            "schema_version": 1
+          },
+          "fetches": []
+        }
+      },
+      "base_canonical_sha256": "f372085cdf15f6d73a1861e7126b1f80314fafc33ecf51cbd3314943cbbffb9f",
+      "prepared": {
+        "p1.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p10.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p11.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p12.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p13.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p14.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p15.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p16.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p17.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p18.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p19.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p2.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p20.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p21.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p22.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p23.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p24.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p25.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p26.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p27.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p28.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p29.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p3.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p30.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p31.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p32.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p33.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p34.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p35.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p36.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p37.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p38.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p39.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p4.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p40.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p41.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p42.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p43.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p44.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p45.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p46.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p47.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p48.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p49.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p5.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p50.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p51.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p52.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p53.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p54.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p55.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p56.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p57.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p58.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p59.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p6.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p60.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p61.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p62.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p63.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p64.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p65.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p66.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p67.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p68.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p69.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p7.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p70.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p71.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p72.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p73.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p74.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p75.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p76.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p8.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40",
+        "p9.sol": "e6409beae6c4fe5398d07bb491f35fa8696ca29c7cf397e07b0ea7e58f3d8d40"
+      }
+    },
+    "both_unavailable": {
+      "job_id": "e20d3f0f-2d0a-45aa-9fd5-6e05b39dc585",
+      "failed": true,
+      "selection": {
+        "actual_supplier": null,
+        "attempts": [
+          {
+            "ended_at": "2026-11-18T03:03:49.922654+00:00",
+            "identity": {
+              "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+              "profile": "wepppy-json-v1",
+              "release": "forest-id-20261001-vi-20161013-v1"
+            },
+            "outcome": "unavailable",
+            "reason": "connection_failed",
+            "started_at": "2026-11-18T03:03:49.837065+00:00"
+          },
+          {
+            "ended_at": "2026-11-18T03:03:50.020579+00:00",
+            "identity": {
+              "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+              "profile": "legacy-xml",
+              "release": null
+            },
+            "outcome": "unavailable",
+            "reason": "connection_failed",
+            "started_at": "2026-11-18T03:03:49.922681+00:00"
+          }
+        ],
+        "configured_primary": {
+          "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "forest-id-20261001-vi-20161013-v1"
+        },
+        "historical_rows_unknown": null,
+        "policy": "mirror-first",
+        "schema_version": 1,
+        "selected_at": "2026-11-18T03:03:50.020599+00:00"
+      }
+    }
+  },
+  "exact_base_and_prepared_parity": true
+}

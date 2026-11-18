@@ -1,0 +1,374 @@
+{
+  "claim": "local_api_cache_record_parity_not_wepppy_soil_or_release_acceptance",
+  "cases": [
+    {
+      "case": "ssurgo-001",
+      "release": {
+        "id": "replay-ssurgo-001-575623478f4a",
+        "datasets": [
+          {
+            "dataset": "WEPPPY_CACHE_REPLAY",
+            "release_id": "replay-ssurgo-001-575623478f4a",
+            "scope": "Processed project cache ssurgo-001; test replay only; source vintage unknown",
+            "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-001",
+            "sha256": "575623478f4acd73a5ffeb63e0d57346d4f2e543c5fc1dc5534c24bf8cfc27fb"
+          }
+        ]
+      },
+      "families": [
+        {
+          "family": "component",
+          "rows": 1041,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "fd4fd56062c0f60c4f8b9edf034ef1e8ca79497411eb8c83e5cbe38033cf79d3"
+        },
+        {
+          "family": "chorizon",
+          "rows": 3086,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "5e098d427322835b88bcb863e03c58b0de169f70106d1c3278f81533ad1840a9"
+        },
+        {
+          "family": "chfrags",
+          "rows": 2163,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "f27dec5c73ba6404a150fe70dab2f1f34cf7c0d82d9c1b6241bdb7325147c150"
+        },
+        {
+          "family": "chtexturegrp",
+          "rows": 3085,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "356147892b8de039554db3c3856fe358b96fad52f5119d86f0f483da1b7e8c14"
+        },
+        {
+          "family": "corestrictions",
+          "rows": 496,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "e8a32eed7b0f09f67ba75c8276ab0b9aac37b24c5f096a2e20ac1e07e78a11dc"
+        }
+      ],
+      "duplicate_import_rolled_back": true
+    },
+    {
+      "case": "ssurgo-002",
+      "release": {
+        "id": "replay-ssurgo-002-a60e41a66ad3",
+        "datasets": [
+          {
+            "dataset": "WEPPPY_CACHE_REPLAY",
+            "release_id": "replay-ssurgo-002-a60e41a66ad3",
+            "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+            "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002",
+            "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772"
+          }
+        ]
+      },
+      "families": [
+        {
+          "family": "component",
+          "rows": 133,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "ef3f0523fc5e8b82c10429af50b851cf25461f8e10dfc34514cdede6f262bab8"
+        },
+        {
+          "family": "chorizon",
+          "rows": 713,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "57167dc5aaedd4b39342fac532b3fdd2c2df044a7e213720ef3f1f8f09540463"
+        },
+        {
+          "family": "chfrags",
+          "rows": 486,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "704418ee62aaffea37d0ae21d58da291faa9b527f9a693d9cc214919e6498875"
+        },
+        {
+          "family": "chtexturegrp",
+          "rows": 713,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "6968b92bc55d45b2240c76a6bf4203a5b38238ec9dea35f32bf9d882cfbffc40"
+        },
+        {
+          "family": "corestrictions",
+          "rows": 96,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "86a9ff41dea68513f045115e224ad21d0bb5d4b8ad46bc78efdb9b41845894a0"
+        }
+      ],
+      "duplicate_import_rolled_back": true
+    },
+    {
+      "case": "ssurgo-003",
+      "release": {
+        "id": "replay-ssurgo-003-f8d003f29077",
+        "datasets": [
+          {
+            "dataset": "WEPPPY_CACHE_REPLAY",
+            "release_id": "replay-ssurgo-003-f8d003f29077",
+            "scope": "Processed project cache ssurgo-003; test replay only; source vintage unknown",
+            "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-003",
+            "sha256": "f8d003f290772118df7e1cd5ba1d5e9dbb4b3b7a75f5ac7532b61cc626de5f7c"
+          }
+        ]
+      },
+      "families": [
+        {
+          "family": "component",
+          "rows": 758,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "8ea23cbb70d9a8cdf4e15ec1ca43924fe642d27223c3634e3fad14ed1f89387d"
+        },
+        {
+          "family": "chorizon",
+          "rows": 3828,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "23999468dfd7721d1e10d363e612135ec3f74aa81b7aed059cea815545407445"
+        },
+        {
+          "family": "chfrags",
+          "rows": 2821,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "efe99e1ce77a37925ba62c8e3f9127c47f54159091c63db4312474901fd32af9"
+        },
+        {
+          "family": "chtexturegrp",
+          "rows": 3828,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "8706290ebee16465f7c0114b9ce97c2d1cae7c51ff0009a7ef5e7c1aac6e7dfe"
+        },
+        {
+          "family": "corestrictions",
+          "rows": 559,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "3ddb79fc2598d7fabf4cbfd1a625f61a6b5fbb558e47ce7d6cd4d25a6e1ca095"
+        }
+      ],
+      "duplicate_import_rolled_back": true
+    },
+    {
+      "case": "ssurgo-004",
+      "release": {
+        "id": "replay-ssurgo-004-4d251335977b",
+        "datasets": [
+          {
+            "dataset": "WEPPPY_CACHE_REPLAY",
+            "release_id": "replay-ssurgo-004-4d251335977b",
+            "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+            "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004",
+            "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9"
+          }
+        ]
+      },
+      "families": [
+        {
+          "family": "component",
+          "rows": 22,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "810f84d529b3b55cfd0011329a2250932bd95eb452a25da2b3c3126dd7025db7"
+        },
+        {
+          "family": "chorizon",
+          "rows": 75,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "c6625c98578966cb75841b81f22a6761f23352535b91d4f329fc4aa01bd68144"
+        },
+        {
+          "family": "chfrags",
+          "rows": 61,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "a44e63b19f4f1af9746d6d6d63bfec9197a830e8773b93d8b74ea49c78990dde"
+        },
+        {
+          "family": "chtexturegrp",
+          "rows": 75,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "6a6f78e814efacff50c67a132c6cb87652dc4d9bb044465c4d9973c738a09123"
+        },
+        {
+          "family": "corestrictions",
+          "rows": 10,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "5b966ba407a29274c40518d64f10bce6458abe79809920a5189c0b9c6b7908e3"
+        }
+      ],
+      "duplicate_import_rolled_back": true
+    },
+    {
+      "case": "statsgo-001",
+      "release": {
+        "id": "replay-statsgo-001-2725874f3fe9",
+        "datasets": [
+          {
+            "dataset": "WEPPPY_CACHE_REPLAY",
+            "release_id": "replay-statsgo-001-2725874f3fe9",
+            "scope": "Processed project cache statsgo-001; test replay only; source vintage unknown",
+            "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/statsgo-001",
+            "sha256": "2725874f3fe9cdb1397b87dd2ad9edbf4cabc978e51f57e908645c785a6786ba"
+          }
+        ]
+      },
+      "families": [
+        {
+          "family": "component",
+          "rows": 0,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "family": "chorizon",
+          "rows": 0,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "family": "chfrags",
+          "rows": 0,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "family": "chtexturegrp",
+          "rows": 0,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "family": "corestrictions",
+          "rows": 0,
+          "requests": 2,
+          "cache_records_equal": true,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "duplicate_import_rolled_back": true
+    }
+  ],
+  "authored_rows": [
+    {
+      "id": "component-empty",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "chorizon-empty",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "chfrags-empty",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "chtexturegrp-empty",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "corestrictions-empty",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "component-exact-id-null-decimal",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "component-first-pair-wins",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "texture-first-key-wins",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "restriction-null-and-text",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "fragments-decimal",
+      "raw_rows_and_exact_wire_values_match": true
+    },
+    {
+      "id": "horizon-decimal-and-null",
+      "raw_rows_and_exact_wire_values_match": true
+    }
+  ],
+  "controls": {
+    "unsupported_queries_rejected": 7,
+    "malformed_or_oversized_requests_rejected": 3,
+    "role_write_denied": true,
+    "overload_status": 503,
+    "server_statement_timeouts": 8,
+    "recovery_status": 200,
+    "remaining_active_serving_queries": 0
+  },
+  "lifecycle": {
+    "inflight_release_and_rows_stay_consistent": true,
+    "next_request_observes_new_release": true,
+    "disconnect_cleanup_seconds": 5.109665641095489,
+    "restart_preserves_release": true
+  },
+  "output_limits": {
+    "response_bytes_exceeded_status": 413,
+    "row_count_exceeded_status": 413,
+    "recovery_status": 200
+  },
+  "database_version": "PostgreSQL 17.12 (Debian 17.12-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit\nPOSTGIS=\"3.7.0 1fdbb1c\" [EXTENSION] PGSQL=\"170\" GEOS=\"3.15.0-CAPI-1.21.0\" PROJ=\"9.9.0 NETWORK_ENABLED=OFF URL_ENDPOINT=https://cdn.proj.org USER_WRITABLE_DIRECTORY=/var/lib/postgresql/.local/share/proj DATABASE_PATH=/usr/share/proj/proj.db\" (compiled against PROJ 9.9.0) LIBXML=\"2.9.14\" LIBJSON=\"0.18\" LIBPROTOBUF=\"1.5.1\" WAGYU=\"0.5.0 (Internal)\" TOPOLOGY",
+  "metadata": {
+    "active_release": {
+      "datasets": [
+        {
+          "dataset": "WEPPPY_CACHE_REPLAY",
+          "release_id": "replay-statsgo-001-2725874f3fe9",
+          "scope": "Processed project cache statsgo-001; test replay only; source vintage unknown",
+          "sha256": "2725874f3fe9cdb1397b87dd2ad9edbf4cabc978e51f57e908645c785a6786ba",
+          "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/statsgo-001"
+        }
+      ],
+      "id": "replay-statsgo-001-2725874f3fe9"
+    },
+    "code_revision": "7316c2430989b292d2a7f264355db10c9b82496e",
+    "contract_version": "wepppy-json-v1",
+    "official": false,
+    "ready": true,
+    "service": "soil-data-access"
+  },
+  "code_revision": "7316c2430989b292d2a7f264355db10c9b82496e",
+  "observed_at": "2026-11-18T02:56:45.852438+00:00",
+  "source_files": {
+    "Cargo.lock": "5902bbac66f6847188c0f8dad0c69cad6a5d3e43ddab037f26ca79057e21bdfd",
+    "compose.yaml": "634ca86042af9bf666a96e61fe5060ab8bad2bb4a9d937270a75ca859213dc8e",
+    "Dockerfile": "3e006ded094f2e505ad74f8bc169391e7fe413b0a3cd2e0666c24a012ede8afa",
+    "src/main.rs": "08299935437e407a83153488d4ebe199729570191352d66417b9ade00ab1ce0d",
+    "src/planner.rs": "7f05d13368f675151ae1aaf61332201bed015554c87af3b9f24cf549fdd45c21",
+    "scripts/replay_cache.py": "c8ed80568a1d2f3264e1cf2e6c818fb85475ddbf11e57988012905fe97ea3a09",
+    "scripts/verify_runtime.py": "935f04e46ad8b42e96ec047feddeccbb5922705b6fdccb10275b25bd76c5f72b",
+    "migrations/001_replay.sql": "cdabf14b8f31e85eea05874f39e10d4e1a907a9896ba4de6f183b44fbe92435b",
+    "src/runtime.rs": "5f111d4254a9b206b65ed233f8f1064f7b1f5a0b4abb341c6bff2ce6842de794"
+  },
+  "request_trace": {
+    "file": "artifacts/runtime/forest-runtime-api.log",
+    "sha256": "668ce6fc3505be1fe1ed4e4d37f8423f6cbf13d9bc80a60def82d625d1034e24"
+  },
+  "api_image_id": "sha256:52ce746bcf1ed99183c62f0d2c93875904c94e60688fa2842e38980e16b76149"
+}

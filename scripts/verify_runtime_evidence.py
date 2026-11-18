@@ -13,7 +13,7 @@ def verify(root=ROOT):
         raise ValueError('Wrong evidence scope')
     if receipt['code_revision'] != receipt['metadata']['code_revision']:
         raise ValueError('Metadata code revision differs')
-    required = {'Cargo.lock', 'compose.yaml', 'Dockerfile', 'src/main.rs', 'src/planner.rs',
+    required = {'Cargo.lock', 'compose.yaml', 'Dockerfile', 'src/main.rs', 'src/planner.rs', 'src/runtime.rs',
                 'scripts/replay_cache.py', 'scripts/verify_runtime.py', 'migrations/001_replay.sql'}
     if set(receipt['source_files']) != required:
         raise ValueError('Missing source binding')

@@ -1,8 +1,14 @@
 # Initial WEPPpy release acceptance
 
-Status: operator-approved acceptance policy, 2026-11-17. **No release has passed.**
+Status: operator-approved acceptance policy, revised 2026-11-18. **No release has passed.**
 This is the normative first-release gate. Full SDA parity is deferred and must not
 be implied by satisfying this gate.
+
+The [mirror-first rollout amendment](mirror-first-rollout.md) takes precedence:
+existing SSURGO/STATSGO fixture parity is sufficient to proceed with the bounded
+rollout. Comprehensive geographic/live SDA comparison is deferred until recovery.
+The intended deployment default is the mirror with recorded USDA SDA fallback.
+Current runtime still uses explicit source selection; the amendment is pending implementation.
 
 ## Authority, rationale, and claim
 
@@ -69,7 +75,9 @@ JSON path. Synthetic XML is permissible as labeled test input, never as live evi
 
 ## Gate 3: production source import and coverage
 
-Validate official source imports independently of the cache adapter. Check hashes,
+Load the serving dataset and validate import mechanics independently of the cache
+adapter. Use bounded direct-reader samples; comprehensive geographic/live-source
+parity is deferred and is not a first-rollout gate. Check hashes,
 schemas, relationship/key coverage, units, precision, nulls, and source-record
 projections against a direct reference reader that does not reuse the candidate
 importer/translator. Preserve the source values. Do not repair a mismatch by copying
@@ -102,9 +110,9 @@ Tie every acceptance result to the exact code, image, dataset manifests, configu
 and corpus hashes. Missing/stale evidence fails closed. Record all cases, including
 failures and exclusions. Assessment/parser tests are not deployment acceptance tests.
 
-Use explicit endpoint/profile selection and isolated cache provenance. Preserve the
-existing upstream XML workflow and original caches; no silent endpoint failover or
-mixing releases. Stage a selected canary and inspect freshly generated inputs before
+Use deployment-default mirror selection with explicit project overrides and isolated
+cache provenance. Implement observable SDA fallback under the rollout amendment;
+preserve original caches and never mix source rows within a collection. Stage a selected canary and inspect freshly generated inputs before
 expansion. Rollback restores the previous tested endpoint/profile/cache and, after
 the first local release, the prior validated local image/data pair. A still-down
 USDA endpoint must not be described as an available recovery path.

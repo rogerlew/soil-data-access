@@ -1,0 +1,46 @@
+[
+  {
+    "receipt": "queued-id-final.json",
+    "readback": [
+      {
+        "case": "primary_warm",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      },
+      {
+        "case": "official_reference",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      },
+      {
+        "case": "fallback_warm",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      }
+    ],
+    "failed_job_has_no_generated_soils": true,
+    "note": "Cold and warm canonical hashes were compared per job; warm build replaces the same primary artifact paths."
+  },
+  {
+    "receipt": "queued-vi-final.json",
+    "readback": [
+      {
+        "case": "primary_warm",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      },
+      {
+        "case": "official_reference",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      },
+      {
+        "case": "fallback_warm",
+        "base_sha256_verified": true,
+        "prepared_files": 76
+      }
+    ],
+    "failed_job_has_no_generated_soils": true,
+    "note": "Cold and warm canonical hashes were compared per job; warm build replaces the same primary artifact paths."
+  }
+]

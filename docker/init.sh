@@ -1,6 +1,13 @@
 #!/bin/sh
 set -eu
-psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" --set=ON_ERROR_STOP=1 --set=serve_password="$SOIL_SERVE_PASSWORD" <<'SQL'
+if [ -n "${SOIL_SERVE_PASSWORD_FILE:-}" ]; then
+    [ -z "${SOIL_SERVE_PASSWORD:-}" ] || { echo "Set one serving password source" >&2; exit 1; }
+    SOIL_SERVE_PASSWORD=$(cat "$SOIL_SERVE_PASSWORD_FILE")
+fi
+[ -n "${SOIL_SERVE_PASSWORD:-}" ] || { echo "Missing serving password" >&2; exit 1; }
+export SOIL_SERVE_PASSWORD
+psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" --set=ON_ERROR_STOP=1 <<'SQL'
+\getenv serve_password SOIL_SERVE_PASSWORD
 CREATE ROLE soil_serve LOGIN PASSWORD :'serve_password' NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT;
 ALTER ROLE soil_serve SET default_transaction_read_only=on;
 ALTER ROLE soil_serve SET statement_timeout='5s';

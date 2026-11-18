@@ -1,0 +1,46 @@
+name: soil-forest-qualification
+services:
+  weppcloud:
+    image: wepppy-dev:latest
+    user: "1000:993"
+    working_dir: /workdir/wepppy
+    entrypoint: []
+    command: ["/opt/venv/bin/python", "-m", "pytest"]
+    networks: [default, mirror]
+    extra_hosts: ["sdmdataaccess.nrcs.usda.gov:127.0.0.1"]
+    environment:
+      PYTHONPATH: /workdir/wepppy:/qualification
+      PYTHONDONTWRITEBYTECODE: '1'
+      REDIS_HOST: qualification-redis
+      SOIL_DATA_MODE: mirror-first
+      SOIL_DATA_ENDPOINT: http://soil-api:8080/Tabular/post.rest
+      SOIL_DATA_RELEASE: forest-id-20261001-vi-20161013-v1
+      WEPPPY_NCPU: '1'
+      RQ_LOG_LEVEL: INFO
+      SOIL_PROVENANCE_TEST_REDIS_SOCKET: /tmp/soil-test-redis/redis.sock
+      MPLCONFIGDIR: /tmp/matplotlib
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    volumes:
+      - /wc1:/wc1
+      - /workdir/soil-data-access/data/STATSGO2_VI_2016.zip:/official-statsgo.zip:ro
+      - /workdir/soil-data-access/contracts:/contracts:ro
+      - /workdir/soil-data-access/scripts:/qualification:ro
+      - /workdir/soil-data-access/data/forest-qualification:/evidence
+      - /workdir/soil-data-access/data/idaho:/official:ro
+      - /workdir/soil-data-access/data/parity/wepppy-tests/redis:/tmp/soil-test-redis
+      - /workdir/wepppy-ssurgo-merge:/workdir/wepppy
+      - /workdir/rosetta:/workdir/rosetta:ro
+      - /workdir/wepppyo3:/workdir/wepppyo3:ro
+      - /workdir/peridot:/workdir/peridot:ro
+      - /workdir/weppcloud-wbt:/workdir/weppcloud-wbt:ro
+  qualification-redis:
+    image: redis:latest
+    command: [redis-server, --save, "", --appendonly, "no"]
+    networks: [default]
+networks:
+  default:
+    internal: true
+  mirror:
+    external: true
+    name: wepppy-net

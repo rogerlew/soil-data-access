@@ -325,7 +325,7 @@
   "lifecycle": {
     "inflight_release_and_rows_stay_consistent": true,
     "next_request_observes_new_release": true,
-    "disconnect_cleanup_seconds": 5.08217937219888,
+    "disconnect_cleanup_seconds": 4.849864589981735,
     "restart_preserves_release": true
   },
   "output_limits": {
@@ -347,49 +347,28 @@
       ],
       "id": "replay-statsgo-001-2725874f3fe9"
     },
-    "code_revision": "9dc2264be977e795777ebead07ec215c0b749447",
+    "code_revision": "10f33bf266c79e86d93d90bd6b65f4e4f4383ae0",
     "contract_version": "wepppy-json-v1",
     "official": false,
     "ready": true,
     "service": "soil-data-access"
   },
-  "verified_at": "2026-11-18T01:26:20.270298+00:00",
-  "code_revision": "9dc2264be977e795777ebead07ec215c0b749447",
-  "images": {
-    "api": "sha256:290eb1082843a1277504e2656d43fc05501a1be03e3ffd5b5b7df9bab691ec01",
-    "db": "sha256:b58d0db01959739ef2c8a0be9012702b8bf47d9a350b3b82e21c6843a6aec89c"
-  },
-  "platform": {
-    "machine": "x86_64",
-    "logical_cpus": 48
-  },
+  "code_revision": "10f33bf266c79e86d93d90bd6b65f4e4f4383ae0",
+  "observed_at": "2026-11-18T03:12:02.325381+00:00",
   "source_files": {
     "Cargo.lock": "5902bbac66f6847188c0f8dad0c69cad6a5d3e43ddab037f26ca79057e21bdfd",
-    "compose.yaml": "634ca86042af9bf666a96e61fe5060ab8bad2bb4a9d937270a75ca859213dc8e",
+    "compose.yaml": "7436a69be843c239fd202c3f525c8f3541c1cce66d4eac8ddacebfd980a98f16",
     "Dockerfile": "3e006ded094f2e505ad74f8bc169391e7fe413b0a3cd2e0666c24a012ede8afa",
-    "src/main.rs": "346c1ef4094f1c00dfdd6483342b83dd2d87f50805da5b1928b4aa7dad98f91a",
+    "src/main.rs": "08299935437e407a83153488d4ebe199729570191352d66417b9ade00ab1ce0d",
     "src/planner.rs": "7f05d13368f675151ae1aaf61332201bed015554c87af3b9f24cf549fdd45c21",
     "scripts/replay_cache.py": "c8ed80568a1d2f3264e1cf2e6c818fb85475ddbf11e57988012905fe97ea3a09",
     "scripts/verify_runtime.py": "935f04e46ad8b42e96ec047feddeccbb5922705b6fdccb10275b25bd76c5f72b",
-    "migrations/001_replay.sql": "cdabf14b8f31e85eea05874f39e10d4e1a907a9896ba4de6f183b44fbe92435b"
+    "migrations/001_replay.sql": "cdabf14b8f31e85eea05874f39e10d4e1a907a9896ba4de6f183b44fbe92435b",
+    "src/runtime.rs": "4697a8ea2dfbf279fdeaeedb17758f0a874cfd4ecaaf1bdef5226cea05864ee7"
   },
-  "checks": {
-    "python_tests_passed": 31,
-    "rust_test_groups_passed": 2,
-    "clippy_warnings": 0,
-    "cargo_audit_advisories": 0,
-    "docs_lint_errors": 0,
-    "published_reference_integrity": "passed"
-  },
-  "limitations": [
-    "Local API/cache-record parity only; migrated WEPPpy soil build is pending",
-    "Peer disconnect cleanup is bounded by statement timeout, not immediate cancellation",
-    "No official importer, national coverage, performance acceptance or public security approval",
-    "No upstream-blocked candidate WEPPpy execution in this receipt"
-  ],
   "request_trace": {
-    "file": "artifacts/runtime/request-trace.jsonl",
-    "events": 87,
-    "sha256": "a9df20d17328ea33cbff87defc2cec6e7b758d0f5a5123c99752fcf3ba630cbc"
-  }
+    "file": "artifacts/runtime/10f33bf-api.log",
+    "sha256": "4b6e66e7204047f512248437e30ef62af0bf18f0db3b89a9fbdd98c18dcb4493"
+  },
+  "api_image_id": "sha256:0855e94b5f635a5a05c98075031673825f949f142e194fc66bc2dc08fc97cf09"
 }

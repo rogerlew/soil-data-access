@@ -6,6 +6,10 @@ and Outcomes & Retrospective current. The normative rules are in docs/contract.m
 and docs/wepppy-release-gate.md. The scope is faithful preservation of WEPPpy soil
 behavior through a new database/API/JSON path; scaffolding is not acceptance.
 
+The 2026-11-18 [mirror-first amendment](mirror-first-rollout.md) supersedes earlier
+no-failover and comprehensive pre-rollout parity language in this plan. It provides
+the next implementation sequence and acceptance scope.
+
 ## Purpose
 
 
@@ -37,9 +41,12 @@ still deployment prerequisites.
 - [x] (2026-11-18 UTC) Implement Rust/PostgreSQL/PostGIS local runtime and test-only cache replay adapter.
 - [x] (2026-11-18 UTC) Validate committed 9dc2264 in fresh Compose: 24,049 cache records, eleven wire cases, containment and lifecycle checks.
 - [x] (2026-11-18 UTC) Wire explicit WEPPpy JSON transport/provenance; real-service fresh-cache replay matches 501 canonical artifacts in the reference numerical environment.
-- [ ] Verify official-data import independently from historical cache replay.
-- [ ] Prove corpus parity, release coverage, capacity, security, and recovery in Compose.
-- [ ] Prepare and execute authorized environment-specific deployment.
+- [x] Load broader source data; validate import mechanics and bounded independent projections.
+- [x] Implement mirror-first deployment defaults, bounded SDA fallback and selection provenance.
+- [x] Run focused forest worker, bounded performance and runtime recovery acceptance in Compose.
+- [ ] Deferred until SDA recovery: comprehensive geographic/live source parity.
+- [x] Start new soil API/database services in forest dev Compose.
+- [ ] Integrate protected Compose change, then activate shared forest client defaults; forest1/production are later scope.
 - [ ] Deferred: capture live SDA success/empty/error/XML fixtures after recovery.
 - [ ] Deferred: establish full SDA/public-client/spatial compatibility before claiming it.
 
@@ -127,6 +134,13 @@ had none; the collector now rejects that condition before opening SQLite. See
 docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
+
+2026-11-18: the operator accepts fixture generalization for the five query families
+and directs mirror-first deployment defaults with SDA fallback. Move comprehensive
+geographic/live parity to post-recovery follow-up; preserve import integrity and
+source-separated provenance. The next work is implementation, not more nationwide
+pre-rollout fixture collection.
+
 
 2026-11-18: preserve the fixed comparison exclusions. Use explicit persisted
 endpoint/profile/release with cache-bound identity and sidecars to meet the operator
@@ -393,6 +407,11 @@ remove persistent volumes as routine cleanup.
 
 ## Outcomes & Retrospective
 
+The rollout policy is revised; no runtime default changed in this documentation
+checkpoint. Next implement the mirror-first contract, broader importer and Compose
+wiring, then execute forest -> forest1 -> wepp.cloud bounded acceptance.
+
+
 WEPPpy 39f24ce92 with runtime 9dc2264 passes the bounded fresh-cache replay:
 24,049 positive records, 34 successful HTTP fetch events, 499 valid soils, six
 non-valid outcomes, 501 canonical artifacts and 499 verified base sidecars.
@@ -472,3 +491,41 @@ Revision: 2026-11-18 UTC. WEPPpy 39f24ce92 implements explicit JSON selection,
 source-bound caches, atomic retrieval events and base-soil provenance sidecars.
 Retain real-service parity and the initial development-image numerical mismatch
 in artifacts/wepppy-parity/json-client; no expanded comment exclusions.
+
+Revision: 2026-11-18 UTC. Adopt operator-approved mirror-first/SDA-fallback direction
+and defer comprehensive geographic/live parity; see mirror-first-rollout.md.
+
+## Forest implementation scope in progress
+
+Execute docs/official-import-contract.md for Idaho SSURGO plus Virgin Islands
+STATSGO2, then wire the explicit release into a forest-only Compose integration.
+The files are official source downloads, not corpus replay. Use the existing six-table
+serving schema and transactional COPY, an independent projection reader and actual
+queued fresh-cache builds. No new runtime database driver/dependency is required:
+Python stdlib reads sources, psql loads PostgreSQL, and existing Rust serves queries.
+Client contract checkpoint lives in WEPPpy at 43c78bf95; its source-selection factory
+must pass real fallback/deadline/provenance tests before dev activation.
+
+Progress: official import and independent raw projections pass; forest soil services
+are healthy. Real queued SSURGO/STATSGO2 builds pass exact base/prepared parity through
+primary cold/warm and warm fallback; dual failure leaves no generated soils.
+See docs/forest-validation.md and artifacts/forest.
+
+Surprises & Discoveries: ANALYZE after COPY is necessary before relational joins.
+Canceling the first slow validation preserved the active release. Initial queued
+comparison used an incorrect whitespace-sensitive comment filter; the final runs use
+the frozen canonicalizer with only Build Date/Source File value exclusions.
+
+Decision Log: serving data is explicitly regional; comprehensive geographic/live
+parity remains deferred. WEPPpy dev Compose owns forest wiring; public hosting and
+production activation remain separate. Exact source approval is required for the
+protected WEPPpy Compose diff before changing shared-client defaults.
+
+Outcomes & Retrospective: local operational and bounded scientific gates pass.
+The service is usable on forest's internal Compose network; no public/national
+deployment or shared-client default activation is claimed.
+
+Final operational discovery: socket-only pg_isready can briefly succeed against
+PostgreSQL's initialization server. Both portable and forest soil-DB probes now use
+TCP localhost, which becomes available after initialization. Restart/readiness
+and the fresh runtime suite pass; no existing shared PostgreSQL service was changed.
