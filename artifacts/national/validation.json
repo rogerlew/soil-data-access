@@ -10,7 +10,7 @@
     "STATSGO2": 100
   },
   "source_hashes_unchanged_after_readback": true,
-  "source_files_left_read_only_by_all_tools": true,
   "live_SDA_parity": "deferred",
-  "scope": "national six-table WEPPpy projection on forest development; no forest1/production/public-hosting activation"
+  "scope": "national six-table WEPPpy projection on forest development; no forest1/production/public-hosting activation",
+  "source_databases_opened_read_only_for_import_and_verification": true
 }

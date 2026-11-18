@@ -132,7 +132,7 @@ Job a334f0d2-6ab9-420f-b9d1-d4ed397bb07c built soils and
 6b569d94-d1e9-473f-ab4a-0d42f74af2bf prepared all 32 hillslope inputs. All generated
 base provenance records identify the national mirror and verify against file
 hashes. Both national-release canaries preserve the accepted scientific results.
-No software soil formulas, user overrides, or historical qualification artifacts
+No software soil formulas, unrelated explicit source overrides, or historical qualification artifacts
 were changed. National data loading is complete; live SDA comparison and other
 host deployments remain separate follow-ups.
 
