@@ -1,0 +1,149 @@
+[
+  {
+    "repository": "apache/datafusion-sqlparser-rs",
+    "url": "https://github.com/apache/datafusion-sqlparser-rs",
+    "pushed_at": "2026-11-17T10:55:16Z",
+    "license": "Apache-2.0",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v0.64.0",
+        "sha": "23f188212cf837e380d7b765e80435fe0e79f181"
+      },
+      {
+        "name": "v0.64.0-rc1",
+        "sha": "23f188212cf837e380d7b765e80435fe0e79f181"
+      },
+      {
+        "name": "v0.63.0",
+        "sha": "85b1a6f2223bf95d98cf1bc504971abd191dc869"
+      }
+    ]
+  },
+  {
+    "repository": "ajitpratap0/GoSQLX",
+    "url": "https://github.com/ajitpratap0/GoSQLX",
+    "pushed_at": "2026-11-17T06:11:12Z",
+    "license": "Apache-2.0",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v1.17.0",
+        "sha": "3655a37900cd391b7673e3e22a27699862cd3a28"
+      },
+      {
+        "name": "v1.16.0",
+        "sha": "e9c5db91a8eda4f98d697a53dbd997ebd5255c87"
+      },
+      {
+        "name": "v1.15.0",
+        "sha": "31b5b1ce22bcf220819bc2f99f253e7b1ffdaeb3"
+      }
+    ]
+  },
+  {
+    "repository": "ha1tch/tsqlparser",
+    "url": "https://github.com/ha1tch/tsqlparser",
+    "pushed_at": "2026-07-19T02:26:49Z",
+    "license": "GPL-3.0",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v0.6.1",
+        "sha": "36e39653337d41b9913a7bfd22214fd2635068ad"
+      },
+      {
+        "name": "v0.6.0",
+        "sha": "2b39b7c9ee2cb9d295051247ac70e0dc0760867a"
+      },
+      {
+        "name": "v0.5.2",
+        "sha": "64d7dc52096d6086440424e361e4f5f2c322ebce"
+      }
+    ]
+  },
+  {
+    "repository": "pganalyze/pg_query_go",
+    "url": "https://github.com/pganalyze/pg_query_go",
+    "pushed_at": "2026-10-01T00:11:50Z",
+    "license": "BSD-3-Clause",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v6.2.5",
+        "sha": "7ac09d4bd830e591a69c6ebc756bb8f71de0281e"
+      },
+      {
+        "name": "v6.2.2",
+        "sha": "6a1adb4a50b66ca95f2bb34409697c586e18fa28"
+      },
+      {
+        "name": "v6.1.0",
+        "sha": "43a49d3d9df734eb12640b6517d11cfcb33d2239"
+      }
+    ]
+  },
+  {
+    "repository": "jackc/pgx",
+    "url": "https://github.com/jackc/pgx",
+    "pushed_at": "2026-11-16T14:05:13Z",
+    "license": "MIT",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v5.13.0",
+        "sha": "1e38d71d74e94fd3b35cbe5b3415109a870d5b91"
+      },
+      {
+        "name": "v5.12.0",
+        "sha": "b2ef08bbb951384e3936e45de60de60609f2d2ba"
+      },
+      {
+        "name": "v5.11.0",
+        "sha": "5e583fa7aabfa88b796292f849fc9d7d75ac159d"
+      }
+    ]
+  },
+  {
+    "repository": "tokio-rs/axum",
+    "url": "https://github.com/tokio-rs/axum",
+    "pushed_at": "2026-11-17T08:33:58Z",
+    "license": "MIT",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v0.4.0",
+        "sha": "a63843d6c5039ee843469d1e0f9542205150b4fa"
+      },
+      {
+        "name": "v0.3.4",
+        "sha": "cb4f64375bab27d0439a82bee74fc4f0d06a5ef8"
+      },
+      {
+        "name": "v0.3.3",
+        "sha": "b9dfea636071c2c194c8251612beba9d0515e9fe"
+      }
+    ]
+  },
+  {
+    "repository": "sfackler/rust-postgres",
+    "url": "https://github.com/sfackler/rust-postgres",
+    "pushed_at": "2026-10-03T04:31:01Z",
+    "license": "Apache-2.0",
+    "archived": false,
+    "tags": [
+      {
+        "name": "v0.13.4",
+        "sha": "1006b50295e33f7d8e002a6597d8498f17ad1b00"
+      },
+      {
+        "name": "v0.13.3",
+        "sha": "8e5f28eb70d330335a8d697812be64e8f4c189ba"
+      },
+      {
+        "name": "v0.13.2",
+        "sha": "1e24f48b102cc17bbf5e1076495305c8cc748399"
+      }
+    ]
+  }
+]

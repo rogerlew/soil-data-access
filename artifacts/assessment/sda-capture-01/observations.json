@@ -1,0 +1,32 @@
+[
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "availability",
+    "form": {
+      "query": "SELECT TOP 1 mukey FROM mapunit ORDER BY mukey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "observed_at": "2026-11-17T20:42:01.026992+00:00",
+    "status": 502,
+    "content_type": "text/html",
+    "body_file": "host-0-availability.body",
+    "body_sha256": "880c929020d4b79bf1995656d21d9a6859aab3a9460f941eb0b1a6e5502ee4cc",
+    "body_bytes": 122,
+    "classification": "upstream_unavailable_not_parity_fixture"
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "availability",
+    "form": {
+      "query": "SELECT TOP 1 mukey FROM mapunit ORDER BY mukey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "observed_at": "2026-11-17T20:42:01.599362+00:00",
+    "status": 502,
+    "content_type": "text/html",
+    "body_file": "host-1-availability.body",
+    "body_sha256": "880c929020d4b79bf1995656d21d9a6859aab3a9460f941eb0b1a6e5502ee4cc",
+    "body_bytes": 122,
+    "classification": "upstream_unavailable_not_parity_fixture"
+  }
+]

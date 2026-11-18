@@ -1,0 +1,138 @@
+[
+  {
+    "id": "availability",
+    "form": {
+      "query": "SELECT TOP 1 mukey FROM mapunit ORDER BY mukey",
+      "format": "JSON+COLUMNNAME"
+    }
+  },
+  {
+    "id": "ssurgo_fetch_components",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY mukey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f"
+  },
+  {
+    "id": "ssurgo_fetch_chorizon",
+    "form": {
+      "query": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f"
+  },
+  {
+    "id": "ssurgo_fetch_chfrags",
+    "form": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f"
+  },
+  {
+    "id": "ssurgo_fetch_chtexturegrp",
+    "form": {
+      "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f"
+  },
+  {
+    "id": "ssurgo_fetch_corestrictions",
+    "form": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "c2cee8f1f1fb8557a94ab1e3c51d3d8c5c906f8d216a81f248d4484eb20d064f"
+  },
+  {
+    "id": "ssurgo-gu-xml",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY mukey",
+      "format": "xml"
+    }
+  },
+  {
+    "id": "ssurgo-gu-metadata",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY mukey",
+      "format": "JSON+COLUMNNAME+METADATA"
+    }
+  },
+  {
+    "id": "statsgo2_fetch_components",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1390211 ) ORDER BY mukey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  },
+  {
+    "id": "statsgo2_fetch_chorizon",
+    "form": {
+      "query": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (14276909,14276910,14276911,14276912,14276913,14276914,14276915,14276916,14276917,14276918,14276919,14276920,14276921,14276922,14276923,14276924,14276925,14276926,14276927,14276928,14276929,14276930,14276931,14276932,14276933,14276934) ORDER BY cokey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  },
+  {
+    "id": "statsgo2_fetch_chfrags",
+    "form": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (41094228,41094229,41094230,41094231,41094232,41094233,41094234,41094235,41094236,41094237,41094238,41094239,41094240,41094241,41094242,41094243,41094244,41094245,41094246,41094247,41094248,41094249,41094250,41094251,41094252,41094253,41094254,41094255,41094256,41094257,41094258,41094259,41094260,41094261,41094262,41094263,41094264,41094265,41094266,41094267,41094268,41094269,41094270,41094271,41094272,41094273,41094274,41094275,41094276,41094277,41094278,41094279,41094280,41094281,41094282,41094283,41094284,41094285,41094286,41094287,41094288,41094289,41094290,41094291,41094292,41094293,41094294,41094295,41094296,41094297,41094298,41094299,41094300,41094301,41094302,41094303,41094304,41094305,41094306,41094307,41094308,41094309,41094310,41094311,41094312,41094313,41094314,41094315,41094316,41094317,41094318,41094319,41094320,41094321,41094322,41094323,41094324,41094325,41094326,41094327,41094328,41094329,41094330,41094331) ORDER BY chkey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  },
+  {
+    "id": "statsgo2_fetch_chtexturegrp",
+    "form": {
+      "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (41094228,41094229,41094230,41094231,41094232,41094233,41094234,41094235,41094236,41094237,41094238,41094239,41094240,41094241,41094242,41094243,41094244,41094245,41094246,41094247,41094248,41094249,41094250,41094251,41094252,41094253,41094254,41094255,41094256,41094257,41094258,41094259,41094260,41094261,41094262,41094263,41094264,41094265,41094266,41094267,41094268,41094269,41094270,41094271,41094272,41094273,41094274,41094275,41094276,41094277,41094278,41094279,41094280,41094281,41094282,41094283,41094284,41094285,41094286,41094287,41094288,41094289,41094290,41094291,41094292,41094293,41094294,41094295,41094296,41094297,41094298,41094299,41094300,41094301,41094302,41094303,41094304,41094305,41094306,41094307,41094308,41094309,41094310,41094311,41094312,41094313,41094314,41094315,41094316,41094317,41094318,41094319,41094320,41094321,41094322,41094323,41094324,41094325,41094326,41094327,41094328,41094329,41094330,41094331) ORDER BY chkey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  },
+  {
+    "id": "statsgo2_fetch_corestrictions",
+    "form": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (14276909,14276910,14276911,14276912,14276913,14276914,14276915,14276916,14276917,14276918,14276919,14276920,14276921,14276922,14276923,14276924,14276925,14276926,14276927,14276928,14276929,14276930,14276931,14276932,14276933,14276934) ORDER BY cokey",
+      "format": "JSON+COLUMNNAME"
+    },
+    "source_data_sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  },
+  {
+    "id": "statsgo2-vi-xml",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1390211 ) ORDER BY mukey",
+      "format": "xml"
+    }
+  },
+  {
+    "id": "statsgo2-vi-metadata",
+    "form": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1390211 ) ORDER BY mukey",
+      "format": "JSON+COLUMNNAME+METADATA"
+    }
+  },
+  {
+    "id": "empty",
+    "form": {
+      "query": "SELECT mukey FROM mapunit WHERE mukey='0'",
+      "format": "JSON+COLUMNNAME"
+    }
+  },
+  {
+    "id": "invalid",
+    "form": {
+      "query": "SELECT FROM WHERE",
+      "format": "JSON+COLUMNNAME"
+    }
+  },
+  {
+    "id": "null-decimal",
+    "form": {
+      "query": "SELECT CAST(NULL AS decimal(10,3)) AS missing, CAST(0.125 AS decimal(10,3)) AS value",
+      "format": "JSON+COLUMNNAME"
+    }
+  }
+]

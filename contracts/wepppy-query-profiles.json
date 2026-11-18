@@ -1,0 +1,117 @@
+{
+  "profile": "wepppy-json-v1",
+  "profiles": [
+    {
+      "query_id": "_fetch_components",
+      "cache_table": "component",
+      "columns": [
+        "mukey",
+        "cokey",
+        "compname",
+        "comppct_r",
+        "albedodry_r",
+        "hydricrating",
+        "drainagecl",
+        "muname",
+        "wtdepannmin",
+        "flodfreqdcd",
+        "aws025wta",
+        "aws0150wta",
+        "hydgrpdcd",
+        "drclassdcd",
+        "taxclname",
+        "geomdesc",
+        "taxorder",
+        "taxsuborder"
+      ],
+      "legacy_first_wins_columns": [
+        "mukey",
+        "cokey"
+      ],
+      "order_by": [
+        "component.mukey"
+      ],
+      "tie_order": "not_guaranteed_by_original_query; raw-order parity remains an independent gate"
+    },
+    {
+      "query_id": "_fetch_chorizon",
+      "cache_table": "chorizon",
+      "columns": [
+        "cokey",
+        "chkey",
+        "hzname",
+        "hzdepb_r",
+        "hzdept_r",
+        "hzthk_r",
+        "dbthirdbar_r",
+        "ksat_r",
+        "sandtotal_r",
+        "claytotal_r",
+        "om_r",
+        "cec7_r",
+        "awc_l",
+        "fraggt10_r",
+        "frag3to10_r",
+        "desgnmaster",
+        "sieveno10_r",
+        "wthirdbar_r",
+        "wfifteenbar_r",
+        "sandvf_r",
+        "ll_r"
+      ],
+      "legacy_first_wins_columns": [
+        "cokey",
+        "chkey"
+      ],
+      "order_by": [
+        "cokey"
+      ],
+      "tie_order": "not_guaranteed_by_original_query; raw-order parity remains an independent gate"
+    },
+    {
+      "query_id": "_fetch_chfrags",
+      "cache_table": "chfrags",
+      "columns": [
+        "chkey",
+        "fragvol_r"
+      ],
+      "legacy_first_wins_columns": [
+        "chkey"
+      ],
+      "order_by": [
+        "chkey"
+      ],
+      "tie_order": "not_guaranteed_by_original_query; raw-order parity remains an independent gate"
+    },
+    {
+      "query_id": "_fetch_chtexturegrp",
+      "cache_table": "chtexturegrp",
+      "columns": [
+        "chkey",
+        "texture"
+      ],
+      "legacy_first_wins_columns": [
+        "chkey"
+      ],
+      "order_by": [
+        "chkey"
+      ],
+      "tie_order": "not_guaranteed_by_original_query; raw-order parity remains an independent gate"
+    },
+    {
+      "query_id": "_fetch_corestrictions",
+      "cache_table": "corestrictions",
+      "columns": [
+        "cokey",
+        "reskind"
+      ],
+      "legacy_first_wins_columns": [
+        "cokey"
+      ],
+      "order_by": [
+        "cokey"
+      ],
+      "tie_order": "not_guaranteed_by_original_query; raw-order parity remains an independent gate"
+    }
+  ]
+}

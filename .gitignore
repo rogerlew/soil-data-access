@@ -16,7 +16,7 @@
 *.dump
 
 # Rust and Go build output
-/target/
+**/target/
 /bin/
 /coverage/
 *.prof
@@ -29,3 +29,6 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+# Reviewed, operator-authorized parity fixtures are versioned with Git LFS.
+!fixtures/wepppy/**/*.sqlite

@@ -1,0 +1,45 @@
+{
+  "host": "wepp1",
+  "observation_start_utc": "2026-11-18T00:12:46Z",
+  "observation_end_utc": "2026-11-18T00:16:49.569485+00:00",
+  "scope": "Bounded metadata-only direct-run discovery; not exhaustive; nested scenarios and symlink runs excluded",
+  "passes": [
+    {
+      "runs_scanned": 190,
+      "elapsed_seconds": 45.433897987008095,
+      "cache_count": 31,
+      "complete": false
+    },
+    {
+      "runs_scanned": 33,
+      "elapsed_seconds": 45.18079389631748,
+      "cache_count": 4,
+      "complete": false
+    }
+  ],
+  "unique_cache_count": 35,
+  "datasets": {
+    "ssurgo": 35,
+    "statsgo": 0
+  },
+  "first_pass": {
+    "caches": 31,
+    "with_soil_artifacts": 30,
+    "with_model_soil_artifacts": 28,
+    "with_wal": 30
+  },
+  "sidecars_read": 3,
+  "databases_opened": 0,
+  "snapshots_created": 0,
+  "private_evidence_sha256": {
+    "wepp1-sidecars.json": "2140a23032143480160d583ecec6cfd296121b39ed3f9f1115f1ff0d9795c7c9",
+    "wepp1-inventory.json": "210ccfd28298980b0e4bad2d322a185618eeb285875805e97452b313a6fbbb62",
+    "wepp1-sample.json": "e4a4848dccf739647488a388a0992f5d88f04667492a4da74cc3c3057b7983f3"
+  },
+  "limitations": [
+    "File existence does not establish soil validity or cache completeness.",
+    "Sidecar counts may be stale; generation dates are not source release dates.",
+    "STATSGO not observed, not proven absent.",
+    "First discarded scan exceeded 90 seconds; two subsequent 45-second scans retained partial results."
+  ]
+}

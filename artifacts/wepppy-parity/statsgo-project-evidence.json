@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-11-18T00:34:57.553215+00:00",
+  "host": "wepp1",
+  "published_case": "ssurgo-004",
+  "project_id_redacted": true,
+  "cache_filename": "ssurgo_tabular_cache.sqlite",
+  "source_marker": "Surgo",
+  "verified_mukey": 667003,
+  "verified_cokey": 14222716,
+  "component_name": "Hutson",
+  "catalog_evidence": "statsgo-catalog-classification.json",
+  "actual_model_input_observed": true,
+  "artifacts_manifest": "../../fixtures/wepppy/ssurgo-004/artifacts.manifest.json",
+  "other_project_model_input": {
+    "project_id_redacted": true,
+    "mukey": 666936,
+    "cokey": 14221951
+  },
+  "private_verification_sha256": "b130a1c98de0904b1bb2a390486ed9f1253210dfe3a96ef7d84d0343d6ba6317",
+  "limitations": [
+    "Catalog evidence does not establish current USDA source-release parity.",
+    "Current collection/cache label is not row-level provenance.",
+    "Historical model inputs are captured but have not been regenerated.",
+    "Cache and soil files were captured separately, not as an atomic whole-project snapshot."
+  ]
+}

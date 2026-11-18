@@ -1,0 +1,30 @@
+{
+  "claim": "offline_reference_validation_not_release_acceptance",
+  "verified_at": "2026-11-18T01:08:44.776168+00:00",
+  "code_revision": "d991fec6441aea133a0b65a9440778d33ba852d5",
+  "branch": "task/offline-wepppy-reference",
+  "fresh_remote_checkout": true,
+  "checks": {
+    "git_lfs_pull": "passed",
+    "git_lfs_fsck": "passed",
+    "cache_fixture_verification": "passed",
+    "published_reference_members": 501,
+    "unit_tests_passed": 27,
+    "draft_2020_12_schemas_and_examples": "passed_locally",
+    "markdown_files_checked": 7,
+    "markdown_errors": 0,
+    "privacy_scan": "passed_locally"
+  },
+  "files": {
+    "fixtures/wepppy/reference-v1.tar.gz": "3538510b8b3b7626b51e324966d4b21b4bfaf52a98bd6230d1a8c0bd6a361977",
+    "fixtures/wepppy/ssurgo-004/treatment-lookup.csv": "bf4b38fbcb16643345b29e24a1ace6afd8409695cf0b27dbbb707e4707620a67",
+    "artifacts/wepppy-parity/reference-repeatability.json": "4d4c8879ec96e8655ca6012882c559d9fcc87347f157b5a317bd4974cc3bb011",
+    "artifacts/wepppy-parity/reference-run-a.json": "534431c1500f5294e4f372f24fcb6334a30f454a5fd526a13f081cde242e22d2",
+    "artifacts/wepppy-parity/reference-run-b.json": "9c45ed28610334a728630b900b66fd97114beb08d9e5d44a78255ebc2a7aae55"
+  },
+  "limitations": [
+    "Legacy reference only; no candidate API/database/client execution",
+    "Fresh checkout verified hashes and tests, not another numerical model replay",
+    "Full workflow coverage and import/security/capacity/recovery gates remain open"
+  ]
+}

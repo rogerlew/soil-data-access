@@ -1,0 +1,127 @@
+{
+  "contract_version": "0.3-wepppy-json-v1-reference",
+  "status": "local_runtime_cache_replay_implemented_not_release_ready",
+  "observed_at": "2026-11-17T20:44:07.429188+00:00",
+  "runtime_implemented": true,
+  "features": [
+    {
+      "id": "wepppy_five_query_families",
+      "scope": "initial_target",
+      "evidence": "local_postgresql_cache_record_replay",
+      "notes": "five exact parsed shapes; official import and migrated WEPPpy soil parity pending"
+    },
+    {
+      "id": "form_urlencoded_post",
+      "scope": "initial_target",
+      "evidence": "client_source_verified",
+      "notes": "query and format fields; explicitly decode plus signs in format values"
+    },
+    {
+      "id": "json_columnname",
+      "scope": "initial_target",
+      "evidence": "local_api_authored_wire_cases",
+      "notes": "wepppy-json-v1 implemented; live SDA and coordinated WEPPpy migration pending"
+    },
+    {
+      "id": "json_columnname_metadata",
+      "scope": "next_target",
+      "evidence": "client_source_verified_wire_unverified",
+      "notes": "required by soilDB; do not claim soilDB compatibility without metadata serialization"
+    },
+    {
+      "id": "xml",
+      "scope": "deferred",
+      "evidence": "current_wepppy_client_verified",
+      "notes": "legacy extraction may be exercised offline with labeled authored/download-derived data; live paired captures deferred"
+    },
+    {
+      "id": "select_projection_join_in_order",
+      "scope": "initial_target",
+      "evidence": "syntax_probed",
+      "notes": "preserve column sequence, row multiplicity, qualified name resolution and key coercion"
+    },
+    {
+      "id": "top_brackets_isnull_concat",
+      "scope": "deferred_beyond_initial_wepppy_scope",
+      "evidence": "syntax_probed",
+      "notes": "map syntax explicitly and test type/collation/null semantics"
+    },
+    {
+      "id": "aggregates_ctes",
+      "scope": "deferred_beyond_initial_wepppy_scope",
+      "evidence": "syntax_probed",
+      "notes": "not automatically admitted because parser accepts them"
+    },
+    {
+      "id": "spatial_sda_function",
+      "scope": "deferred_beyond_initial_wepppy_scope",
+      "evidence": "syntax_probed",
+      "notes": "map helper semantics with SSURGO versus STATSGO2 distinction"
+    },
+    {
+      "id": "spatial_sqlserver_methods",
+      "scope": "deferred_beyond_initial_wepppy_scope",
+      "evidence": "rust_parses_go_rejects_intersection_case",
+      "notes": "shape is GeoPackage storage column; SDA exposes mupolygongeo; PostGIS mapping required"
+    },
+    {
+      "id": "multiple_statements",
+      "scope": "excluded_initial",
+      "evidence": "syntax_probed",
+      "notes": "soilDB has multipart use cases; explicit known compatibility gap"
+    },
+    {
+      "id": "writes_select_into_catalogs_unapproved_functions",
+      "scope": "reject",
+      "evidence": "syntax_probed_not_security_validated",
+      "notes": "parser accepts many unsafe constructs; owned semantic admission is required"
+    },
+    {
+      "id": "soap_wms_wfs_paoi_reports_interpretations",
+      "scope": "excluded_initial",
+      "evidence": "not_evaluated",
+      "notes": "separate service contracts required"
+    }
+  ],
+  "sources": [
+    "artifacts/assessment/ssurgo-gu.json",
+    "artifacts/assessment/statsgo2-vi.json",
+    "artifacts/assessment/sda-capture-01/observations.json",
+    "artifacts/assessment/soildb-source.json",
+    "artifacts/wepppy-parity/reference-repeatability.json",
+    "artifacts/wepppy-parity/reference-run-b.json"
+  ],
+  "policy_updated_at": "2026-11-18",
+  "initial_release_policy": "docs/wepppy-release-gate.md",
+  "initial_release_ready": false,
+  "deferred_sda_parity_gaps": [
+    "Live success/empty/error JSON wire responses and paired XML",
+    "Matched release identification against SDA"
+  ],
+  "initial_release_gates": [
+    {
+      "id": "frozen_project_cache_corpus_and_reference",
+      "status": "repeatable_reference_available_workflow_coverage_pending"
+    },
+    {
+      "id": "service_owned_json_profile",
+      "status": "runtime_implemented_client_migration_pending"
+    },
+    {
+      "id": "matched_input_end_to_end_soil_parity",
+      "status": "pending"
+    },
+    {
+      "id": "independent_official_import_and_declared_coverage",
+      "status": "pending"
+    },
+    {
+      "id": "capacity_security_and_compose_recovery",
+      "status": "pending"
+    },
+    {
+      "id": "exact_candidate_release_evidence_and_rollout",
+      "status": "pending"
+    }
+  ]
+}

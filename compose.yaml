@@ -1,0 +1,42 @@
+name: soil-replay
+services:
+  db:
+    image: postgis/postgis:17-3.7@sha256:b2379049e1d7623127ec61ba802a44706109bf91c23ec76b8f323888fd037ed9
+    environment:
+      POSTGRES_DB: soil
+      POSTGRES_USER: soil_import
+      POSTGRES_PASSWORD: ${SOIL_IMPORT_PASSWORD:?set local import password}
+      SOIL_SERVE_PASSWORD: ${SOIL_SERVE_PASSWORD:?set local serving password}
+    volumes:
+      - soil-data:/var/lib/postgresql/data
+      - ./docker/init.sh:/docker-entrypoint-initdb.d/20-soil.sh:ro
+      - ./migrations/001_replay.sql:/opt/soil/001_replay.sql:ro
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U soil_import -d soil']
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    shm_size: 128mb
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://soil_serve:${SOIL_SERVE_PASSWORD:?set local serving password}@db/soil
+      CODE_REVISION: ${CODE_REVISION:?set source revision}
+    ports:
+      - '127.0.0.1:${SOIL_HTTP_PORT:-18080}:8080'
+    networks: [database, http]
+    depends_on:
+      db:
+        condition: service_healthy
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    mem_limit: 512m
+networks:
+  database:
+    internal: true
+  http: {}
+volumes:
+  soil-data: {}

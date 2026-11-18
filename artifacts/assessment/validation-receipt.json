@@ -1,0 +1,51 @@
+{
+  "recorded_at": "2026-11-17T20:49:20.676149+00:00",
+  "scope": "milestone-1 offline assessment; not runtime acceptance",
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 10
+  },
+  "schemas": {
+    "validator": "jsonschema 3.2.0 from existing WEPPpy venv",
+    "draft": "draft-07",
+    "positive_and_negative_examples": "passed"
+  },
+  "parser_probes": {
+    "rust": {
+      "source_sha256": "290fadc0f2ddda12f7fbe56524233528eb225437ba9d92edc2c5b2e16eb562e2",
+      "corpus_sha256": "2febc6f6d617c8b676dff3fa480ca9b9310d3ed1dc464fd3b010e51fb3859d8b",
+      "result_sha256": "99fc81e0164c1035d2c969e7148553c17913ebdd2d5ff3c6aebd1d6ce36338cf"
+    },
+    "go": {
+      "source_sha256": "f1393d47d306fa502b1149ba61a392bfa9357db8bb5f9f8ce3bc47380d14bf0e",
+      "corpus_sha256": "2febc6f6d617c8b676dff3fa480ca9b9310d3ed1dc464fd3b010e51fb3859d8b",
+      "result_sha256": "aff07c2c6341d2c81d86e1284f520ab8c904d15e21e85584d85d7a62e89f3648"
+    }
+  },
+  "artifacts_sha256": {
+    "artifacts/assessment/SQLite_SSURGO_GU.7z.manifest.json": "a7974186c65f11cdd9ea8d02ea967379cdb78e78c55652c7780df2cb8c9ce5f3",
+    "artifacts/assessment/STATSGO2_VI_2016.zip.manifest.json": "2fc08559d10bf1f2d43ee670cae7171ec631c98a0dc9d98d35316e1e8d3efbf8",
+    "artifacts/assessment/States_ReadMe.txt.manifest.json": "51aa595960886f9d155dac541a18938d8daff1993564387a527562e6eddcd38b",
+    "artifacts/assessment/US_ReadMe.txt.manifest.json": "ef5484e733afe9851a6b3b8537be4cea86b154006d190ad58c2c031b448f54bc",
+    "artifacts/assessment/contributor-snapshot.json": "9232b46fb9b79a31c326418660134e0e3a7ac90c7c9ef24a6457585f0a9f5455",
+    "artifacts/assessment/dependency-footprint.json": "70eb48746ccb94612122c384dd79a35a261741d205685ac304c8374787e2bd04",
+    "artifacts/assessment/download-listings.json": "c1a81aa0813faee53b25175cfce43fede852cdc08dee1b2d67740d1ae2bf8639",
+    "artifacts/assessment/go-parser-results.json": "aff07c2c6341d2c81d86e1284f520ab8c904d15e21e85584d85d7a62e89f3648",
+    "artifacts/assessment/go-vulncheck.json": "277e3a27687099e2bcbb813131ae3eff9076d378b629ca879245e97a0265e970",
+    "artifacts/assessment/rust-audit.json": "627505f6061155eba1bdd2ca38132fe03c3d16446c5daf330b729a7ccda7331f",
+    "artifacts/assessment/rust-parser-results.json": "99fc81e0164c1035d2c969e7148553c17913ebdd2d5ff3c6aebd1d6ce36338cf",
+    "artifacts/assessment/sda-capture-01/observations.json": "100d531321e13a61ff4835573ca656bd1aca81963cc4619e82bb36f60a8e9936",
+    "artifacts/assessment/soildb-source.json": "0666367f63a37368e87ee141e2ba3b59ca157f0b0a87fb2534f69b32711c2f2d",
+    "artifacts/assessment/ssurgo-gu.json": "25977d4f29160272f025dde8be1609f825b7583bae8ab494490d6c77a02ca28a",
+    "artifacts/assessment/statsgo2-vi.json": "90689e80424985087adb6bda863ae068505e198bb63c972b0a21615f643f4b7d",
+    "artifacts/assessment/upstream-projects.json": "d0ca0f5096e74aa854c02970b1797689607414df657d1b2a56e9098c63cfd0e5",
+    "contracts/capture-cases.json": "564faa0c5ea33cb32a2b89ad5fa2744dca8923f2dc0aefbdf9bf8ec3c19ac06b",
+    "contracts/compatibility.json": "da01bfe4a03732a55a02fb14f118db8925bd7aa4c7350919980f19677cd44684",
+    "contracts/error.schema.json": "be56ad5fa2ef1b1446a2a5c6db807566fb1edb15bba55511f9e1b2963f93aa62",
+    "contracts/metadata.schema.json": "86ecfe04b55214d9369ba9c3b6babfe803234839e7d8117527dc11aba7ffaa04",
+    "contracts/parser-corpus.json": "2febc6f6d617c8b676dff3fa480ca9b9310d3ed1dc464fd3b010e51fb3859d8b",
+    "contracts/service-examples.json": "2c8f216d5c60fcf8e74d1eeeac64cfff40aae4a97c1dd5d741c970184463b3b4",
+    "contracts/wepppy-queries.json": "623a925a26c3a24cc6976086c42e8776dcb2badbbf88b2fa77872f50989c3170"
+  },
+  "known_blocker": "both SDA hosts return 502; no observed success/empty/application-error parity fixtures"
+}

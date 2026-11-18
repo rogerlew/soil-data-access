@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "service": "soil-data-access",
+    "official": false,
+    "contract_version": "0.1-assessment",
+    "code_revision": "0000000000000000000000000000000000000000",
+    "ready": false,
+    "active_release": null
+  },
+  "error": {
+    "error": {
+      "code": "unsupported_query",
+      "message": "This query uses an unsupported SQL construct.",
+      "request_id": "assessment-example"
+    }
+  }
+}

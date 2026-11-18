@@ -1,0 +1,1300 @@
+{
+  "claim": "bounded_cache_replay_json_artifact_parity_not_release_acceptance",
+  "network": {
+    "namespace": "net:[4026537744]",
+    "external_connect_errno": 101
+  },
+  "environment": {
+    "wepppy_revision": "39f24ce92442e76e8192ddf329ba70708d52c52a",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "numpy": "1.26.0",
+    "scipy": "1.13.1",
+    "duckdb": "1.1.1",
+    "numpy_native_sha256": "164eb264458d26031c346950c1b4576c6b48f9f30cf1f2e4926ca3318ab41aee",
+    "duckdb_native_sha256": "8b64cb4c1c2cff74e2c01da6a611a3d0abe719dcaecead4bfa858a44e9d8db95",
+    "rosetta_files": {
+      "__init__.py": "5959e8b05ab553d44cc2a38d9cc0baef43e02eb4f0511b192f63676c588b519c",
+      "__main__.py": "8bb31c5f40f1f1177c88f85d461b246c0048d16e9d9fd51f1f804c3c11f2bf95",
+      "_migration/create_duckdb.py": "5f0e2b9def71449a6cfdca71ff66f814458600c2950611e57f263dee19594b1f",
+      "_migration/dump_sqlite_to_parquet.py": "c2fcb8e1fcc56066cb309623ef804d60d6b695a996c1ac481b949ff9a32992e8",
+      "ann.py": "ce42f8dce26d8af038174150562567c4de1640fda22330b50132ffb9cc314690",
+      "db/rosetta.duckdb": "a1e26a549f7babfb77456201850c760d84d88788f1614d7db89e81f0b139532f",
+      "db.py": "cd7fd827c00fb474654097ef08f0483e6d9ae2435ae86108de14694e60989531",
+      "rosetta.py": "ceffff322a67019fb0b97c6484a08508221be290aa27a4b39c10e56dd305fe61",
+      "sqlite/Rosetta.sqlite": "0e1a3f3ccbcf569066dc3c19027183646e434eece30213896f00df6f477910de",
+      "tests/PTF_Model_tests.py": "36b3488a8e6a92260800fcd165e2d7abd4da255881a8303d68296a3bc455a32e",
+      "tests/test_performance.py": "9fa75c224e6d1e9d3e9e3fe228b8187885297c1d0bd847d4f6c620ac51a0d575",
+      "tests/test_rosetta_regression.py": "4c24d0e1511628f80385427aff54a4547a690ce60c6edae40c107abd4e5511e4"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "candidate_source_sha256": {
+    "wepppy/soils/ssurgo/ssurgo.py": "ee1b2a41a751e47715fe3f655de3e65e23a2f0c28065b61fb4f496173d62796c",
+    "wepppy/soils/ssurgo/source.py": "3a308d1d22f4b92880ce6cf9cbde830a830bed8b4839cbaf8309e5981eb518e0",
+    "wepppy/nodb/core/soils.py": "fe8a65620cb58adff2697dd2d78b6a216878b57bb25210e597d9650046973b25"
+  },
+  "source": {
+    "endpoint": "http://api:8080/Tabular/post.rest",
+    "profile": "wepppy-json-v1",
+    "release": "replay-ssurgo-002-a60e41a66ad3"
+  },
+  "case": {
+    "case_id": "ssurgo-002",
+    "snapshot_sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+    "coverage": {
+      "requested_mukeys": 38,
+      "multiple_components": 38,
+      "multiple_horizons": 121,
+      "profile_bottom_le_50cm": 2,
+      "horizons_with_null_texture_or_hydraulic_field": 218,
+      "restriction_kinds": [
+        "Abrupt textural change",
+        "Lithic bedrock",
+        "Paralithic bedrock"
+      ],
+      "fragment_rows": 486,
+      "texture_rows": 713,
+      "negative_rows": 265
+    },
+    "cache_gaps": {},
+    "profile": {
+      "use_statsgo": false,
+      "initial_sat": 0.75,
+      "ksflag": true,
+      "version": "7778"
+    },
+    "profile_basis": "authored_reference_profile_not_historical_settings",
+    "retrieval": {
+      "binding": {
+        "historical_rows_unknown": false,
+        "identity": {
+          "endpoint": "http://api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "replay-ssurgo-002-a60e41a66ad3"
+        },
+        "schema_version": 1
+      },
+      "fetches": [
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-002-a60e41a66ad3"
+          },
+          "key_count": 38,
+          "metadata": {
+            "observed_at": "2026-11-18T02:01:27.069273+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-002-a60e41a66ad3",
+                  "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+                  "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002"
+                }
+              ],
+              "id": "replay-ssurgo-002-a60e41a66ad3"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T02:01:27.112141+00:00",
+          "processed_records_sha256": "76fb759a0e6ba2bd121b732590a5257f94a5f978b1e457a2873b12b290bfe45e",
+          "response_origin": "http://api:8080",
+          "response_sha256": "a6f770c8558c8317055be9f616241fc81dee0c1fb01bb1d0c7ebbf072e2fac68",
+          "row_count": 133,
+          "table": "component"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-002-a60e41a66ad3"
+          },
+          "key_count": 133,
+          "metadata": {
+            "observed_at": "2026-11-18T02:01:27.069273+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-002-a60e41a66ad3",
+                  "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+                  "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002"
+                }
+              ],
+              "id": "replay-ssurgo-002-a60e41a66ad3"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T02:01:27.276342+00:00",
+          "processed_records_sha256": "57167dc5aaedd4b39342fac532b3fdd2c2df044a7e213720ef3f1f8f09540463",
+          "response_origin": "http://api:8080",
+          "response_sha256": "71472a5d48be1fdee322952c9ad7ce2d0cef961e6dd87986c5abe2833aaab128",
+          "row_count": 713,
+          "table": "chorizon"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-002-a60e41a66ad3"
+          },
+          "key_count": 133,
+          "metadata": {
+            "observed_at": "2026-11-18T02:01:27.069273+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-002-a60e41a66ad3",
+                  "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+                  "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002"
+                }
+              ],
+              "id": "replay-ssurgo-002-a60e41a66ad3"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T02:01:27.333938+00:00",
+          "processed_records_sha256": "86a9ff41dea68513f045115e224ad21d0bb5d4b8ad46bc78efdb9b41845894a0",
+          "response_origin": "http://api:8080",
+          "response_sha256": "129d4ba6d83a4613e016ac292a79ad3cb0738f85910dc2e3b5eb4686039c9a4d",
+          "row_count": 96,
+          "table": "corestrictions"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-002-a60e41a66ad3"
+          },
+          "key_count": 713,
+          "metadata": {
+            "observed_at": "2026-11-18T02:01:27.069273+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-002-a60e41a66ad3",
+                  "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+                  "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002"
+                }
+              ],
+              "id": "replay-ssurgo-002-a60e41a66ad3"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T02:01:27.402591+00:00",
+          "processed_records_sha256": "704418ee62aaffea37d0ae21d58da291faa9b527f9a693d9cc214919e6498875",
+          "response_origin": "http://api:8080",
+          "response_sha256": "98dfc82cef1a7c8d6e215f108e5cd10a57f4294fd83d0814e974722ed8000291",
+          "row_count": 486,
+          "table": "chfrags"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-002-a60e41a66ad3"
+          },
+          "key_count": 713,
+          "metadata": {
+            "observed_at": "2026-11-18T02:01:27.069273+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-002-a60e41a66ad3",
+                  "scope": "Processed project cache ssurgo-002; test replay only; source vintage unknown",
+                  "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-002"
+                }
+              ],
+              "id": "replay-ssurgo-002-a60e41a66ad3"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T02:01:27.478093+00:00",
+          "processed_records_sha256": "6968b92bc55d45b2240c76a6bf4203a5b38238ec9dea35f32bf9d882cfbffc40",
+          "response_origin": "http://api:8080",
+          "response_sha256": "abafa385f07855b611ac620494817ed605687ff70ac36204a8b464bab7b48814",
+          "row_count": 713,
+          "table": "chtexturegrp"
+        }
+      ]
+    },
+    "cache_started_absent": true,
+    "decisions": [
+      {
+        "mukey": 2436952,
+        "valid": true,
+        "cokey": 27506087,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82167697,
+          82167698,
+          82167699
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2437299,
+        "valid": true,
+        "cokey": 27504971,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82166140,
+          82166139,
+          82166141,
+          82166142,
+          82166138
+        ],
+        "restriction_index": 4
+      },
+      {
+        "mukey": 2437479,
+        "valid": true,
+        "cokey": 27506497,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82170694,
+          82170695,
+          82170696,
+          82170697,
+          82170693,
+          82170692
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2437481,
+        "valid": true,
+        "cokey": 27506500,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82168116,
+          82168117,
+          82168112,
+          82168113,
+          82168114,
+          82168115,
+          82168111
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2437491,
+        "valid": true,
+        "cokey": 27506526,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82170765,
+          82170770,
+          82170766,
+          82170767,
+          82170768,
+          82170769,
+          82170764
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2437492,
+        "valid": true,
+        "cokey": 27506529,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173976,
+          82173981,
+          82173977,
+          82173978,
+          82173979,
+          82173980,
+          82173975
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2484538,
+        "valid": true,
+        "cokey": 27506756,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173869,
+          82173870,
+          82173871,
+          82173872,
+          82173873
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486184,
+        "valid": true,
+        "cokey": 27507468,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173264,
+          82173260,
+          82173261,
+          82173262,
+          82173263
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486881,
+        "valid": true,
+        "cokey": 27506999,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82171902,
+          82171903,
+          82171904,
+          82171900,
+          82171901,
+          82171905,
+          82171906,
+          82171907
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486883,
+        "valid": true,
+        "cokey": 27506994,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82175363,
+          82175364,
+          82175365,
+          82175366,
+          82175362,
+          82175361
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486884,
+        "valid": true,
+        "cokey": 27506992,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82175373,
+          82175377,
+          82175374,
+          82175375,
+          82175376,
+          82175372
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486897,
+        "valid": true,
+        "cokey": 27506958,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173198,
+          82173199,
+          82173200,
+          82173201,
+          82173197,
+          82173196
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486898,
+        "valid": true,
+        "cokey": 27506955,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173112,
+          82173113,
+          82173114,
+          82173115,
+          82173111
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486900,
+        "valid": true,
+        "cokey": 27506946,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82172582,
+          82172588,
+          82172583,
+          82172584,
+          82172585,
+          82172586,
+          82172587,
+          82172581
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486902,
+        "valid": true,
+        "cokey": 27506939,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82175116,
+          82175122,
+          82175117,
+          82175118,
+          82175119,
+          82175120,
+          82175121,
+          82175115
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 2486903,
+        "valid": true,
+        "cokey": 27506935,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          82173314,
+          82173310,
+          82173311,
+          82173312,
+          82173313
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120230,
+        "valid": true,
+        "cokey": 27431254,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81928717,
+          81928718,
+          81928721,
+          81928719,
+          81928720,
+          81928722,
+          81928723,
+          81928724
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120244,
+        "valid": true,
+        "cokey": 27431384,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81929335,
+          81929340,
+          81929336,
+          81929337,
+          81929334,
+          81929338,
+          81929339
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120261,
+        "valid": true,
+        "cokey": 27431436,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81929606,
+          81929612,
+          81929607,
+          81929608,
+          81929609,
+          81929610,
+          81929611,
+          81929605
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120321,
+        "valid": true,
+        "cokey": 27431637,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81930554,
+          81930555,
+          81930556,
+          81930557,
+          81930553,
+          81930552
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120324,
+        "valid": true,
+        "cokey": 27433260,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81938449,
+          81938444,
+          81938445,
+          81938446,
+          81938447,
+          81938448
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120384,
+        "valid": true,
+        "cokey": 27431836,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81931521,
+          81931517,
+          81931518,
+          81931519,
+          81931520
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120433,
+        "valid": true,
+        "cokey": 27432011,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81932436,
+          81932431,
+          81932432,
+          81932433,
+          81932434,
+          81932435
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120436,
+        "valid": true,
+        "cokey": 27432026,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81932508,
+          81932514,
+          81932509,
+          81932510,
+          81932515,
+          81932511,
+          81932512,
+          81932513
+        ],
+        "restriction_index": 5
+      },
+      {
+        "mukey": 3120488,
+        "valid": true,
+        "cokey": 27432261,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81933682,
+          81933683,
+          81933684,
+          81933681
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120621,
+        "valid": true,
+        "cokey": 27432766,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936020,
+          81936021,
+          81936022,
+          81936018,
+          81936019,
+          81936023,
+          81936024,
+          81936025
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120629,
+        "valid": true,
+        "cokey": 27432784,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936119,
+          81936120,
+          81936121,
+          81936122,
+          81936118,
+          81936117
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120631,
+        "valid": true,
+        "cokey": 27432789,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936143,
+          81936147,
+          81936144,
+          81936145,
+          81936146,
+          81936142
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120639,
+        "valid": true,
+        "cokey": 27432810,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936255,
+          81936256,
+          81936257,
+          81936258,
+          81936254,
+          81936253
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120641,
+        "valid": true,
+        "cokey": 27432819,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936302,
+          81936307,
+          81936303,
+          81936304,
+          81936305,
+          81936306,
+          81936301
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120650,
+        "valid": true,
+        "cokey": 27432843,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936431,
+          81936432,
+          81936433,
+          81936434,
+          81936430
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120651,
+        "valid": true,
+        "cokey": 27432846,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936448,
+          81936449,
+          81936450,
+          81936451,
+          81936447
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120652,
+        "valid": true,
+        "cokey": 27432851,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936470,
+          81936471,
+          81936473,
+          81936472,
+          81936474,
+          81936475,
+          81936476
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120661,
+        "valid": true,
+        "cokey": 27432876,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81936595,
+          81936601,
+          81936596,
+          81936597,
+          81936598,
+          81936599,
+          81936600,
+          81936594
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120759,
+        "valid": true,
+        "cokey": 27433202,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81938161,
+          81938162,
+          81938163
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120766,
+        "valid": true,
+        "cokey": 27433230,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81938286,
+          81938287,
+          81938288,
+          81938289,
+          81938290
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120776,
+        "valid": true,
+        "cokey": 27433240,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81938342,
+          81938343,
+          81938344,
+          81938345
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 3120785,
+        "valid": true,
+        "cokey": 27433348,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          81938862,
+          81938863,
+          81938864,
+          81938865,
+          81938861
+        ],
+        "restriction_index": null
+      }
+    ],
+    "valid_count": 38,
+    "invalid_count": 0,
+    "historical_comparisons": [],
+    "artifacts": [
+      {
+        "file": "base/2436952.sol",
+        "bytes": 3007,
+        "raw_sha256": "b30051ac9700b53c9bcc9b5ebc9fc38415bb151ad918c025af876a6ffad1107b",
+        "canonical_sha256": "27ece99d8ba3bf7975d9bfaae223d3b2c23575a004c6022e5cc3c62aa282f922"
+      },
+      {
+        "file": "base/2437299.sol",
+        "bytes": 3678,
+        "raw_sha256": "cffe6d6ce8e4e2bf942b621a51c7abedee80297335c6ae9094b5eadcfece7d2d",
+        "canonical_sha256": "66ada199c1e27f71a5b9ee40d457336bf42743839c290655110b6ec4493a1dfd"
+      },
+      {
+        "file": "base/2437479.sol",
+        "bytes": 3913,
+        "raw_sha256": "637e9462302bb18f200679840149a988a7beb6feec728cb966ef683d8134584f",
+        "canonical_sha256": "5b6afbfe4720dd69df6cd97ff912f03017808ed29870d89d797e525150a6a7f7"
+      },
+      {
+        "file": "base/2437481.sol",
+        "bytes": 4255,
+        "raw_sha256": "040f2563e6615c47347fa2e29fdfd65380e481cae09a379ada26e180f0a5bd19",
+        "canonical_sha256": "86fd5fcf60315bb24f60c35b1ac293ed4849b006210d3dbd2f365ddcdc991ed3"
+      },
+      {
+        "file": "base/2437491.sol",
+        "bytes": 4246,
+        "raw_sha256": "cb15969692300981fcf5d5a9e23097985ba2fc2ae86ac856f410aae44094645e",
+        "canonical_sha256": "2c2869830e3341c76855ad26f7124f74d7e4a2354d81cad211764b4504308841"
+      },
+      {
+        "file": "base/2437492.sol",
+        "bytes": 4246,
+        "raw_sha256": "7b11d6765f89776017818b4051ffe072fb65bf7d595a3e43bc2379453f236083",
+        "canonical_sha256": "f2365d452e042e34c872e97b899ea1de722f6e58f9d1a118ab22894e4dd6f30c"
+      },
+      {
+        "file": "base/2484538.sol",
+        "bytes": 3434,
+        "raw_sha256": "85e5d922f01c99ea1733e0cd1d4dc95f1b1b2c3932a4f688fc3ec42bbbc0b123",
+        "canonical_sha256": "8cd7a75fb3063f563aa03b4b0bb62f0919e7273711cfe0d9f2a512767fea93c8"
+      },
+      {
+        "file": "base/2486184.sol",
+        "bytes": 3592,
+        "raw_sha256": "8903559666df3e4d9bd1ca6057a287f8617140dd56d1f38de0616932363277b1",
+        "canonical_sha256": "dbc25e755451c9a7cbe37e789ce1039f21aa792b9e90937bfc250fcb6bb84b82"
+      },
+      {
+        "file": "base/2486881.sol",
+        "bytes": 4359,
+        "raw_sha256": "d55ded67a0a511c975a80f24e9fc65e8dd0b105e2d4181993d6a27a02660b1da",
+        "canonical_sha256": "e00014e68645f9eb1b1ff7c98e0984dbcf75fc0252b0a8b3b7bf23c2f9007e8f"
+      },
+      {
+        "file": "base/2486883.sol",
+        "bytes": 3926,
+        "raw_sha256": "0b4b20bb7eb3a81cc0fd2a3cf872e4f3df05b2b615bee81072feb5fa17be4648",
+        "canonical_sha256": "2e78254e62c83f8596fc708be58e95e21659d95f216f1ffd6efb2cec5cc2b1e1"
+      },
+      {
+        "file": "base/2486884.sol",
+        "bytes": 3922,
+        "raw_sha256": "26ab1d68178d7ebd6add2760bd022e56f39991d6c146fae59239e2e1b458674e",
+        "canonical_sha256": "88c021bc87e57f9759502edcc7a2e1a588d5db750a7b217dfd169b30437161a2"
+      },
+      {
+        "file": "base/2486897.sol",
+        "bytes": 3916,
+        "raw_sha256": "b5c0a53bf17487f7ede416172179868f86e2e9e5e1bd7c14f06583a9e4cbd191",
+        "canonical_sha256": "fe1ddafeadc72598cf180108ef1da931c140d0f9239ae49d5a4d1f74aa726fe7"
+      },
+      {
+        "file": "base/2486898.sol",
+        "bytes": 3590,
+        "raw_sha256": "7e3153c58fce8809d8cd1a76f677c22ba3526de16078e1b8d5399ca55f2dd08a",
+        "canonical_sha256": "183d7d019b48987cea3c39db63f19346a5752fbf37321e22b8858b1d7e47cffc"
+      },
+      {
+        "file": "base/2486900.sol",
+        "bytes": 4583,
+        "raw_sha256": "6ca94f6b039d3f7ec6357a8107bbc5f899f6d3400d4a061200d390b4579cf6df",
+        "canonical_sha256": "785220a68eea9ccfb7967ab8a7dc3f6f5aa704736550cf078726ffeb83d5e0b8"
+      },
+      {
+        "file": "base/2486902.sol",
+        "bytes": 4578,
+        "raw_sha256": "af12647b2b61c507320f0a18ba9b6286e88bcf771c24cd572894e44dfc22ab48",
+        "canonical_sha256": "87685efdce8f4d83eda7ed4fe5f6a821f5e5d5e48db0b36524af2616d70eef85"
+      },
+      {
+        "file": "base/2486903.sol",
+        "bytes": 3590,
+        "raw_sha256": "7d57cf021961de9247ba3381c9f00582e5d862f057dceb41391452ebe8e0cd6b",
+        "canonical_sha256": "de82a17d0997c6b73835ff7e5294b70ac5a2b2f4c04e94e4f6704cddac9425ec"
+      },
+      {
+        "file": "base/3120230.sol",
+        "bytes": 4370,
+        "raw_sha256": "a935389927b4edfb07bc4d08db1e6fe73ec5ae98e28643594c8f766ac4c1e502",
+        "canonical_sha256": "b4d30fb5b37c9f24edb61e19a9182d52916a47097742a24b3408ab85179a12cb"
+      },
+      {
+        "file": "base/3120244.sol",
+        "bytes": 4119,
+        "raw_sha256": "bde78a95c29a4abd275eaff28b494df52fa55fa295b52fdb623c3590b1bd1315",
+        "canonical_sha256": "cc048c91d5e49384a3e945d960e60a857e3af9f5bc07714d353a53e14df77e2e"
+      },
+      {
+        "file": "base/3120261.sol",
+        "bytes": 4583,
+        "raw_sha256": "2d9f1c3e7107aea9602a5cbad9931b9ab3fcb4d839117fab752d2926a8d759a3",
+        "canonical_sha256": "a92acb574264ff66edc620652647ba4998695ae25071e7d166224f9e054eb18e"
+      },
+      {
+        "file": "base/3120321.sol",
+        "bytes": 3916,
+        "raw_sha256": "4700e346d51c9523a2f1e41af08ee82f9f7e463ffe81b77f9302ff2d57db9ecc",
+        "canonical_sha256": "6d735993131a65ef4ad87196b4cd944fcfa1bffaa511457d1a380908105f26d2"
+      },
+      {
+        "file": "base/3120324.sol",
+        "bytes": 3916,
+        "raw_sha256": "e506a9fbc6d8ee13af79f8d227eedc0c6a25847bec6693cb112bb00cb32776d0",
+        "canonical_sha256": "40fa6a4c4a0f985b5068cae4c6ff0d119c40ee98adcea23f696c5b0f36fef64d"
+      },
+      {
+        "file": "base/3120384.sol",
+        "bytes": 3592,
+        "raw_sha256": "148683a214f9c8549c7ceef66b8af9171a20413910975da6c96f432d1706ca52",
+        "canonical_sha256": "f5cc844db354f51ebb7905e6987ca94bda83dcb55d5a69754f576ccfbfdee783"
+      },
+      {
+        "file": "base/3120433.sol",
+        "bytes": 3927,
+        "raw_sha256": "c9eaa2550f872e5fad343673d2b38e4ea58d58bb0b3a8028d5b204f945d61173",
+        "canonical_sha256": "a7d3165c189bd4f344814efab7b154c09efe89f89c6341c0825ed497ca28bc03"
+      },
+      {
+        "file": "base/3120436.sol",
+        "bytes": 4181,
+        "raw_sha256": "1f67535c4fe9a659c7e04eb41022e9366e20f2213cbba3eb012af4d787de3e57",
+        "canonical_sha256": "4d1dbaf12d755496e724b5f5d00764ae7c2e0a9961f493d49a7e6e723e621e9c"
+      },
+      {
+        "file": "base/3120488.sol",
+        "bytes": 3266,
+        "raw_sha256": "00a849e783f8dae6a64fff0c686c09f318e3b42123899aa50265f5279e60e4bb",
+        "canonical_sha256": "f4d437057a4848597d1a998e603c5d30f834559247448575d8c7fe2df938b660"
+      },
+      {
+        "file": "base/3120621.sol",
+        "bytes": 4359,
+        "raw_sha256": "54cfa98f79f86134262bbb726a4da1dd64b308b67ebd6771c1dc27f340a9bce7",
+        "canonical_sha256": "167df627b243cc20fe76f3d8141226b6c6e28e187fb109cea27572b3e878e154"
+      },
+      {
+        "file": "base/3120629.sol",
+        "bytes": 3926,
+        "raw_sha256": "591b5a4039044870cbdcaff38146e403fc20dfe8aa571a957a62d0cffbf69744",
+        "canonical_sha256": "57f0b8a8cbb6c039f645bba5bed62b31a9ff3e26c9ec2901729a012c5d17b4c0"
+      },
+      {
+        "file": "base/3120631.sol",
+        "bytes": 3922,
+        "raw_sha256": "c99584a7c20383665a1f41e3cf3ce923f8cc08034b49662cf531d3caff09eec8",
+        "canonical_sha256": "99a6211ef737ccb347d32cb6347cbad4ca3c93ab794a3cea68ac2639cae09484"
+      },
+      {
+        "file": "base/3120639.sol",
+        "bytes": 3920,
+        "raw_sha256": "6569aa1a7e364f4cc732f6ba78bb5953c70dec4674e4fdee6b2ab3de8c5f4051",
+        "canonical_sha256": "88081a34d8c8469827ccda9421b8e2181d359a0faf949fde802fe565ebcd5b1f"
+      },
+      {
+        "file": "base/3120641.sol",
+        "bytes": 4246,
+        "raw_sha256": "c45dd8c01603a5f737c52ed7ca02fb400c0540d1d6ea4e840f6e63b6e893b54b",
+        "canonical_sha256": "ba53252fe6666abed4516bc71d58771b16d2dfb59129042bf92823579bbb632e"
+      },
+      {
+        "file": "base/3120650.sol",
+        "bytes": 3590,
+        "raw_sha256": "fc916e2a5cf3f4d7a587941232b2814722a8c85d3ced9f322ca5a7a0d1b315d3",
+        "canonical_sha256": "91ef331479c9b929c15470e13065e11ca07bdc78fc957e39ab89643436d753bd"
+      },
+      {
+        "file": "base/3120651.sol",
+        "bytes": 3584,
+        "raw_sha256": "62f566df57a5dee37466670c70b9b6b2a66483269726ba6334b417667ec4b71c",
+        "canonical_sha256": "4a975e9cd54eec334083d17e33a37f548a115aad99a4eb265acd37b6a64527c6"
+      },
+      {
+        "file": "base/3120652.sol",
+        "bytes": 3805,
+        "raw_sha256": "0b3da7a4940a1eedc9aa0e1c18f46d1960196dc86bc6ead7613ea876c84cf7e4",
+        "canonical_sha256": "ca062aa9540a9a6f95970803c7a92a714026f5cf9846072382bbfdc7ce10acb8"
+      },
+      {
+        "file": "base/3120661.sol",
+        "bytes": 4578,
+        "raw_sha256": "a647311a22eee7d566801b4e7b134ca6686b4ddc722f7de947fdbea7458e8074",
+        "canonical_sha256": "8a90e8fd7f1f8d0df290a55dbb88cdc8f6d4f099152bce62f43e43717af941f9"
+      },
+      {
+        "file": "base/3120759.sol",
+        "bytes": 3007,
+        "raw_sha256": "0a9ac63b624cdfcd10e3a2e185ba97f00400f174f7daeadaf73fc44a8d55e9b4",
+        "canonical_sha256": "3aa82123e6398c0436878b90b996d66779a4cfa5a2293484af6cb20e58756e1a"
+      },
+      {
+        "file": "base/3120766.sol",
+        "bytes": 3434,
+        "raw_sha256": "a03eb7a28b03b52ee042927b1cf43849e8670d94d16d2b6601d8277378c11fbe",
+        "canonical_sha256": "4b07af2fb2dab787e2a6cbb9975281b474dd929996f43f968e1d13a98967c8ac"
+      },
+      {
+        "file": "base/3120776.sol",
+        "bytes": 3119,
+        "raw_sha256": "84cda27bb3518b49e0e7bb15d5f9c0715de5ff75d533d3cb5c8bbf5504caf5cd",
+        "canonical_sha256": "77709a8da5ce2b598479ec5064bbe5ca9b673f236d82e60c9bf90e6a9712b222"
+      },
+      {
+        "file": "base/3120785.sol",
+        "bytes": 3585,
+        "raw_sha256": "9c23512ab1555c283b22ed21a5b8212d533896c720075f5254d802cf607a8f66",
+        "canonical_sha256": "f51f6b985cde01b2665b0db59f76775909bc4f177b90b2bf90c7096f4e4606ca"
+      }
+    ],
+    "status": "json_candidate_built_historical_comparison_separate"
+  },
+  "cache_comparison": {
+    "component": {
+      "reference_rows": 133,
+      "candidate_rows": 133,
+      "equal": true
+    },
+    "chorizon": {
+      "reference_rows": 713,
+      "candidate_rows": 713,
+      "equal": true
+    },
+    "corestrictions": {
+      "reference_rows": 96,
+      "candidate_rows": 96,
+      "equal": true
+    },
+    "chfrags": {
+      "reference_rows": 486,
+      "candidate_rows": 486,
+      "equal": true
+    },
+    "chtexturegrp": {
+      "reference_rows": 713,
+      "candidate_rows": 713,
+      "equal": true
+    },
+    "bad_component_mukey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_chorizon_cokey": {
+      "reference_rows": 1,
+      "candidate_rows": 1,
+      "equal": true
+    },
+    "bad_corestrictions_cokey": {
+      "reference_rows": 37,
+      "candidate_rows": 37,
+      "equal": true
+    },
+    "bad_chfrags_chkey": {
+      "reference_rows": 227,
+      "candidate_rows": 227,
+      "equal": true
+    },
+    "bad_chtexturegrp_chkey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    }
+  },
+  "provenance_sidecars": [
+    {
+      "file": "2436952.sol.provenance.json",
+      "sha256": "b877f226c7ea60f742708453e0ba86114e31d1bf722a10ad2616e8aaf72cc255"
+    },
+    {
+      "file": "2437299.sol.provenance.json",
+      "sha256": "0273ff9c8acdc407d38c2fa5d18f5be70389372746edea696c73ef985ac2705d"
+    },
+    {
+      "file": "2437479.sol.provenance.json",
+      "sha256": "0e94a013c95a8d06ac5ccab99229ac3584e9210de17f72417a880f3481ab1429"
+    },
+    {
+      "file": "2437481.sol.provenance.json",
+      "sha256": "37f02b1e14dd37e9b3396071d7776a0af7d67faa3d641dcf356bb9940eee4420"
+    },
+    {
+      "file": "2437491.sol.provenance.json",
+      "sha256": "3d736df0a56b62c03c37f9c946d528decffcc8c4aa5be617712d626a898b2c05"
+    },
+    {
+      "file": "2437492.sol.provenance.json",
+      "sha256": "35e3a5bb60af0e75f5c27196bf853dde2b2aaa236549d30055aa27a06018f76e"
+    },
+    {
+      "file": "2484538.sol.provenance.json",
+      "sha256": "a648a1a066e6251fb3d1491b3df927e7aba727bcb8d7ec2f7a2763d794a95e2b"
+    },
+    {
+      "file": "2486184.sol.provenance.json",
+      "sha256": "ec7fcdd46c76647b86538bf1bb3dd8f59ab70c003d5a93afc9891430b7f5a510"
+    },
+    {
+      "file": "2486881.sol.provenance.json",
+      "sha256": "9c643947b2ad104877754f4bb4edb87f992725b57a591a7b9752b678fdb157a2"
+    },
+    {
+      "file": "2486883.sol.provenance.json",
+      "sha256": "7ebecf7b1130c1e8e7100127f797744dd3f1404a55395a737187058a007db7ee"
+    },
+    {
+      "file": "2486884.sol.provenance.json",
+      "sha256": "141c0d75ec2408a45d4c8be6ebb3c7b81a589d1750f0874f4acb8a399c2064fd"
+    },
+    {
+      "file": "2486897.sol.provenance.json",
+      "sha256": "c83fc4df54b29017bd9bb5c057ffe2ca61130d5cdaf494ef83ca350b8ac76f1b"
+    },
+    {
+      "file": "2486898.sol.provenance.json",
+      "sha256": "398355a9e2967e7273b82ef35fdd00f7ceef05dba2b1c0b8696ebf938f2b7bcc"
+    },
+    {
+      "file": "2486900.sol.provenance.json",
+      "sha256": "684f22a9da336a27885a6dd0f297cafb78886057ece75fbc5df1bb40438b4d4e"
+    },
+    {
+      "file": "2486902.sol.provenance.json",
+      "sha256": "d8191cb21a53b54079677e2e4884b3d17649f23a3e2fae1efe9490ca70cd0508"
+    },
+    {
+      "file": "2486903.sol.provenance.json",
+      "sha256": "419419e69091a108c39cf4b7ed6cd6da241b3010428848fac961a6d3f46df39e"
+    },
+    {
+      "file": "3120230.sol.provenance.json",
+      "sha256": "3b591a802bd817e2f0cd9e368d3048df648c9bee27d3d484564c2cb670a33184"
+    },
+    {
+      "file": "3120244.sol.provenance.json",
+      "sha256": "ba523011c28457648931f3efe26ed93b94089e8b9bed714d07cc41854da3ac2f"
+    },
+    {
+      "file": "3120261.sol.provenance.json",
+      "sha256": "259dd39dc8c626901bf131349fb3af67a9339087fb9c5e45b89fea6e193328d5"
+    },
+    {
+      "file": "3120321.sol.provenance.json",
+      "sha256": "8bcf4f10aeb4305374a6e036bd14183042e7c6a878681972a9d1385505be6fda"
+    },
+    {
+      "file": "3120324.sol.provenance.json",
+      "sha256": "ba3c5926cf8266b203a690faa25dd45e70a25b81ff51eedb6ecf1f227c76e8c5"
+    },
+    {
+      "file": "3120384.sol.provenance.json",
+      "sha256": "291931af3a52d65d6a6d5db986811684304db5969187c3e1fd1de1ac38be5e0c"
+    },
+    {
+      "file": "3120433.sol.provenance.json",
+      "sha256": "7add41d3f10286d3fd3d60258d98662aaaac18f4264f35750828f2e88d54a729"
+    },
+    {
+      "file": "3120436.sol.provenance.json",
+      "sha256": "a608ed9da1d03218a8d974be8bb2fe22a583fb36b7333614b4fe0104f0ce267c"
+    },
+    {
+      "file": "3120488.sol.provenance.json",
+      "sha256": "34eaf85313ec4166837c791b89e3ddd0b3337d8dedf5322c71b7292a79486338"
+    },
+    {
+      "file": "3120621.sol.provenance.json",
+      "sha256": "0c696f9e58d0189aa529dd8e098d97b3e072f2882df4353cbf2d2a5abfe2213c"
+    },
+    {
+      "file": "3120629.sol.provenance.json",
+      "sha256": "6e4c497475c93ea877f2dc636d93dd2d21289f69e137ca8ead2639709d574e49"
+    },
+    {
+      "file": "3120631.sol.provenance.json",
+      "sha256": "a0b1b2863c291013406661dd858b9f99074d2cba113693d4b1512ec0359c5821"
+    },
+    {
+      "file": "3120639.sol.provenance.json",
+      "sha256": "266cd1f08f3751eb028f51a504b33821a922661d18a6cdbd36dacac6c2113591"
+    },
+    {
+      "file": "3120641.sol.provenance.json",
+      "sha256": "a20e1d369e4bcbd6ad9beea58c085a0f42b2bb10da5b375029fefeea932432e7"
+    },
+    {
+      "file": "3120650.sol.provenance.json",
+      "sha256": "467bf6ec9c607febfd57c75b24fc08e83d7e648571a40d800db8498dc7d2db1d"
+    },
+    {
+      "file": "3120651.sol.provenance.json",
+      "sha256": "c61afdcb2636527533b65e45d77febfdcefe596e12a7e740ff6da6bfa7848633"
+    },
+    {
+      "file": "3120652.sol.provenance.json",
+      "sha256": "6a5018091b66977b93b97099f9578a43f4b955e9406376477c8e6ce40d76e1ee"
+    },
+    {
+      "file": "3120661.sol.provenance.json",
+      "sha256": "ab0cf6eca79067057ac5ba88a0df7c505586e8a881ac4c1cf43f7fb45e9c7938"
+    },
+    {
+      "file": "3120759.sol.provenance.json",
+      "sha256": "2ea9d5ce683142b9de74f6d31c73343602880b161112e01bb511f9d99b7c4c7a"
+    },
+    {
+      "file": "3120766.sol.provenance.json",
+      "sha256": "a71253ee564b74e0a2afb89fab36d0eb69aa96bce9cfabc74c1ddaf9be514333"
+    },
+    {
+      "file": "3120776.sol.provenance.json",
+      "sha256": "b74a151bb8533c08d3a48899bd49e590accfd442656b3081825a959585298d4a"
+    },
+    {
+      "file": "3120785.sol.provenance.json",
+      "sha256": "966c6856f5ee7a78c1cc53c42299a0578bfeae712a6b1a9faef1015fcb7c4cd7"
+    }
+  ],
+  "comparison": "all_decisions_cache_semantics_and_canonical_artifacts_equal",
+  "native_reference_comparison": {
+    "numpy": true,
+    "scipy": true,
+    "duckdb": true,
+    "numpy_native_sha256": true,
+    "duckdb_native_sha256": true,
+    "rosetta_files": true,
+    "thread_environment": true
+  }
+}

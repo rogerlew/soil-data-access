@@ -1,0 +1,60 @@
+{
+  "component": {
+    "mukey": "bigint",
+    "cokey": "bigint",
+    "compname": "text",
+    "comppct_r": "numeric",
+    "albedodry_r": "numeric",
+    "hydricrating": "text",
+    "drainagecl": "text",
+    "taxclname": "text",
+    "geomdesc": "text",
+    "taxorder": "text",
+    "taxsuborder": "text"
+  },
+  "chorizon": {
+    "cokey": "bigint",
+    "chkey": "bigint",
+    "hzname": "text",
+    "hzdepb_r": "numeric",
+    "hzdept_r": "numeric",
+    "hzthk_r": "numeric",
+    "dbthirdbar_r": "numeric",
+    "ksat_r": "numeric",
+    "sandtotal_r": "numeric",
+    "claytotal_r": "numeric",
+    "om_r": "numeric",
+    "cec7_r": "numeric",
+    "awc_l": "numeric",
+    "fraggt10_r": "numeric",
+    "frag3to10_r": "numeric",
+    "desgnmaster": "text",
+    "sieveno10_r": "numeric",
+    "wthirdbar_r": "numeric",
+    "wfifteenbar_r": "numeric",
+    "sandvf_r": "numeric",
+    "ll_r": "numeric"
+  },
+  "chfrags": {
+    "chkey": "bigint",
+    "fragvol_r": "numeric"
+  },
+  "chtexturegrp": {
+    "chkey": "bigint",
+    "texture": "text"
+  },
+  "corestrictions": {
+    "cokey": "bigint",
+    "reskind": "text"
+  },
+  "muaggatt": {
+    "mukey": "bigint",
+    "muname": "text",
+    "wtdepannmin": "numeric",
+    "flodfreqdcd": "text",
+    "aws025wta": "numeric",
+    "aws0150wta": "numeric",
+    "hydgrpdcd": "text",
+    "drclassdcd": "text"
+  }
+}

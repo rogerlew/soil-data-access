@@ -1,0 +1,53 @@
+{
+  "wepppy_revision": "39f24ce92442e76e8192ddf329ba70708d52c52a",
+  "parity_runner_revision": "60a699f12005b00dab3842a277c0011162ba64fb",
+  "runtime_revision": "9dc2264be977e795777ebead07ec215c0b749447",
+  "client_uid_gid": "1000:1000",
+  "client_network": "soil-replay-validation_database (internal; no external route)",
+  "canonical_exclusions": [
+    "Build Date comment value",
+    "Source File comment value"
+  ],
+  "tests": {
+    "focused": "75 passed; actual HTTP, SQLite and disposable Redis",
+    "stubtest": "success: 2 modules",
+    "test_stub_hygiene": "all stubs complete",
+    "changed_broad_exceptions": "pass; zero added broad catches",
+    "service_python": "34 passed",
+    "broad_pytest": "blocked during collection: missing SECRET_KEY, then SECURITY_PASSWORD_SALT after setting a disposable test SECRET_KEY",
+    "extended_soils": "46 passed, 5 skipped; blocked on unhydrated statsgo_spatial.db LFS pointer"
+  },
+  "scripts_sha256": {
+    "scripts/run_wepppy_parity.py": "98b914d1bedab36cf032f66eb8fc94fae2eb71b11335a444435c3db539cafc34",
+    "scripts/run_wepppy_json_parity.py": "61fe74e589f1a5ed1bbc5039db3327ee4cb3ae6966bb47b72a150b1d8e14b52f"
+  },
+  "image_ids": {
+    "wepppy-dev:latest": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+    "soil-replay-validation-api": "sha256:290eb1082843a1277504e2656d43fc05501a1be03e3ffd5b5b7df9bab691ec01"
+  },
+  "results": {
+    "valid_soils": 499,
+    "nonvalid_outcomes": 6,
+    "canonical_artifacts": 501,
+    "verified_base_sidecars": 499,
+    "successful_http_fetch_events": 34,
+    "positive_cache_rows": 24049,
+    "matched_reference_environment": true,
+    "excluded_cases": [
+      "statsgo-002: incomplete corestrictions cache"
+    ],
+    "empty_cases": [
+      "statsgo-001: empty input; no positive dataset coverage"
+    ]
+  },
+  "reports_sha256": {
+    "initial-image-failure.json": "f7aac1f40090248870954317070de9a9b2b34ef2bd074cdaaa134b137a1b883b",
+    "negative-diagnostic.json": "05b4a694dcf7a2e4268d536ad06bfe5e1bad0e0434f5dfa4bb38ae24f4ba5759",
+    "ssurgo-001.json": "8bec741e2bf2e95e284ed297a438e9ecb0dd17a690e1ee30e99ef614a8fe2cb1",
+    "ssurgo-002.json": "b99a2b6f68ebf45ed8d5234ff9da6a7459d41b06da5d34a3849eb76f225595bb",
+    "ssurgo-003.json": "6280fc0c609a961ff3f2449a5128638651fcc0e3d436c970b92b3c7958b7bf32",
+    "ssurgo-004.json": "64a30a9e1100553c6068e3f0a032752e219b74e235dfe2220aa36d9dcaaea7ab",
+    "statsgo-001.json": "34aed788b83468763efe2c431fff44c5afdc30eb34f0d5ae5ccce1b948a8e4e0",
+    "statsgo-002.json": "791bdeb8b597653dd2b15f8775b9e763b7baf579208e906981f7ca64628285ef"
+  }
+}

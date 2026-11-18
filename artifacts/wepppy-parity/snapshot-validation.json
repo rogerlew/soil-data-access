@@ -1,0 +1,62 @@
+{
+  "observed_at": "2026-11-18T00:42:04.055341+00:00",
+  "validated_code_revision": "8a0f2cd3e4121d6f1f5941e88548e9fe96e2be71",
+  "unit_tests_passed": 19,
+  "assessment_evidence_check": "passed",
+  "documentation_lint": "10 files, 0 errors, 0 warnings",
+  "staged_lfs_pointers": "9 verified against original fixture bytes",
+  "git_lfs_fsck": "passed locally and after fresh remote clone",
+  "fresh_remote_clone": {
+    "revision": "8a0f2cd3e4121d6f1f5941e88548e9fe96e2be71",
+    "lfs_pull": "passed",
+    "corpus_verifier": "6 cache cases plus paired soil artifacts passed"
+  },
+  "lfs_objects": [
+    {
+      "file": "fixtures/wepppy/ssurgo-001/cache.sqlite",
+      "bytes": 819200,
+      "sha256": "575623478f4acd73a5ffeb63e0d57346d4f2e543c5fc1dc5534c24bf8cfc27fb"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-002/cache.sqlite",
+      "bytes": 200704,
+      "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-003/cache.sqlite",
+      "bytes": 843776,
+      "sha256": "f8d003f290772118df7e1cd5ba1d5e9dbb4b3b7a75f5ac7532b61cc626de5f7c"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-004/cache.sqlite",
+      "bytes": 69632,
+      "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9"
+    },
+    {
+      "file": "fixtures/wepppy/statsgo-001/cache.sqlite",
+      "bytes": 61440,
+      "sha256": "2725874f3fe9cdb1397b87dd2ad9edbf4cabc978e51f57e908645c785a6786ba"
+    },
+    {
+      "file": "fixtures/wepppy/statsgo-002/cache.sqlite",
+      "bytes": 3084288,
+      "sha256": "5ce9db21bdad47421ac2d5b25fe92f330a4561a41441b8ff5e19680a681ac390"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-004/artifacts/model-input.sol",
+      "bytes": 3644,
+      "sha256": "f3fa43933f41d42597173b9b8948f775f4887659a1f2fa5f58d9fbb7b137485c"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-004/artifacts/source.sol",
+      "bytes": 2919,
+      "sha256": "93e450eac93d059677dabf6674c5a605dbf445db1ce166062e5341b35edceccd"
+    },
+    {
+      "file": "fixtures/wepppy/ssurgo-004/artifacts/treated.sol",
+      "bytes": 3621,
+      "sha256": "4a4337165e3891e85d1407c8c9d46b5e7ec16216bd3e2caa7789dba072a608c7"
+    }
+  ],
+  "claim": "Snapshot/tooling validation only; historical soils have not been rebuilt and no release gate has passed."
+}

@@ -1,0 +1,152 @@
+{
+  "claim": "bounded_cache_replay_json_artifact_parity_not_release_acceptance",
+  "network": {
+    "namespace": "net:[4026537744]",
+    "external_connect_errno": 101
+  },
+  "environment": {
+    "wepppy_revision": "39f24ce92442e76e8192ddf329ba70708d52c52a",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "numpy": "1.26.0",
+    "scipy": "1.13.1",
+    "duckdb": "1.1.1",
+    "numpy_native_sha256": "164eb264458d26031c346950c1b4576c6b48f9f30cf1f2e4926ca3318ab41aee",
+    "duckdb_native_sha256": "8b64cb4c1c2cff74e2c01da6a611a3d0abe719dcaecead4bfa858a44e9d8db95",
+    "rosetta_files": {
+      "__init__.py": "5959e8b05ab553d44cc2a38d9cc0baef43e02eb4f0511b192f63676c588b519c",
+      "__main__.py": "8bb31c5f40f1f1177c88f85d461b246c0048d16e9d9fd51f1f804c3c11f2bf95",
+      "_migration/create_duckdb.py": "5f0e2b9def71449a6cfdca71ff66f814458600c2950611e57f263dee19594b1f",
+      "_migration/dump_sqlite_to_parquet.py": "c2fcb8e1fcc56066cb309623ef804d60d6b695a996c1ac481b949ff9a32992e8",
+      "ann.py": "ce42f8dce26d8af038174150562567c4de1640fda22330b50132ffb9cc314690",
+      "db/rosetta.duckdb": "a1e26a549f7babfb77456201850c760d84d88788f1614d7db89e81f0b139532f",
+      "db.py": "cd7fd827c00fb474654097ef08f0483e6d9ae2435ae86108de14694e60989531",
+      "rosetta.py": "ceffff322a67019fb0b97c6484a08508221be290aa27a4b39c10e56dd305fe61",
+      "sqlite/Rosetta.sqlite": "0e1a3f3ccbcf569066dc3c19027183646e434eece30213896f00df6f477910de",
+      "tests/PTF_Model_tests.py": "36b3488a8e6a92260800fcd165e2d7abd4da255881a8303d68296a3bc455a32e",
+      "tests/test_performance.py": "9fa75c224e6d1e9d3e9e3fe228b8187885297c1d0bd847d4f6c620ac51a0d575",
+      "tests/test_rosetta_regression.py": "4c24d0e1511628f80385427aff54a4547a690ce60c6edae40c107abd4e5511e4"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "candidate_source_sha256": {
+    "wepppy/soils/ssurgo/ssurgo.py": "ee1b2a41a751e47715fe3f655de3e65e23a2f0c28065b61fb4f496173d62796c",
+    "wepppy/soils/ssurgo/source.py": "3a308d1d22f4b92880ce6cf9cbde830a830bed8b4839cbaf8309e5981eb518e0",
+    "wepppy/nodb/core/soils.py": "fe8a65620cb58adff2697dd2d78b6a216878b57bb25210e597d9650046973b25"
+  },
+  "source": {
+    "endpoint": "http://api:8080/Tabular/post.rest",
+    "profile": "wepppy-json-v1",
+    "release": "replay-statsgo-001-2725874f3fe9"
+  },
+  "case": {
+    "case_id": "statsgo-001",
+    "snapshot_sha256": "2725874f3fe9cdb1397b87dd2ad9edbf4cabc978e51f57e908645c785a6786ba",
+    "coverage": {
+      "requested_mukeys": 0,
+      "multiple_components": 0,
+      "multiple_horizons": 0,
+      "profile_bottom_le_50cm": 0,
+      "horizons_with_null_texture_or_hydraulic_field": 0,
+      "restriction_kinds": [],
+      "fragment_rows": 0,
+      "texture_rows": 0,
+      "negative_rows": 0
+    },
+    "cache_gaps": {},
+    "profile": {
+      "use_statsgo": true,
+      "initial_sat": 0.75,
+      "ksflag": true,
+      "version": "7778"
+    },
+    "profile_basis": "authored_reference_profile_not_historical_settings",
+    "retrieval": {
+      "binding": {
+        "historical_rows_unknown": false,
+        "identity": {
+          "endpoint": "http://api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "replay-statsgo-001-2725874f3fe9"
+        },
+        "schema_version": 1
+      },
+      "fetches": []
+    },
+    "cache_started_absent": true,
+    "decisions": [],
+    "valid_count": 0,
+    "invalid_count": 0,
+    "historical_comparisons": [],
+    "artifacts": [],
+    "status": "json_candidate_built_historical_comparison_separate"
+  },
+  "cache_comparison": {
+    "component": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "chorizon": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "corestrictions": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "chfrags": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "chtexturegrp": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_component_mukey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_chorizon_cokey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_corestrictions_cokey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_chfrags_chkey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_chtexturegrp_chkey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    }
+  },
+  "provenance_sidecars": [],
+  "comparison": "all_decisions_cache_semantics_and_canonical_artifacts_equal",
+  "native_reference_comparison": {
+    "numpy": true,
+    "scipy": true,
+    "duckdb": true,
+    "numpy_native_sha256": true,
+    "duckdb_native_sha256": true,
+    "rosetta_files": true,
+    "thread_environment": true
+  }
+}

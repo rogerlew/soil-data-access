@@ -1,0 +1,18 @@
+{
+  "command": "go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 -json ./...",
+  "exit_code": 0,
+  "config": {
+    "protocol_version": "v1.0.0",
+    "scanner_name": "govulncheck",
+    "scanner_version": "v1.9.0",
+    "db": "https://vuln.go.dev",
+    "db_last_modified": "2026-11-11T02:51:11Z",
+    "go_version": "go1.26.11",
+    "scan_level": "symbol",
+    "scan_mode": "source"
+  },
+  "findings": [],
+  "raw_sha256": "f9cbc000c0666e2978be49619ddc05b90cba564c65cfa829973aad510aa2b282",
+  "scope": "source-symbol reachability for assessment probe only; not full future API stack",
+  "initial_attempt": "v1.1.4 could not load Go 1.26 syntax; replaced by pinned v1.9.0"
+}

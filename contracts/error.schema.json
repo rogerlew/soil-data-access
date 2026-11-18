@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unofficial mirror error (service-owned, not SDA parity)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "error"
+  ],
+  "properties": {
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message",
+        "request_id"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "invalid_request",
+            "unsupported_query",
+            "request_too_large",
+            "rate_limited",
+            "overloaded",
+            "not_ready",
+            "query_timeout",
+            "internal_error"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    }
+  }
+}

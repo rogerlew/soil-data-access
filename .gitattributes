@@ -1,0 +1,6 @@
+# Preserve captured HTTP response bytes, including CRLF, for checksum verification.
+artifacts/assessment/**/*.body binary
+fixtures/wepppy/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
+fixtures/wepppy/**/*.sol filter=lfs diff=lfs merge=lfs -text
+fixtures/wepppy/**/*.csv filter=lfs diff=lfs merge=lfs -text
+fixtures/wepppy/*.tar.gz filter=lfs diff=lfs merge=lfs -text

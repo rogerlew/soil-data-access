@@ -1,0 +1,231 @@
+[
+  {
+    "category": "core",
+    "id": "_fetch_components",
+    "parsed": true,
+    "rendered": [
+      "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey = muaggatt.mukey WHERE component.mukey IN (1001, 1002) ORDER BY mukey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "core",
+    "id": "_fetch_chorizon",
+    "parsed": true,
+    "rendered": [
+      "SELECT cokey, chkey, hzname, hzdepb_r, hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (1001, 1002) ORDER BY cokey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "core",
+    "id": "_fetch_chfrags",
+    "parsed": true,
+    "rendered": [
+      "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (1001, 1002) ORDER BY chkey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "core",
+    "id": "_fetch_chtexturegrp",
+    "parsed": true,
+    "rendered": [
+      "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (1001, 1002) ORDER BY chkey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "core",
+    "id": "_fetch_corestrictions",
+    "parsed": true,
+    "rendered": [
+      "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (1001, 1002) ORDER BY cokey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "top",
+    "parsed": true,
+    "rendered": [
+      "SELECT TOP 10 mukey, muname FROM mapunit ORDER BY mukey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "brackets",
+    "parsed": true,
+    "rendered": [
+      "SELECT [mukey], [muname] FROM [mapunit] WHERE [mukey] = 465524"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "isnull",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey, ISNULL(muname, 'unknown') AS name FROM mapunit"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "string_concat",
+    "parsed": true,
+    "rendered": [
+      "SELECT musym + ':' + muname AS label FROM mapunit"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "aggregate",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey, SUM(comppct_r) AS total FROM component GROUP BY mukey"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "cte",
+    "parsed": true,
+    "rendered": [
+      "WITH c AS (SELECT mukey, COUNT(*) AS n FROM component GROUP BY mukey) SELECT mukey, n FROM c"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "spatial_function",
+    "parsed": true,
+    "rendered": [
+      "SELECT * FROM SDA_Get_Mukey_from_intersection_with_WktWgs84('POINT(-116.7 46.7)')"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "spatial_method",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey, mupolygongeo.STAsText() AS wkt FROM mupolygon"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "spatial_intersects",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey FROM mupolygon WHERE mupolygongeo.STIntersects(geometry::STGeomFromText('POINT(-116.7 46.7)', 4326)) = 1"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "empty",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey FROM mapunit WHERE mukey = 'nonexistent-fixture-key'"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "nulls",
+    "parsed": true,
+    "rendered": [
+      "SELECT CAST(NULL AS DECIMAL(10,3)) AS missing, CAST(0.125 AS DECIMAL(10,3)) AS value"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "reject",
+    "id": "multiple",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey FROM mapunit",
+      "SELECT cokey FROM component"
+    ],
+    "statement_count": 2
+  },
+  {
+    "category": "reject",
+    "id": "write",
+    "parsed": true,
+    "rendered": [
+      "DELETE FROM component"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "reject",
+    "id": "select_into",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey INTO copied FROM mapunit"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "reject",
+    "id": "dangerous_function",
+    "parsed": true,
+    "rendered": [
+      "SELECT pg_read_file('/etc/passwd')"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "reject",
+    "id": "catalog",
+    "parsed": true,
+    "rendered": [
+      "SELECT * FROM pg_catalog.pg_authid"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "reject",
+    "id": "sleep",
+    "parsed": true,
+    "rendered": [
+      "SELECT pg_sleep(60)"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "malformed",
+    "error": "sql parser error: Expected an expression, found: FROM at Line: 1, Column: 13",
+    "id": "bad_syntax",
+    "parsed": false
+  },
+  {
+    "category": "malformed",
+    "error": "sql parser error: Expected: end of statement, found: IS at Line: 1, Column: 32",
+    "id": "trailing_garbage",
+    "parsed": false
+  },
+  {
+    "category": "candidate",
+    "id": "soildb_survey_join",
+    "parsed": true,
+    "rendered": [
+      "SELECT component.mukey, cokey, comppct_r, compname, taxclname, taxorder, taxsuborder, taxgrtgroup, taxsubgrp FROM legend INNER JOIN mapunit ON mapunit.lkey = legend.lkey LEFT OUTER JOIN component ON component.mukey = mapunit.mukey WHERE legend.areasymbol = 'CA113'"
+    ],
+    "statement_count": 1
+  },
+  {
+    "category": "candidate",
+    "id": "soildb_spatial_subquery",
+    "parsed": true,
+    "rendered": [
+      "SELECT mukey, cokey, compname, comppct_r FROM component WHERE mukey IN (SELECT DISTINCT mukey FROM SDA_Get_Mukey_from_intersection_with_WktWgs84('POINT(-121.771 37.368402)')) ORDER BY mukey, cokey, comppct_r DESC"
+    ],
+    "statement_count": 1
+  }
+]
