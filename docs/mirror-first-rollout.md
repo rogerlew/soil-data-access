@@ -1,8 +1,8 @@
 # Mirror-first rollout with USDA SDA fallback
 
 Status: implemented and qualified on forest, 2026-11-18 UTC. New API/database
-services are running; shared client-default activation awaits protected Compose
-integration approval. See [retained results](forest-validation.md).
+services are running; shared forest client defaults are active after protected Compose
+integration approval and normal-queue canary acceptance. See [retained results](forest-validation.md).
 The operator accepts the SSURGO/STATSGO fixture results as sufficient evidence to
 proceed beyond those locations. Comprehensive geographic/live SDA parity is a
 post-rollout follow-up when SDA recovers, not a prerequisite for the first rollout.

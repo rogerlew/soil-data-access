@@ -17,8 +17,8 @@ two keys outside replay fixtures match direct-file references through the mirror
 and warm SDA-cache fallback, including 76 prepared soil files per case.
 
 [Forest evidence](docs/forest-validation.md) covers import, source selection,
-readiness, runtime controls and bounded performance. Shared WEPPpy client defaults
-await protected Compose integration approval. National data coverage, comprehensive
+readiness, runtime controls and bounded performance. Shared forest WEPPpy client defaults are active following exact-revision approval;
+four normal-queue canary jobs verified 152 prepared soil inputs. National data coverage, comprehensive
 live SDA parity, public hosting and broader workflow coverage remain follow-ups.
 
 ## Local setup

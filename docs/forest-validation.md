@@ -1,8 +1,8 @@
 # Forest regional release qualification
 
 The forest API/database are running on WEPPpy's existing Compose network, using
-runtime 9d09f7f and release forest-id-20261001-vi-20161013-v1. Shared web/workers
-retain their existing client defaults until protected Compose integration approval.
+runtime 9d09f7f and release forest-id-20261001-vi-20161013-v1. Shared forest web/workers now use mirror-first defaults following protected Compose
+integration approval.
 No forest1, production or public hosting activation is included.
 
 ## Retained evidence
@@ -53,3 +53,13 @@ TCP database readiness refinement. Scientific acquisition/model paths are unchan
 four real NoDb tests cover cache clearing, and the new forest database was restarted
 with its release and API readiness preserved. A fresh runtime suite also validates
 the final service source after the readiness-test Clippy correction.
+
+## Completed forest activation
+
+artifacts/forest/activation records exact operator approval, WEPPpy merge revision
+0ae17ad8a393a4fbe250241b2253b77cc475d06b, runtime source hashes, consumer defaults
+and four live RQ canary jobs. Normal-queue builds and soil preparation produced 152
+exact-reference model inputs with verified base hashes and mirror provenance.
+Existing explicit project choices and unrelated shared work are preserved; web,
+RQ and soil services are healthy and dequeue is resumed. Earlier pending-approval
+receipts are historical observations, superseded by this activation record.
