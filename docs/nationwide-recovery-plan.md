@@ -14,8 +14,8 @@ artifacts, plus independent source/import checks for both national datasets.
 ## Progress
 
 - [x] Diagnose both source failures and preserve existing project caches.
-- [x] Start national SSURGO acquisition; acquire national STATSGO2.
-- [ ] Validate archive integrity, provenance and geographic/key coverage.
+- [x] Acquire and hash both national archives; extract the 117,836,186,624-byte SSURGO GeoPackage.
+- [x] Validate archive integrity, provenance and geographic/key coverage: 3,386 SSURGO surveys; all 22 incident keys; all AK/HI/PR/VI STATSGO2 subset keys.
 - [ ] Prepare and validate the national import with the existing six-table schema.
 - [ ] Coordinate active release, environment defaults and saved regional mirror pins.
 - [ ] Rebuild cavernous-oxygen through RQ and validate base and prepared soil artifacts.
@@ -100,7 +100,7 @@ Colorado keys; its mirror cache contains zero components and 22 negative markers
 The national STATSGO2 archive contains 9,562 map units, including all eight keys
 in the previously downloaded VI archive. Its catalog explicitly describes the
 Alaska redevelopment; the earlier CONUS-only listing label is not reliable scope
-evidence. Confirm remaining geographic evidence before declaring completeness.
+evidence. The completed subset checks also cover all Alaska, Hawaii and Puerto Rico map units. The SSURGO catalog contains 3,386 surveys, covers all states and island jurisdictions, and contains components for all 22 incident keys. No SSURGO/STATSGO2 map-unit overlap was found.
 
 ## Decision Log
 
@@ -113,6 +113,6 @@ location-by-location live SDA comparison is required.
 ## Outcomes & Retrospective
 
 In progress. The regional default is still active while national data is prepared.
-The failed project has not been rebuilt or modified yet.
+The failed project has not been rebuilt or modified yet. Both archives and extraction are complete. Import preparation is hashing the source GeoPackage before validation/COPY emission. Inventory found one user project on the regional pin; the other 13 runs are historical qualification fixtures whose accepted evidence will remain unchanged.
 
 Revision note: created after the operator corrected the regional deployment scope.
