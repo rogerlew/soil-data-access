@@ -1,14 +1,14 @@
 {
   "contract_version": "0.3-wepppy-json-v1-reference",
-  "status": "offline_reference_and_authored_json_contract",
+  "status": "local_runtime_cache_replay_implemented_not_release_ready",
   "observed_at": "2026-11-17T20:44:07.429188+00:00",
-  "runtime_implemented": false,
+  "runtime_implemented": true,
   "features": [
     {
       "id": "wepppy_five_query_families",
       "scope": "initial_target",
-      "evidence": "source_download_results_available",
-      "notes": "five families across six tables; SQLServer-to-PostgreSQL semantics still unproven"
+      "evidence": "local_postgresql_cache_record_replay",
+      "notes": "five exact parsed shapes; official import and migrated WEPPpy soil parity pending"
     },
     {
       "id": "form_urlencoded_post",
@@ -19,8 +19,8 @@
     {
       "id": "json_columnname",
       "scope": "initial_target",
-      "evidence": "authored_profile_frozen_legacy_extraction_verified",
-      "notes": "wepppy-json-v1; 11 authored examples checked against pinned legacy extraction; runtime and live USDA wire parity unimplemented"
+      "evidence": "local_api_authored_wire_cases",
+      "notes": "wepppy-json-v1 implemented; live SDA and coordinated WEPPpy migration pending"
     },
     {
       "id": "json_columnname_metadata",
@@ -105,7 +105,7 @@
     },
     {
       "id": "service_owned_json_profile",
-      "status": "contract_frozen_runtime_pending"
+      "status": "runtime_implemented_client_migration_pending"
     },
     {
       "id": "matched_input_end_to_end_soil_parity",

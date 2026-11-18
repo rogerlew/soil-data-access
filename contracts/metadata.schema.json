@@ -63,7 +63,8 @@
                   "dataset": {
                     "enum": [
                       "SSURGO",
-                      "STATSGO2"
+                      "STATSGO2",
+                      "WEPPPY_CACHE_REPLAY"
                     ]
                   },
                   "release_id": {

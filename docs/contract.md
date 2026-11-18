@@ -1,6 +1,7 @@
 # Unofficial Soil Data Access contract
 
-Status: WEPPpy-first acceptance baseline, 2026-11-17. No runtime is implemented.
+Status: local bounded Rust/PostgreSQL replay runtime implemented, 2026-11-18.
+See [runtime contract](runtime-contract.md); no initial release gate has passed.
 The operator approved [project-cache and soil-artifact parity](wepppy-release-gate.md)
 as the first deployment gate. Full SDA wire parity is deferred, not required for
 that bounded release; the [earlier assessment](milestone-1-assessment.md) retains outage evidence.
@@ -19,10 +20,9 @@ The code license does not relicense third-party datasets. Clearly identify the s
 ## Architecture and deployment
 
 Use the Rust recommendation as the implementation direction with PostgreSQL/PostGIS;
-finish evaluation and pinning of the complete runtime stack before adoption.
+the [runtime dependency decision](runtime-dependencies.md) pins the local stack.
 Docker Compose is a required supported deployment, including a reproducible local
-API/database acceptance environment. Exact dependency versions and image digests
-must be evaluated and pinned before implementation. There is no selected public
+API/database acceptance environment. Dependency versions and image digests are pinned for local evaluation. There is no selected public
 host, hostname, TLS integration, capacity allocation, or availability commitment.
 Do not assume Compose can run on the existing Talos nodes or reuse postgres-01.
 No new queue, Redis cache, replication layer, or SQL Server emulation platform is
@@ -151,7 +151,8 @@ releases. Existing project caches and upstream XML behavior remain intact.
 Full live SDA and general public-client parity are deferred. Passing this gate
 permits only the published WEPPpy workflow/source-release claim. No gate has passed
 yet; the [offline reference](offline-reference-contract.md) is reproducible,
-but complete workflow coverage and the runtime remain pending.
+but full workflow coverage, migrated client, production import and deployment
+acceptance remain pending.
 
 Benchmarks report hardware, image/code revisions, dataset/checksums, indexes,
 connection limits, concurrency, warm/cold conditions, throughput, error rate,
@@ -191,7 +192,6 @@ full SDA compatibility without evidence.
 ## Assessment recommendation
 
 [The Rust/Go evaluation](dependency-evaluation.md) recommends Rust based on the
-26-query syntax probe and parser maintenance breadth. The full runtime stack is
-not adopted yet. Rust sqlparser parses the tested SQL Server spatial intersection
+26-query syntax probe and parser maintenance breadth. The [local runtime stack](runtime-dependencies.md) is now pinned and implemented. Rust sqlparser parses the tested SQL Server spatial intersection
 expression that GoSQLX rejects. Neither parser translates semantics or enforces
 query safety; PostgreSQL/PostGIS parity and resource containment remain gates.

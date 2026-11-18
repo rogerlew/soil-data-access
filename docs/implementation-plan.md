@@ -34,7 +34,8 @@ still deployment prerequisites.
 - [x] (2026-11-18 UTC) Repeat pinned offline reference builds: 499 valid soils, six non-valid outcomes, 501 matching canonical artifacts.
 - [x] (2026-11-18 UTC) Freeze authored JSON profile, eleven legacy extraction cases, reference schema, and comparison rules.
 - [ ] Complete workflow coverage: fallback/assignment execution, treatment variants, and full historical/native lineage gaps.
-- [ ] Implement Rust/PostgreSQL/PostGIS service and test-only cache replay adapter.
+- [x] (2026-11-18 UTC) Implement Rust/PostgreSQL/PostGIS local runtime and test-only cache replay adapter.
+- [ ] Retain final committed Compose runtime validation receipt.
 - [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
 - [ ] Verify official-data import independently from historical cache replay.
 - [ ] Prove corpus parity, release coverage, capacity, security, and recovery in Compose.
@@ -46,8 +47,8 @@ still deployment prerequisites.
 
 
 The service repository is /workdir/soil-data-access. It currently contains contracts,
-source audit scripts, parser probes, and offline tests, but no server, production
-importer, or Compose stack. The original query inventory is
+source audits, offline references, the Rust runtime in src/, migrations/001_replay.sql,
+a test-only cache adapter, and compose.yaml. No production importer exists. The original query inventory is
 contracts/wepppy-queries.json; contracts/compatibility.json records supported-scope
 intent and evidence status. Existing audit observations remain immutable in
 artifacts/assessment; they are not proof that a release is ready.
@@ -71,6 +72,13 @@ which manages Talos/Kubernetes; do not assume those nodes run Docker Compose.
 
 ## Surprises & Discoveries
 
+
+All five complete cache cases reconstruct consistent muaggatt attributes and match
+API results after SQLite cache affinities. Immediate disconnect cancellation is not
+proven: PostgreSQL statement_timeout bounded the observed cleanup to about five
+seconds. Docker internal-only networking suppressed localhost port publishing, so
+the API uses an HTTP bridge and an internal database bridge; upstream confinement
+for the future WEPPpy build remains open. See docs/runtime-security-review.md.
 
 The offline reference repeats exactly after the two declared metadata exclusions.
 The paired historical base soil predates the October 200 mm writer boundary change;
@@ -114,6 +122,12 @@ docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
 
+
+2026-11-18 UTC: implement the bounded runtime under docs/runtime-contract.md.
+Use exact parsed query shapes and owned parameterized statements, per-request
+connections with bounded concurrency, and separate replay releases. Add explicit
+WEPPPY_CACHE_REPLAY metadata instead of claiming official source lineage. Replay
+ordinals preserve cached tie order only; production ordering remains unproved.
 
 2026-11-18 UTC: pin the observed production checkout revision for the legacy
 reference, with networking blocked by a Linux network namespace. Preserve only
@@ -159,8 +173,8 @@ new caches by endpoint profile and source release.
 
 Earlier decisions retained: MIT license; separate service repository and
 open-wepp-org infrastructure ownership; Docker Compose support; PostgreSQL/PostGIS
-candidate; Rust recommended from pinned syntax/dependency evidence. Full runtime
-dependency selection and numerical capacity targets remain to be completed.
+candidate; Rust selected from pinned syntax/dependency evidence. Runtime dependencies are
+pinned in Cargo.lock and docs/runtime-dependencies.md; capacity targets remain open.
 
 ## Milestone 1: Freeze the project corpus and WEPPpy contract
 
@@ -321,8 +335,11 @@ evaluation/rust/Cargo.toml and go run from evaluation/go as documented in the
 assessment. The corpus verifier checks committed snapshot bytes and logical content; it does
 not validate rebuilt soils or runtime acceptance.
 
-Initial cache discovery and snapshot tooling are implemented. Next, complete the
-coverage matrix, capture configuration/artifact lineage, and build the reference. Before creating candidate caches,
+The offline reference and local runtime are implemented. Execute the local Compose
+commands in README.md, then scripts/verify_runtime.py against a new isolated database.
+It checks all complete fixtures and authored cases, privilege denial, overload,
+statement timeout cleanup, release consistency, response bounds and restart. Next,
+wire the actual WEPPpy client and complete the missing workflow coverage. Before creating candidate caches,
 record compatibility/regression expectations in the WEPPpy work package. As each
 runner/CLI is implemented, add its exact invocation and retained output here;
 proposed file paths above are not commands that already exist. Run WEPPpy tests
@@ -381,13 +398,14 @@ A fresh remote clone retrieved all LFS objects and passed fixture/archive checks
 and all 27 tests at d991fec; reference-validation.json retains the verification
 receipt. This verifies published artifact integrity, not another numerical replay.
 
-The next implementation step is the bounded Rust/PostgreSQL service and test-only
-cache replay, after dependency evaluation, while completing declared workflow
-coverage. This reference is a useful baseline, not full NoDb/RQ/raster execution or
+The bounded Rust/PostgreSQL service and test-only cache replay now execute all
+five families through local Compose. Each complete fixture matches independent
+SQLite records; eleven authored cases preserve raw rows and exact wire values.
+The next implementation step is the WEPPpy client, while completing workflow coverage. This reference is a useful baseline, not full NoDb/RQ/raster execution or
 mirror parity. Only one captured forest treatment profile is paired downstream;
 other treatment/fallback/assignment behaviors still need evidence or explicit scope
-exclusion before release. Historical commit/native lineage remains unknown. No API,
-production importer, migrated client, Compose acceptance, or deployment exists.
+exclusion before release. Historical commit/native lineage remains unknown. No production importer, migrated
+WEPPpy client, full Compose workflow acceptance, or deployment exists.
 The source caches, historical files, and WEPPpy production behavior remain intact.
 
 ## Artifacts and Dependencies
@@ -397,7 +415,7 @@ Historical observations remain under artifacts/assessment and can be read at com
 d311ddb. New cache/soil evidence belongs under artifacts/wepppy-parity, with large
 or sensitive acquisitions in ignored data/parity. Operator-authorized clean cache
 fixtures are stored in Git LFS under fixtures/wepppy with adjacent manifests. Rust
-is the recommended implementation language; exact runtime versions await evaluation.
+is the implementation language; versions and licenses are retained under artifacts/runtime.
 The code and documentation remain MIT-licensed; third-party data attribution is
 separate. Initial complexity is one API, one PostgreSQL/PostGIS database, import
 and validation tooling, and explicit WEPPpy client configuration.
@@ -417,3 +435,6 @@ that unified SDA queries and gNATSGO coverage cross cache/collection labels.
 
 Revision: 2026-11-18 UTC. Retain two offline reference runs and authored JSON
 contracts; document historical drift, incomplete cache, and workflow coverage gaps.
+
+Revision: 2026-11-18 UTC. Implement bounded local Rust/PostgreSQL replay, preserve
+explicit metadata provenance, and keep client/workflow/public gates open.

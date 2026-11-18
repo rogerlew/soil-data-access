@@ -2,49 +2,104 @@
 
 An independent soil-data API intended to remain usable during USDA service outages.
 
-## Status
+## Status and architecture
 
-Contract-first assessment. No API, importer, database, or Compose stack is
-implemented yet. The initial release will be gated by project SQLite cache and
-generated-soil parity for declared WEPPpy workflows. Full SDA parity is deferred;
-upstream availability does not block this bounded implementation. No release gate
-has passed yet.
+The local Rust API, PostgreSQL/PostGIS Compose stack, and test-only cache replay
+adapter implement five bounded WEPPpy query families. Frozen project-cache records
+and authored wire cases can be checked through the real API/database. This is an
+unofficial development service, not a deployed national mirror.
 
-## Architecture and API direction
+WEPPpy JSON client integration, fresh-cache generated-soil parity, official-data
+import, full workflow coverage, capacity, and public security/recovery approval
+remain open. Full SDA compatibility is deferred. No release gate has passed.
 
-The assessment recommends Rust with PostgreSQL/PostGIS and Docker Compose
-deployment. The complete runtime stack is not yet adopted.
-Start with a documented subset of SDA's `/Tabular/post.rest` query behavior and
-JSON responses. Coordinate a WEPPpy XML-to-JSON migration with parser and final
-soil-file parity tests. XML compatibility remains a separate assessment item.
+## Local setup
 
-SSURGO and STATSGO2 coverage, SQL Server translation, public-client compatibility,
-and performance require evidence. This is not an official USDA service.
-
-## Developer entry points
-
-- [Behavior contract](docs/contract.md): scope, data, security, and acceptance.
-- [Implementation plan](docs/implementation-plan.md): milestones and current state.
-- [WEPPpy release gate](docs/wepppy-release-gate.md): corpus, artifact parity, and deployment requirements.
-- [Milestone 1 assessment](docs/milestone-1-assessment.md): source audit and remaining gaps.
-- [Rust/Go recommendation](docs/dependency-evaluation.md): reproducible probes and tradeoffs.
-- [Current WEPPpy queries](contracts/wepppy-queries.json): five extracted query
-  families with provenance; synthetic keys and no captured responses yet.
-- [Contributor guidance](AGENTS.md).
-
-Validate the initial inventory from this repository:
+Requires Docker Compose, Python 3, and Git LFS. Rust 1.92.0 is needed for native
+checks; Docker builds pin the compiler and image digests. From a clean checkout:
 
 ```bash
-python3 -m unittest discover -s tests -v
-python3 scripts/verify_assessment.py
+git lfs pull
+python3 scripts/init_local_env.py
+export COMPOSE_PROJECT_NAME=soil-replay-local
+docker compose config --quiet
+docker compose up -d --build
+curl --fail http://127.0.0.1:18080/v1/metadata
 ```
 
-## Operations and licensing
+The initialization script creates .env once with random local credentials and the
+current source revision. Do not overwrite existing credentials or change them for
+an initialized volume without a database password migration. Before validating a
+new committed build, update CODE_REVISION in .env to that commit. Metadata initially
+reports ready=false until an explicit replay import activates a release.
 
-Portable Compose configuration belongs here; environment-specific deployment
-integration belongs in open-wepp-org. The host, route, TLS, and capacity are not
-selected. Production infrastructure has not been changed.
+To exercise every complete fixture, authored examples, and operational checks on
+this new empty database:
 
-Code and documentation are licensed under the [MIT License](LICENSE).
-USDA source attribution and data-release metadata are retained independently;
-the code license does not relicense third-party datasets.
+```bash
+python3 scripts/verify_runtime.py --receipt data/parity/runtime-validation.json
+```
+
+This harness mutates only the selected local test stack and refuses an already
+populated release table. For another full run, choose a new COMPOSE_PROJECT_NAME
+and an unused SOIL_HTTP_PORT, or stop the previous stack first. Keep previous
+volumes/evidence; do not delete persistent volumes as routine cleanup.
+
+For a single fixture instead of the full harness:
+
+```bash
+python3 scripts/replay_cache.py --case ssurgo-004 --output data/parity/replay.sql
+docker compose exec -T db psql -U soil_import -d soil -v ON_ERROR_STOP=1 < data/parity/replay.sql
+curl --fail http://127.0.0.1:18080/v1/metadata
+```
+
+A duplicate release import fails transactionally. The incomplete shared STATSGO
+fixture is deliberately rejected. Stop local containers with `docker compose down`;
+the named data volume remains. Environment-specific deployment belongs to
+open-wepp-org and is not configured here.
+
+## API and configuration
+
+| Endpoint | Behavior |
+| --- | --- |
+| GET /v1/metadata | Unofficial identity, readiness, code revision, active replay release |
+| POST /Tabular/post.rest | Form fields query and format=JSON+COLUMNNAME; five exact parsed shapes |
+
+The [JSON profile](docs/wepppy-json-profile.md) defines ordered headers, string/null
+cells and release headers. The [runtime contract](docs/runtime-contract.md) defines
+admission, resource bounds and replay assumptions. XML and arbitrary SQL are unsupported.
+
+| Setting | Purpose |
+| --- | --- |
+| SOIL_IMPORT_PASSWORD | Local database initialization/import credential |
+| SOIL_SERVE_PASSWORD | Separate SELECT-only API credential |
+| CODE_REVISION | Exact lowercase 40-character source revision |
+| SOIL_HTTP_PORT | Localhost published HTTP port; default 18080 |
+| COMPOSE_PROJECT_NAME | Isolates test containers, network and volume |
+
+PostgreSQL has no published port. API success logs contain request IDs, query family,
+release and row count. Use `docker compose logs api` for those records. See the
+[security review](docs/runtime-security-review.md) for controls and open public gates.
+
+## Developer checks
+
+```bash
+cargo test --locked
+cargo clippy --locked --all-targets -- -D warnings
+python3 -m unittest discover -s tests -v
+python3 scripts/verify_assessment.py
+python3 scripts/verify_corpus.py
+python3 scripts/verify_wepppy_reference.py --verify-published
+```
+
+src/planner.rs admits frozen query shapes; src/main.rs executes owned SQL with bound
+keys. scripts/replay_cache.py reconstructs test tables from processed caches and
+rejects conflicting map-unit attributes. It is not a production importer.
+
+- [Contributor guidance](AGENTS.md) and [implementation plan](docs/implementation-plan.md).
+- [Behavior contract](docs/contract.md) and [WEPPpy release gate](docs/wepppy-release-gate.md).
+- [Reference findings](docs/reference-deviations.md) and [reproduction](docs/offline-reference-contract.md).
+- [Rust/Go assessment](docs/dependency-evaluation.md) and [runtime dependencies](docs/runtime-dependencies.md).
+
+Code and documentation use the [MIT License](LICENSE). USDA data attribution and
+third-party component licenses remain independent; MIT does not relicense them.
