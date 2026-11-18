@@ -343,14 +343,17 @@ remove persistent volumes as routine cleanup.
 ## Outcomes & Retrospective
 
 
-Six cache fixtures are acquired and prepared for LFS publication: three initial
+Six cache fixtures are acquired and stored through Git LFS: three initial
 SSURGO-labeled project caches, a fourth project cache containing confirmed STATSGO
 catalog keys, one empty STATSGO-labeled project cache, and the positive shared
 STATSGO cache. Three paired historical soil files for the fourth project include
 an actual WEPP model input. Publication strips only the private project path in
 two Source File comments; numeric/model payload bytes remain exact.
 
-Source fingerprints, logical comparisons, integrity checks, and unknown historical
+Nineteen tests, fixture verification, documentation lint, and a fresh remote
+LFS checkout passed; artifacts/wepppy-parity/snapshot-validation.json pins the
+validated code and object hashes. Source fingerprints, logical comparisons,
+integrity checks, and unknown historical
 revision/configuration are explicit. Raw acquisition and private run mapping stay
 outside Git. No reference soils have been rebuilt, no complete workflow corpus
 frozen, no server implemented, and no deployment validated. Complete configuration,
