@@ -1,6 +1,10 @@
 # Milestone 1: source and compatibility assessment
 
-Date: 2026-11-17. Status: **partially complete; upstream wire capture blocked**.
+Historical assessment: 2026-11-17. Original status: **partially complete; upstream
+wire capture blocked**. The later operator-approved [WEPPpy release policy](wepppy-release-gate.md)
+supersedes the live-capture prerequisite below. Findings remain valid; revised
+milestone 1 now freezes a project-cache corpus and offline WEPPpy JSON contract.
+The `--require-live` check addresses deferred SDA parity, not initial deployment.
 The source audit, offline query evidence, compatibility inventory, and language
 assessment are complete for the inspected samples. There is no runtime service.
 

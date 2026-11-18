@@ -1,4 +1,4 @@
-"""Verify retained assessment evidence; --require-live fails while M1 is incomplete."""
+"""Verify assessment evidence; --require-live checks deferred SDA parity, not release readiness."""
 
 import argparse
 import hashlib
@@ -44,9 +44,9 @@ def verify(root, require_live=False):
             raise ValueError("Parser results are stale or incomplete")
         if any(not result["parsed"] for result in results if result["category"] == "core"):
             raise ValueError("Core consumer query not parsed")
-    if require_live and matrix["blocking_gaps"]:
-        raise ValueError("Milestone 1 remains incomplete: " + "; ".join(matrix["blocking_gaps"]))
-    return "Offline evidence checks passed; live wire parity and full milestone acceptance remain unproven."
+    if require_live and matrix["deferred_sda_parity_gaps"]:
+        raise ValueError("Deferred SDA wire parity remains unproven: " + "; ".join(matrix["deferred_sda_parity_gaps"]))
+    return "Offline evidence checks passed; WEPPpy release acceptance and full SDA parity remain unproven."
 
 
 def main():

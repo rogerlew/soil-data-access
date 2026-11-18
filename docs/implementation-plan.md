@@ -1,165 +1,316 @@
-# Establish and implement an unofficial Soil Data Access service
+# Deliver a WEPPpy-compatible soil service during the SDA outage
+
 
 This ExecPlan is living. Keep Progress, Surprises & Discoveries, Decision Log,
-and Outcomes & Retrospective current. The normative behavior is docs/contract.md.
+and Outcomes & Retrospective current. The normative rules are in docs/contract.md
+and docs/wepppy-release-gate.md. The scope is faithful preservation of WEPPpy soil
+behavior through a new database/API/JSON path; scaffolding is not acceptance.
 
 ## Purpose
 
-Enable existing soil clients to query independently hosted USDA data through a
-measured, explicitly bounded compatible API during upstream outages. Deliver a
-portable Docker Compose stack and an environment-specific open-wepp-org handoff.
+
+Enable WEPPpy soil construction without contacting the unavailable USDA Soil Data
+Access (SDA) service. The first release supports the five existing tabular query
+families, with verified project-cache and generated-soil parity. It is a public,
+unofficial, MIT-licensed service with Docker Compose support. Full SDA wire and
+public-client compatibility are separate follow-up work, not initial deployment
+prerequisites. Security, operational readiness, and actual output validation are
+still deployment prerequisites.
 
 ## Progress
 
-- [x] Inspect WEPPpy requests and open-wepp-org deployment boundaries.
-- [x] Establish initial contract and extract five real query families.
-- [x] Scaffold separate soil-data-access repository for operator-requested main publication.
-- [ ] Confirm target deployment environment.
-- [x] Audit official SSURGO Guam and STATSGO2 Virgin Islands downloads; retain schemas, hashes, keys, and ten query-family results.
-- [x] Capture availability failures on both SDA hosts; each returned 502.
-- [ ] Capture live success/empty/error fixtures and paired XML after SDA recovers.
-- [x] Define compatibility matrix and service-owned metadata/error schemas.
-- [ ] Freeze SDA wire response schemas and release-matched parity fixtures.
-- [x] Run pinned Rust/Go parser probes and dependency scans; recommend Rust.
-- [ ] Adopt and pin the complete runtime stack during milestone 2.
-- [ ] Implement importer and bounded API using PostgreSQL/PostGIS.
-- [ ] Validate Compose end-to-end, artifact parity, security, and performance.
-- [ ] Prepare reviewed infrastructure integration and public-release handoff.
 
-## Surprises & Discoveries
-
-WEPPpy currently uses form-encoded POST and XML. The operator is open to migrating
-it to JSON, so XML is an observed baseline rather than a mandatory first target. The open-wepp-org checkout is
-an existing Talos/Kubernetes infrastructure repository. Docker Compose support
-must not silently mutate that platform or assume Talos can host Docker.
-The current national SSURGO archive is listed at 31,549,528,132 compressed bytes;
-the official STATSGO2 download inspected is dated 2016. Neither a national listing
-nor sample coverage establishes full SDA parity. SQLite rejects the component
-query's unqualified ORDER BY mukey; the source audit records an explicit qualified
-adaptation. GoSQLX 1.17.0 rejects the tested geometry::STGeomFromText intersection;
-Rust sqlparser 0.64.0 parses it. Both parse unsafe constructs, so neither is an
-admission-control boundary.
-
-## Decision Log
-
-2026-11-17: Recommend Rust after pinned probes (5/5 core queries for both;
-13/13 candidate queries for Rust, 12/13 for Go). This is a suitability decision,
-not a service-performance claim or blanket dependency approval. See
-[dependency evaluation](dependency-evaluation.md).
-
-2026-11-17: Keep milestone 1 open while upstream is unavailable. Download-derived
-results are explicitly not wire fixtures. Continue bounded offline work; do not
-invent null/error/empty-response semantics. Choose form-encoded JSON+COLUMNNAME
-for WEPPpy and record soilDB's metadata format as a separate compatibility target.
-
-2026-11-17: Operator selected MIT licensing and requested scaffold commit/push
-to main. Include LICENSE and keep third-party data attribution separate.
-
-2026-11-17: Prefer JSON-first integration with a coordinated WEPPpy migration,
-following operator steering. Prove parser and generated-soil artifact parity;
-evaluate XML separately for broader compatibility.
-
-2026-11-17: Start with the contract and extracted consumer queries. The operator
-explicitly requested contract-first work. Keep Rust/Go and exact dependency
-versions undecided until compatibility and dependency evaluation are recorded.
-Use /workdir/soil-data-access as a provisional separate service repository;
-open-wepp-org owns eventual environment integration. No live target is selected.
+- [x] Inspect current WEPPpy requests and infrastructure ownership.
+- [x] Publish scaffold, initial contracts, and extracted query inventory.
+- [x] Audit official SSURGO Guam and STATSGO2 Virgin Islands samples.
+- [x] Retain SDA 502 observations and source/probe evidence.
+- [x] Evaluate Rust/Go parsers and dependencies; recommend Rust.
+- [x] (2026-11-17) Record operator-approved WEPPpy-first acceptance and deferred SDA parity.
+- [ ] Inventory and consistently snapshot representative project SQLite caches/artifacts.
+- [ ] Freeze corpus manifest, reference build, JSON profile, and comparison rules.
+- [ ] Implement Rust/PostgreSQL/PostGIS service and test-only cache replay adapter.
+- [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
+- [ ] Verify official-data import independently from historical cache replay.
+- [ ] Prove corpus parity, release coverage, capacity, security, and recovery in Compose.
+- [ ] Prepare and execute authorized environment-specific deployment.
+- [ ] Deferred: capture live SDA success/empty/error/XML fixtures after recovery.
+- [ ] Deferred: establish full SDA/public-client/spatial compatibility before claiming it.
 
 ## Context and Orientation
 
-This repository initially contains documentation and contracts/wepppy-queries.json.
-The latter was extracted without importing or executing WEPPpy module code.
-Its synthetic keys exercise query construction only. Source code is at
-/workdir/wepppy/wepppy/soils/ssurgo/ssurgo.py. Infrastructure guidance resides in
-/workdir/open-wepp-org/AGENTS.md and its docs/planning deployment roadmap.
-SDA means USDA Soil Data Access. T-SQL is SQL Server's SQL dialect. PostGIS adds
-spatial operations to PostgreSQL. Parity means equivalent observable results on
-equivalent source data, not just successful requests.
 
-## Milestone 1: Freeze an executable compatibility baseline
+The service repository is /workdir/soil-data-access. It currently contains contracts,
+source audit scripts, parser probes, and offline tests, but no server, production
+importer, or Compose stack. The original query inventory is
+contracts/wepppy-queries.json; contracts/compatibility.json records supported-scope
+intent and evidence status. Existing audit observations remain immutable in
+artifacts/assessment; they are not proof that a release is ready.
 
-Inspect official downloads and record release/checksum/schema/coverage manifests.
-Acquire bounded upstream response fixtures when available, including JSON success,
-empty and invalid requests and paired XML responses for migration comparison. Do not fabricate observations during outages. Build
-contracts/compatibility.json and fixture validation with explicit supported and
-unsupported entries, then define the metadata and error schemas. Add known real
-SSURGO and STATSGO2 keys; retain synthetic examples separately. Extend beyond the
-five WEPPpy families with representative soilDB and spatial queries. Acceptance:
-fixtures are provenance-tagged and expected results can be checked offline.
+WEPPpy source is /workdir/wepppy/wepppy/soils/ssurgo/ssurgo.py. SurgoSoilCollection
+reads project-local soils/ssurgo_tabular_cache.sqlite or
+soils/statsgo_tabular_cache.sqlite and fetches missing records. Start read-only
+project discovery under /wc1/runs/ when available. Consult WEPPpy's nearest AGENTS
+and tests before its eventual implementation edits; use a separate task worktree.
+The current working tree contains unrelated work and is not a fixture sandbox.
 
-## Milestone 2: Implement one reproducible vertical slice
+A project cache stores processed records, not raw SDA tables/responses. Its
+component records include muaggatt attributes; existing extraction removes some
+duplicate records. An oracle is the frozen reference result used for comparison.
+PostGIS adds spatial types/operations to PostgreSQL. Neither adopting PostGIS nor
+parsing a spatial query makes spatial API compatibility part of the first release.
+Environment-specific host/routing/storage ownership is /workdir/open-wepp-org,
+which manages Talos/Kubernetes; do not assume those nodes run Docker Compose.
 
-Evaluate parser, database driver, HTTP stack, license, maintenance, dependency tax,
-and security exposure before selecting language/libraries. Record the result in
-docs/dependency-evaluation.md. Implement import tools, migrations, bounded parsed
-query translation, JSON serialization, coordinated WEPPpy JSON extraction, and API endpoints against the frozen contract.
-Create compose.yaml and a Dockerfile with pinned dependencies. Keep imports and
-serving roles separate. Start with one isolated database and API instance.
-Acceptance: a real imported subset answers all initial query families, rejects
-unsupported operations, and produces results consumable by WEPPpy offline.
+## Surprises & Discoveries
 
-## Milestone 3: Prove public-service readiness
 
-Import the national release(s), measure actual database/index/workspace storage,
-run parity and representative load tests, and retain sanitized evidence. Freeze
-numerical latency/error/capacity targets before measurements. Validate bounds,
-client cancellation, restart, interrupted import, atomic activation, and rollback.
-Run WEPPpy soil generation through the candidate endpoint and compare generated
-soil files. A security review must cover the final code/configuration; unresolved
-high findings prevent publication. Tiny synthetic data cannot close this milestone.
+SDA remains unavailable in retained observations. Independent official downloads
+are reachable. The national SSURGO archive is listed at 31,549,528,132 compressed
+bytes; the inspected STATSGO2 archive is dated 2016. Sample contents do not prove
+national coverage or equivalence to current SDA.
 
-## Milestone 4: Environment integration
+WEPPpy currently uses form-urlencoded POST with XML. It can migrate to JSON while
+retaining soil behavior. The source audit found ambiguous ORDER BY mukey in the
+component join and integer-versus-text key storage differences. These require
+explicit resolution and tests. Rust sqlparser parsed all tested candidate syntax;
+GoSQLX rejected the spatial intersection example. Neither parser enforces safety.
 
-Prepare a governed package in open-wepp-org identifying the exact Compose-capable
-host, capacity, storage, secrets, routing, TLS, image digest, rollback, and operator
-handoffs. Preserve existing Talos and WEPPcloud deployments. Portable Compose
-support and live public deployment are separate acceptance states. Review public
-branding and source-data attribution before a public service release. Code and
-documentation use the operator-selected MIT License.
+Project caches preserve useful historical reference data but lose some upstream
+row multiplicity/order. Cache replay alone therefore cannot establish raw import
+correctness, live wire parity, or duplicate-selection behavior on unseen raw data.
+
+## Decision Log
+
+
+2026-11-17, operator-approved: replace live SDA availability as an initial release
+gate with WEPPpy cache/soil parity. The extended outage makes waiting for live wire
+fixtures unnecessary for a narrowly claimed WEPPpy deployment. The prior decision
+to hold milestone 1 for upstream recovery is superseded. Full SDA validation remains
+tracked; no existing security, recovery, or end-to-end gate is waived.
+
+2026-11-17: use two independent evidence paths. Historical cache replay isolates
+software/transport changes. Official-download validation checks import correctness
+and source-release differences. Treating a processed cache as a raw national source,
+or forcing new source values to match old files, was rejected as circular testing.
+
+2026-11-17: freeze an explicitly service-owned JSON profile offline, informed by
+existing client behavior. It may use the SDA-style path and format token but must
+not claim observed SDA wire equivalence. Preserve the current upstream XML path
+for existing configurations; select the new JSON service explicitly and namespace
+new caches by endpoint profile and source release.
+
+Earlier decisions retained: MIT license; separate service repository and
+open-wepp-org infrastructure ownership; Docker Compose support; PostgreSQL/PostGIS
+candidate; Rust recommended from pinned syntax/dependency evidence. Full runtime
+dependency selection and numerical capacity targets remain to be completed.
+
+## Milestone 1: Freeze the project corpus and WEPPpy contract
+
+
+Add scripts/snapshot_project_corpus.py and contracts/wepppy-corpus.schema.json.
+Inventory cache-bearing runs read-only; select SSURGO and STATSGO2 plus restrictive
+layers, shallow profiles, multiple components/horizons/textures/fragments, null and
+missing fields, invalid soils, missing keys, fallback behavior, and relevant burn
+or treatment variants. Record a coverage matrix rather than an arbitrary project
+count. Uncovered supported behavior blocks acceptance or must be excluded from the
+release scope before implementation, not silently skipped.
+
+Use SQLite's backup API to create consistent snapshots, including committed WAL
+content; never copy a live .sqlite file alone or checkpoint/mutate the source.
+Check snapshot integrity and record input hashes, schema, row counts, provenance
+sidecars, source vintage (explicitly unknown where absent), model/configuration,
+reference code/native-library versions, negative-cache markers, completeness, and
+selected/generated artifact hashes.
+Store working copies in ignored data/parity; retain sanitized manifests under
+artifacts/wepppy-parity. Do not publish entire project directories or private paths.
+
+Implement the reference runner in scripts/run_wepppy_parity.py. Regenerate soils
+from snapshot copies with pinned WEPPpy/configuration and remote fetching disabled.
+Use existing project .sol files as an additional historical check, not an assumed
+current-code oracle. Classify historical mismatches by code/configuration/source
+lineage; exclude incomplete caches from the complete replay set and retain them
+as explicit missing-data cases. Do not refill reference snapshots through the mirror.
+
+Before implementing transport, define contracts/wepppy-json.schema.json and authored
+fixtures for success, empty results, nulls, decimals, identifier normalization,
+column order, errors, and duplicate handling. Keep the five query families as the
+first supported SQL scope. Define numeric precision and selection/tie behavior from
+the pinned reference; do not invent an ordering rule to make a test pass. For raw
+row cases that caches cannot represent, run independently authored or download-
+derived rows through the unchanged legacy extraction logic and the new JSON path;
+label synthetic XML honestly. Live XML is not required for those offline tests.
+
+Acceptance: the reference rebuild is reproducible with USDA unavailable; corpus
+coverage and deviations are explicit; authored schemas/fixtures can be checked
+offline. Milestone 1 does not require a recovered SDA endpoint.
+
+## Milestone 2: Implement and wire the bounded service
+
+
+Use the Rust recommendation, finishing dependency/license/security evaluation for
+the complete HTTP/database stack before adoption. Create src/, importer tools,
+schema migrations, Dockerfile, and compose.yaml with pinned versions. Parse only
+the agreed grammar, resolve schema names/types, bind literals, and emit PostgreSQL
+SQL from an owned query representation. Reject unsupported SQL and functions.
+Implement the service-owned JSON, metadata, and error profiles first. Keep import
+credentials separate from the read-only serving role. No unrestricted passthrough,
+queue, cache daemon, or SQL Server emulator is included.
+
+Add a clearly test-only cache-to-PostgreSQL adapter. Explicitly map the processed
+component/muaggatt projection; reject inconsistent repeated attributes instead of
+inventing source rows. Record all reconstruction assumptions. Exercise the real
+server and database, not a mock of _fetch_* or a fake HTTP response. This replay
+adapter is not the production importer and cannot certify production source data.
+
+In a WEPPpy task worktree, add explicit endpoint/profile selection and JSON parsing
+without changing model formulas, defaults, or existing upstream XML behavior.
+Specify a backward-compatible cache provenance/isolation design before editing
+persistence: retain original project caches and create candidate caches separately.
+Never silently merge historical and candidate releases or automatically fail over
+between endpoints. Add focused consumer and downstream regression tests following
+WEPPpy's own contract-first and artifact standards.
+
+Acceptance: a candidate rebuild with an empty cache reaches the real Compose API,
+queries PostgreSQL, populates a new cache, and produces the reference soil outputs
+with USDA blocked. Retain request counts/traces demonstrating that the API was used.
+Check parsed records, cache contents, selection decisions, invalid/fallback results,
+.sol artifacts, assignments/summaries, and actual soil inputs in wepp/runs/.
+Implemented API code without that wired run cannot close this milestone.
+
+## Milestone 3: Validate the official release and operational gates
+
+
+Import official source downloads through the production importer. Validate hashes,
+all required columns, keys/relationships, units/nulls/precision, and advertised
+coverage independently of the cache replay adapter. For matched raw inputs, compare
+results against a direct source reference outside the Rust importer/translator.
+If source vintages differ from historical caches, record field-level differences
+and their effects on soil outputs. Known dataset changes are not automatically
+software defects; they still need explicit release disposition. Unexplained
+model-affecting differences block release. Do not patch new source data to match
+old cached values or bless differences merely because timestamps differ.
+
+Serve only the declared validated coverage. Measure the intended release's actual
+storage, indexes, staging space, and key coverage; a national availability claim
+requires national evidence, not the Guam/Virgin Islands samples. Identify workflows
+that still require upstream spatial services; either prove their local path or
+exclude them from the initial supported workflow list.
+
+Define numerical load targets and resource budgets before measurements. Validate
+representative batches and concurrent builds, including latency percentiles,
+throughput, errors, CPU, memory, I/O, deadlines, and cancellation recovery. Test
+unsupported/malicious queries, privilege boundaries, overload, server restart,
+failed/interrupted import, one-release-per-request activation, and rollback.
+Run acceptance under actual intended identities, mounts, permissions, and Compose
+configuration. Retain a dedicated security review; unresolved high findings block
+public deployment. Full SDA parity does not replace or waive these gates.
+
+Acceptance: docs/wepppy-release-gate.md is satisfied with evidence tied to the
+candidate code/image/data/configuration. Do not repurpose verify_assessment.py's
+offline evidence check into a deployment approval; add a release evidence validator
+when actual runtime evidence exists and test its rejection of missing/stale evidence.
+
+## Milestone 4: Deploy the bounded WEPPpy release
+
+
+Create the environment work package in open-wepp-org. Identify the exact Compose-
+capable host, storage, capacity, secret delivery, immutable image, hostname, TLS,
+routing, monitoring, and rollback. Reconcile its roadmap/ADRs as required. Existing
+Talos/WEPPcloud deployments remain intact. Start with an explicitly selected canary
+workflow and retained old endpoint/profile/cache configuration. Verify fresh-cache
+artifact parity and operational signals before widening the supported workflow set.
+
+Acceptance permits the claim "validated for the published WEPPpy soil-building
+workflows and source release." It does not permit "full SDA mirror" or general
+soilDB/spatial compatibility. Planning authority is not authorization for an
+unidentified live host, public route, or shared-database mutation; apply the
+infrastructure repository's target verification and deployment handoffs.
+
+## Milestone 5: Deferred SDA and broader-client compatibility
+
+
+After SDA recovers, use scripts/capture_sda.py with a new output directory to
+capture bounded success/empty/error/null/decimal and paired XML responses. Identify
+source releases, compare actual wire semantics, and extend independent client and
+spatial coverage. Keep discrepancies public in the compatibility matrix. Changes
+to the released WEPPpy profile require versioned/additive evolution and its parity
+suite. This milestone is not a prerequisite for the bounded first deployment and
+must not be marked complete simply because WEPPpy passes.
 
 ## Concrete Steps and Validation
 
-From /workdir/soil-data-access, run `python3 -m unittest discover -s tests -v`
-and `python3 scripts/verify_assessment.py`; ten tests and offline evidence checks
-pass. `python3 scripts/verify_assessment.py --require-live` must currently exit 1.
-Run `cargo run --locked --manifest-path evaluation/rust/Cargo.toml --
-contracts/parser-corpus.json` and, from evaluation/go, `go run .
-../../contracts/parser-corpus.json` to reproduce parser probes. See the
-[milestone 1 report](milestone-1-assessment.md#reproduce-and-resume) for exact source
-audit and upstream recapture commands. No runtime command or success is claimed.
-Later acceptance includes Compose rendering/execution, real data parity,
-resource-bound tests, and benchmark reports.
+
+From /workdir/soil-data-access, current runnable checks are:
+
+    python3 -m unittest discover -s tests -v
+    python3 scripts/verify_assessment.py
+    python3 scripts/verify_assessment.py --require-live
+
+The first two verify retained assessment evidence. The last remains an optional
+full-SDA evidence check and currently exits 1; it must not gate the initial WEPPpy
+release. Parser probes remain reproducible with cargo run --locked using
+evaluation/rust/Cargo.toml and go run from evaluation/go as documented in the
+assessment. No runtime or cache-corpus acceptance result is claimed yet.
+
+The first implementation step is read-only discovery under /wc1/runs/, then schema
+and manifest definitions and snapshot tooling. Before creating candidate caches,
+record compatibility/regression expectations in the WEPPpy work package. As each
+runner/CLI is implemented, add its exact invocation and retained output here;
+proposed file paths above are not commands that already exist. Run WEPPpy tests
+through its wctl wrappers against the actual candidate worktree/container checkout.
+Run docker compose config --quiet and real Compose workflow tests before deployment.
+
+## Validation and Acceptance
+
+
+For matched inputs, require byte-identical model-consumed soil files and unchanged
+assignments, component/invalid/fallback decisions, and cache semantics. Any excluded
+non-model metadata must be named and justified before comparison; no blanket
+rounding, tolerance, sorting, or comment removal may hide model changes. Where
+ordering is not fully specified, prove selection stability or explicitly resolve
+and approve the behavior before release. Source-release differences use a separate
+reviewed ledger, not a relaxed software-parity threshold.
+
+Every supported corpus case must pass. Tests must prove fresh candidate caches and
+blocked upstream access, exercise the real database/API/consumer path, and inspect
+final generated files. Missing evidence, stale revisions, failed comparisons,
+undeclared coverage, or unresolved security/recovery failures prevent release.
+No successful test, corpus, deployment, or full compatibility is inferred from
+this planning revision.
 
 ## Idempotence and Recovery
 
-Use new candidate data releases and isolated Compose projects. Never overwrite
-source downloads or the active database while importing. Failed candidates remain
-inactive and cannot become ready. Roll back by selecting the prior validated data
-and image pair; prove that procedure before public deployment. Do not remove
-persistent volumes as routine cleanup.
+
+Keep immutable source snapshots and manifests; use scratch working copies for
+reference and candidate builds. Never clear or overwrite production caches.
+Snapshot publication must be all-or-nothing and repeatable without modifying
+original projects. Stage data imports separately from the active database and
+retain the prior validated release/image pair. Rollback restores the prior
+endpoint/profile and its separate cache; upstream being down is not a usable
+recovery guarantee. Retain a tested prior local release once deployed. Do not
+remove persistent volumes as routine cleanup.
 
 ## Outcomes & Retrospective
 
-The repository scaffold is published on main. Milestone 1 now has a representative
-official source audit, live outage receipts, a compatibility matrix, service-owned
-schemas, ten offline tests, and reproducible Rust/Go suitability probes. Rust is
-recommended. Milestone 1 is partially complete because live SDA responses and
-matched release identity remain unavailable. No runtime implementation, national
-import, PostgreSQL semantic parity, benchmark, or deployment has occurred.
-Next: recapture live responses after recovery and freeze the remaining wire
-contract. Source and parser findings are retained in artifacts/assessment.
+
+The prior source and parser assessment is retained. The operator has approved a
+WEPPpy-first release gate using project SQLite caches and actual soil artifacts;
+waiting for live SDA is no longer the next action. This turn revises requirements
+and sequencing only. No project corpus has been captured, no new server implemented,
+and no deployment validated. Next: discover candidate project caches read-only and
+freeze the corpus/reference/JSON contract in revised milestone 1.
 
 ## Artifacts and Dependencies
 
-contracts/wepppy-queries.json records the WEPPpy Git revision and source-file hash.
-No new service runtime dependencies have been adopted. Pinned parser dependencies
-are confined to evaluation/rust and evaluation/go. Rust is recommended; the full
-HTTP/database stack and PostgreSQL/PostGIS versions await milestone 2 evaluation. This plan does not authorize an unbounded SQL
-service or a different deployment topology.
 
-Revision: 2026-11-17, initial baseline records operator intent and observed XML
-consumer behavior before runtime implementation; amended to record the operator
-permitting JSON migration rather than requiring XML-first compatibility.
+Historical observations remain under artifacts/assessment and can be read at commit
+d311ddb. New cache/soil evidence belongs under artifacts/wepppy-parity, with large
+or sensitive inputs in ignored data/parity and sanitized manifests in Git. Rust
+is the recommended implementation language; exact runtime versions await evaluation.
+The code and documentation remain MIT-licensed; third-party data attribution is
+separate. Initial complexity is one API, one PostgreSQL/PostGIS database, import
+and validation tooling, and explicit WEPPpy client configuration.
 
-Revision: 2026-11-17, added sample audits, outage observations, service schemas,
-parser evidence, and Rust recommendation; left blocked wire-parity work open.
+Revision: 2026-11-17. Supersedes the upstream-availability milestone dependency with
+operator-approved WEPPpy parity acceptance. Separates historical replay from source
+import validation, preserves runtime/security gates, and defers broader SDA parity.

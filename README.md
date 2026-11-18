@@ -5,8 +5,10 @@ An independent soil-data API intended to remain usable during USDA service outag
 ## Status
 
 Contract-first assessment. No API, importer, database, or Compose stack is
-implemented yet. Milestone 1 has an offline source audit and language assessment;
-live SDA wire-parity capture is blocked by upstream 502 responses.
+implemented yet. The initial release will be gated by project SQLite cache and
+generated-soil parity for declared WEPPpy workflows. Full SDA parity is deferred;
+upstream availability does not block this bounded implementation. No release gate
+has passed yet.
 
 ## Architecture and API direction
 
@@ -23,6 +25,7 @@ and performance require evidence. This is not an official USDA service.
 
 - [Behavior contract](docs/contract.md): scope, data, security, and acceptance.
 - [Implementation plan](docs/implementation-plan.md): milestones and current state.
+- [WEPPpy release gate](docs/wepppy-release-gate.md): corpus, artifact parity, and deployment requirements.
 - [Milestone 1 assessment](docs/milestone-1-assessment.md): source audit and remaining gaps.
 - [Rust/Go recommendation](docs/dependency-evaluation.md): reproducible probes and tradeoffs.
 - [Current WEPPpy queries](contracts/wepppy-queries.json): five extracted query

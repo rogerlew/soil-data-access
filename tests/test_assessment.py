@@ -14,8 +14,8 @@ class AssessmentTests(unittest.TestCase):
     def test_retained_evidence(self):
         self.assertIn("unproven", verify(ROOT))
 
-    def test_live_gate_rejects_incomplete_milestone(self):
-        with self.assertRaisesRegex(ValueError, "Milestone 1 remains incomplete"):
+    def test_deferred_sda_check_rejects_unproven_wire_parity(self):
+        with self.assertRaisesRegex(ValueError, "Deferred SDA wire parity remains unproven"):
             verify(ROOT, require_live=True)
 
     def test_html_outage_is_not_parity(self):

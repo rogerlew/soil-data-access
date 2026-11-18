@@ -1,7 +1,9 @@
 # Unofficial Soil Data Access contract
 
-Status: assessment baseline, 2026-11-17. No runtime is implemented. Live SDA wire
-parity is blocked by observed 502 responses; see [milestone 1 assessment](milestone-1-assessment.md).
+Status: WEPPpy-first acceptance baseline, 2026-11-17. No runtime is implemented.
+The operator approved [project-cache and soil-artifact parity](wepppy-release-gate.md)
+as the first deployment gate. Full SDA wire parity is deferred, not required for
+that bounded release; the [earlier assessment](milestone-1-assessment.md) retains outage evidence.
 
 ## Purpose and ownership
 
@@ -16,8 +18,8 @@ The code license does not relicense third-party datasets. Clearly identify the s
 
 ## Architecture and deployment
 
-Evaluate PostgreSQL with PostGIS as the initial database candidate. Evaluate Rust
-or Go for a stateless API after identifying SQL parsing and serialization needs.
+Use the Rust recommendation as the implementation direction with PostgreSQL/PostGIS;
+finish evaluation and pinning of the complete runtime stack before adoption.
 Docker Compose is a required supported deployment, including a reproducible local
 API/database acceptance environment. Exact dependency versions and image digests
 must be evaluated and pinned before implementation. There is no selected public
@@ -28,13 +30,14 @@ part of the initial complexity budget.
 
 ## Compatibility scope
 
-Initial integration direction: POST /Tabular/post.rest using an explicitly selected
-SDA JSON response format, with a coordinated WEPPpy parser migration. Capture the
-actual upstream JSON envelope, column metadata, types and null behavior before
-freezing the executable schema. Use application/x-www-form-urlencoded requests with query and format fields;
-percent-encode the plus signs in JSON+COLUMNNAME. Exact response behavior remains
-pending live capture. The [compatibility matrix](../contracts/compatibility.json)
-is the machine-readable scope/evidence inventory.
+Initial integration direction: POST /Tabular/post.rest with a coordinated WEPPpy
+JSON client migration. Freeze an explicitly service-owned JSON+COLUMNNAME profile
+from the pinned WEPPpy contract and offline fixtures before implementation, including
+column order, types, nulls, empty results, and errors. Live SDA capture is not a
+prerequisite; do not describe authored response fixtures as observed SDA parity.
+Use application/x-www-form-urlencoded query and format fields, percent-encoding
+plus signs. The [compatibility matrix](../contracts/compatibility.json) distinguishes
+initial WEPPpy release gates from deferred SDA wire-compatibility gaps.
 Current WEPPpy uses form-encoded requests with format=xml; the extracted queries
 record that baseline, not a requirement that the new service implement XML first.
 XML support is a separate compatibility-matrix decision based on public clients.
@@ -47,9 +50,9 @@ The fixture keys are synthetic query-generation inputs, not verified USDA keys.
 Preserve ordered columns, null representation, numeric precision, aliases,
 response structure and escaping, and explicitly requested row ordering. Preserve row
 multiplicity. Unordered results are compared as multisets; ties in an incomplete
-ORDER BY have no implied stable ordering. Capture upstream success, empty, and
-error responses before freezing exact SDA-compatible response schemas. Do not invent upstream
-error codes or label locally designed errors compatible.
+ORDER BY have no implied stable ordering. Live upstream success/empty/error capture is required before claiming exact SDA
+wire compatibility, but does not block the service-owned WEPPpy profile. Never
+label locally designed errors or source-derived fixtures as observed USDA behavior.
 
 SQL Server/T-SQL compatibility is bounded by a published feature matrix.
 Resolve identifier case, implicit key casts, nulls, decimals, collation, functions,
@@ -112,14 +115,24 @@ bypasses, function access, catalog leakage, resource exhaustion, and secrets.
 
 ## Acceptance evidence
 
-Parity tests identify both source releases and distinguish upstream data drift
-from translation/serialization defects. Include missing keys, nulls, duplicate
-rows, special characters, decimal edges, large batches, and invalid requests.
-Validate existing XML extraction against the migrated JSON extraction using
-equivalent recorded data, then compare final WEPP soil artifacts for representative
-SSURGO and STATSGO2 runs. Retain duplicate handling, ordering, key normalization,
-and null/numeric conversion behavior unless a separate change is justified. Include public
-client queries before claiming compatibility beyond WEPPpy.
+[Initial WEPPpy release acceptance](wepppy-release-gate.md) defines the required
+corpus, comparison, import, security, and operational gates. Freeze consistent
+project SQLite snapshots and regenerate reference soils with pinned existing WEPPpy.
+Exercise the real PostgreSQL/API/JSON client with empty candidate caches and USDA
+blocked. Require matched-input parity through final soil files in wepp/runs/,
+including component selection, invalid soils, fallbacks, and assignments.
+
+Caches are processed projections, not raw SDA response fixtures. Keep the cache
+replay adapter test-only and validate production imports independently against
+official source records. Add raw duplicate/null/order cases that caches cannot
+preserve. Track source-version differences with affected fields/output effects and
+explicit disposition; never weaken software parity or patch data to match history.
+Select the endpoint/profile explicitly and isolate cache provenance to avoid mixed
+releases. Existing project caches and upstream XML behavior remain intact.
+
+Full live SDA and general public-client parity are deferred. Passing this gate
+permits only the published WEPPpy workflow/source-release claim. No gate has passed
+yet; the corpus and runtime remain unimplemented.
 
 Benchmarks report hardware, image/code revisions, dataset/checksums, indexes,
 connection limits, concurrency, warm/cold conditions, throughput, error rate,
@@ -140,6 +153,12 @@ A PostgreSQL/PostGIS candidate permits joint spatial/tabular assessment; it does
 not prove SQL Server compatibility. Start with real consumer queries. The operator subsequently identified migration
 of WEPPpy away from XML as acceptable: JSON-first integration with artifact parity
 is the chosen assessment direction, rather than making legacy XML mandatory.
+The operator then approved using existing project SQLite caches and soils to
+validate WEPPpy behavior and defer full SDA parity during the multi-day outage.
+The earlier live-capture prerequisite is superseded for the bounded release.
+Waiting for upstream recovery was rejected as unnecessary for that narrow claim;
+treating processed caches as raw import truth was rejected as circular validation.
+Security, performance/capacity, recovery, and fresh-output gates remain mandatory.
 This does not authorize removing XML support for unrelated callers or claiming
 full SDA compatibility without evidence.
 

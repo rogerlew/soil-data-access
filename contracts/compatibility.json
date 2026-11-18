@@ -1,6 +1,6 @@
 {
-  "contract_version": "0.1-assessment",
-  "status": "partial_blocked_on_upstream_wire_capture",
+  "contract_version": "0.2-wepppy-first-planned",
+  "status": "initial_wepppy_release_planning",
   "observed_at": "2026-11-17T20:44:07.429188+00:00",
   "runtime_implemented": false,
   "features": [
@@ -19,8 +19,8 @@
     {
       "id": "json_columnname",
       "scope": "initial_target",
-      "evidence": "live_capture_blocked",
-      "notes": "select JSON+COLUMNNAME for WEPPpy migration; exact types/nulls/empty results not frozen"
+      "evidence": "service_owned_profile_to_be_frozen",
+      "notes": "offline WEPPpy profile may be frozen without live SDA; exact USDA wire parity deferred"
     },
     {
       "id": "json_columnname_metadata",
@@ -32,7 +32,7 @@
       "id": "xml",
       "scope": "deferred",
       "evidence": "current_wepppy_client_verified",
-      "notes": "paired captures required for JSON migration parity; no initial public XML promise"
+      "notes": "legacy extraction may be exercised offline with labeled authored/download-derived data; live paired captures deferred"
     },
     {
       "id": "select_projection_join_in_order",
@@ -42,25 +42,25 @@
     },
     {
       "id": "top_brackets_isnull_concat",
-      "scope": "candidate",
+      "scope": "deferred_beyond_initial_wepppy_scope",
       "evidence": "syntax_probed",
       "notes": "map syntax explicitly and test type/collation/null semantics"
     },
     {
       "id": "aggregates_ctes",
-      "scope": "candidate",
+      "scope": "deferred_beyond_initial_wepppy_scope",
       "evidence": "syntax_probed",
       "notes": "not automatically admitted because parser accepts them"
     },
     {
       "id": "spatial_sda_function",
-      "scope": "candidate",
+      "scope": "deferred_beyond_initial_wepppy_scope",
       "evidence": "syntax_probed",
       "notes": "map helper semantics with SSURGO versus STATSGO2 distinction"
     },
     {
       "id": "spatial_sqlserver_methods",
-      "scope": "candidate",
+      "scope": "deferred_beyond_initial_wepppy_scope",
       "evidence": "rust_parses_go_rejects_intersection_case",
       "notes": "shape is GeoPackage storage column; SDA exposes mupolygongeo; PostGIS mapping required"
     },
@@ -83,18 +83,43 @@
       "notes": "separate service contracts required"
     }
   ],
-  "blocking_gaps": [
-    "Live success/empty/error JSON wire responses and paired XML",
-    "Matched release identification against SDA"
-  ],
   "sources": [
     "artifacts/assessment/ssurgo-gu.json",
     "artifacts/assessment/statsgo2-vi.json",
     "artifacts/assessment/sda-capture-01/observations.json",
     "artifacts/assessment/soildb-source.json"
   ],
-  "later_implementation_gates": [
-    "National coverage and STATSGO2 freshness verification",
-    "PostgreSQL/PostGIS semantic execution parity"
+  "policy_updated_at": "2026-11-18T00:09:37.172413+00:00",
+  "initial_release_policy": "docs/wepppy-release-gate.md",
+  "initial_release_ready": false,
+  "deferred_sda_parity_gaps": [
+    "Live success/empty/error JSON wire responses and paired XML",
+    "Matched release identification against SDA"
+  ],
+  "initial_release_gates": [
+    {
+      "id": "frozen_project_cache_corpus_and_reference",
+      "status": "pending"
+    },
+    {
+      "id": "service_owned_json_profile",
+      "status": "pending"
+    },
+    {
+      "id": "matched_input_end_to_end_soil_parity",
+      "status": "pending"
+    },
+    {
+      "id": "independent_official_import_and_declared_coverage",
+      "status": "pending"
+    },
+    {
+      "id": "capacity_security_and_compose_recovery",
+      "status": "pending"
+    },
+    {
+      "id": "exact_candidate_release_evidence_and_rollout",
+      "status": "pending"
+    }
   ]
 }
