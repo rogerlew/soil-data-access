@@ -16,9 +16,10 @@ artifacts, plus independent source/import checks for both national datasets.
 - [x] Diagnose both source failures and preserve existing project caches.
 - [x] Acquire and hash both national archives; extract the 117,836,186,624-byte SSURGO GeoPackage.
 - [x] Validate archive integrity, provenance and geographic/key coverage: 3,386 SSURGO surveys; all 22 incident keys; all AK/HI/PR/VI STATSGO2 subset keys.
-- [ ] Prepare and validate the national import with the existing six-table schema.
-- [ ] Coordinate active release, environment defaults and saved regional mirror pins.
-- [ ] Rebuild cavernous-oxygen through RQ and validate base and prepared soil artifacts.
+- [x] Prepare national import: 22,073,263 rows; source schema, parent relationships, key domains and numerical conversion pass.
+- [x] Staged COPY committed; all six table counts and relationship checks passed; independent projections for both datasets and all 22 incident keys matched.
+- [x] Activate national release, refresh six services, and migrate the sole user-project regional pin; preserve 13 historical qualification runs.
+- [x] Rebuild cavernous-oxygen through RQ: 21 base provenance hashes and all 32 prepared hillslope inputs verified; no SDA fallback.
 - [ ] Retain SSURGO/STATSGO2 direct-source parity, timings and operational evidence.
 
 ## Context
@@ -112,7 +113,14 @@ location-by-location live SDA comparison is required.
 
 ## Outcomes & Retrospective
 
-In progress. The regional default is still active while national data is prepared.
-The failed project has not been rebuilt or modified yet. Both archives and extraction are complete. Import preparation is hashing the source GeoPackage before validation/COPY emission. Inventory found one user project on the regional pin; the other 13 runs are historical qualification fixtures whose accepted evidence will remain unchanged.
+National data is active on forest. The failed project rebuilt successfully; its
+21 base provenance records and complete set of 32 prepared hillslope inputs passed
+readback. Both dataset canaries passed exact reference comparison for 152 prepared files. Eighty local HTTP benchmark requests passed with zero errors and p95 below 47 ms. Authenticated homepage, profile and project requests returned 200. HTTP source fingerprint readback and final evidence publication are completing. Both archives and extraction are complete. Import preparation completed with 22,073,263 rows and a retained SQL checksum. Staged PostgreSQL execution and independent projection checks passed; database size is 5,187,139,251 bytes including the retained regional release. Inventory found one user project on the regional pin; the other 13 runs are historical qualification fixtures whose accepted evidence will remain unchanged.
 
 Revision note: created after the operator corrected the regional deployment scope.
+
+The API refresh resolved its credential-file mount from the old task checkout to
+the canonical shared checkout. Credential bytes, file mode, read-only mount and
+API user remained unchanged; database access and health passed. All five WEPPpy
+consumer images, users and mounts remained identical. The owned RQ fence was
+released after readiness and source-pin migration; it is not retained.

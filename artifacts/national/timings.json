@@ -1,0 +1,22 @@
+{
+  "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1",
+  "scope": "100-MUKEY national component query; local forest HTTP; bounded warm check",
+  "runs": {
+    "1": {
+      "requests": 40,
+      "errors": 0,
+      "rows_per_request": 313,
+      "p50_ms": 22.45314442552626,
+      "p95_ms": 27.867726981639862,
+      "max_ms": 45.01993581652641
+    },
+    "4": {
+      "requests": 40,
+      "errors": 0,
+      "rows_per_request": 313,
+      "p50_ms": 28.968031983822584,
+      "p95_ms": 46.80510191246867,
+      "max_ms": 48.63699432462454
+    }
+  }
+}
