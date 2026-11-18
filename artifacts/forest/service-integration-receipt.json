@@ -1,0 +1,12 @@
+{
+  "accepted_sha": "9960280b6d15006ffee67b3c366985a44366a716",
+  "branch": "main",
+  "claim": "remote_integration_snapshot",
+  "integration_mode": "merge-preserving",
+  "observed_at": "2026-11-18T03:13:56.097730+00:00",
+  "observed_remote_sha": "15ac4638fd4c6179ac4c1e969ccf5733f6e8eea0",
+  "remote": "origin",
+  "repository": "https://github.com/rogerlew/soil-data-access.git",
+  "schema_version": 1,
+  "validation_scope": "ancestry-only; not behavioral acceptance or release approval"
+}
