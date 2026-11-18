@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-11-18T03:03:18.642693+00:00",
+  "release": "forest-id-20261001-vi-20161013-v1",
+  "counts": {
+    "component": 31841,
+    "chorizon": 132604,
+    "chfrags": 198812,
+    "chtexturegrp": 233321,
+    "corestrictions": 10949,
+    "muaggatt": 10945
+  },
+  "duplicate_import_rolled_back": true,
+  "serving_write_denied": true,
+  "correct_release_ready": true,
+  "wrong_release_unready": true,
+  "manifest": {
+    "id": "forest-id-20261001-vi-20161013-v1",
+    "datasets": [
+      {
+        "dataset": "SSURGO",
+        "release_id": "2026-10-01",
+        "scope": "Idaho SSURGO official state GeoPackage",
+        "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2516986372040",
+        "sha256": "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958"
+      },
+      {
+        "dataset": "STATSGO2",
+        "release_id": "2016-10-13",
+        "scope": "Virgin Islands STATSGO2 official archive",
+        "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_144172184525",
+        "sha256": "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+      }
+    ]
+  },
+  "sql_sha256": "a390f2959da4db0b84ee97823ad48886c218ac109b47bec80ea2f1b3c08fd458",
+  "api_image": "sha256:4f32140002c67149797cce482fb0170ae7db8303ddf70b279e744f34f338f3c9",
+  "api_code_revision": "9d09f7ff3bca5d243075763055155c721d84b065"
+}

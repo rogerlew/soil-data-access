@@ -1,6 +1,8 @@
 # Mirror-first rollout with USDA SDA fallback
 
-Status: operator-approved direction, 2026-11-18 UTC; not implemented or deployed.
+Status: implemented and qualified on forest, 2026-11-18 UTC. New API/database
+services are running; shared client-default activation awaits protected Compose
+integration approval. See [retained results](forest-validation.md).
 The operator accepts the SSURGO/STATSGO fixture results as sufficient evidence to
 proceed beyond those locations. Comprehensive geographic/live SDA parity is a
 post-rollout follow-up when SDA recovers, not a prerequisite for the first rollout.
@@ -12,9 +14,9 @@ support generalization of the five query families and soil-building logic. Do no
 require a location-by-location national comparison before activation. Retain those
 regressions and a bounded real worker smoke check in each environment.
 
-A serving dataset still must be loaded: the existing replay importer contains only
-fixture releases. Implement the broader source import with source hashes, schema,
-row/key counts, relationship checks, and small independent projection samples.
+The official regional release is loaded with source hashes, schema, row/key counts,
+relationship checks and independent projection comparisons. Broader geographic
+imports can use the same importer; replay releases remain distinct.
 This verifies that the import loaded its declared data, rather than requiring
 comprehensive agreement with live SDA. Record actual source vintage/coverage and
 handle unavailable keys through the fallback policy. Exhaustive source-version
@@ -44,7 +46,7 @@ where applicable. One source supplies each successfully constructed collection.
 Return to mirror-first on the next construction; do not persist a temporary outage
 as a permanent project source switch. Bound attempts across the complete fallback
 operation, including the legacy XML request path, so an SDA outage cannot cause an
-unbounded build delay. Choose and test the concrete total budget in the client contract.
+unbounded build delay. The client contract fixes 30 seconds per source and 60 seconds across selection.
 
 Record the configured primary, attempted sources, reason/time of fallback, actual
 supplier, and any unknown upstream release. Link this selection event to SQLite

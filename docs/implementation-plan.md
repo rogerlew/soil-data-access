@@ -41,11 +41,12 @@ still deployment prerequisites.
 - [x] (2026-11-18 UTC) Implement Rust/PostgreSQL/PostGIS local runtime and test-only cache replay adapter.
 - [x] (2026-11-18 UTC) Validate committed 9dc2264 in fresh Compose: 24,049 cache records, eleven wire cases, containment and lifecycle checks.
 - [x] (2026-11-18 UTC) Wire explicit WEPPpy JSON transport/provenance; real-service fresh-cache replay matches 501 canonical artifacts in the reference numerical environment.
-- [ ] Load broader source data; validate import mechanics and bounded independent projections.
-- [ ] Implement mirror-first deployment defaults, bounded SDA fallback and selection provenance.
-- [ ] Run focused worker, capacity and recovery acceptance in Compose.
+- [x] Load broader source data; validate import mechanics and bounded independent projections.
+- [x] Implement mirror-first deployment defaults, bounded SDA fallback and selection provenance.
+- [x] Run focused forest worker, bounded performance and runtime recovery acceptance in Compose.
 - [ ] Deferred until SDA recovery: comprehensive geographic/live source parity.
-- [ ] Prepare and execute authorized environment-specific deployment.
+- [x] Start new soil API/database services in forest dev Compose.
+- [ ] Integrate protected Compose change, then activate shared forest client defaults; forest1/production are later scope.
 - [ ] Deferred: capture live SDA success/empty/error/XML fixtures after recovery.
 - [ ] Deferred: establish full SDA/public-client/spatial compatibility before claiming it.
 
@@ -505,5 +506,26 @@ Python stdlib reads sources, psql loads PostgreSQL, and existing Rust serves que
 Client contract checkpoint lives in WEPPpy at 43c78bf95; its source-selection factory
 must pass real fallback/deadline/provenance tests before dev activation.
 
-Progress: Idaho archive acquired and extracted (2.86 GB total); broader source import,
-independent validation, Compose integration and actual queued acceptance are pending.
+Progress: official import and independent raw projections pass; forest soil services
+are healthy. Real queued SSURGO/STATSGO2 builds pass exact base/prepared parity through
+primary cold/warm and warm fallback; dual failure leaves no generated soils.
+See docs/forest-validation.md and artifacts/forest.
+
+Surprises & Discoveries: ANALYZE after COPY is necessary before relational joins.
+Canceling the first slow validation preserved the active release. Initial queued
+comparison used an incorrect whitespace-sensitive comment filter; the final runs use
+the frozen canonicalizer with only Build Date/Source File value exclusions.
+
+Decision Log: serving data is explicitly regional; comprehensive geographic/live
+parity remains deferred. WEPPpy dev Compose owns forest wiring; public hosting and
+production activation remain separate. Exact source approval is required for the
+protected WEPPpy Compose diff before changing shared-client defaults.
+
+Outcomes & Retrospective: local operational and bounded scientific gates pass.
+The service is usable on forest's internal Compose network; no public/national
+deployment or shared-client default activation is claimed.
+
+Final operational discovery: socket-only pg_isready can briefly succeed against
+PostgreSQL's initialization server. Both portable and forest soil-DB probes now use
+TCP localhost, which becomes available after initialization. Restart/readiness
+and the fresh runtime suite pass; no existing shared PostgreSQL service was changed.

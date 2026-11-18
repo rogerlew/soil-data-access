@@ -1,0 +1,178 @@
+{
+  "claim": "official_download_raw_projection_parity_not_live_SDA_or_nationwide_parity",
+  "release": "forest-id-20261001-vi-20161013-v1",
+  "source_sha256": [
+    "d703260d7a8e13e2c71c6758b165ffe6ec6bf6f57f7469ef7165d518285d1958",
+    "bf7fa9d1e661a3bfd79ea49df3774aed91d48d0bf76be39be798f75bade2608e"
+  ],
+  "SSURGO": {
+    "mukeys": [
+      78900,
+      79057,
+      79334,
+      79449,
+      79625,
+      79905,
+      80015,
+      80177,
+      80286,
+      80568,
+      80677,
+      80787,
+      81097,
+      81206,
+      81315,
+      81777,
+      81888,
+      82112,
+      82406,
+      82530,
+      82645,
+      82770,
+      82897,
+      83040,
+      83150,
+      83688,
+      83798,
+      83908,
+      84155,
+      150435,
+      152885,
+      153443,
+      153988,
+      154110,
+      154221,
+      154373,
+      159238,
+      485191,
+      485315,
+      485669,
+      486059,
+      486277,
+      644904,
+      775584,
+      777312,
+      784243,
+      1014499,
+      1389840,
+      1529295,
+      1602209,
+      1949158,
+      2024100,
+      2376440,
+      2396817,
+      2397435,
+      2429460,
+      2436885,
+      2496300,
+      2502065,
+      2518581,
+      2519117,
+      2519226,
+      2519478,
+      2519587,
+      2519698,
+      2519811,
+      2619857,
+      2662911,
+      2663431,
+      2686344,
+      2686454,
+      2686563,
+      2743044,
+      2843033,
+      2850865,
+      2858640,
+      2936638,
+      2936749,
+      2963851,
+      2980874,
+      3002654,
+      3099012,
+      3163502,
+      3163613,
+      3173313,
+      3173431,
+      3238920,
+      3239033,
+      3270939,
+      3332047,
+      3332286,
+      3332398,
+      3402850,
+      3403199,
+      3417713,
+      3420833,
+      3469058,
+      3469172,
+      3480171,
+      3480285
+    ],
+    "families": [
+      {
+        "family": "_fetch_components",
+        "rows": 289,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chorizon",
+        "rows": 1230,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chfrags",
+        "rows": 1787,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chtexturegrp",
+        "rows": 2134,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_corestrictions",
+        "rows": 116,
+        "exact_raw_multiset_equal": true
+      }
+    ]
+  },
+  "STATSGO2": {
+    "mukeys": [
+      657964,
+      1390208,
+      1390209,
+      1390210,
+      1390211,
+      1390212,
+      1390213,
+      1390214
+    ],
+    "families": [
+      {
+        "family": "_fetch_components",
+        "rows": 99,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chorizon",
+        "rows": 370,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chfrags",
+        "rows": 716,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_chtexturegrp",
+        "rows": 649,
+        "exact_raw_multiset_equal": true
+      },
+      {
+        "family": "_fetch_corestrictions",
+        "rows": 66,
+        "exact_raw_multiset_equal": true
+      }
+    ]
+  }
+}

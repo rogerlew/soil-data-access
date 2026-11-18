@@ -1,0 +1,31 @@
+{
+  "scope": "warm regional 100-MUKEY component queries; local forest image; not national capacity claim",
+  "requests": {
+    "1": {
+      "requests": 40,
+      "component_rows_per_request": 289,
+      "p50_ms": 37.7959085162729,
+      "p95_ms": 40.83066899329424,
+      "max_ms": 79.56404192373157
+    },
+    "4": {
+      "requests": 40,
+      "component_rows_per_request": 289,
+      "p50_ms": 34.88175105303526,
+      "p95_ms": 48.58703585341573,
+      "max_ms": 57.146943639963865
+    }
+  },
+  "queued_seconds": {
+    "id_primary_cold": 26.276928,
+    "id_primary_warm": 24.842251,
+    "id_official_reference": 24.520701,
+    "id_fallback_warm": 24.886369,
+    "id_both_unavailable": 12.647513,
+    "vi_primary_cold": 23.311081,
+    "vi_primary_warm": 22.530957,
+    "vi_official_reference": 23.578097,
+    "vi_fallback_warm": 23.41745,
+    "vi_both_unavailable": 11.822252
+  }
+}

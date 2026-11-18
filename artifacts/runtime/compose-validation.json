@@ -325,7 +325,7 @@
   "lifecycle": {
     "inflight_release_and_rows_stay_consistent": true,
     "next_request_observes_new_release": true,
-    "disconnect_cleanup_seconds": 5.109665641095489,
+    "disconnect_cleanup_seconds": 4.849864589981735,
     "restart_preserves_release": true
   },
   "output_limits": {
@@ -347,28 +347,28 @@
       ],
       "id": "replay-statsgo-001-2725874f3fe9"
     },
-    "code_revision": "7316c2430989b292d2a7f264355db10c9b82496e",
+    "code_revision": "10f33bf266c79e86d93d90bd6b65f4e4f4383ae0",
     "contract_version": "wepppy-json-v1",
     "official": false,
     "ready": true,
     "service": "soil-data-access"
   },
-  "code_revision": "7316c2430989b292d2a7f264355db10c9b82496e",
-  "observed_at": "2026-11-18T02:56:45.852438+00:00",
+  "code_revision": "10f33bf266c79e86d93d90bd6b65f4e4f4383ae0",
+  "observed_at": "2026-11-18T03:12:02.325381+00:00",
   "source_files": {
     "Cargo.lock": "5902bbac66f6847188c0f8dad0c69cad6a5d3e43ddab037f26ca79057e21bdfd",
-    "compose.yaml": "634ca86042af9bf666a96e61fe5060ab8bad2bb4a9d937270a75ca859213dc8e",
+    "compose.yaml": "7436a69be843c239fd202c3f525c8f3541c1cce66d4eac8ddacebfd980a98f16",
     "Dockerfile": "3e006ded094f2e505ad74f8bc169391e7fe413b0a3cd2e0666c24a012ede8afa",
     "src/main.rs": "08299935437e407a83153488d4ebe199729570191352d66417b9ade00ab1ce0d",
     "src/planner.rs": "7f05d13368f675151ae1aaf61332201bed015554c87af3b9f24cf549fdd45c21",
     "scripts/replay_cache.py": "c8ed80568a1d2f3264e1cf2e6c818fb85475ddbf11e57988012905fe97ea3a09",
     "scripts/verify_runtime.py": "935f04e46ad8b42e96ec047feddeccbb5922705b6fdccb10275b25bd76c5f72b",
     "migrations/001_replay.sql": "cdabf14b8f31e85eea05874f39e10d4e1a907a9896ba4de6f183b44fbe92435b",
-    "src/runtime.rs": "5f111d4254a9b206b65ed233f8f1064f7b1f5a0b4abb341c6bff2ce6842de794"
+    "src/runtime.rs": "4697a8ea2dfbf279fdeaeedb17758f0a874cfd4ecaaf1bdef5226cea05864ee7"
   },
   "request_trace": {
-    "file": "artifacts/runtime/forest-runtime-api.log",
-    "sha256": "668ce6fc3505be1fe1ed4e4d37f8423f6cbf13d9bc80a60def82d625d1034e24"
+    "file": "artifacts/runtime/10f33bf-api.log",
+    "sha256": "4b6e66e7204047f512248437e30ef62af0bf18f0db3b89a9fbdd98c18dcb4493"
   },
-  "api_image_id": "sha256:52ce746bcf1ed99183c62f0d2c93875904c94e60688fa2842e38980e16b76149"
+  "api_image_id": "sha256:0855e94b5f635a5a05c98075031673825f949f142e194fc66bc2dc08fc97cf09"
 }

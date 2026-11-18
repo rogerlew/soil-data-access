@@ -4,16 +4,22 @@ An independent soil-data API intended to remain usable during USDA service outag
 
 ## Status and architecture
 
-The local Rust API, PostgreSQL/PostGIS Compose stack, and test-only cache replay
-adapter implement five bounded WEPPpy query families. Frozen project-cache records
+The Rust API, PostgreSQL/PostGIS Compose stack, official-source importer and cache
+replay tools implement five bounded WEPPpy query families. Frozen project-cache records
 and authored wire cases can be checked through the real API/database. This is an
-unofficial development service, not a deployed national mirror.
+unofficial service with a regional forest development deployment, not a national mirror.
 
 The [WEPPpy JSON client](docs/wepppy-client-integration.md) now records server,
 release, cache retrievals, and base-soil provenance. Fresh-cache replay matches
-501 canonical artifacts in the frozen numerical environment. Official-data import,
-full workflow coverage, deployment-image parity, capacity, and public security/recovery
-approval remain open. Full SDA compatibility is deferred. No release gate has passed.
+501 canonical artifacts in the frozen numerical environment. Forest now serves an
+official Idaho SSURGO plus Virgin Islands STATSGO2 release. Real queued builds for
+two keys outside replay fixtures match direct-file references through the mirror
+and warm SDA-cache fallback, including 76 prepared soil files per case.
+
+[Forest evidence](docs/forest-validation.md) covers import, source selection,
+readiness, runtime controls and bounded performance. Shared WEPPpy client defaults
+await protected Compose integration approval. National data coverage, comprehensive
+live SDA parity, public hosting and broader workflow coverage remain follow-ups.
 
 ## Local setup
 
@@ -33,7 +39,7 @@ The initialization script creates .env once with random local credentials and th
 current source revision. Do not overwrite existing credentials or change them for
 an initialized volume without a database password migration. Before validating a
 new committed build, update CODE_REVISION in .env to that commit. Metadata initially
-reports ready=false until an explicit replay import activates a release.
+reports ready=false until an explicit official or replay import activates a release.
 
 To exercise every complete fixture, authored examples, and operational checks on
 this new empty database:
@@ -57,14 +63,14 @@ curl --fail http://127.0.0.1:18080/v1/metadata
 
 A duplicate release import fails transactionally. The incomplete shared STATSGO
 fixture is deliberately rejected. Stop local containers with `docker compose down`;
-the named data volume remains. Environment-specific deployment belongs to
-open-wepp-org and is not configured here.
+the named data volume remains. WEPPcloud environment wiring lives in WEPPpy Compose; public openwepp.org hosting
+is separately owned by open-wepp-org.
 
 ## API and configuration
 
 | Endpoint | Behavior |
 | --- | --- |
-| GET /v1/metadata | Unofficial identity, readiness, code revision, active replay release |
+| GET /v1/metadata | Unofficial identity, readiness, code revision, active release manifest |
 | POST /Tabular/post.rest | Form fields query and format=JSON+COLUMNNAME; five exact parsed shapes |
 
 The [JSON profile](docs/wepppy-json-profile.md) defines ordered headers, string/null
@@ -78,6 +84,9 @@ admission, resource bounds and replay assumptions. XML and arbitrary SQL are uns
 | CODE_REVISION | Exact lowercase 40-character source revision |
 | SOIL_HTTP_PORT | Localhost published HTTP port; default 18080 |
 | COMPOSE_PROJECT_NAME | Isolates test containers, network and volume |
+| DATABASE_URL_FILE | API credential file; mutually exclusive with DATABASE_URL |
+| SOIL_SERVE_PASSWORD_FILE | Initializer credential file; mutually exclusive with SOIL_SERVE_PASSWORD |
+| SOIL_DATA_RELEASE | Expected release for the API --healthcheck command |
 
 PostgreSQL has no published port. API success logs contain request IDs, query family,
 release and row count. Use `docker compose logs api` for those records. See the
@@ -98,6 +107,8 @@ python3 scripts/verify_wepppy_reference.py --verify-published
 src/planner.rs admits frozen query shapes; src/main.rs executes owned SQL with bound
 keys. scripts/replay_cache.py reconstructs test tables from processed caches and
 rejects conflicting map-unit attributes. It is not a production importer.
+scripts/import_official.py imports original GeoPackage/legacy ZIP data transactionally;
+see the [official import contract](docs/official-import-contract.md).
 
 - [Contributor guidance](AGENTS.md) and [implementation plan](docs/implementation-plan.md).
 - [Behavior contract](docs/contract.md) and [WEPPpy release gate](docs/wepppy-release-gate.md).
