@@ -1,6 +1,6 @@
 # Official tabular import for forest
 
-Import a user-selected immutable GeoPackage SSURGO source and legacy STATSGO2 ZIP
+Import an immutable GeoPackage SSURGO source and legacy STATSGO2 ZIP
 into one scoped release of the existing six-table API. The first forest release
 uses Idaho SSURGO (October 2026 download) and Virgin Islands STATSGO2 (2016 archive).
 This broadens data beyond project-cache fixtures; it is not nationwide coverage.
@@ -45,3 +45,16 @@ and, when SOIL_DATA_RELEASE is configured, that exact active release. It returns
 nonzero exit status without response/credential logging on failure. A missing or
 wrong release must not appear healthy. Clients do not depend on API health for
 startup: their bounded SDA fallback must remain available during mirror outages.
+
+## Nationwide rollout and staged import
+
+The shared forest default requires nationwide SSURGO and STATSGO2. The initial
+Idaho/VI import is historical qualification only, not sufficient shared coverage.
+Use the official national archives and retain their actual catalog/scope/vintage.
+
+The importer accepts --no-activate to commit a fully validated candidate release
+without changing soil.active_release. Default behavior remains atomic import and
+activation for existing callers. The receipt records whether activation is included.
+Staged loading avoids suspending shared job processing throughout a national COPY.
+Activate the validated candidate in a separate transaction only while coordinating
+client release pins and the API healthcheck. Old releases and caches remain intact.
