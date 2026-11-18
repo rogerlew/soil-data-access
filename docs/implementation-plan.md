@@ -46,7 +46,8 @@ still deployment prerequisites.
 - [x] Run focused forest worker, bounded performance and runtime recovery acceptance in Compose.
 - [ ] Deferred until SDA recovery: comprehensive geographic/live source parity.
 - [x] Start new soil API/database services in forest dev Compose.
-- [ ] Integrate protected Compose change, then activate shared forest client defaults; forest1/production are later scope.
+- [x] Integrate protected Compose change and activate shared forest client defaults; four normal-queue canary jobs pass.
+- [ ] Later scope: forest1 and production activation.
 - [ ] Deferred: capture live SDA success/empty/error/XML fixtures after recovery.
 - [ ] Deferred: establish full SDA/public-client/spatial compatibility before claiming it.
 
@@ -529,3 +530,8 @@ Final operational discovery: socket-only pg_isready can briefly succeed against
 PostgreSQL's initialization server. Both portable and forest soil-DB probes now use
 TCP localhost, which becomes available after initialization. Restart/readiness
 and the fresh runtime suite pass; no existing shared PostgreSQL service was changed.
+
+Forest activation is complete: operator-approved WEPPpy PR #675 is merged; all five
+shared consumers have mirror-first settings. Four normal-queue RQ jobs validate both
+datasets and 152 exact-reference prepared soils. Source/configuration backups and
+unrelated shared work are preserved. See artifacts/forest/activation for receipts.
