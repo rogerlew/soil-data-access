@@ -35,7 +35,7 @@ still deployment prerequisites.
 - [x] (2026-11-18 UTC) Freeze authored JSON profile, eleven legacy extraction cases, reference schema, and comparison rules.
 - [ ] Complete workflow coverage: fallback/assignment execution, treatment variants, and full historical/native lineage gaps.
 - [x] (2026-11-18 UTC) Implement Rust/PostgreSQL/PostGIS local runtime and test-only cache replay adapter.
-- [ ] Retain final committed Compose runtime validation receipt.
+- [x] (2026-11-18 UTC) Validate committed 9dc2264 in fresh Compose: 24,049 cache records, eleven wire cases, containment and lifecycle checks.
 - [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
 - [ ] Verify official-data import independently from historical cache replay.
 - [ ] Prove corpus parity, release coverage, capacity, security, and recovery in Compose.
@@ -327,6 +327,9 @@ From /workdir/soil-data-access, current runnable checks are:
     python3 scripts/verify_assessment.py --require-live
     git lfs pull
     python3 scripts/verify_corpus.py
+    python3 scripts/verify_runtime_evidence.py
+    cargo test --locked
+    cargo clippy --locked --all-targets -- -D warnings
 
 The first two verify tests and retained assessment evidence. The --require-live
 command remains an optional full-SDA evidence check and currently exits 1; it must not gate the initial WEPPpy
@@ -401,6 +404,13 @@ receipt. This verifies published artifact integrity, not another numerical repla
 The bounded Rust/PostgreSQL service and test-only cache replay now execute all
 five families through local Compose. Each complete fixture matches independent
 SQLite records; eleven authored cases preserve raw rows and exact wire values.
+The exact runtime receipt is artifacts/runtime/compose-validation.json at code
+9dc2264; it pins both image IDs, source hashes, fixture hashes, database version and
+request traces. An evidence checker rejects stale source, missing cases and failed
+controls. Thirty-three Python tests and two Rust test groups pass; Clippy and docs
+lint are clean. Disconnect cleanup in the final run was 5.08 seconds, consistent
+with the explicit timeout limitation. These checks do not close milestone 2: the
+actual WEPPpy client and generated-soil path are still unwired.
 The next implementation step is the WEPPpy client, while completing workflow coverage. This reference is a useful baseline, not full NoDb/RQ/raster execution or
 mirror parity. Only one captured forest treatment profile is paired downstream;
 other treatment/fallback/assignment behaviors still need evidence or explicit scope

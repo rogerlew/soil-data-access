@@ -34,7 +34,9 @@ also exercises query rejection, serving-role write denial even with its default
 read-only setting disabled, duplicate-import rollback, overload, database lock
 statement timeouts, active-query cleanup, consistent release switching, response
 size/row failures, and restart recovery. Retained results belong in
-artifacts/runtime/compose-validation.json after the final committed build.
+artifacts/runtime/compose-validation.json for committed runtime 9dc2264.
+The final observed disconnect cleanup was 5.08 seconds; all eight timed-out queries
+were gone before recovery was accepted. This is local containment evidence only.
 
 ## Open deployment gates and limitations
 

@@ -88,6 +88,7 @@ cargo test --locked
 cargo clippy --locked --all-targets -- -D warnings
 python3 -m unittest discover -s tests -v
 python3 scripts/verify_assessment.py
+python3 scripts/verify_runtime_evidence.py
 python3 scripts/verify_corpus.py
 python3 scripts/verify_wepppy_reference.py --verify-published
 ```
