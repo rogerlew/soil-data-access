@@ -1,0 +1,488 @@
+{
+  "case_id": "ssurgo-002",
+  "status": "snapshot_only_reference_not_rebuilt",
+  "observed_at": "2026-11-18T00:22:39.914099+00:00",
+  "source_release": null,
+  "historical_wepppy_revision": null,
+  "historical_configuration": null,
+  "sidecar_generated_at": "2026-08-15T23:12:01+00:00",
+  "source_fingerprints": {
+    "database": {
+      "sha256": "352a9bb23c329c5a9bf235baf56917358b5b64b03f1a11d261fadae9c3cdb721",
+      "bytes": 4096,
+      "mtime_ns": 1786831772213038000
+    },
+    "wal": {
+      "sha256": "e6d3ca651f7969e448067816e81e99991a232b114fb2a21010de4322e5e7ffca",
+      "bytes": 395552,
+      "mtime_ns": 1786831775799068000
+    }
+  },
+  "source_unchanged": true,
+  "acquired_backup_sha256": "eb3a258fbe269519cddd798d010f63228c8276330f595c8d4e00d5c0f686e72a",
+  "snapshot": {
+    "file": "cache.sqlite",
+    "bytes": 200704,
+    "sha256": "a60e41a66ad35995c79108f8c78c574786fa450a104522c92756d164f2c16772"
+  },
+  "reconstruction": "Fresh SQLite schema, all records and rowids retained; logical hashes verified; no free pages",
+  "schema_contract_sha256": "7189e6e826f5adfb832cd127c05a8cb0c9a2ddd411ef6f47ef1d22111a410ddb",
+  "integrity_check": "ok",
+  "mukeys": [
+    2436952,
+    2437299,
+    2437479,
+    2437481,
+    2437491,
+    2437492,
+    2484538,
+    2486184,
+    2486881,
+    2486883,
+    2486884,
+    2486897,
+    2486898,
+    2486900,
+    2486902,
+    2486903,
+    3120230,
+    3120244,
+    3120261,
+    3120321,
+    3120324,
+    3120384,
+    3120433,
+    3120436,
+    3120488,
+    3120621,
+    3120629,
+    3120631,
+    3120639,
+    3120641,
+    3120650,
+    3120651,
+    3120652,
+    3120661,
+    3120759,
+    3120766,
+    3120776,
+    3120785
+  ],
+  "tables": {
+    "component": {
+      "rows": 133,
+      "logical_sha256": "c972361f6fc8b275c7726076ffb4216ab1aed80f48e67c2c25f44afbc108d8bf",
+      "columns": [
+        [
+          "mukey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "compname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "comppct_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "albedodry_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hydricrating",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "drainagecl",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "muname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "wtdepannmin",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "flodfreqdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "aws025wta",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "aws0150wta",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "hydgrpdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "drclassdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxclname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "geomdesc",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxorder",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxsuborder",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "chorizon": {
+      "rows": 713,
+      "logical_sha256": "5d4fd7286db826a82b5089d3c23b3d40c3923f2a1cb13e0438860a19554e0df9",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzdepb_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzdept_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzthk_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "dbthirdbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "ksat_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "sandtotal_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "claytotal_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "om_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "cec7_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "awc_l",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "fraggt10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "frag3to10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "desgnmaster",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "sieveno10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "wthirdbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "wfifteenbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "sandvf_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "ll_r",
+          "REAL",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "chfrags": {
+      "rows": 486,
+      "logical_sha256": "011b07d2fda206d28757863ec1e5d794c8bfce1ef08c63f4fe3092ffd520771a",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "fragvol_r",
+          "REAL",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "chtexturegrp": {
+      "rows": 713,
+      "logical_sha256": "9a8cb570521c2ec6365350c9f08562fee5e1275a4ab9e73341edc058465bd197",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "texture",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "corestrictions": {
+      "rows": 96,
+      "logical_sha256": "93628d0d387e0eee5527bb4f157cdab0fee8bb32be643c7ee7ed65dffdfc0663",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "reskind",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_component_mukey": {
+      "rows": 0,
+      "logical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "columns": [
+        [
+          "mukey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chorizon_cokey": {
+      "rows": 1,
+      "logical_sha256": "90d98ad30eb7346e0caec8cdb61dfd5234d1ad5d28f333329eb404a157a6aa72",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_corestrictions_cokey": {
+      "rows": 37,
+      "logical_sha256": "b9bf2371fa1f03b0aeef81d88159dbd5bf14de4420ec645bc6a6c1cf5bd893b4",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chfrags_chkey": {
+      "rows": 227,
+      "logical_sha256": "6db9117e0b0f3356d773409011001dde6261dab434f3abeb2278dc7d3211a6a1",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chtexturegrp_chkey": {
+      "rows": 0,
+      "logical_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    }
+  },
+  "coverage_complete": false,
+  "sqlite_acquisition_version": "3.45.1",
+  "sqlite_publication_version": "3.53.3",
+  "cache_label": "ssurgo",
+  "source_kind": "project_cache"
+}

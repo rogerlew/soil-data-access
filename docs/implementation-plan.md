@@ -27,7 +27,10 @@ still deployment prerequisites.
 - [x] Evaluate Rust/Go parsers and dependencies; recommend Rust.
 - [x] (2026-11-17) Record operator-approved WEPPpy-first acceptance and deferred SDA parity.
 - [x] (2026-11-18 UTC) Bounded read-only discovery on wepp1: 35 SSURGO cache candidates.
-- [ ] Complete coverage-directed discovery (including STATSGO) and consistently snapshot representative caches/artifacts.
+- [x] (2026-11-18 UTC) Acquire and validate three selected SSURGO cache snapshots.
+- [x] (2026-11-18 UTC) Implement WAL-aware acquisition, clean logical reconstruction, and LFS fixture verification.
+- [x] (2026-11-18 UTC) Find positive STATSGO model inputs through an SSURGO-named project cache; retain paired artifacts and shared STATSGO cache.
+- [ ] Complete coverage-directed discovery, configuration/assignment lineage, and offline reference rebuild.
 - [ ] Freeze corpus manifest, reference build, JSON profile, and comparison rules.
 - [ ] Implement Rust/PostgreSQL/PostGIS service and test-only cache replay adapter.
 - [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
@@ -85,11 +88,34 @@ correctness, live wire parity, or duplicate-selection behavior on unseen raw dat
 The wepp1 discovery found 35 SSURGO caches in bounded samples, with generated
 model inputs for 28 of the first 31. Thirty of those caches had WAL files and
 4 KiB database files. Sidecars suggest useful negative-record coverage, but cannot
-prove completeness. STATSGO has not been observed in these non-exhaustive samples.
-See docs/wepp1-cache-discovery.md for limits and evidence.
+prove completeness. The explicit STATSGO-named cache found by follow-up discovery was empty.
+However, catalog-key searches found two projects with STATSGO map-unit/component
+IDs in actual WEPP soil inputs under the SSURGO cache path. One is retained as
+ssurgo-004 with base, treated, and model-input files. The shared STATSGO cache is
+retained as statsgo-002. Both upstream query paths share helpers and have no
+dataset predicate; gNATSGO combines source families. Cache labels are not provenance. See docs/wepp1-cache-discovery.md for the initial evidence
+and docs/wepppy-corpus.md for the snapshot follow-up.
+
+Historical negative-key tables lack primary keys. Preserve their duplicates and
+rowids rather than coercing them to the initialized schema. The first read-only
+SQLite open appears to have created empty sidecars for a WAL-mode database that
+had none; the collector now rejects that condition before opening SQLite. See
+docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
 
+
+2026-11-18 UTC: the operator clarified that gNATSGO and the shared SDA queries
+cover both source families. Code, NRCS documentation, and project artifacts confirm
+that STATSGO MUKEYs can use the default SSURGO cache path. Preserve the unified
+key-query contract and classify source coverage using independent catalog/release
+evidence, never filenames or collection labels.
+
+2026-11-18 UTC: the operator explicitly authorized committing selected sanitized
+cache snapshots through Git LFS. This supersedes the blanket data exclusion only
+for fixtures/wepppy/. Keep source mappings, raw backups, and project configuration
+private; rebuild public SQLite files to remove unused/deleted pages while proving
+exact logical equality. Cache fixtures alone cannot close corpus/reference parity.
 
 2026-11-18 UTC: the operator selected wepp1 for read-only discovery. Retain private
 candidate paths locally and publish only aggregate evidence. Bound production
@@ -121,7 +147,12 @@ dependency selection and numerical capacity targets remain to be completed.
 ## Milestone 1: Freeze the project corpus and WEPPpy contract
 
 
-Add scripts/snapshot_project_corpus.py and contracts/wepppy-corpus.schema.json.
+scripts/snapshot_project_corpus.py now acquires private read-only-source backups;
+scripts/publish_cache_fixture.py publishes clean logical copies against
+contracts/wepppy-cache-schema.json; scripts/verify_corpus.py verifies their hashes,
+records, and integrity. See docs/wepppy-corpus.md for commands. The broader
+contracts/wepppy-corpus.schema.json and configuration/artifact capture remain to
+be defined before freezing the complete replay corpus.
 Inventory cache-bearing runs read-only; select SSURGO and STATSGO2 plus restrictive
 layers, shallow profiles, multiple components/horizons/textures/fragments, null and
 missing fields, invalid soils, missing keys, fallback behavior, and relevant burn
@@ -135,8 +166,10 @@ Check snapshot integrity and record input hashes, schema, row counts, provenance
 sidecars, source vintage (explicitly unknown where absent), model/configuration,
 reference code/native-library versions, negative-cache markers, completeness, and
 selected/generated artifact hashes.
-Store working copies in ignored data/parity; retain sanitized manifests under
-artifacts/wepppy-parity. Do not publish entire project directories or private paths.
+Store private acquisitions and working copies in ignored data/parity. Store
+reviewed cache fixtures through LFS under fixtures/wepppy, with adjacent manifests;
+retain aggregate operational evidence under artifacts/wepppy-parity. Do not publish
+entire project directories or private paths.
 
 Implement the reference runner in scripts/run_wepppy_parity.py. Regenerate soils
 from snapshot copies with pinned WEPPpy/configuration and remote fetching disabled.
@@ -259,15 +292,18 @@ From /workdir/soil-data-access, current runnable checks are:
     python3 -m unittest discover -s tests -v
     python3 scripts/verify_assessment.py
     python3 scripts/verify_assessment.py --require-live
+    git lfs pull
+    python3 scripts/verify_corpus.py
 
-The first two verify retained assessment evidence. The last remains an optional
-full-SDA evidence check and currently exits 1; it must not gate the initial WEPPpy
+The first two verify tests and retained assessment evidence. The --require-live
+command remains an optional full-SDA evidence check and currently exits 1; it must not gate the initial WEPPpy
 release. Parser probes remain reproducible with cargo run --locked using
 evaluation/rust/Cargo.toml and go run from evaluation/go as documented in the
-assessment. No runtime or cache-corpus acceptance result is claimed yet.
+assessment. The corpus verifier checks committed snapshot bytes and logical content; it does
+not validate rebuilt soils or runtime acceptance.
 
-The first implementation step is read-only discovery under /wc1/runs/, then schema
-and manifest definitions and snapshot tooling. Before creating candidate caches,
+Initial cache discovery and snapshot tooling are implemented. Next, complete the
+coverage matrix, capture configuration/artifact lineage, and build the reference. Before creating candidate caches,
 record compatibility/regression expectations in the WEPPpy work package. As each
 runner/CLI is implemented, add its exact invocation and retained output here;
 proposed file paths above are not commands that already exist. Run WEPPpy tests
@@ -307,20 +343,30 @@ remove persistent volumes as routine cleanup.
 ## Outcomes & Retrospective
 
 
-The prior source and parser assessment is retained. The operator has approved a
-WEPPpy-first release gate using project SQLite caches and actual soil artifacts;
-waiting for live SDA is no longer the next action. Bounded wepp1 discovery now
-identifies 35 SSURGO candidates and three inspected provenance sidecars. No databases have been opened or snapshotted, no corpus has
-been frozen, no server implemented, and no deployment validated. Next: implement
-consistent snapshot collection for selected candidates, fill the STATSGO/behavior
-coverage gaps, and freeze the corpus/reference/JSON contract in milestone 1.
+Six cache fixtures are acquired and prepared for LFS publication: three initial
+SSURGO-labeled project caches, a fourth project cache containing confirmed STATSGO
+catalog keys, one empty STATSGO-labeled project cache, and the positive shared
+STATSGO cache. Three paired historical soil files for the fourth project include
+an actual WEPP model input. Publication strips only the private project path in
+two Source File comments; numeric/model payload bytes remain exact.
+
+Source fingerprints, logical comparisons, integrity checks, and unknown historical
+revision/configuration are explicit. Raw acquisition and private run mapping stay
+outside Git. No reference soils have been rebuilt, no complete workflow corpus
+frozen, no server implemented, and no deployment validated. Complete configuration,
+assignment and native-library lineage, behavioral coverage, and the reference/JSON
+contract next. The SQLite sidecar incident motivated a pre-open guard and regression
+test; the snapshot contract records that filesystem effect. Collection/cache labels
+cannot distinguish source families; the positive STATSGO evidence resolved the
+misleading result of searching only STATSGO-named cache files.
 
 ## Artifacts and Dependencies
 
 
 Historical observations remain under artifacts/assessment and can be read at commit
 d311ddb. New cache/soil evidence belongs under artifacts/wepppy-parity, with large
-or sensitive inputs in ignored data/parity and sanitized manifests in Git. Rust
+or sensitive acquisitions in ignored data/parity. Operator-authorized clean cache
+fixtures are stored in Git LFS under fixtures/wepppy with adjacent manifests. Rust
 is the recommended implementation language; exact runtime versions await evaluation.
 The code and documentation remain MIT-licensed; third-party data attribution is
 separate. Initial complexity is one API, one PostgreSQL/PostGIS database, import
@@ -332,3 +378,9 @@ import validation, preserves runtime/security gates, and defers broader SDA pari
 
 Revision: 2026-11-18 UTC. Record bounded wepp1 discovery, WAL observations, private
 candidate evidence, and outstanding STATSGO/snapshot coverage without claiming parity.
+
+Revision: 2026-11-18 UTC. Record operator-authorized LFS publication, implemented
+snapshot tools, historical schema preservation, and the sidecar creation guard.
+
+Revision: 2026-11-18 UTC. Retain positive STATSGO project model inputs and clarify
+that unified SDA queries and gNATSGO coverage cross cache/collection labels.

@@ -101,6 +101,23 @@ a documented service-owned metadata endpoint; finalize its schema before coding.
 Refresh scheduling follows actual published releases, not an assumed calendar-only
 availability guarantee.
 
+## Cache labels and source-family coverage
+
+WEPPpy's SSURGO and STATSGO collection paths share the same tabular query helpers
+and endpoint; the five queries have no source-dataset predicate. A cache filename
+or `Surgo`/`StatsGo` header is a client-path label, not row-level provenance.
+gNATSGO combines SSURGO, STATSGO2, and Raster Soil Survey data, so the default
+SSURGO cache can contain STATSGO2 map units. See the
+[NRCS composition description](https://www.nrcs.usda.gov/resources/data-and-reports/gridded-national-soil-survey-geographic-database-gnatsgo)
+and [retained corpus evidence](wepppy-corpus.md).
+
+Preserve one supported key-query contract across the source families. Do not
+partition query routing or exclude keys using cache labels. Validate the selected
+official import's coverage against actual gNATSGO/WEPPpy keys, retain source-release
+provenance, and reject unexplained conflicting source records. A SSURGO-only source
+name is insufficient evidence of coverage; a combined gNATSGO source is a candidate
+for independent import assessment, not automatically validated by its name.
+
 ## Public query containment
 
 Define an allowlisted parsed query grammar and exposed tables/functions. Reject

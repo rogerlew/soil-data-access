@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-11-18T00:34:57.553215+00:00",
+  "status": "historical_artifacts_not_rebuilt_reference",
+  "case_id": "ssurgo-004",
+  "artifacts": [
+    {
+      "file": "artifacts/treated.sol",
+      "role": "treated_soil",
+      "mukey": 667003,
+      "cokey": 14222716,
+      "header_source": "Surgo",
+      "bytes": 3621,
+      "sha256": "4a4337165e3891e85d1407c8c9d46b5e7ec16216bd3e2caa7789dba072a608c7",
+      "source_sha256": "2f3ebc4332b4e97c80f2b4ad6770be0247a768fd2e06d6bf58a823104b40febb",
+      "noncomment_payload_sha256": "7b1709632f40411fca94f77bad34de407b530c7cd1d24a7ad2740b2fc756281b",
+      "transformations": [
+        "Replace the project path only in the Source File comment with :<project>/soils/667003.sol"
+      ]
+    },
+    {
+      "file": "artifacts/source.sol",
+      "role": "base_soil",
+      "mukey": 667003,
+      "cokey": 14222716,
+      "header_source": "Surgo",
+      "bytes": 2919,
+      "sha256": "93e450eac93d059677dabf6674c5a605dbf445db1ce166062e5341b35edceccd",
+      "source_sha256": "93e450eac93d059677dabf6674c5a605dbf445db1ce166062e5341b35edceccd",
+      "noncomment_payload_sha256": "91de79385f6145fc573cedd9bb0dede0be62fa074c0b936775bb45d19dcee467",
+      "transformations": []
+    },
+    {
+      "file": "artifacts/model-input.sol",
+      "role": "model_input",
+      "mukey": 667003,
+      "cokey": 14222716,
+      "header_source": "Surgo",
+      "bytes": 3644,
+      "sha256": "f3fa43933f41d42597173b9b8948f775f4887659a1f2fa5f58d9fbb7b137485c",
+      "source_sha256": "12208508243a54192b7597aad04ec5f607f1ac160a53972732aad174aa2b2cfb",
+      "noncomment_payload_sha256": "d588dcd665e63d8f93e43ed99991996bf955eeb15286814f6a2c9dec1c3a4d76",
+      "transformations": [
+        "Replace the project path only in the Source File comment with :<project>/soils/667003.sol"
+      ]
+    }
+  ]
+}

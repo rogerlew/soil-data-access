@@ -1,0 +1,21 @@
+{
+  "host": "wepp1",
+  "first_observed_at": "2026-11-18T00:20:30.505423+00:00",
+  "last_observed_at": "2026-11-18T00:29:26.682614+00:00",
+  "scope": "Direct entries below two-character run prefixes; symlink runs/prefixes and nested scenarios excluded; live multi-pass inventory, not atomic",
+  "run_candidates_checked": 25357,
+  "completed_enumerated_scope": true,
+  "cache_candidates_found": 1,
+  "populated_statsgo_caches_found": 0,
+  "empty_statsgo_caches_snapshotted": 1,
+  "errors": [],
+  "private_evidence_sha256": {
+    "wepp1-statsgo-targeted.json": "988f4cd214dad6b9be48cc66621f9ba82672ea0cdd1e6dccd96349fc0fe616ee",
+    "wepp1-statsgo-targeted-2.json": "bd8765e3be64a3d9365f2c9642cbdb12e39758bb69efe0ce00cbca6962db65ee",
+    "wepp1-statsgo-targeted-3.json": "6fe729d00ef31e42a35c075aac0ed4deff12aa87fdd2d99344ccb185680454d7",
+    "wepp1-statsgo-targeted-4.json": "38a088b06a659453cb61139398fc762dfd1bdeb9c5a165e13288341bd6f37d97",
+    "wepp1-statsgo-targeted-5.json": "8be4168014f466c94d0b46c868f1d04dbce82bfa3bffc01a93280204fca49d5b",
+    "wepp1-statsgo-targeted-6.json": "be0667f0914e6c26084334b7c230ef0ed7b70de229c6be00101a021a6525da44",
+    "wepp1-statsgo-targeted-7.json": "c4b2b7400f95707ad1bd344deef6fc942deb8fea48042ff7605b43d811fde4cf"
+  }
+}

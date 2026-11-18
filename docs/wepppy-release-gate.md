@@ -28,6 +28,8 @@ source. Record source hashes, available provenance/vintage, schema, selected key
 WEPPpy/native dependency revisions, configuration, and generated-artifact hashes.
 Unknown source dates remain unknown; they are not proof of a matched current release.
 Sanitize public manifests and keep private project data outside the public repository.
+The operator authorized sanitized cache fixtures in Git LFS; follow
+[the snapshot contract](corpus-snapshot-contract.md), retaining private mappings locally.
 
 Freeze the coverage matrix before candidate evaluation. Include both datasets and
 ordinary soils, multiple components/horizons, restrictive layers, shallow profiles,

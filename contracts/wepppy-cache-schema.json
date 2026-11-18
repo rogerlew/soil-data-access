@@ -1,0 +1,470 @@
+{
+  "tables": {
+    "component": {
+      "columns": [
+        [
+          "mukey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "compname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "comppct_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "albedodry_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hydricrating",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "drainagecl",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "muname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "wtdepannmin",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "flodfreqdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "aws025wta",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "aws0150wta",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "hydgrpdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "drclassdcd",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxclname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "geomdesc",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxorder",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "taxsuborder",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sql": "CREATE TABLE component\n                          (mukey INTEGER, cokey INTEGER UNIQUE, compname TEXT, \n                           comppct_r REAL, albedodry_r REAL, \n                           hydricrating REAL, drainagecl REAL, muname TEXT,\n                           wtdepannmin TEXT, flodfreqdcd TEXT,\n                           aws025wta TEXT, aws0150wta TEXT,\n                           hydgrpdcd TEXT, drclassdcd TEXT,\n                           taxclname TEXT, geomdesc TEXT,\n                           taxorder TEXT, taxsuborder TEXT)"
+    },
+    "chorizon": {
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzname",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzdepb_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzdept_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "hzthk_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "dbthirdbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "ksat_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "sandtotal_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "claytotal_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "om_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "cec7_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "awc_l",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "fraggt10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "frag3to10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "desgnmaster",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          "sieveno10_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "wthirdbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "wfifteenbar_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "sandvf_r",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          "ll_r",
+          "REAL",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sql": "CREATE TABLE chorizon\n                          (cokey INTEGER, chkey INTEGER UNIQUE, hzname TEXT,\n                           hzdepb_r REAL, hzdept_r REAL, hzthk_r REAL, \n                           dbthirdbar_r REAL, ksat_r REAL, \n                           sandtotal_r REAL, claytotal_r REAL, om_r REAL, \n                           cec7_r REAL, awc_l REAL, fraggt10_r REAL, \n                           frag3to10_r REAL, desgnmaster TEXT, \n                           sieveno10_r REAL, wthirdbar_r REAL, \n                           wfifteenbar_r REAL, sandvf_r  REAL,\n                           ll_r  REAL)"
+    },
+    "chfrags": {
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "fragvol_r",
+          "REAL",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sql": "CREATE TABLE chfrags\n                          (chkey INTEGER PRIMARY KEY , fragvol_r REAL)"
+    },
+    "chtexturegrp": {
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "texture",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sql": "CREATE TABLE chtexturegrp\n                          (chkey INTEGER PRIMARY KEY , texture TEXT)"
+    },
+    "corestrictions": {
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          "reskind",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sql": "CREATE TABLE corestrictions\n                          (cokey INTEGER PRIMARY KEY , reskind TEXT)"
+    },
+    "bad_component_mukey": {
+      "columns": [
+        [
+          "mukey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ]
+      ],
+      "sql": "CREATE TABLE bad_component_mukey\n                          (mukey INTEGER PRIMARY KEY )"
+    },
+    "bad_chorizon_cokey": {
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ]
+      ],
+      "sql": "CREATE TABLE bad_chorizon_cokey\n                          (cokey INTEGER PRIMARY KEY )"
+    },
+    "bad_corestrictions_cokey": {
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ]
+      ],
+      "sql": "CREATE TABLE bad_corestrictions_cokey\n                          (cokey INTEGER PRIMARY KEY )"
+    },
+    "bad_chfrags_chkey": {
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ]
+      ],
+      "sql": "CREATE TABLE bad_chfrags_chkey\n                          (chkey INTEGER PRIMARY KEY )"
+    },
+    "bad_chtexturegrp_chkey": {
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          1
+        ]
+      ],
+      "sql": "CREATE TABLE bad_chtexturegrp_chkey\n                          (chkey INTEGER PRIMARY KEY )"
+    }
+  },
+  "indexes": {
+    "mukey_cokey": "CREATE INDEX mukey_cokey ON component(mukey, cokey)",
+    "cokey_chkey": "CREATE INDEX cokey_chkey ON chorizon(cokey, chkey)"
+  },
+  "negative_table_variants": {
+    "bad_component_mukey": {
+      "sql": "CREATE TABLE bad_component_mukey (mukey INTEGER)",
+      "columns": [
+        [
+          "mukey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chorizon_cokey": {
+      "sql": "CREATE TABLE bad_chorizon_cokey (cokey INTEGER)",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_corestrictions_cokey": {
+      "sql": "CREATE TABLE bad_corestrictions_cokey (cokey INTEGER)",
+      "columns": [
+        [
+          "cokey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chfrags_chkey": {
+      "sql": "CREATE TABLE bad_chfrags_chkey (chkey INTEGER)",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "bad_chtexturegrp_chkey": {
+      "sql": "CREATE TABLE bad_chtexturegrp_chkey (chkey INTEGER)",
+      "columns": [
+        [
+          "chkey",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ]
+    }
+  }
+}
