@@ -26,7 +26,8 @@ still deployment prerequisites.
 - [x] Retain SDA 502 observations and source/probe evidence.
 - [x] Evaluate Rust/Go parsers and dependencies; recommend Rust.
 - [x] (2026-11-17) Record operator-approved WEPPpy-first acceptance and deferred SDA parity.
-- [ ] Inventory and consistently snapshot representative project SQLite caches/artifacts.
+- [x] (2026-11-18 UTC) Bounded read-only discovery on wepp1: 35 SSURGO cache candidates.
+- [ ] Complete coverage-directed discovery (including STATSGO) and consistently snapshot representative caches/artifacts.
 - [ ] Freeze corpus manifest, reference build, JSON profile, and comparison rules.
 - [ ] Implement Rust/PostgreSQL/PostGIS service and test-only cache replay adapter.
 - [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
@@ -48,8 +49,10 @@ artifacts/assessment; they are not proof that a release is ready.
 
 WEPPpy source is /workdir/wepppy/wepppy/soils/ssurgo/ssurgo.py. SurgoSoilCollection
 reads project-local soils/ssurgo_tabular_cache.sqlite or
-soils/statsgo_tabular_cache.sqlite and fetches missing records. Start read-only
-project discovery under /wc1/runs/ when available. Consult WEPPpy's nearest AGENTS
+soils/statsgo_tabular_cache.sqlite and fetches missing records. Read-only discovery
+on wepp1 uses host /geodata/wc1/runs/ (container /wc1/runs/); see
+docs/wepp1-cache-discovery.md and ignored data/parity/discovery/ for candidates.
+Consult WEPPpy's nearest AGENTS
 and tests before its eventual implementation edits; use a separate task worktree.
 The current working tree contains unrelated work and is not a fixture sandbox.
 
@@ -79,8 +82,19 @@ Project caches preserve useful historical reference data but lose some upstream
 row multiplicity/order. Cache replay alone therefore cannot establish raw import
 correctness, live wire parity, or duplicate-selection behavior on unseen raw data.
 
+The wepp1 discovery found 35 SSURGO caches in bounded samples, with generated
+model inputs for 28 of the first 31. Thirty of those caches had WAL files and
+4 KiB database files. Sidecars suggest useful negative-record coverage, but cannot
+prove completeness. STATSGO has not been observed in these non-exhaustive samples.
+See docs/wepp1-cache-discovery.md for limits and evidence.
+
 ## Decision Log
 
+
+2026-11-18 UTC: the operator selected wepp1 for read-only discovery. Retain private
+candidate paths locally and publish only aggregate evidence. Bound production
+metadata scans; freeze snapshots before inspecting database contents or claiming
+coverage. This avoids treating an expensive full-tree scan as a prerequisite.
 
 2026-11-17, operator-approved: replace live SDA availability as an initial release
 gate with WEPPpy cache/soil parity. The extended outage makes waiting for live wire
@@ -295,10 +309,11 @@ remove persistent volumes as routine cleanup.
 
 The prior source and parser assessment is retained. The operator has approved a
 WEPPpy-first release gate using project SQLite caches and actual soil artifacts;
-waiting for live SDA is no longer the next action. This turn revises requirements
-and sequencing only. No project corpus has been captured, no new server implemented,
-and no deployment validated. Next: discover candidate project caches read-only and
-freeze the corpus/reference/JSON contract in revised milestone 1.
+waiting for live SDA is no longer the next action. Bounded wepp1 discovery now
+identifies 35 SSURGO candidates and three inspected provenance sidecars. No databases have been opened or snapshotted, no corpus has
+been frozen, no server implemented, and no deployment validated. Next: implement
+consistent snapshot collection for selected candidates, fill the STATSGO/behavior
+coverage gaps, and freeze the corpus/reference/JSON contract in milestone 1.
 
 ## Artifacts and Dependencies
 
@@ -314,3 +329,6 @@ and validation tooling, and explicit WEPPpy client configuration.
 Revision: 2026-11-17. Supersedes the upstream-availability milestone dependency with
 operator-approved WEPPpy parity acceptance. Separates historical replay from source
 import validation, preserves runtime/security gates, and defers broader SDA parity.
+
+Revision: 2026-11-18 UTC. Record bounded wepp1 discovery, WAL observations, private
+candidate evidence, and outstanding STATSGO/snapshot coverage without claiming parity.
