@@ -47,3 +47,14 @@ It does not certify numerical equivalence of an eventual deployment image.
 Full NoDb/RQ/raster orchestration, fallback/assignment coverage, official-source
 import, capacity targets, intended-host recovery and rollout remain the service
 release gates. A bounded replay pass does not authorize public deployment.
+
+## Retained result
+
+The [validation receipt](../artifacts/wepppy-parity/json-client/validation.json)
+identifies WEPPpy 39f24ce92, runtime 9dc2264 and harness 60a699f. All 24,049 positive
+cache rows match; 34 successful HTTP events establish fresh retrievals. The complete
+cases retain 499 valid soils, six non-valid outcomes, 501 matching canonical files,
+and 499 verified base-soil sidecars. The known null-texture worker rejection was
+also reproduced directly from the candidate cache with the reference defaults.
+The empty and incomplete cases remain distinct. Reports retain the initial image
+failure, matched environment, source hashes, selections, cache counts and sidecar hashes.

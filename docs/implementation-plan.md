@@ -36,7 +36,7 @@ still deployment prerequisites.
 - [ ] Complete workflow coverage: fallback/assignment execution, treatment variants, and full historical/native lineage gaps.
 - [x] (2026-11-18 UTC) Implement Rust/PostgreSQL/PostGIS local runtime and test-only cache replay adapter.
 - [x] (2026-11-18 UTC) Validate committed 9dc2264 in fresh Compose: 24,049 cache records, eleven wire cases, containment and lifecycle checks.
-- [ ] Wire WEPPpy JSON transport and verify empty-cache offline execution.
+- [x] (2026-11-18 UTC) Wire explicit WEPPpy JSON transport/provenance; real-service fresh-cache replay matches 501 canonical artifacts in the reference numerical environment.
 - [ ] Verify official-data import independently from historical cache replay.
 - [ ] Prove corpus parity, release coverage, capacity, security, and recovery in Compose.
 - [ ] Prepare and execute authorized environment-specific deployment.
@@ -71,6 +71,12 @@ Environment-specific host/routing/storage ownership is /workdir/open-wepp-org,
 which manages Talos/Kubernetes; do not assume those nodes run Docker Compose.
 
 ## Surprises & Discoveries
+
+The development-image paired build failed two base diagnostic-comment values by
+about 2e-15; Python/libc/Rosetta differ from the frozen reference. Retain the failure.
+Matched read-only numerical-environment mounts restore exact canonical artifacts;
+this is not deployment-image equivalence.
+
 
 
 All five complete cache cases reconstruct consistent muaggatt attributes and match
@@ -121,6 +127,12 @@ had none; the collector now rejects that condition before opening SQLite. See
 docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
+
+2026-11-18: preserve the fixed comparison exclusions. Use explicit persisted
+endpoint/profile/release with cache-bound identity and sidecars to meet the operator
+provenance request. Keep deployment-image parity separate from matched-environment
+transport parity; never widen tolerances to conceal environment differences.
+
 
 
 2026-11-18 UTC: implement the bounded runtime under docs/runtime-contract.md.
@@ -381,6 +393,13 @@ remove persistent volumes as routine cleanup.
 
 ## Outcomes & Retrospective
 
+WEPPpy 39f24ce92 with runtime 9dc2264 passes the bounded fresh-cache replay:
+24,049 positive records, 34 successful HTTP fetch events, 499 valid soils, six
+non-valid outcomes, 501 canonical artifacts and 499 verified base sidecars.
+The incomplete case remains excluded. See artifacts/wepppy-parity/json-client/validation.json.
+No production import, full workflow coverage, capacity, or deployment gate is claimed.
+
+
 
 Six cache fixtures are acquired and stored through Git LFS: three initial
 SSURGO-labeled project caches, a fourth project cache containing confirmed STATSGO
@@ -411,7 +430,7 @@ controls. Thirty-three Python tests and two Rust test groups pass; Clippy and do
 lint are clean. Disconnect cleanup in the final run was 5.08 seconds, consistent
 with the explicit timeout limitation. These checks do not close milestone 2: the
 actual WEPPpy client and generated-soil path are still unwired.
-The next implementation step is the WEPPpy client, while completing workflow coverage. This reference is a useful baseline, not full NoDb/RQ/raster execution or
+The WEPPpy JSON client and bounded fresh-cache replay are implemented; complete workflow coverage and official import remain next. This reference is a useful baseline, not full NoDb/RQ/raster execution or
 mirror parity. Only one captured forest treatment profile is paired downstream;
 other treatment/fallback/assignment behaviors still need evidence or explicit scope
 exclusion before release. Historical commit/native lineage remains unknown. No production importer, migrated
@@ -448,3 +467,8 @@ contracts; document historical drift, incomplete cache, and workflow coverage ga
 
 Revision: 2026-11-18 UTC. Implement bounded local Rust/PostgreSQL replay, preserve
 explicit metadata provenance, and keep client/workflow/public gates open.
+
+Revision: 2026-11-18 UTC. WEPPpy 39f24ce92 implements explicit JSON selection,
+source-bound caches, atomic retrieval events and base-soil provenance sidecars.
+Retain real-service parity and the initial development-image numerical mismatch
+in artifacts/wepppy-parity/json-client; no expanded comment exclusions.

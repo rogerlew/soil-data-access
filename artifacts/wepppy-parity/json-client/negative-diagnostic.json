@@ -1,0 +1,9 @@
+{
+  "case_id": "ssurgo-001",
+  "mukey": 474429,
+  "exception": "ValueError",
+  "message": "Rosetta texture fractions must be finite percentages that sum to 100 with non-negative silt, got sand=66.8, silt=-14.299999999999997, clay=47.5.",
+  "matches_reference_diagnostic": true,
+  "cache_reused_without_http": true,
+  "wepppy_revision": "39f24ce92442e76e8192ddf329ba70708d52c52a"
+}

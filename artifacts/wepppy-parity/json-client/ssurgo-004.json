@@ -1,0 +1,492 @@
+{
+  "claim": "bounded_cache_replay_json_artifact_parity_not_release_acceptance",
+  "network": {
+    "namespace": "net:[4026537744]",
+    "external_connect_errno": 101
+  },
+  "environment": {
+    "wepppy_revision": "39f24ce92",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "numpy": "1.26.0",
+    "scipy": "1.13.1",
+    "duckdb": "1.1.1",
+    "numpy_native_sha256": "164eb264458d26031c346950c1b4576c6b48f9f30cf1f2e4926ca3318ab41aee",
+    "duckdb_native_sha256": "8b64cb4c1c2cff74e2c01da6a611a3d0abe719dcaecead4bfa858a44e9d8db95",
+    "rosetta_files": {
+      "__init__.py": "5959e8b05ab553d44cc2a38d9cc0baef43e02eb4f0511b192f63676c588b519c",
+      "__main__.py": "8bb31c5f40f1f1177c88f85d461b246c0048d16e9d9fd51f1f804c3c11f2bf95",
+      "_migration/create_duckdb.py": "5f0e2b9def71449a6cfdca71ff66f814458600c2950611e57f263dee19594b1f",
+      "_migration/dump_sqlite_to_parquet.py": "c2fcb8e1fcc56066cb309623ef804d60d6b695a996c1ac481b949ff9a32992e8",
+      "ann.py": "ce42f8dce26d8af038174150562567c4de1640fda22330b50132ffb9cc314690",
+      "db/rosetta.duckdb": "a1e26a549f7babfb77456201850c760d84d88788f1614d7db89e81f0b139532f",
+      "db.py": "cd7fd827c00fb474654097ef08f0483e6d9ae2435ae86108de14694e60989531",
+      "rosetta.py": "ceffff322a67019fb0b97c6484a08508221be290aa27a4b39c10e56dd305fe61",
+      "sqlite/Rosetta.sqlite": "0e1a3f3ccbcf569066dc3c19027183646e434eece30213896f00df6f477910de",
+      "tests/PTF_Model_tests.py": "36b3488a8e6a92260800fcd165e2d7abd4da255881a8303d68296a3bc455a32e",
+      "tests/test_performance.py": "9fa75c224e6d1e9d3e9e3fe228b8187885297c1d0bd847d4f6c620ac51a0d575",
+      "tests/test_rosetta_regression.py": "4c24d0e1511628f80385427aff54a4547a690ce60c6edae40c107abd4e5511e4"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "candidate_source_sha256": {
+    "wepppy/soils/ssurgo/ssurgo.py": "ee1b2a41a751e47715fe3f655de3e65e23a2f0c28065b61fb4f496173d62796c",
+    "wepppy/soils/ssurgo/source.py": "3a308d1d22f4b92880ce6cf9cbde830a830bed8b4839cbaf8309e5981eb518e0",
+    "wepppy/nodb/core/soils.py": "fe8a65620cb58adff2697dd2d78b6a216878b57bb25210e597d9650046973b25"
+  },
+  "source": {
+    "endpoint": "http://api:8080/Tabular/post.rest",
+    "profile": "wepppy-json-v1",
+    "release": "replay-ssurgo-004-4d251335977b"
+  },
+  "case": {
+    "case_id": "ssurgo-004",
+    "snapshot_sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+    "coverage": {
+      "requested_mukeys": 3,
+      "multiple_components": 3,
+      "multiple_horizons": 22,
+      "profile_bottom_le_50cm": 2,
+      "horizons_with_null_texture_or_hydraulic_field": 10,
+      "restriction_kinds": [
+        "Lithic bedrock",
+        "Paralithic bedrock"
+      ],
+      "fragment_rows": 61,
+      "texture_rows": 75,
+      "negative_rows": 26
+    },
+    "cache_gaps": {},
+    "profile": {
+      "use_statsgo": false,
+      "initial_sat": 0.75,
+      "ksflag": false,
+      "version": "7778"
+    },
+    "profile_basis": "captured_project_state_not_historical_commit_proof",
+    "configuration_sha256": "04b7ef06d8eeb2fd910f2dbdabd572f9e23bdb48f99ed651cc51bb1c239bf3f6",
+    "captured_assignments": {
+      "raw_mukeys": {
+        "22": "667005",
+        "23": "667005",
+        "32": "667005",
+        "33": "667005",
+        "41": "667005",
+        "42": "667005",
+        "43": "667005",
+        "51": "667005",
+        "53": "667005",
+        "62": "667005",
+        "63": "667005",
+        "71": "667003",
+        "81": "667005",
+        "82": "667005",
+        "83": "667005"
+      },
+      "base_mukeys": {
+        "22": "667005",
+        "23": "667005",
+        "32": "667005",
+        "33": "667005",
+        "41": "667005",
+        "42": "667005",
+        "43": "667005",
+        "51": "667005",
+        "53": "667005",
+        "62": "667005",
+        "63": "667005",
+        "71": "667003",
+        "81": "667005",
+        "82": "667005",
+        "83": "667005"
+      },
+      "treated_soil_keys": {
+        "22": "667005-sand loam-forest",
+        "23": "667005-sand loam-forest",
+        "32": "667005-sand loam-forest",
+        "33": "667005-sand loam-forest",
+        "41": "667005-sand loam-forest",
+        "42": "667005-sand loam-forest",
+        "43": "667005-sand loam-forest",
+        "51": "667005-sand loam-forest",
+        "53": "667005-sand loam-forest",
+        "62": "667005-sand loam-forest",
+        "63": "667005-sand loam-forest",
+        "71": "667003-sand loam-forest",
+        "81": "667005-sand loam-forest",
+        "82": "667005-sand loam-forest",
+        "83": "667005-sand loam-forest"
+      },
+      "landuse": {
+        "22": "42",
+        "23": "42",
+        "32": "42",
+        "33": "42",
+        "41": "42",
+        "42": "42",
+        "43": "42",
+        "51": "42",
+        "53": "42",
+        "62": "42",
+        "63": "42",
+        "71": "42",
+        "81": "42",
+        "82": "42",
+        "83": "42"
+      },
+      "substitutions": {}
+    },
+    "retrieval": {
+      "binding": {
+        "historical_rows_unknown": false,
+        "identity": {
+          "endpoint": "http://api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "replay-ssurgo-004-4d251335977b"
+        },
+        "schema_version": 1
+      },
+      "fetches": [
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-004-4d251335977b"
+          },
+          "key_count": 3,
+          "metadata": {
+            "observed_at": "2026-11-18T01:58:51.019903+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-004-4d251335977b",
+                  "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+                  "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004"
+                }
+              ],
+              "id": "replay-ssurgo-004-4d251335977b"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T01:58:51.047268+00:00",
+          "processed_records_sha256": "51ce0ab0b0d2ec2924fbb242bf6dfe7db5e5025381e36d006df93d8bb10de1b2",
+          "response_origin": "http://api:8080",
+          "response_sha256": "f4d8b174a6185fd381d97c5fedf531578e529c729b621e6e339dce1d926371a9",
+          "row_count": 22,
+          "table": "component"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-004-4d251335977b"
+          },
+          "key_count": 22,
+          "metadata": {
+            "observed_at": "2026-11-18T01:58:51.019903+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-004-4d251335977b",
+                  "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+                  "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004"
+                }
+              ],
+              "id": "replay-ssurgo-004-4d251335977b"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T01:58:51.139257+00:00",
+          "processed_records_sha256": "c6625c98578966cb75841b81f22a6761f23352535b91d4f329fc4aa01bd68144",
+          "response_origin": "http://api:8080",
+          "response_sha256": "2abd9082ee8fd0bb959b746fa91c047c8a978462ab624c6f4a990e33a5339487",
+          "row_count": 75,
+          "table": "chorizon"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-004-4d251335977b"
+          },
+          "key_count": 22,
+          "metadata": {
+            "observed_at": "2026-11-18T01:58:51.019903+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-004-4d251335977b",
+                  "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+                  "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004"
+                }
+              ],
+              "id": "replay-ssurgo-004-4d251335977b"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T01:58:51.192168+00:00",
+          "processed_records_sha256": "5b966ba407a29274c40518d64f10bce6458abe79809920a5189c0b9c6b7908e3",
+          "response_origin": "http://api:8080",
+          "response_sha256": "628fa0c33205b357da0d78275cda62a409de570cf4b98b432f6bc02091e94370",
+          "row_count": 10,
+          "table": "corestrictions"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-004-4d251335977b"
+          },
+          "key_count": 75,
+          "metadata": {
+            "observed_at": "2026-11-18T01:58:51.019903+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-004-4d251335977b",
+                  "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+                  "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004"
+                }
+              ],
+              "id": "replay-ssurgo-004-4d251335977b"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T01:58:51.309352+00:00",
+          "processed_records_sha256": "a44e63b19f4f1af9746d6d6d63bfec9197a830e8773b93d8b74ea49c78990dde",
+          "response_origin": "http://api:8080",
+          "response_sha256": "1045d2000aa4552235cf5347f3cc0e9258328c83ffab0b6319f67746ba6da652",
+          "row_count": 61,
+          "table": "chfrags"
+        },
+        {
+          "identity": {
+            "endpoint": "http://api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "replay-ssurgo-004-4d251335977b"
+          },
+          "key_count": 75,
+          "metadata": {
+            "observed_at": "2026-11-18T01:58:51.019903+00:00",
+            "release_manifest": {
+              "datasets": [
+                {
+                  "dataset": "WEPPPY_CACHE_REPLAY",
+                  "release_id": "replay-ssurgo-004-4d251335977b",
+                  "scope": "Processed project cache ssurgo-004; test replay only; source vintage unknown",
+                  "sha256": "4d251335977bf8167a5164211848b7f834c234d35a580b5fa23a016c70d44ce9",
+                  "source_url": "https://github.com/rogerlew/soil-data-access/tree/231c424/fixtures/wepppy/ssurgo-004"
+                }
+              ],
+              "id": "replay-ssurgo-004-4d251335977b"
+            },
+            "server_code_revision_observed": "9dc2264be977e795777ebead07ec215c0b749447"
+          },
+          "observed_at": "2026-11-18T01:58:51.364339+00:00",
+          "processed_records_sha256": "6a6f78e814efacff50c67a132c6cb87652dc4d9bb044465c4d9973c738a09123",
+          "response_origin": "http://api:8080",
+          "response_sha256": "da095c1d20fbe065eb55c53a6c7ee51b70b2bb1fb638af96f26db858e9b9a444",
+          "row_count": 75,
+          "table": "chtexturegrp"
+        }
+      ]
+    },
+    "cache_started_absent": true,
+    "decisions": [
+      {
+        "mukey": 666998,
+        "valid": true,
+        "cokey": 14222665,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          40920215,
+          40920211,
+          40920212,
+          40920213,
+          40920214,
+          40920209,
+          40920210
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 667003,
+        "valid": true,
+        "cokey": 14222716,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          40920395,
+          40920396,
+          40920397
+        ],
+        "restriction_index": null
+      },
+      {
+        "mukey": 667005,
+        "valid": true,
+        "cokey": 14222730,
+        "urban": false,
+        "water": false,
+        "horizons": [
+          40920437,
+          40920438,
+          40920439,
+          40920440
+        ],
+        "restriction_index": null
+      }
+    ],
+    "valid_count": 3,
+    "invalid_count": 0,
+    "historical_comparisons": [
+      {
+        "role": "base",
+        "historical_sha256": "93e450eac93d059677dabf6674c5a605dbf445db1ce166062e5341b35edceccd",
+        "rebuilt_sha256": "336050ab9c4759e4749c0f01daae61b652ceaae0470bac7a149dc8f7e38888ce",
+        "canonical_equal": false,
+        "historical_canonical_sha256": "454e06a95209fa8237ea7f353bf01dc8676b35da86bfb07c52d8992b2ab93e9b",
+        "rebuilt_canonical_sha256": "b020fcb3756febcf84c6ea471b87abdce4a2e2f1b8e763e0e93820302e1b42c4"
+      },
+      {
+        "role": "treated",
+        "historical_sha256": "4a4337165e3891e85d1407c8c9d46b5e7ec16216bd3e2caa7789dba072a608c7",
+        "rebuilt_sha256": "76de6799cac62458fdabf3ded3359f4ce439fb2858edb93c5dfb74a8c60414f1",
+        "canonical_equal": true,
+        "historical_canonical_sha256": "4416d05edc3a4438b6376bddfb7d89fa5151b954494192622ac0a2831d5acce9",
+        "rebuilt_canonical_sha256": "4416d05edc3a4438b6376bddfb7d89fa5151b954494192622ac0a2831d5acce9"
+      },
+      {
+        "role": "model_input",
+        "historical_sha256": "f3fa43933f41d42597173b9b8948f775f4887659a1f2fa5f58d9fbb7b137485c",
+        "rebuilt_sha256": "2c91d33c8654d3be1b35d444a95ea3dab21284f13883a1120d4fb347b690afa3",
+        "canonical_equal": true,
+        "historical_canonical_sha256": "c53f81e14aa93d587df862a2b931a840302bce6d29764ca8de284a16e7eb7311",
+        "rebuilt_canonical_sha256": "c53f81e14aa93d587df862a2b931a840302bce6d29764ca8de284a16e7eb7311"
+      }
+    ],
+    "artifacts": [
+      {
+        "file": "base/666998.sol",
+        "bytes": 4260,
+        "raw_sha256": "9ab4fd3de70d9d801377492077ecb038e6d47d788f31be40a3087ec615c7ffa1",
+        "canonical_sha256": "6fb8a7b5d24b0e842dec65106b405caa5b9d58c4a4ea062bb2484db01624a350"
+      },
+      {
+        "file": "base/667003.sol",
+        "bytes": 3014,
+        "raw_sha256": "336050ab9c4759e4749c0f01daae61b652ceaae0470bac7a149dc8f7e38888ce",
+        "canonical_sha256": "b020fcb3756febcf84c6ea471b87abdce4a2e2f1b8e763e0e93820302e1b42c4"
+      },
+      {
+        "file": "base/667005.sol",
+        "bytes": 3487,
+        "raw_sha256": "2a778735a390388c7d9790c451a0cc96abf12e2629919eb400f5b17978323dc7",
+        "canonical_sha256": "75d25ae0fe0eb828ec916de89773c5f95702241b611781a5995b1935ffa74269"
+      },
+      {
+        "file": "model-input.sol",
+        "bytes": 3702,
+        "raw_sha256": "2c91d33c8654d3be1b35d444a95ea3dab21284f13883a1120d4fb347b690afa3",
+        "canonical_sha256": "c53f81e14aa93d587df862a2b931a840302bce6d29764ca8de284a16e7eb7311"
+      },
+      {
+        "file": "treated.sol",
+        "bytes": 3679,
+        "raw_sha256": "76de6799cac62458fdabf3ded3359f4ce439fb2858edb93c5dfb74a8c60414f1",
+        "canonical_sha256": "4416d05edc3a4438b6376bddfb7d89fa5151b954494192622ac0a2831d5acce9"
+      }
+    ],
+    "status": "json_candidate_built_historical_comparison_separate"
+  },
+  "cache_comparison": {
+    "component": {
+      "reference_rows": 22,
+      "candidate_rows": 22,
+      "equal": true
+    },
+    "chorizon": {
+      "reference_rows": 75,
+      "candidate_rows": 75,
+      "equal": true
+    },
+    "corestrictions": {
+      "reference_rows": 10,
+      "candidate_rows": 10,
+      "equal": true
+    },
+    "chfrags": {
+      "reference_rows": 61,
+      "candidate_rows": 61,
+      "equal": true
+    },
+    "chtexturegrp": {
+      "reference_rows": 75,
+      "candidate_rows": 75,
+      "equal": true
+    },
+    "bad_component_mukey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_chorizon_cokey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    },
+    "bad_corestrictions_cokey": {
+      "reference_rows": 12,
+      "candidate_rows": 12,
+      "equal": true
+    },
+    "bad_chfrags_chkey": {
+      "reference_rows": 14,
+      "candidate_rows": 14,
+      "equal": true
+    },
+    "bad_chtexturegrp_chkey": {
+      "reference_rows": 0,
+      "candidate_rows": 0,
+      "equal": true
+    }
+  },
+  "provenance_sidecars": [
+    {
+      "file": "666998.sol.provenance.json",
+      "sha256": "36a2175aedefe95fdd915ee6828b3ce09c430d081dc0ecbdd5b9321a3d7bb5a5"
+    },
+    {
+      "file": "667003.sol.provenance.json",
+      "sha256": "e7215e52f57ec8e3b033e0978a54041e1e0ee909d74fc94084e1fe8eaf029647"
+    },
+    {
+      "file": "667005.sol.provenance.json",
+      "sha256": "d48f9ea772fec84ef161a337cb32a08d28ad6324e85b9b0eb4b6c44e956135e6"
+    }
+  ],
+  "comparison": "all_decisions_cache_semantics_and_canonical_artifacts_equal",
+  "native_reference_comparison": {
+    "numpy": true,
+    "scipy": true,
+    "duckdb": true,
+    "numpy_native_sha256": true,
+    "duckdb_native_sha256": true,
+    "rosetta_files": true,
+    "thread_environment": true
+  }
+}

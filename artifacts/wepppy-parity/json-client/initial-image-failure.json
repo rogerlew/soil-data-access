@@ -1,0 +1,73 @@
+{
+  "status": "failed_strict_canonical_comparison_unmatched_numerical_environment",
+  "case_id": "ssurgo-004",
+  "environment": {
+    "wepppy_revision": "39f24ce92442e76e8192ddf329ba70708d52c52a",
+    "python": "3.12.16 (main, Nov  5 2026, 07:58:20) [GCC 14.2.0]",
+    "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "numpy": "1.26.0",
+    "scipy": "1.13.1",
+    "duckdb": "1.1.1",
+    "numpy_native_sha256": "164eb264458d26031c346950c1b4576c6b48f9f30cf1f2e4926ca3318ab41aee",
+    "duckdb_native_sha256": "8b64cb4c1c2cff74e2c01da6a611a3d0abe719dcaecead4bfa858a44e9d8db95",
+    "rosetta_files": {
+      "__init__.py": "5959e8b05ab553d44cc2a38d9cc0baef43e02eb4f0511b192f63676c588b519c",
+      "__main__.py": "0cf1355c0ed00de13c0d6203818a5e8f15a007f4cdc37e6db598a60801f7e48c",
+      "_migration/create_duckdb.py": "5f0e2b9def71449a6cfdca71ff66f814458600c2950611e57f263dee19594b1f",
+      "_migration/dump_sqlite_to_parquet.py": "c2fcb8e1fcc56066cb309623ef804d60d6b695a996c1ac481b949ff9a32992e8",
+      "ann.py": "7c943102c11b62374ce1fdf239d86aed525a80dc642fdb3ed0c0e7e4f1e18f12",
+      "db/rosetta.duckdb": "a1e26a549f7babfb77456201850c760d84d88788f1614d7db89e81f0b139532f",
+      "db.py": "ca2c46bd004aa36ad32b5b158525045c8980fc2d35b26a4559aa8498bfdfc4e1",
+      "rosetta.py": "6c0b8739a5d4b193dc89094ae86a7da5a03bff45918710a0e104e1678111b11f",
+      "sqlite/Rosetta.sqlite": "0e1a3f3ccbcf569066dc3c19027183646e434eece30213896f00df6f477910de",
+      "tests/PTF_Model_tests.py": "36b3488a8e6a92260800fcd165e2d7abd4da255881a8303d68296a3bc455a32e",
+      "tests/test_performance.py": "9fa75c224e6d1e9d3e9e3fe228b8187885297c1d0bd847d4f6c620ac51a0d575",
+      "tests/test_rosetta_regression.py": "371de7d24139abd67860ff9b4868ee99e2084b40e9382eb6949099d6f1bdd397",
+      "tests/test_streaming.py": "bbd77240152341b3a4922ab3bff865fae14931f3f948e39d3acfa6b04379a9db"
+    },
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "artifacts": [
+    {
+      "file": "base/666998.sol",
+      "bytes": 4260,
+      "raw_sha256": "176111e5579a5d5706c5b9332782d95e7a7ac403e8ad90755f52d485a1e6552e",
+      "canonical_sha256": "4dd7b186c91a6aacd2f8da5f4ab7f59f95f9d9dc7da9a30938f9ad3ebc5b7f65",
+      "canonical_equal": false
+    },
+    {
+      "file": "base/667003.sol",
+      "bytes": 3014,
+      "raw_sha256": "b61e900f84ee6c50dfd576d4f48c9b880bf4760bf854bdadf3263d22936b9b1b",
+      "canonical_sha256": "b020fcb3756febcf84c6ea471b87abdce4a2e2f1b8e763e0e93820302e1b42c4",
+      "canonical_equal": true
+    },
+    {
+      "file": "base/667005.sol",
+      "bytes": 3487,
+      "raw_sha256": "70a1b9f6d6dcb9e15727c8fffaf1e5d20cc98dd063788dfa8e6425732d5a7d53",
+      "canonical_sha256": "352b6980133d921db3478a35cd1bf8c5e58509d6c6437515138c90a57170700f",
+      "canonical_equal": false
+    },
+    {
+      "file": "model-input.sol",
+      "bytes": 3703,
+      "raw_sha256": "13883ca7cf8e8ba886d866a627ec59da22fd751769d9c2c73180e2f79844c349",
+      "canonical_sha256": "c53f81e14aa93d587df862a2b931a840302bce6d29764ca8de284a16e7eb7311",
+      "canonical_equal": true
+    },
+    {
+      "file": "treated.sol",
+      "bytes": 3680,
+      "raw_sha256": "2b59bcc1d35189bdd66e1b5d6a1fa6d75699da92ab3c7b21cbf215b7a6310899",
+      "canonical_sha256": "4416d05edc3a4438b6376bddfb7d89fa5151b954494192622ac0a2831d5acce9",
+      "canonical_equal": true
+    }
+  ],
+  "observed_difference": "Two base diagnostic comments: 5.917715041673642 vs 5.917715041673644. No added exclusion or tolerance."
+}

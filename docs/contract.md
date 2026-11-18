@@ -151,8 +151,9 @@ releases. Existing project caches and upstream XML behavior remain intact.
 Full live SDA and general public-client parity are deferred. Passing this gate
 permits only the published WEPPpy workflow/source-release claim. No gate has passed
 yet; the [offline reference](offline-reference-contract.md) is reproducible,
-but full workflow coverage, migrated client, production import and deployment
-acceptance remain pending.
+and the [migrated client](wepppy-client-integration.md) has bounded fresh-cache
+artifact parity. Full workflow coverage, production import, deployment-image
+parity and deployment acceptance remain pending.
 
 Benchmarks report hardware, image/code revisions, dataset/checksums, indexes,
 connection limits, concurrency, warm/cold conditions, throughput, error rate,

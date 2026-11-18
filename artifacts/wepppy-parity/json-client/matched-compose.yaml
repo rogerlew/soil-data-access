@@ -1,0 +1,35 @@
+name: ssurgo-json-tests
+services:
+  weppcloud:
+    image: wepppy-dev:latest
+    user: "1000:1000"
+    working_dir: /workdir/wepppy
+    entrypoint: []
+    command: ["/opt/venv/bin/python", "-m", "pytest"]
+    networks: [replay]
+    environment:
+      PYTHONHOME: /hostusr
+      PYTHONPATH: /workdir/wepppy:/hostvenv/lib/python3.12/site-packages:/workdir/wepppyo3/release/linux/py312:/workdir/weppcloud-wbt/WBT
+      PYTHONDONTWRITEBYTECODE: '1'
+      REDIS_HOST: localhost
+      SOIL_PROVENANCE_TEST_REDIS_SOCKET: /tmp/soil-test-redis/redis.sock
+      MPLCONFIGDIR: /tmp/matplotlib
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    volumes:
+      - /usr:/hostusr:ro
+      - /lib:/hostlib:ro
+      - /workdir/wepppy/.venv:/hostvenv:ro
+      - /workdir/soil-data-access:/workdir/soil-data-access
+      - /workdir/soil-data-access/data/parity/wepppy-tests/redis:/tmp/soil-test-redis
+      - /workdir/wepppy-ssurgo-json:/workdir/wepppy
+      - /workdir/rosetta:/workdir/rosetta:ro
+      - /workdir/wepppyo3:/workdir/wepppyo3:ro
+      - /workdir/peridot:/workdir/peridot:ro
+      - /workdir/weppcloud-wbt:/workdir/weppcloud-wbt:ro
+
+networks:
+  replay:
+    external: true
+    name: soil-replay-validation_database

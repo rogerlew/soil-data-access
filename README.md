@@ -9,9 +9,11 @@ adapter implement five bounded WEPPpy query families. Frozen project-cache recor
 and authored wire cases can be checked through the real API/database. This is an
 unofficial development service, not a deployed national mirror.
 
-WEPPpy JSON client integration, fresh-cache generated-soil parity, official-data
-import, full workflow coverage, capacity, and public security/recovery approval
-remain open. Full SDA compatibility is deferred. No release gate has passed.
+The [WEPPpy JSON client](docs/wepppy-client-integration.md) now records server,
+release, cache retrievals, and base-soil provenance. Fresh-cache replay matches
+501 canonical artifacts in the frozen numerical environment. Official-data import,
+full workflow coverage, deployment-image parity, capacity, and public security/recovery
+approval remain open. Full SDA compatibility is deferred. No release gate has passed.
 
 ## Local setup
 
