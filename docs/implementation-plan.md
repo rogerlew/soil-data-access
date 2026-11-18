@@ -377,6 +377,9 @@ integrity, and transport shapes. Eleven authored synthetic XML cases passed thro
 the actual pinned legacy extractors. Canonical output is in the LFS archive
 fixtures/wepppy/reference-v1.tar.gz; reports retain selections, hashes, environment,
 coverage, and separate historical comparisons. See docs/reference-deviations.md.
+A fresh remote clone retrieved all LFS objects and passed fixture/archive checks
+and all 27 tests at d991fec; reference-validation.json retains the verification
+receipt. This verifies published artifact integrity, not another numerical replay.
 
 The next implementation step is the bounded Rust/PostgreSQL service and test-only
 cache replay, after dependency evaluation, while completing declared workflow
