@@ -493,3 +493,17 @@ in artifacts/wepppy-parity/json-client; no expanded comment exclusions.
 
 Revision: 2026-11-18 UTC. Adopt operator-approved mirror-first/SDA-fallback direction
 and defer comprehensive geographic/live parity; see mirror-first-rollout.md.
+
+## Forest implementation scope in progress
+
+Execute docs/official-import-contract.md for Idaho SSURGO plus Virgin Islands
+STATSGO2, then wire the explicit release into a forest-only Compose integration.
+The files are official source downloads, not corpus replay. Use the existing six-table
+serving schema and transactional COPY, an independent projection reader and actual
+queued fresh-cache builds. No new runtime database driver/dependency is required:
+Python stdlib reads sources, psql loads PostgreSQL, and existing Rust serves queries.
+Client contract checkpoint lives in WEPPpy at 43c78bf95; its source-selection factory
+must pass real fallback/deadline/provenance tests before dev activation.
+
+Progress: Idaho archive acquired and extracted (2.86 GB total); broader source import,
+independent validation, Compose integration and actual queued acceptance are pending.
