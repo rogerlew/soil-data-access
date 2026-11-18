@@ -14,7 +14,9 @@ support generalization of the five query families and soil-building logic. Do no
 require a location-by-location national comparison before activation. Retain those
 regressions and a bounded real worker smoke check in each environment.
 
-The official regional release is loaded with source hashes, schema, row/key counts,
+Nationwide SSURGO and STATSGO2 are required for the shared default. The initial regional activation caused a confirmed Colorado coverage failure and is superseded by [national recovery](nationwide-recovery-plan.md). Full live SDA parity remains deferred; nationwide data loading is required.
+
+The historical official regional release was loaded with source hashes, schema, row/key counts,
 relationship checks and independent projection comparisons. Broader geographic
 imports can use the same importer; replay releases remain distinct.
 This verifies that the import loaded its declared data, rather than requiring

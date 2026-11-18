@@ -7,19 +7,21 @@ An independent soil-data API intended to remain usable during USDA service outag
 The Rust API, PostgreSQL/PostGIS Compose stack, official-source importer and cache
 replay tools implement five bounded WEPPpy query families. Frozen project-cache records
 and authored wire cases can be checked through the real API/database. This is an
-unofficial service with a regional forest development deployment, not a national mirror.
+unofficial service serving national SSURGO and STATSGO2 datasets on forest development.
 
 The [WEPPpy JSON client](docs/wepppy-client-integration.md) now records server,
 release, cache retrievals, and base-soil provenance. Fresh-cache replay matches
-501 canonical artifacts in the frozen numerical environment. Forest now serves an
-official Idaho SSURGO plus Virgin Islands STATSGO2 release. Real queued builds for
+501 canonical artifacts in the frozen numerical environment. Forest now serves the
+official national SSURGO October 2026 and STATSGO2 October 2016 releases. Real queued builds for
 two keys outside replay fixtures match direct-file references through the mirror
 and warm SDA-cache fallback, including 76 prepared soil files per case.
 
 [Forest evidence](docs/forest-validation.md) covers import, source selection,
 readiness, runtime controls and bounded performance. Shared forest WEPPpy client defaults are active following exact-revision approval;
-four normal-queue canary jobs verified 152 prepared soil inputs. National data coverage, comprehensive
-live SDA parity, public hosting and broader workflow coverage remain follow-ups.
+the initial canaries verified 152 prepared soil inputs. The [national recovery](docs/nationwide-recovery-plan.md)
+loaded 22,073,263 rows, verified both source datasets, and rebuilt the failed Colorado
+project with 32 prepared hillslope soils. Comprehensive live SDA parity, public
+hosting and broader workflow coverage remain follow-ups.
 
 ## Local setup
 

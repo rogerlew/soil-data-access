@@ -63,3 +63,19 @@ exact-reference model inputs with verified base hashes and mirror provenance.
 Existing explicit project choices and unrelated shared work are preserved; web,
 RQ and soil services are healthy and dequeue is resumed. Earlier pending-approval
 receipts are historical observations, superseded by this activation record.
+
+## National release recovery, 2026-11-18 UTC
+
+The regional release above is historical qualification. Forest now defaults to
+forest-us-ssurgo-20261001-statsgo2-20161013-v1: national SSURGO October 2026 plus
+national STATSGO2 October 2016. All 22,073,263 rows passed imported count and
+relationship checks; independent source/PostgreSQL projections matched all five
+query families for both datasets, including the failed Colorado project's keys.
+
+cavernous-oxygen rebuilt through the normal queue without SDA fallback: 21 base
+provenance hashes and the complete set of 32 prepared hillslope inputs passed
+readback. National-release SSURGO and STATSGO2 canaries matched all 152 prepared
+reference files. Eighty local HTTP component requests had zero errors and p95
+below 47 ms. Authenticated homepage, profile and project requests returned 200.
+See [national evidence](../artifacts/national/activation-receipt.json) and the
+[recovery plan](nationwide-recovery-plan.md). Full live SDA parity remains deferred.

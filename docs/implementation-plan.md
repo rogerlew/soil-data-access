@@ -23,6 +23,8 @@ still deployment prerequisites.
 
 ## Progress
 
+- [x] (2026-11-18) Incident recovery: national SSURGO and STATSGO2 active on forest; 22,073,263 imported rows; staged/HTTP parity for both datasets; cavernous-oxygen rebuilt with 32 verified prepared soils; 152 canary inputs match references. See docs/nationwide-recovery-plan.md and artifacts/national.
+
 
 - [x] Inspect current WEPPpy requests and infrastructure ownership.
 - [x] Publish scaffold, initial contracts, and extracted query inventory.
@@ -135,6 +137,8 @@ had none; the collector now rejects that condition before opening SQLite. See
 docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
+
+2026-11-18 operator correction: nationwide SSURGO AND STATSGO2 are required for the shared default. Regional-only activation did not meet the intended outage-recovery requirement. Full live SDA parity remains deferred; nationwide data loading does not. See docs/nationwide-recovery-plan.md for execution and project migration.
 
 2026-11-18: the operator accepts fixture generalization for the five query families
 and directs mirror-first deployment defaults with SDA fallback. Move comprehensive

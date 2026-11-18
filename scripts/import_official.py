@@ -73,7 +73,7 @@ def copy_cell(value, kind):
 
 
 def generate(gpkg, statsgo_zip, release, ssurgo_url, statsgo_url, output, receipt,
-             ssurgo_release, statsgo_release, ssurgo_scope, statsgo_scope):
+             ssurgo_release, statsgo_release, ssurgo_scope, statsgo_scope, no_activate=False):
     if not re.fullmatch(r'[A-Za-z0-9._-]{1,128}', release):
         raise ValueError('Invalid release ID')
     if output.exists() or receipt.exists():
@@ -133,9 +133,12 @@ def generate(gpkg, statsgo_zip, release, ssurgo_url, statsgo_url, output, receip
                 ('corestrictions', 'cokey', 'component', 'cokey'),
             ):
                 stream.write("DO $$ BEGIN IF EXISTS (SELECT 1 FROM soil." + child + ' c LEFT JOIN soil.' + parent + ' p ON c.release_id=p.release_id AND c.' + foreign + '=p.' + primary + ' WHERE c.release_id=' + literal(release, 'text') + ' AND p.' + primary + " IS NULL) THEN RAISE EXCEPTION 'Imported relationship differs'; END IF; END $$;\n")
-            stream.write('INSERT INTO soil.active_release(singleton,release_id) VALUES(true,' + literal(release, 'text') + ') ON CONFLICT(singleton) DO UPDATE SET release_id=EXCLUDED.release_id;\nCOMMIT;\n')
+            if not no_activate:
+                stream.write('INSERT INTO soil.active_release(singleton,release_id) VALUES(true,' + literal(release, 'text') + ') ON CONFLICT(singleton) DO UPDATE SET release_id=EXCLUDED.release_id;\n')
+            stream.write('COMMIT;\n')
         result = {'claim': 'official_source_import_prepared_not_yet_executed', 'manifest': manifest,
                   'source_audits': audits, 'import_row_counts': counts, 'sql_sha256': digest(output),
+                  'activation_included': not no_activate,
                   'source_files': [gpkg.name, statsgo_zip.name], 'ordering': 'source rowid; sources in manifest order',
                   'scope': [item['scope'] for item in specs]}
         receipt.parent.mkdir(parents=True, exist_ok=True)
@@ -153,6 +156,7 @@ def main():
         p.add_argument('--' + name, type=Path, required=True)
     for name in ('release', 'ssurgo-url', 'statsgo-url', 'ssurgo-release', 'statsgo-release', 'ssurgo-scope', 'statsgo-scope'):
         p.add_argument('--' + name, required=True)
+    p.add_argument("--no-activate", action="store_true", help="Validate and load without switching the active release")
     result = generate(**vars(p.parse_args()))
     print(json.dumps({'release': result['manifest']['id'], 'row_counts': result['import_row_counts']}))
 

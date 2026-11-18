@@ -1,0 +1,21 @@
+{
+  "national_mapunits": 9562,
+  "state_subset_checks": {
+    "AK": {
+      "mapunits": 253,
+      "missing_from_national": []
+    },
+    "HI": {
+      "mapunits": 55,
+      "missing_from_national": []
+    },
+    "PR": {
+      "mapunits": 56,
+      "missing_from_national": []
+    },
+    "VI": {
+      "mapunits": 8,
+      "missing_from_national": []
+    }
+  }
+}
