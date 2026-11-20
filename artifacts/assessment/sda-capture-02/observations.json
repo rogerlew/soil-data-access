@@ -1,0 +1,333 @@
+[
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "availability",
+    "observed_at": "2026-11-20T03:14:27.566917+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "ad842564a35b3ae19841214d391930b25bec0848e1529912c82afc15da8dfe8b",
+    "body_bytes": 31
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_components",
+    "observed_at": "2026-11-20T03:14:28.011150+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434",
+    "body_bytes": 1555
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chorizon",
+    "observed_at": "2026-11-20T03:14:28.456124+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c",
+    "body_bytes": 2254
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chfrags",
+    "observed_at": "2026-11-20T03:14:28.900242+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "body_bytes": 2
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chtexturegrp",
+    "observed_at": "2026-11-20T03:14:29.351654+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f",
+    "body_bytes": 365
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_corestrictions",
+    "observed_at": "2026-11-20T03:14:29.792395+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab",
+    "body_bytes": 167
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo-gu-xml",
+    "observed_at": "2026-11-20T03:14:30.238568+00:00",
+    "status": 200,
+    "content_type": "text/xml",
+    "body_file": "host-0-ssurgo-gu-xml.body",
+    "body_sha256": "c0c29c7ff0f0ae3990a9bc328efe68eb452af6b117e1b281cda6c4f997b81fa1",
+    "body_bytes": 5689
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo-gu-metadata",
+    "observed_at": "2026-11-20T03:14:30.684182+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "1b3be0e2ecd6596c139cf78384b0d28a0ed86e0b8d838adeba60bcef8529a92d",
+    "body_bytes": 4786
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_components",
+    "observed_at": "2026-11-20T03:14:31.118161+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_file": "host-0-statsgo2_fetch_components.body",
+    "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4",
+    "body_bytes": 6188
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chorizon",
+    "observed_at": "2026-11-20T03:14:31.554438+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197",
+    "body_bytes": 13073
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chfrags",
+    "observed_at": "2026-11-20T03:14:32.002935+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20",
+    "body_bytes": 3135
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chtexturegrp",
+    "observed_at": "2026-11-20T03:14:32.442710+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146",
+    "body_bytes": 3348
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_corestrictions",
+    "observed_at": "2026-11-20T03:14:32.892844+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686",
+    "body_bytes": 841
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2-vi-xml",
+    "observed_at": "2026-11-20T03:14:33.323280+00:00",
+    "status": 200,
+    "content_type": "text/xml",
+    "body_file": "host-0-statsgo2-vi-xml.body",
+    "body_sha256": "2a27919a5522f340f35e9cbeef25c5e59cf28f032397caf6cf250a1804324bbb",
+    "body_bytes": 19550
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2-vi-metadata",
+    "observed_at": "2026-11-20T03:14:33.826176+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_file": "host-0-statsgo2-vi-metadata.body",
+    "body_sha256": "a212dc4d72a7ccbfb13a93ffb1cca7139219795f0029dcb27521c34df2bd543b",
+    "body_bytes": 9419
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "empty",
+    "observed_at": "2026-11-20T03:14:34.261319+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_file": "host-0-empty.body",
+    "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "body_bytes": 2
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "invalid",
+    "observed_at": "2026-11-20T03:14:34.743583+00:00",
+    "status": 400,
+    "content_type": "text/xml; charset=utf-8",
+    "body_file": "host-0-invalid.body",
+    "body_sha256": "d65cc22eceba7b78ac9334379e5f2f6ba2b7ee800f9f880dad6d950a0e2a1a82",
+    "body_bytes": 406
+  },
+  {
+    "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "case_id": "null-decimal",
+    "observed_at": "2026-11-20T03:14:35.169037+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_file": "host-0-null-decimal.body",
+    "body_sha256": "7407e02c3007c24533d5567484577eeb78ca8d4956776b4f6200100b748939f4",
+    "body_bytes": 46
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "availability",
+    "observed_at": "2026-11-20T03:14:35.615645+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "ad842564a35b3ae19841214d391930b25bec0848e1529912c82afc15da8dfe8b",
+    "body_bytes": 31
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_components",
+    "observed_at": "2026-11-20T03:14:36.061829+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434",
+    "body_bytes": 1555
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chorizon",
+    "observed_at": "2026-11-20T03:14:36.497034+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c",
+    "body_bytes": 2254
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chfrags",
+    "observed_at": "2026-11-20T03:14:36.939369+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "body_bytes": 2
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_chtexturegrp",
+    "observed_at": "2026-11-20T03:14:37.394928+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f",
+    "body_bytes": 365
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo_fetch_corestrictions",
+    "observed_at": "2026-11-20T03:14:37.830244+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab",
+    "body_bytes": 167
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo-gu-xml",
+    "observed_at": "2026-11-20T03:14:38.439809+00:00",
+    "status": 200,
+    "content_type": "text/xml",
+    "body_sha256": "c0c29c7ff0f0ae3990a9bc328efe68eb452af6b117e1b281cda6c4f997b81fa1",
+    "body_bytes": 5689
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "ssurgo-gu-metadata",
+    "observed_at": "2026-11-20T03:14:38.899236+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "1b3be0e2ecd6596c139cf78384b0d28a0ed86e0b8d838adeba60bcef8529a92d",
+    "body_bytes": 4786
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_components",
+    "observed_at": "2026-11-20T03:14:39.329539+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4",
+    "body_bytes": 6188
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chorizon",
+    "observed_at": "2026-11-20T03:14:39.784849+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197",
+    "body_bytes": 13073
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chfrags",
+    "observed_at": "2026-11-20T03:14:40.365831+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20",
+    "body_bytes": 3135
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_chtexturegrp",
+    "observed_at": "2026-11-20T03:14:40.797717+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146",
+    "body_bytes": 3348
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2_fetch_corestrictions",
+    "observed_at": "2026-11-20T03:14:41.250344+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686",
+    "body_bytes": 841
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2-vi-xml",
+    "observed_at": "2026-11-20T03:14:41.697555+00:00",
+    "status": 200,
+    "content_type": "text/xml",
+    "body_sha256": "2a27919a5522f340f35e9cbeef25c5e59cf28f032397caf6cf250a1804324bbb",
+    "body_bytes": 19550
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "statsgo2-vi-metadata",
+    "observed_at": "2026-11-20T03:14:42.208972+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "a212dc4d72a7ccbfb13a93ffb1cca7139219795f0029dcb27521c34df2bd543b",
+    "body_bytes": 9419
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "empty",
+    "observed_at": "2026-11-20T03:14:42.642785+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "body_bytes": 2
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "invalid",
+    "observed_at": "2026-11-20T03:14:43.073033+00:00",
+    "status": 400,
+    "content_type": "text/xml; charset=utf-8",
+    "body_sha256": "d65cc22eceba7b78ac9334379e5f2f6ba2b7ee800f9f880dad6d950a0e2a1a82",
+    "body_bytes": 406
+  },
+  {
+    "endpoint": "https://sdmdataaccess.sc.egov.usda.gov/Tabular/post.rest",
+    "case_id": "null-decimal",
+    "observed_at": "2026-11-20T03:14:43.618630+00:00",
+    "status": 200,
+    "content_type": "application/json; charset=utf-8",
+    "body_sha256": "7407e02c3007c24533d5567484577eeb78ca8d4956776b4f6200100b748939f4",
+    "body_bytes": 46
+  }
+]

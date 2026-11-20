@@ -87,6 +87,10 @@
     "artifacts/assessment/ssurgo-gu.json",
     "artifacts/assessment/statsgo2-vi.json",
     "artifacts/assessment/sda-capture-01/observations.json",
+    "artifacts/assessment/sda-capture-02/observations.json",
+    "artifacts/assessment/live-sda-raw-parity.json",
+    "artifacts/assessment/live-sda-base-parity.json",
+    "artifacts/assessment/live-sda-prepared-tie-parity.json",
     "artifacts/assessment/soildb-source.json",
     "artifacts/wepppy-parity/reference-repeatability.json",
     "artifacts/wepppy-parity/reference-run-b.json"
@@ -95,8 +99,9 @@
   "initial_release_policy": "docs/wepppy-release-gate.md",
   "initial_release_ready": false,
   "deferred_sda_parity_gaps": [
-    "Live success/empty/error JSON wire responses and paired XML",
-    "Matched release identification against SDA"
+    "Broader live SDA wire semantics beyond retained success, empty, error, metadata, and paired XML observations",
+    "Geographic source-version coverage beyond the nine sampled survey catalog records",
+    "Duplicate-key selection and prepared-run parity across the supported WEPPpy workflows"
   ],
   "initial_release_gates": [
     {

@@ -63,6 +63,12 @@ ORDER BY have no implied stable ordering. Live upstream success/empty/error capt
 wire compatibility, but does not block the service-owned WEPPpy profile. Never
 label locally designed errors or source-derived fixtures as observed USDA behavior.
 
+The [live SDA assessment](live-sda-parity.md) records observed upstream
+envelopes and ties in the five query families. A tie can affect WEPPpy's
+first-row projection even when the returned row multiset agrees. The
+mirror contract preserves source text values, including nulls, and does
+not promise SDA's observed tie order.
+
 SQL Server/T-SQL compatibility is bounded by a published feature matrix.
 Resolve identifier case, implicit key casts, nulls, decimals, collation, functions,
 and spatial semantics explicitly. PostgreSQL accepting a query is not parity.
