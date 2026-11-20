@@ -48,7 +48,8 @@ still deployment prerequisites.
 - [x] Run focused forest worker, bounded performance and runtime recovery acceptance in Compose.
 - [x] (2026-11-20 UTC) Compare live SDA and the pinned mirror across five query families for eight SSURGO and four STATSGO2 map units. See [live assessment](live-sda-parity.md).
 - [x] (2026-11-20 UTC) Verify prepared soil inputs for two selected SSURGO fragment ties and one restriction control. All 228 model-input payloads match.
-- [ ] Extend geographic, multi-OFE, and treatment coverage.
+- [x] (2026-11-20 UTC) Verify a paired live SDA and mirror multi-OFE prescribed-fire canary across 68 hillslopes and 240 segments. Read back treatment on the same 93 segments and compare prepared soil and management inputs.
+- [ ] Extend geographic coverage and assess other treatment workflows.
 - [x] Start new soil API/database services in forest dev Compose.
 - [x] Integrate protected Compose change and activate shared forest client defaults; four normal-queue canary jobs pass.
 - [ ] Later scope: forest1 and production activation.
@@ -151,7 +152,9 @@ docs/corpus-snapshot-contract.md for the incident and regression coverage.
 comparison. Retain the observed duplicate order and cache selections for review.
 Keep the mirror profile and source precision intact. Retain the three prepared
 cases as bounded evidence and preserve current selection semantics because
-the observed differences did not alter prepared model-input lines.
+the observed differences did not alter prepared model-input lines. The prescribed-fire
+canary uses frozen spatial inputs so the comparison isolates tabular source
+behavior. Keep scratch-directory comments visible in the byte-level report.
 
 2026-11-18 operator correction: nationwide SSURGO AND STATSGO2 are required for the shared default. Regional-only activation did not meet the intended outage-recovery requirement. Full live SDA parity remains deferred; nationwide data loading does not. See docs/nationwide-recovery-plan.md for execution and project migration.
 
@@ -433,6 +436,9 @@ matched the legacy model-input lines, with a restriction diagnostic difference
 for one soil. The targeted NoDb follow-up verified 228 prepared file pairs
 for three SSURGO cases. The bedrock diagnostic carried through the control
 case. Full live compatibility and broader prepared-run parity remain open.
+The paired prescribed-fire canary matched prepared model inputs at both stages
+across 68 hillslopes, with the same treatment effects on 93 segments. See
+[live assessment](live-sda-parity.md#prescribed-fire-multi-ofe-canary).
 
 The rollout policy is revised; no runtime default changed in this documentation
 checkpoint. Next implement the mirror-first contract, broader importer and Compose

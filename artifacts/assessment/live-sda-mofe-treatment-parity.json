@@ -1,0 +1,292 @@
+{
+  "scope": "paired gridded SSURGO and prescribed-fire multi-OFE preparation using the same frozen Idaho watershed inputs",
+  "source_catalog": {
+    "survey_count": 4,
+    "matching_survey_catalog": true,
+    "covered_map_units": 68,
+    "response_sha256": "eed2498c1cd085bbaa98d7258204544b8bd50dc428936f49cd0c01fe188924ad",
+    "archive_catalog_sha256": "882ebc1aca626988b09d51df29cb3279c5fa6049e5294c69efcc9d90c4bc3b0d"
+  },
+  "input_manifest_sha256": "1095678034137c94c57b81104c1756eb507ce04d4fb01a854ddf52ecdfef4de3",
+  "case_source_evidence": {
+    "usda": {
+      "source": {
+        "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+        "profile": "legacy-xml",
+        "release": null
+      },
+      "fetches": [
+        {
+          "table": "component",
+          "observed_at": "2026-11-20T03:33:03.566748+00:00",
+          "response_sha256": "4e65b5f58acc22e9a865db49b4119c1adda6f808dcee0662022ff5396f7af1af",
+          "key_count": 68,
+          "row_count": 213
+        },
+        {
+          "table": "chorizon",
+          "observed_at": "2026-11-20T03:33:05.131135+00:00",
+          "response_sha256": "52b01ef181ac3838691653f40cb41fd1d5c542ed55eceafe52e63a2e734030a1",
+          "key_count": 213,
+          "row_count": 998
+        },
+        {
+          "table": "corestrictions",
+          "observed_at": "2026-11-20T03:33:05.822875+00:00",
+          "response_sha256": "f3bf3b9fd4449e606f97489c269b534b98b6eaa0543559c2012f883a9675940b",
+          "key_count": 213,
+          "row_count": 96
+        },
+        {
+          "table": "chfrags",
+          "observed_at": "2026-11-20T03:33:06.682604+00:00",
+          "response_sha256": "a6e6c6fd6e41fb5f5edc227695a4bcdce3e0db9330e843bdc2b514ec6aabe514",
+          "key_count": 998,
+          "row_count": 727
+        },
+        {
+          "table": "chtexturegrp",
+          "observed_at": "2026-11-20T03:33:07.644988+00:00",
+          "response_sha256": "cfda60269fd579baca386eba2350efbc84c30a18cd177e90f83d0cbf17ff3afb",
+          "key_count": 998,
+          "row_count": 998
+        }
+      ],
+      "config": "disturbed9002-wbt-mofe",
+      "treatment_targets": 24,
+      "changed_segments": 93,
+      "changed_prepared_hillslopes": 24,
+      "base_assignment_count": 68,
+      "assigned_base_soil_count": 14,
+      "base_assignment_sha256": "ca5221c4d17f44f0b97c58e854f87dd2b030fdd8fb5e3b00592ac5a1e74b9acb",
+      "selected_component_sha256": "ff41aa0aea7425ab4893b6085a16e021d8b60c19fb4feafc1c550cd170107721",
+      "prepared_model_input_set_sha256": {
+        "before": "21bc5b1a65a5edb22878b675629ded2790aab85a1cd4981a90066283c5c6125d",
+        "after": "50c28bfe290b74a294b0868b29b741e9fdab2e222283c457fc1466ac4075b977"
+      },
+      "treatment_class_changes": [
+        {
+          "before": "forest",
+          "after": "forest prescribed fire",
+          "segments": 86
+        },
+        {
+          "before": "tall grass",
+          "after": "grass prescribed fire",
+          "segments": 6
+        },
+        {
+          "before": "shrub",
+          "after": "shrub prescribed fire",
+          "segments": 1
+        }
+      ]
+    },
+    "mirror": {
+      "source": {
+        "endpoint": "http://soil-api:8080/Tabular/post.rest",
+        "profile": "wepppy-json-v1",
+        "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+      },
+      "fetches": [
+        {
+          "table": "component",
+          "observed_at": "2026-11-20T03:34:28.508444+00:00",
+          "response_sha256": "d7cbed6fd40d6ff1b41f4f64b238ba21cd01fda181ce658b94be2b7670b09d5d",
+          "key_count": 68,
+          "row_count": 213
+        },
+        {
+          "table": "chorizon",
+          "observed_at": "2026-11-20T03:34:28.617774+00:00",
+          "response_sha256": "bb269860c3b2f6fadbbf15034da6362d4159f06ce311cc2630bb1cfd103e0f5d",
+          "key_count": 213,
+          "row_count": 998
+        },
+        {
+          "table": "corestrictions",
+          "observed_at": "2026-11-20T03:34:28.652139+00:00",
+          "response_sha256": "355e4d1d95ac0f30b324d8e7a0a927fb96c7059209ce4ddcf77fd5c07957407b",
+          "key_count": 213,
+          "row_count": 96
+        },
+        {
+          "table": "chfrags",
+          "observed_at": "2026-11-20T03:34:28.694200+00:00",
+          "response_sha256": "1ba93111ad5c6c704eb086fbbc6554a31046bbe6e7cbd4eaa9e4c9540be414ff",
+          "key_count": 998,
+          "row_count": 727
+        },
+        {
+          "table": "chtexturegrp",
+          "observed_at": "2026-11-20T03:34:28.742823+00:00",
+          "response_sha256": "e40afb910a7f4d5c72ca448275c60947bc84557d5015d3b7dc0bdf033bb47211",
+          "key_count": 998,
+          "row_count": 998
+        }
+      ],
+      "config": "disturbed9002-wbt-mofe",
+      "treatment_targets": 24,
+      "changed_segments": 93,
+      "changed_prepared_hillslopes": 24,
+      "base_assignment_count": 68,
+      "assigned_base_soil_count": 14,
+      "base_assignment_sha256": "ca5221c4d17f44f0b97c58e854f87dd2b030fdd8fb5e3b00592ac5a1e74b9acb",
+      "selected_component_sha256": "ff41aa0aea7425ab4893b6085a16e021d8b60c19fb4feafc1c550cd170107721",
+      "prepared_model_input_set_sha256": {
+        "before": "21bc5b1a65a5edb22878b675629ded2790aab85a1cd4981a90066283c5c6125d",
+        "after": "50c28bfe290b74a294b0868b29b741e9fdab2e222283c457fc1466ac4075b977"
+      },
+      "treatment_class_changes": [
+        {
+          "before": "forest",
+          "after": "forest prescribed fire",
+          "segments": 86
+        },
+        {
+          "before": "tall grass",
+          "after": "grass prescribed fire",
+          "segments": 6
+        },
+        {
+          "before": "shrub",
+          "after": "shrub prescribed fire",
+          "segments": 1
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "before": {
+      "hillslopes": 68,
+      "multi_ofe_hillslopes": 59,
+      "segments": 240,
+      "different_segment_assignments": 0,
+      "different_prepared_management_files": 0,
+      "different_model_inputs": 0,
+      "different_canonical_prepared_soils": 68,
+      "different_canonical_staged_soils": 68,
+      "different_staged_soil_model_inputs": 0
+    },
+    "after": {
+      "hillslopes": 68,
+      "multi_ofe_hillslopes": 59,
+      "segments": 240,
+      "different_segment_assignments": 0,
+      "different_prepared_management_files": 0,
+      "different_model_inputs": 0,
+      "different_canonical_prepared_soils": 68,
+      "different_canonical_staged_soils": 68,
+      "different_staged_soil_model_inputs": 0
+    },
+    "different_base_assignments": 0,
+    "identical_treatment_changed_hillslope_sets": true
+  },
+  "runtime": {
+    "worker_image": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+    "wepppy_checkout_head": "dff2f29f74158857da3b0c313e7ec7194501ed76",
+    "wepppy_module_sha256": {
+      "wepppy/nodb/core/soils.py": "42de5560ab10ca477e1508611bce95b82771b2e65f7dcb8c5c3967dcaeb8e665",
+      "wepppy/nodb/core/wepp.py": "2449d03128966b5a051fc0cc1520a7f93cfd39d3bd7a6dad60903af0a0c257ac",
+      "wepppy/nodb/core/landuse.py": "be886fd308235c4af60397436ff35abce1acf100d23c518061c1efddae26366a",
+      "wepppy/nodb/mods/disturbed/disturbed.py": "458a8109678cdb6c3bf0eb470892c89d0a0004deeb14a0c9a47f3f75fd7477c0",
+      "wepppy/nodb/mods/treatments/treatments.py": "26503e0be113581e2e6f2fa50cefeb17defb0aacfe04fd26ccb04e60964015d7",
+      "wepppy/soils/ssurgo/ssurgo.py": "a384f279102594ae481526aebf0f46ac9be1140f552de47ca1507cc91ca0e744",
+      "wepppy/soils/ssurgo/source.py": "33e4b4af598bb03a05d6317113d3ea96b6aa4bd192fcac3c09ded46e3701b8d7"
+    },
+    "base_build_workers": 1,
+    "mofe_preparation_workers": 6,
+    "queued": false
+  },
+  "cache_row_comparison": {
+    "component": {
+      "usda": 213,
+      "mirror": 213,
+      "usda_only": 11,
+      "mirror_only": 11
+    },
+    "chorizon": {
+      "usda": 998,
+      "mirror": 998,
+      "usda_only": 0,
+      "mirror_only": 0
+    },
+    "chfrags": {
+      "usda": 727,
+      "mirror": 727,
+      "usda_only": 30,
+      "mirror_only": 30
+    },
+    "chtexturegrp": {
+      "usda": 998,
+      "mirror": 998,
+      "usda_only": 15,
+      "mirror_only": 15
+    },
+    "corestrictions": {
+      "usda": 96,
+      "mirror": 96,
+      "usda_only": 0,
+      "mirror_only": 0
+    }
+  },
+  "cache_differences_description": {
+    "component": "Four aws025wta and seven aws0150wta cache strings differed by a trailing .0 and were numerically equal.",
+    "chfrags": "30 cached fragment selections differed.",
+    "chtexturegrp": "15 cached texture selections differed."
+  },
+  "prepared_actual_treatment_classes": {
+    "usda": [
+      {
+        "assigned_before": "forest",
+        "assigned_after": "forest prescribed fire",
+        "prepared_before": "forest",
+        "prepared_after": "forest prescribed fire",
+        "segments": 86
+      },
+      {
+        "assigned_before": "shrub",
+        "assigned_after": "shrub prescribed fire",
+        "prepared_before": "shrub",
+        "prepared_after": "shrub prescribed fire",
+        "segments": 1
+      },
+      {
+        "assigned_before": "tall grass",
+        "assigned_after": "grass prescribed fire",
+        "prepared_before": "tall grass",
+        "prepared_after": "grass prescribed fire",
+        "segments": 6
+      }
+    ],
+    "mirror": [
+      {
+        "assigned_before": "forest",
+        "assigned_after": "forest prescribed fire",
+        "prepared_before": "forest",
+        "prepared_after": "forest prescribed fire",
+        "segments": 86
+      },
+      {
+        "assigned_before": "shrub",
+        "assigned_after": "shrub prescribed fire",
+        "prepared_before": "shrub",
+        "prepared_after": "shrub prescribed fire",
+        "segments": 1
+      },
+      {
+        "assigned_before": "tall grass",
+        "assigned_after": "grass prescribed fire",
+        "prepared_before": "tall grass",
+        "prepared_after": "grass prescribed fire",
+        "segments": 6
+      }
+    ]
+  },
+  "pairs_equal_after_replacing_only_volatile_comments_and_working_directory_prefix": {
+    "before-treatment": 68,
+    "after-treatment": 68,
+    "after-treatment-staged": 68
+  },
+  "base_soils_canonical_pairs_equal": 68
+}
