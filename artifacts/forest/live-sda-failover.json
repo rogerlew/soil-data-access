@@ -1,0 +1,319 @@
+{
+  "runid": "soil-sda-cold-failover-20261120t034352z",
+  "mukey": 78905,
+  "reference": "soil-mirror-national-20261118-ssurgo",
+  "prepared_pairs": 76,
+  "fallback": {
+    "jobs": {
+      "build": {
+        "id": "e3a747c2-e6d0-4063-8bc3-cb01081c559c",
+        "worker": "c02c6993f49a44bebc2dd6eefb3bf0d9",
+        "queue": "default",
+        "started_at": "2026-11-20T03:44:02.456577+00:00",
+        "ended_at": "2026-11-20T03:44:12.009396+00:00"
+      },
+      "prepare": {
+        "id": "cc1f9204-0374-42c4-8bcd-459f97cc290d",
+        "worker": "4637bce158154af7b7d2921cc04f88ac",
+        "queue": "default",
+        "started_at": "2026-11-20T03:45:09.665872+00:00",
+        "ended_at": "2026-11-20T03:45:36.425090+00:00"
+      }
+    },
+    "selection": {
+      "actual_supplier": {
+        "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+        "profile": "legacy-xml",
+        "release": null
+      },
+      "attempts": [
+        {
+          "ended_at": "2026-11-20T03:44:05.518368+00:00",
+          "identity": {
+            "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+          },
+          "outcome": "unavailable",
+          "reason": "connection_failed",
+          "started_at": "2026-11-20T03:44:05.410588+00:00"
+        },
+        {
+          "ended_at": "2026-11-20T03:44:08.342413+00:00",
+          "identity": {
+            "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+            "profile": "legacy-xml",
+            "release": null
+          },
+          "outcome": "success",
+          "reason": "selected",
+          "started_at": "2026-11-20T03:44:05.518403+00:00"
+        }
+      ],
+      "configured_primary": {
+        "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+        "profile": "wepppy-json-v1",
+        "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+      },
+      "historical_rows_unknown": false,
+      "policy": "mirror-first",
+      "schema_version": 1,
+      "selected_at": "2026-11-20T03:44:08.342431+00:00"
+    },
+    "cache": {
+      "binding": {
+        "historical_rows_unknown": false,
+        "identity": {
+          "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+          "profile": "legacy-xml",
+          "release": null
+        },
+        "schema_version": 1
+      },
+      "fetches": [
+        {
+          "table": "component",
+          "observed_at": "2026-11-20T03:44:06.484247+00:00",
+          "key_count": 1,
+          "row_count": 1,
+          "response_origin": "https://sdmdataaccess.nrcs.usda.gov",
+          "response_sha256": "d890163c62dae6dee45cf776fb873a0122373f133be6c4eb54e1b46d974d9b7a"
+        },
+        {
+          "table": "chorizon",
+          "observed_at": "2026-11-20T03:44:06.946311+00:00",
+          "key_count": 1,
+          "row_count": 7,
+          "response_origin": "https://sdmdataaccess.nrcs.usda.gov",
+          "response_sha256": "5617e2a28cfc9b1072f04e911e526391db7c14246ab0eea14c894c13249dc6fe"
+        },
+        {
+          "table": "corestrictions",
+          "observed_at": "2026-11-20T03:44:07.386745+00:00",
+          "key_count": 1,
+          "row_count": 0,
+          "response_origin": "https://sdmdataaccess.nrcs.usda.gov",
+          "response_sha256": "53d433dba9f5f28f415403a8c6129972bb9b684a57bd88d6db5e79fca565b1a9"
+        },
+        {
+          "table": "chfrags",
+          "observed_at": "2026-11-20T03:44:07.864977+00:00",
+          "key_count": 7,
+          "row_count": 7,
+          "response_origin": "https://sdmdataaccess.nrcs.usda.gov",
+          "response_sha256": "eaa05ddedb0500c8d7d427b09f1c5e8adf16049de70297823b5bdc4f5230eff8"
+        },
+        {
+          "table": "chtexturegrp",
+          "observed_at": "2026-11-20T03:44:08.334814+00:00",
+          "key_count": 7,
+          "row_count": 7,
+          "response_origin": "https://sdmdataaccess.nrcs.usda.gov",
+          "response_sha256": "db0f1d36a800498761277e9e99b77e343b045a50c9284d36c8b6faeb6e2b69dd"
+        }
+      ],
+      "component_count": 1,
+      "logical_sha256": "0ab400c1b5154934aae27eb272a0aafe727cebb25957b9e6d7550c87c24064f7"
+    },
+    "base": {
+      "sha256": "5e84c9bc5a48586b7cf22abbac11950574cb0e2d94f7e34f2653752c1cae4725",
+      "canonical_sha256": "f41ee7573aad861e4b1550c228c76e36489c1f46ecec9671a417f95d94cc46e5",
+      "model_input_sha256": "dcf56a7698c8c244f51f730b108dd8b4107e4264fc5ce2d111f49aed51eef387"
+    },
+    "prepared_count": 76,
+    "prepared_manifest_sha256": "a35c9fc934a1d6c9e93ea767d7462729b7c5095664c9b2d0fd1f4c96134c06cf"
+  },
+  "failed_mirror_cache": {
+    "binding": {
+      "historical_rows_unknown": false,
+      "identity": {
+        "endpoint": "http://127.0.0.1:9/Tabular/post.rest",
+        "profile": "wepppy-json-v1",
+        "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+      },
+      "schema_version": 1
+    },
+    "fetches": [],
+    "component_count": 0,
+    "selection_history": [],
+    "logical_sha256": "be67a43ab754ae1649c22b73ba2f489d6f94ba7384a313b2b58eca2c7636b7b7"
+  },
+  "restored_mirror": {
+    "jobs": {
+      "build": {
+        "id": "226cbaa7-4c52-4ffd-b0f6-741289cfb090",
+        "worker": "f0ba47739509432e895efd3be0de694b",
+        "queue": "default",
+        "started_at": "2026-11-20T03:45:36.964852+00:00",
+        "ended_at": "2026-11-20T03:45:43.523035+00:00"
+      },
+      "prepare": {
+        "id": "4da918df-2a0c-4e00-bfaf-aaaf99dd784b",
+        "worker": "5a05515307db43cba794ca7622ba42d8",
+        "queue": "default",
+        "started_at": "2026-11-20T03:45:43.972690+00:00",
+        "ended_at": "2026-11-20T03:46:09.387957+00:00"
+      }
+    },
+    "selection": {
+      "actual_supplier": {
+        "endpoint": "http://soil-api:8080/Tabular/post.rest",
+        "profile": "wepppy-json-v1",
+        "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+      },
+      "attempts": [
+        {
+          "ended_at": "2026-11-20T03:45:40.391725+00:00",
+          "identity": {
+            "endpoint": "http://soil-api:8080/Tabular/post.rest",
+            "profile": "wepppy-json-v1",
+            "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+          },
+          "outcome": "success",
+          "reason": "selected",
+          "started_at": "2026-11-20T03:45:40.129917+00:00"
+        }
+      ],
+      "configured_primary": {
+        "endpoint": "http://soil-api:8080/Tabular/post.rest",
+        "profile": "wepppy-json-v1",
+        "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+      },
+      "historical_rows_unknown": false,
+      "policy": "mirror-first",
+      "schema_version": 1,
+      "selected_at": "2026-11-20T03:45:40.391761+00:00"
+    },
+    "cache": {
+      "binding": {
+        "historical_rows_unknown": false,
+        "identity": {
+          "endpoint": "http://soil-api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+        },
+        "schema_version": 1
+      },
+      "fetches": [
+        {
+          "table": "component",
+          "observed_at": "2026-11-20T03:45:40.277217+00:00",
+          "key_count": 1,
+          "row_count": 1,
+          "response_origin": "http://soil-api:8080",
+          "response_sha256": "000e5a942ae8edf53eb643efd4661968bd5ba0cd71676032ecfce37add948a51"
+        },
+        {
+          "table": "chorizon",
+          "observed_at": "2026-11-20T03:45:40.303829+00:00",
+          "key_count": 1,
+          "row_count": 7,
+          "response_origin": "http://soil-api:8080",
+          "response_sha256": "1ef827a02664d277c1c17d62390b29cdb2968a497f6ad682a657e5179e78d773"
+        },
+        {
+          "table": "corestrictions",
+          "observed_at": "2026-11-20T03:45:40.330017+00:00",
+          "key_count": 1,
+          "row_count": 0,
+          "response_origin": "http://soil-api:8080",
+          "response_sha256": "fbbfe18e4bb68e412d82dd5bf0aadbc3fa1a619d22caecf483ffe3ca55664b3d"
+        },
+        {
+          "table": "chfrags",
+          "observed_at": "2026-11-20T03:45:40.357627+00:00",
+          "key_count": 7,
+          "row_count": 7,
+          "response_origin": "http://soil-api:8080",
+          "response_sha256": "8d0e9261bc4485172936b74e7393bbc6aec974e437ae1dc46ca2a3eac2c15020"
+        },
+        {
+          "table": "chtexturegrp",
+          "observed_at": "2026-11-20T03:45:40.384560+00:00",
+          "key_count": 7,
+          "row_count": 7,
+          "response_origin": "http://soil-api:8080",
+          "response_sha256": "7f77f80aab4599b8d4ac3b307b3e81f3c1789cefb6251fca51c1f7c53ceae7b9"
+        }
+      ],
+      "component_count": 1,
+      "logical_sha256": "75efe7bfd26355d60a4348e166f29c901c10d5e7755f84feaadb5b42f8f395da"
+    },
+    "base": {
+      "sha256": "47ba56f2f39ef8d32504346d3eaaf25aa8058e113b881f89bfcb4968ed4f4516",
+      "canonical_sha256": "f41ee7573aad861e4b1550c228c76e36489c1f46ecec9671a417f95d94cc46e5",
+      "model_input_sha256": "dcf56a7698c8c244f51f730b108dd8b4107e4264fc5ce2d111f49aed51eef387"
+    },
+    "prepared_count": 76,
+    "prepared_manifest_sha256": "6c2759c40fc974f8bd4657ea681db6fc3006a9b82afa04d35df78f348e8f2cfb",
+    "mirror_server_code_revision": "9d09f7ff3bca5d243075763055155c721d84b065"
+  },
+  "sda_cache_preserved": true,
+  "comparisons": {
+    "fallback_vs_reference": {
+      "canonical_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      },
+      "model_input_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      }
+    },
+    "restored_mirror_vs_reference": {
+      "canonical_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      },
+      "model_input_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      }
+    },
+    "fallback_vs_restored_mirror": {
+      "canonical_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      },
+      "model_input_sha256": {
+        "base_equal": true,
+        "different_prepared_files": []
+      }
+    }
+  },
+  "independent_restored_artifact_readback": true,
+  "survey_catalog": {
+    "query": "SELECT mapunit.mukey, legend.areasymbol, sacatalog.saversion, sacatalog.saverest FROM mapunit JOIN legend ON legend.lkey=mapunit.lkey JOIN sacatalog ON sacatalog.areasymbol=legend.areasymbol WHERE mapunit.mukey IN (78905) ORDER BY mapunit.mukey",
+    "response_sha256": "3d11503672351fa448bd83d03c57452bf10dc13a1f8c8777b8490194a922d3ca",
+    "archive": [
+      78905,
+      "ID780",
+      18,
+      "2026-08-28T22:33:33"
+    ],
+    "live_sda": [
+      78905,
+      "ID780",
+      18,
+      "2026-08-28T22:33:33"
+    ],
+    "matches": true
+  },
+  "runtime": {
+    "worker_image": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+    "wepppy_checkout_head": "dff2f29f74158857da3b0c313e7ec7194501ed76",
+    "wepppy_module_sha256": {
+      "wepppy/nodb/core/soils.py": "42de5560ab10ca477e1508611bce95b82771b2e65f7dcb8c5c3967dcaeb8e665",
+      "wepppy/nodb/core/wepp.py": "2449d03128966b5a051fc0cc1520a7f93cfd39d3bd7a6dad60903af0a0c257ac",
+      "wepppy/soils/ssurgo/ssurgo.py": "a384f279102594ae481526aebf0f46ac9be1140f552de47ca1507cc91ca0e744",
+      "wepppy/soils/ssurgo/selection.py": "871d71ec05829e9d4565181ae14544df283952ba6b13d07037454c6115daf6e3",
+      "wepppy/soils/ssurgo/source.py": "33e4b4af598bb03a05d6317113d3ea96b6aa4bd192fcac3c09ded46e3701b8d7",
+      "wepppy/rq/wepp_rq_stage_prep.py": "f93f5679fb758f61b252eab46e8dfe56e1340a62ab393553d7b242896347bafa"
+    }
+  },
+  "reference_template_sha256": {
+    "watershed.nodb": "87256a7f2d6373dc4f82703e56923a137271e5948d7addd7eb4bd655532c6032",
+    "watershed/hillslopes.parquet": "638d9f760d5c0bd26df3338f641980836c204a5478dc5632f4f66e97f0ec680f",
+    "watershed/channels.parquet": "0b8e2955139f9940e83958502ba2ae938e75ad119de0e029c000867766262290"
+  }
+}

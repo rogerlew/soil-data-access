@@ -79,3 +79,37 @@ reference files. Eighty local HTTP component requests had zero errors and p95
 below 47 ms. Authenticated homepage, profile and project requests returned 200.
 See [national evidence](../artifacts/national/activation-receipt.json) and the
 [recovery plan](nationwide-recovery-plan.md). Full live SDA parity remains deferred.
+
+## Cold live SDA failover and mirror recovery
+
+The recovery canary uses the national SSURGO single-soil reference for map unit
+78905 and an empty project cache. It changes the primary endpoint only on the
+disposable project to a closed local port. The normal queue builds soils and
+prepares hillslope inputs. The test verifies the supplier through the artifact
+sidecar, SQLite binding and retrieval history, and selection receipt.
+
+The canary restores the project's primary to the current national mirror
+endpoint with mirror-first selection. It then rebuilds and prepares soils
+again. The restored mirror cache starts empty, while the separate USDA cache
+remains populated. The second build must contact the mirror and select it on
+its first attempt.
+
+The November 20, 2026 UTC [failover receipt](../artifacts/forest/live-sda-failover.json)
+records four successful normal-queue jobs. The connection refusal triggered a
+cold live USDA XML retrieval with response hashes for all five tabular query
+families. The failed primary cache contained zero components and no retrieval
+rows. After restoration, the project retrieved fresh mirror JSON on its first
+attempt and left the separate USDA cache logically identical.
+
+Both phases matched the reference base soil and all 76 prepared hillslope
+soils after the established volatile-comment exclusion. The USDA and archive
+catalog records for the sampled survey also agree. This qualifies the
+project-scoped connection-refusal case on forest against one SSURGO map unit.
+
+To repeat, copy the comparison scripts into a forest worker environment and
+run the following with a fresh tag. The runner creates a new canary directory
+and submits the two build and two preparation jobs to the normal queue.
+
+```bash
+python scripts/run_forest_live_sda_failover.py coldcanary01
+```
