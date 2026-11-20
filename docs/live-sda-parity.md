@@ -118,3 +118,48 @@ WEPPPY_NCPU=1 python scripts/run_prepared_soil_tie_parity.py \
   --mirror-base "http://soil-api:8080" \
   --output /tmp/live-sda-prepared-ties
 ```
+
+## Prescribed-fire multi-OFE canary
+
+The canary runs the gridded SSURGO build, prescribed-fire treatment
+controller, and multi-OFE preparation on each source. Both runs use the same
+local US watershed template, pinned SSURGO raster, untreated landuse
+assignments, treatment plan, slope files, and treatment lookup. The tabular
+caches and generated soils are created in separate private directories.
+The first preparation provides an untreated reference for verifying that
+the treatment reaches the generated soil inputs.
+
+The comparison reads the base map-unit assignments, ordered segment classes,
+staged soil stacks, and prepared WEPP soil and management files. It compares
+both the complete canonical soil bytes and the model-input lines. The
+ordinary preparation path verifies that each soil, slope, and management
+file has the same OFE count.
+
+The November 20, 2026 UTC [canary receipt](../artifacts/assessment/live-sda-mofe-treatment-parity.json)
+records identical base map-unit assignments and segment classes across 68
+hillslopes and 240 segments. Both sources changed the same 93 segments on 24
+hillslopes. Reading the prepared inputs confirmed prescribed-fire classes for
+86 forest, one shrub, and six grass segments. The 68 prepared soil and
+management input pairs matched at each stage. In the soil files, absolute
+scratch-directory prefixes in source-file comments accounted for the remaining
+byte differences after the existing volatile-comment normalization.
+
+The pinned archive covers all 68 requested map units, and SDA reported matching
+versions and timestamps for all four surveys. The fresh caches differed in
+30 fragment and 15 texture selections and in 11 numerically equivalent
+water-storage strings. All 68 generated base soils matched after the existing
+volatile-comment normalization. This canary covers one US SSURGO watershed
+and one prescribed-fire scenario.
+
+To repeat, use a local US SSURGO multi-OFE qualification watershed with an
+untreated OMNI scenario and a saved prescribed-fire scenario. Make the
+scripts available in a WEPPpy worker environment with access to both sources.
+This command takes a template path and a new private output directory.
+
+```bash
+WEPPPY_NCPU=6 python scripts/run_live_sda_mofe_parity.py \
+  --template "${SOIL_CANARY_TEMPLATE}" \
+  --mirror-base "http://soil-api:8080" \
+  --prep-workers 6 \
+  --output /tmp/live-sda-mofe-parity
+```
