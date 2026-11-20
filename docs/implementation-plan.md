@@ -51,6 +51,7 @@ still deployment prerequisites.
 - [x] (2026-11-20 UTC) Verify a paired live SDA and mirror multi-OFE prescribed-fire canary across 68 hillslopes and 240 segments. Read back treatment on the same 93 segments and compare prepared soil and management inputs.
 - [ ] Extend geographic coverage and assess other treatment workflows.
 - [x] (2026-11-20 UTC) Verify live cold USDA fallback and fresh mirror recovery on the forest normal queue. Both phases match the reference base soil and all 76 prepared inputs.
+- [x] (2026-11-20 UTC) Measure [paired forest client latency](sda-performance-benchmark.md) for 11 JSON workloads and cold/warm WEPPpy acquisitions.
 - [x] Start new soil API/database services in forest dev Compose.
 - [x] Integrate protected Compose change and activate shared forest client defaults; four normal-queue canary jobs pass.
 - [ ] Later scope: forest1 and production activation.

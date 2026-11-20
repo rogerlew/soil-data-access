@@ -1,0 +1,2455 @@
+{
+  "started_at": "2026-11-20T03:51:42.143096+00:00",
+  "python": "3.12.16",
+  "architecture": "x86_64",
+  "mirror_metadata": {
+    "active_release": {
+      "datasets": [
+        {
+          "dataset": "SSURGO",
+          "release_id": "2026-10-01",
+          "scope": "United States and island jurisdictions; complete official national SSURGO GeoPackage",
+          "sha256": "b971fea0a1a40cad85a28b24b33eaeef1a850723cb993a2260a7f37548df11a2",
+          "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=w0gtf7ooxqfcd0cgfht5zprcmc8qvu0i&file_id=f_2495234965465"
+        },
+        {
+          "dataset": "STATSGO2",
+          "release_id": "2016-10-13",
+          "scope": "United States national STATSGO2; Alaska, Hawaii, Puerto Rico and Virgin Islands subset coverage verified",
+          "sha256": "dc412554ec647352d1da09fc9a2686ea371226f80cfcd1f25c7893d9500b5728",
+          "source_url": "https://nrcs.app.box.com/index.php?rm=box_download_shared_file&shared_name=ug97v4dro9huoc16pima6xi86d606l3e&file_id=f_157053109886"
+        }
+      ],
+      "id": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+    },
+    "code_revision": "9d09f7ff3bca5d243075763055155c721d84b065",
+    "contract_version": "wepppy-json-v1",
+    "official": false,
+    "ready": true,
+    "service": "soil-data-access"
+  },
+  "source_endpoints": {
+    "sda": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+    "mirror": "http://soil-api:8080/Tabular/post.rest"
+  },
+  "http": {
+    "ssurgo_fetch_components": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 465534 ) ORDER BY mukey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:42.144519+00:00",
+            "headers_ms": 563.3227019570768,
+            "total_ms": 563.755318056792,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:42.709051+00:00",
+            "headers_ms": 28.999449219554663,
+            "total_ms": 29.144417960196733,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:55.895865+00:00",
+            "headers_ms": 428.4363240003586,
+            "total_ms": 428.8028432056308,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:55.456880+00:00",
+            "headers_ms": 26.719323825091124,
+            "total_ms": 26.83767769485712,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:09.647053+00:00",
+            "headers_ms": 460.2863318286836,
+            "total_ms": 460.66723484545946,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:10.108239+00:00",
+            "headers_ms": 29.55101476982236,
+            "total_ms": 29.68559879809618,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:23.398425+00:00",
+            "headers_ms": 596.9310817308724,
+            "total_ms": 597.3371267318726,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:22.997768+00:00",
+            "headers_ms": 26.706449687480927,
+            "total_ms": 26.82188106700778,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:37.149945+00:00",
+            "headers_ms": 527.4378699250519,
+            "total_ms": 527.848425321281,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:37.678258+00:00",
+            "headers_ms": 29.43081082776189,
+            "total_ms": 29.559741728007793,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:50.901216+00:00",
+            "headers_ms": 430.9992929920554,
+            "total_ms": 431.30245013162494,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:50.392091+00:00",
+            "headers_ms": 24.63109977543354,
+            "total_ms": 24.745543021708727,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:04.652509+00:00",
+            "headers_ms": 447.13516999036074,
+            "total_ms": 447.4316192790866,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:05.100390+00:00",
+            "headers_ms": 28.77926779910922,
+            "total_ms": 28.88261480256915,
+            "status": 200,
+            "rows": 5,
+            "bytes": 1555,
+            "body_sha256": "4c1c647943aed1131ea722ef3ab46fe9494816b8c3601b0e261272744e241434"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 460.66723484545946,
+          "min_ms": 428.8028432056308,
+          "max_ms": 597.3371267318726
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 28.88261480256915,
+          "min_ms": 24.745543021708727,
+          "max_ms": 29.68559879809618
+        }
+      },
+      "median_sda_to_mirror_ratio": 15.94963745472527,
+      "row_counts": {
+        "sda": 5,
+        "mirror": 5
+      }
+    },
+    "ssurgo_fetch_chorizon": {
+      "query": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+      "trials": [
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:43.394774+00:00",
+            "headers_ms": 434.6245629712939,
+            "total_ms": 435.01823395490646,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:42.739217+00:00",
+            "headers_ms": 25.98725911229849,
+            "total_ms": 26.1057922616601,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:57.146041+00:00",
+            "headers_ms": 444.48748603463173,
+            "total_ms": 444.85235027968884,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:57.591495+00:00",
+            "headers_ms": 29.60187802091241,
+            "total_ms": 29.729322995990515,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:10.897332+00:00",
+            "headers_ms": 485.2571948431432,
+            "total_ms": 485.4330476373434,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:10.138858+00:00",
+            "headers_ms": 25.04547033458948,
+            "total_ms": 25.17554396763444,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:24.648719+00:00",
+            "headers_ms": 425.5367279984057,
+            "total_ms": 425.87472684681416,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:25.075104+00:00",
+            "headers_ms": 28.280125930905342,
+            "total_ms": 28.428663965314627,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:38.400003+00:00",
+            "headers_ms": 419.2234636284411,
+            "total_ms": 419.56991981714964,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:37.708653+00:00",
+            "headers_ms": 25.339763145893812,
+            "total_ms": 25.493034161627293,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:52.151427+00:00",
+            "headers_ms": 489.22345507889986,
+            "total_ms": 489.50439505279064,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:52.641281+00:00",
+            "headers_ms": 15.320824924856424,
+            "total_ms": 15.413619112223387,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:05.902762+00:00",
+            "headers_ms": 448.3438776805997,
+            "total_ms": 448.71206395328045,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2254,
+            "body_sha256": "5ffe90c9ce1e7e49745fa9bcc84eca67778378eb42f2a97dfad91f34eb0c649c"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:05.130172+00:00",
+            "headers_ms": 22.879612166434526,
+            "total_ms": 22.965575102716684,
+            "status": 200,
+            "rows": 16,
+            "bytes": 2428,
+            "body_sha256": "ee2c77a64b4eebf4be76985a7285acf6039ab7e18f869c23c1043dfc11cda952"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 444.85235027968884,
+          "min_ms": 419.56991981714964,
+          "max_ms": 489.50439505279064
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 25.493034161627293,
+          "min_ms": 15.413619112223387,
+          "max_ms": 29.729322995990515
+        }
+      },
+      "median_sda_to_mirror_ratio": 17.44995701411215,
+      "row_counts": {
+        "sda": 16,
+        "mirror": 16
+      }
+    },
+    "ssurgo_fetch_chfrags": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:44.644759+00:00",
+            "headers_ms": 431.27417378127575,
+            "total_ms": 431.59501906484365,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:45.076739+00:00",
+            "headers_ms": 28.160099871456623,
+            "total_ms": 28.27395126223564,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:58.395967+00:00",
+            "headers_ms": 448.285236954689,
+            "total_ms": 448.6957062035799,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:57.622549+00:00",
+            "headers_ms": 25.880542118102312,
+            "total_ms": 26.016137097030878,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:12.147496+00:00",
+            "headers_ms": 448.2105551287532,
+            "total_ms": 448.5391778871417,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:12.596512+00:00",
+            "headers_ms": 28.302285820245743,
+            "total_ms": 28.436523862183094,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:25.898866+00:00",
+            "headers_ms": 428.27145708724856,
+            "total_ms": 428.5994991660118,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:25.104824+00:00",
+            "headers_ms": 27.85540698096156,
+            "total_ms": 27.973858639597893,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:39.650056+00:00",
+            "headers_ms": 445.51847595721483,
+            "total_ms": 445.87937416508794,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:40.096305+00:00",
+            "headers_ms": 29.348226729780436,
+            "total_ms": 29.465282801538706,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:53.401447+00:00",
+            "headers_ms": 444.2625897936523,
+            "total_ms": 444.5672519505024,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:52.657776+00:00",
+            "headers_ms": 24.175852071493864,
+            "total_ms": 24.306543171405792,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:07.152839+00:00",
+            "headers_ms": 423.2969079166651,
+            "total_ms": 423.71522169560194,
+            "status": 200,
+            "rows": 0,
+            "bytes": 2,
+            "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:07.577011+00:00",
+            "headers_ms": 28.575490694493055,
+            "total_ms": 28.705983888357878,
+            "status": 200,
+            "rows": 0,
+            "bytes": 33,
+            "body_sha256": "5280fd62c465db4ea6010604b817968ac78473e1fa44b3e889902479d7a00082"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 444.5672519505024,
+          "min_ms": 423.71522169560194,
+          "max_ms": 448.6957062035799
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 28.27395126223564,
+          "min_ms": 24.306543171405792,
+          "max_ms": 29.465282801538706
+        }
+      },
+      "median_sda_to_mirror_ratio": 15.723562929964185,
+      "row_counts": {
+        "sda": 0,
+        "mirror": 0
+      }
+    },
+    "ssurgo_fetch_chtexturegrp": {
+      "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (87934168,87934169,87934170,87934171,87934172,87934173,87934174,87934175,87934176,87934177,87934178,87934179,87934180,87934181,87934182,87934183) ORDER BY chkey",
+      "trials": [
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:45.894956+00:00",
+            "headers_ms": 435.41076220571995,
+            "total_ms": 435.74953312054276,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:45.105216+00:00",
+            "headers_ms": 24.390367791056633,
+            "total_ms": 24.50291207060218,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:59.646194+00:00",
+            "headers_ms": 445.8956359885633,
+            "total_ms": 446.2893810123205,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:00.092887+00:00",
+            "headers_ms": 29.742016922682524,
+            "total_ms": 29.856677167117596,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:13.397533+00:00",
+            "headers_ms": 428.4848882816732,
+            "total_ms": 428.793890401721,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:12.625222+00:00",
+            "headers_ms": 25.47706523910165,
+            "total_ms": 25.596912018954754,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:27.148957+00:00",
+            "headers_ms": 480.07173370569944,
+            "total_ms": 480.43675860390067,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:27.629909+00:00",
+            "headers_ms": 27.053724974393845,
+            "total_ms": 27.170231100171804,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:40.900122+00:00",
+            "headers_ms": 449.0714380517602,
+            "total_ms": 449.4141358882189,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:40.125985+00:00",
+            "headers_ms": 23.633554112166166,
+            "total_ms": 23.7463959492743,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:54.651584+00:00",
+            "headers_ms": 431.0943908058107,
+            "total_ms": 431.42722779884934,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:55.083426+00:00",
+            "headers_ms": 28.36054004728794,
+            "total_ms": 28.49823934957385,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:08.402730+00:00",
+            "headers_ms": 431.01697228848934,
+            "total_ms": 431.32069520652294,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:07.605988+00:00",
+            "headers_ms": 24.98760772868991,
+            "total_ms": 25.100798811763525,
+            "status": 200,
+            "rows": 19,
+            "bytes": 365,
+            "body_sha256": "e771bfa6b8929c4ac8519e7e7f0afd8cb456aee852a8822f1186e90dbfedcf2f"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 435.74953312054276,
+          "min_ms": 428.793890401721,
+          "max_ms": 480.43675860390067
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 25.596912018954754,
+          "min_ms": 23.7463959492743,
+          "max_ms": 29.856677167117596
+        }
+      },
+      "median_sda_to_mirror_ratio": 17.023519586966824,
+      "row_counts": {
+        "sda": 19,
+        "mirror": 19
+      }
+    },
+    "ssurgo_fetch_corestrictions": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (29248556,29248557,29248558,29248559,29248560) ORDER BY cokey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:47.145053+00:00",
+            "headers_ms": 447.7643431164324,
+            "total_ms": 448.09080474078655,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:47.593603+00:00",
+            "headers_ms": 28.02701760083437,
+            "total_ms": 28.143257834017277,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:00.896225+00:00",
+            "headers_ms": 446.7239738442004,
+            "total_ms": 447.0170307904482,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:00.123121+00:00",
+            "headers_ms": 24.067590944468975,
+            "total_ms": 24.18138599023223,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:14.647611+00:00",
+            "headers_ms": 432.49063938856125,
+            "total_ms": 432.78698436915874,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:15.080841+00:00",
+            "headers_ms": 30.89725598692894,
+            "total_ms": 31.027774792164564,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:28.398931+00:00",
+            "headers_ms": 447.3089072853327,
+            "total_ms": 447.6491720415652,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:27.657523+00:00",
+            "headers_ms": 24.084975011646748,
+            "total_ms": 24.19645432382822,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:42.150360+00:00",
+            "headers_ms": 434.5917087048292,
+            "total_ms": 434.96026983484626,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:42.585676+00:00",
+            "headers_ms": 23.483614902943373,
+            "total_ms": 23.606702219694853,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:55.901791+00:00",
+            "headers_ms": 458.93629966303706,
+            "total_ms": 459.24028288573027,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:55.112447+00:00",
+            "headers_ms": 22.22057105973363,
+            "total_ms": 22.33884297311306,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:09.652929+00:00",
+            "headers_ms": 445.12238074094057,
+            "total_ms": 445.4631037078798,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:10.098824+00:00",
+            "headers_ms": 29.906305950134993,
+            "total_ms": 30.02248192206025,
+            "status": 200,
+            "rows": 4,
+            "bytes": 167,
+            "body_sha256": "678a0b239a4012cbc31cf0596b638adccfd10257a42e23faa7f5fb458d9e03ab"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 447.0170307904482,
+          "min_ms": 432.78698436915874,
+          "max_ms": 459.24028288573027
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 24.19645432382822,
+          "min_ms": 22.33884297311306,
+          "max_ms": 31.027774792164564
+        }
+      },
+      "median_sda_to_mirror_ratio": 18.474484931051823,
+      "row_counts": {
+        "sda": 4,
+        "mirror": 4
+      }
+    },
+    "statsgo2_fetch_components": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 1390211 ) ORDER BY mukey",
+      "trials": [
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:48.395061+00:00",
+            "headers_ms": 416.9379388913512,
+            "total_ms": 417.16562304645777,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:47.622093+00:00",
+            "headers_ms": 25.68909991532564,
+            "total_ms": 25.803381111472845,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:02.146427+00:00",
+            "headers_ms": 420.8422051742673,
+            "total_ms": 421.1780149489641,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:02.568240+00:00",
+            "headers_ms": 28.930893167853355,
+            "total_ms": 29.072437901049852,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:15.897821+00:00",
+            "headers_ms": 428.0396746471524,
+            "total_ms": 428.341310005635,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:15.112209+00:00",
+            "headers_ms": 27.839506044983864,
+            "total_ms": 27.97870524227619,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:29.649200+00:00",
+            "headers_ms": 468.36014883592725,
+            "total_ms": 468.8203977420926,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:30.118726+00:00",
+            "headers_ms": 30.478151980787516,
+            "total_ms": 30.60298878699541,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:43.400583+00:00",
+            "headers_ms": 782.7962329611182,
+            "total_ms": 783.2123981788754,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:42.609600+00:00",
+            "headers_ms": 25.188597850501537,
+            "total_ms": 25.31005395576358,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:57.151899+00:00",
+            "headers_ms": 816.4545078761876,
+            "total_ms": 816.8189008720219,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:57.969424+00:00",
+            "headers_ms": 29.80345906689763,
+            "total_ms": 29.953710734844208,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:10.903137+00:00",
+            "headers_ms": 447.27445812895894,
+            "total_ms": 447.848754003644,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6188,
+            "body_sha256": "edcca423c252fb9517fb71316add266e497c4d341be5740718ff55406e473de4"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:10.129153+00:00",
+            "headers_ms": 25.980278849601746,
+            "total_ms": 26.095674838870764,
+            "status": 200,
+            "rows": 26,
+            "bytes": 6240,
+            "body_sha256": "65429bbab9d266dd486e4bdee382c3d2cb1f3601bc9d4910650dfe80996a21a0"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 447.848754003644,
+          "min_ms": 417.16562304645777,
+          "max_ms": 816.8189008720219
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 27.97870524227619,
+          "min_ms": 25.31005395576358,
+          "max_ms": 30.60298878699541
+        }
+      },
+      "median_sda_to_mirror_ratio": 16.006771940502045,
+      "row_counts": {
+        "sda": 26,
+        "mirror": 26
+      }
+    },
+    "statsgo2_fetch_chorizon": {
+      "query": "SELECT cokey, chkey, hzname,  hzdepb_r,  hzdept_r, hzthk_r, dbthirdbar_r, ksat_r, sandtotal_r, claytotal_r, om_r, cec7_r, awc_l, fraggt10_r, frag3to10_r, desgnmaster, sieveno10_r, wthirdbar_r, wfifteenbar_r, sandvf_r, ll_r FROM chorizon WHERE cokey IN (14276909,14276910,14276911,14276912,14276913,14276914,14276915,14276916,14276917,14276918,14276919,14276920,14276921,14276922,14276923,14276924,14276925,14276926,14276927,14276928,14276929,14276930,14276931,14276932,14276933,14276934) ORDER BY cokey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:49.645343+00:00",
+            "headers_ms": 479.93987426161766,
+            "total_ms": 480.50968209281564,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:50.126824+00:00",
+            "headers_ms": 30.329889617860317,
+            "total_ms": 30.49764269962907,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:03.396720+00:00",
+            "headers_ms": 454.1132836602628,
+            "total_ms": 454.4613379985094,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:02.599227+00:00",
+            "headers_ms": 26.42352180555463,
+            "total_ms": 26.568231638520956,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:17.147763+00:00",
+            "headers_ms": 451.31029235199094,
+            "total_ms": 451.73283014446497,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:17.600440+00:00",
+            "headers_ms": 30.239520594477654,
+            "total_ms": 30.410857871174812,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:30.899366+00:00",
+            "headers_ms": 428.67998499423265,
+            "total_ms": 429.00212900713086,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:30.151251+00:00",
+            "headers_ms": 26.29374573007226,
+            "total_ms": 26.42671298235655,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:44.650717+00:00",
+            "headers_ms": 466.74246015027165,
+            "total_ms": 467.088736128062,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:45.118816+00:00",
+            "headers_ms": 29.863985255360603,
+            "total_ms": 30.003638938069344,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:58.401883+00:00",
+            "headers_ms": 424.22090098261833,
+            "total_ms": 424.6838032267988,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:58.001261+00:00",
+            "headers_ms": 25.337180122733116,
+            "total_ms": 25.49330424517393,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:12.153321+00:00",
+            "headers_ms": 434.2284076847136,
+            "total_ms": 434.7565146163106,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:12.589078+00:00",
+            "headers_ms": 31.51624510064721,
+            "total_ms": 31.65311785414815,
+            "status": 200,
+            "rows": 104,
+            "bytes": 13073,
+            "body_sha256": "1cf93490971ee7843703e9d1ede101a4d615dab545383594d434d36ac8bc3197"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 451.73283014446497,
+          "min_ms": 424.6838032267988,
+          "max_ms": 480.50968209281564
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 30.003638938069344,
+          "min_ms": 25.49330424517393,
+          "max_ms": 31.65311785414815
+        }
+      },
+      "median_sda_to_mirror_ratio": 15.055934751010998,
+      "row_counts": {
+        "sda": 104,
+        "mirror": 104
+      }
+    },
+    "statsgo2_fetch_chfrags": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (41094228,41094229,41094230,41094231,41094232,41094233,41094234,41094235,41094236,41094237,41094238,41094239,41094240,41094241,41094242,41094243,41094244,41094245,41094246,41094247,41094248,41094249,41094250,41094251,41094252,41094253,41094254,41094255,41094256,41094257,41094258,41094259,41094260,41094261,41094262,41094263,41094264,41094265,41094266,41094267,41094268,41094269,41094270,41094271,41094272,41094273,41094274,41094275,41094276,41094277,41094278,41094279,41094280,41094281,41094282,41094283,41094284,41094285,41094286,41094287,41094288,41094289,41094290,41094291,41094292,41094293,41094294,41094295,41094296,41094297,41094298,41094299,41094300,41094301,41094302,41094303,41094304,41094305,41094306,41094307,41094308,41094309,41094310,41094311,41094312,41094313,41094314,41094315,41094316,41094317,41094318,41094319,41094320,41094321,41094322,41094323,41094324,41094325,41094326,41094327,41094328,41094329,41094330,41094331) ORDER BY chkey",
+      "trials": [
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:50.895384+00:00",
+            "headers_ms": 452.74871634319425,
+            "total_ms": 453.0965629965067,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:50.163691+00:00",
+            "headers_ms": 25.34420508891344,
+            "total_ms": 25.458534248173237,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:04.646832+00:00",
+            "headers_ms": 451.98139594867826,
+            "total_ms": 452.2865628823638,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:05.099840+00:00",
+            "headers_ms": 29.13870895281434,
+            "total_ms": 29.258035123348236,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:18.397957+00:00",
+            "headers_ms": 447.194061242044,
+            "total_ms": 447.6110050454736,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:17.637711+00:00",
+            "headers_ms": 26.300568133592606,
+            "total_ms": 26.414805091917515,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:32.149591+00:00",
+            "headers_ms": 503.507053013891,
+            "total_ms": 503.99603182449937,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:32.654395+00:00",
+            "headers_ms": 28.841636143624783,
+            "total_ms": 28.971859253942966,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:45.900869+00:00",
+            "headers_ms": 432.1460439823568,
+            "total_ms": 432.44914477691054,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:45.155056+00:00",
+            "headers_ms": 26.040706783533096,
+            "total_ms": 26.17486286908388,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:59.652105+00:00",
+            "headers_ms": 454.97848792001605,
+            "total_ms": 455.3020657040179,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:00.108240+00:00",
+            "headers_ms": 27.642847038805485,
+            "total_ms": 27.758336160331964,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:13.403432+00:00",
+            "headers_ms": 433.35025012493134,
+            "total_ms": 433.6614143103361,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:12.626728+00:00",
+            "headers_ms": 25.692565832287073,
+            "total_ms": 25.819198694080114,
+            "status": 200,
+            "rows": 179,
+            "bytes": 3135,
+            "body_sha256": "b4e2c92b42bd5a134e5ff9b82e7e60753f0ae613dd37e5106f2e487af266df20"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 452.2865628823638,
+          "min_ms": 432.44914477691054,
+          "max_ms": 503.99603182449937
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 26.414805091917515,
+          "min_ms": 25.458534248173237,
+          "max_ms": 29.258035123348236
+        }
+      },
+      "median_sda_to_mirror_ratio": 17.12246451596025,
+      "row_counts": {
+        "sda": 179,
+        "mirror": 179
+      }
+    },
+    "statsgo2_fetch_chtexturegrp": {
+      "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (41094228,41094229,41094230,41094231,41094232,41094233,41094234,41094235,41094236,41094237,41094238,41094239,41094240,41094241,41094242,41094243,41094244,41094245,41094246,41094247,41094248,41094249,41094250,41094251,41094252,41094253,41094254,41094255,41094256,41094257,41094258,41094259,41094260,41094261,41094262,41094263,41094264,41094265,41094266,41094267,41094268,41094269,41094270,41094271,41094272,41094273,41094274,41094275,41094276,41094277,41094278,41094279,41094280,41094281,41094282,41094283,41094284,41094285,41094286,41094287,41094288,41094289,41094290,41094291,41094292,41094293,41094294,41094295,41094296,41094297,41094298,41094299,41094300,41094301,41094302,41094303,41094304,41094305,41094306,41094307,41094308,41094309,41094310,41094311,41094312,41094313,41094314,41094315,41094316,41094317,41094318,41094319,41094320,41094321,41094322,41094323,41094324,41094325,41094326,41094327,41094328,41094329,41094330,41094331) ORDER BY chkey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:52.145453+00:00",
+            "headers_ms": 456.5288810990751,
+            "total_ms": 456.83315489441156,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:52.603021+00:00",
+            "headers_ms": 29.878459870815277,
+            "total_ms": 29.9942079000175,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:05.896985+00:00",
+            "headers_ms": 480.3524571470916,
+            "total_ms": 480.6909114122391,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:05.131320+00:00",
+            "headers_ms": 25.532026775181293,
+            "total_ms": 25.646077003329992,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:19.648278+00:00",
+            "headers_ms": 449.25859617069364,
+            "total_ms": 449.5815960690379,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:20.098618+00:00",
+            "headers_ms": 29.287526849657297,
+            "total_ms": 29.421325773000717,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:33.399608+00:00",
+            "headers_ms": 552.4919680319726,
+            "total_ms": 552.8613869100809,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:32.685590+00:00",
+            "headers_ms": 27.112077921628952,
+            "total_ms": 27.238639071583748,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:47.150740+00:00",
+            "headers_ms": 467.6311509683728,
+            "total_ms": 467.97464368864894,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:47.619369+00:00",
+            "headers_ms": 29.698282945901155,
+            "total_ms": 29.82120681554079,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:00.902219+00:00",
+            "headers_ms": 453.5527448169887,
+            "total_ms": 453.8521938957274,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:00.138181+00:00",
+            "headers_ms": 25.994888972491026,
+            "total_ms": 26.108712889254093,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:14.653593+00:00",
+            "headers_ms": 428.56481205672026,
+            "total_ms": 428.91240445896983,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:15.083169+00:00",
+            "headers_ms": 29.559748712927103,
+            "total_ms": 29.676619917154312,
+            "status": 200,
+            "rows": 172,
+            "bytes": 3348,
+            "body_sha256": "f35fd825282913e254d7305f4cdf9fec5c3effd5f6f4c8e663353ff77de4f146"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 456.83315489441156,
+          "min_ms": 428.91240445896983,
+          "max_ms": 552.8613869100809
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 29.421325773000717,
+          "min_ms": 25.646077003329992,
+          "max_ms": 29.9942079000175
+        }
+      },
+      "median_sda_to_mirror_ratio": 15.527279716049947,
+      "row_counts": {
+        "sda": 172,
+        "mirror": 172
+      }
+    },
+    "statsgo2_fetch_corestrictions": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (14276909,14276910,14276911,14276912,14276913,14276914,14276915,14276916,14276917,14276918,14276919,14276920,14276921,14276922,14276923,14276924,14276925,14276926,14276927,14276928,14276929,14276930,14276931,14276932,14276933,14276934) ORDER BY cokey",
+      "trials": [
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:51:53.395599+00:00",
+            "headers_ms": 424.25011890009046,
+            "total_ms": 424.561751075089,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:52.634731+00:00",
+            "headers_ms": 24.45361204445362,
+            "total_ms": 24.56498099491,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:07.146979+00:00",
+            "headers_ms": 526.9974488765001,
+            "total_ms": 527.4063302204013,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:07.674842+00:00",
+            "headers_ms": 29.06701620668173,
+            "total_ms": 29.196633957326412,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:20.898296+00:00",
+            "headers_ms": 436.4665877074003,
+            "total_ms": 436.77669297903776,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:20.129815+00:00",
+            "headers_ms": 24.870063178241253,
+            "total_ms": 24.982600938528776,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:34.649756+00:00",
+            "headers_ms": 432.8704373911023,
+            "total_ms": 433.1658901646733,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:35.083361+00:00",
+            "headers_ms": 29.298883862793446,
+            "total_ms": 29.42634094506502,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:48.400968+00:00",
+            "headers_ms": 446.1184130050242,
+            "total_ms": 446.55169593170285,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:47.651068+00:00",
+            "headers_ms": 24.217185098677874,
+            "total_ms": 24.32686323300004,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:02.152331+00:00",
+            "headers_ms": 434.7142889164388,
+            "total_ms": 435.0234819576144,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:02.587865+00:00",
+            "headers_ms": 28.829619754105806,
+            "total_ms": 28.942457865923643,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:15.903629+00:00",
+            "headers_ms": 425.141470041126,
+            "total_ms": 425.4561592824757,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:15.114677+00:00",
+            "headers_ms": 24.275758769363165,
+            "total_ms": 24.389957077801228,
+            "status": 200,
+            "rows": 25,
+            "bytes": 841,
+            "body_sha256": "0ed6e0fc32b3e586fef8021e7e0e7fbd079ac7c0519894f23b92ccbbb64c0686"
+          },
+          "exact_row_multiset_equal": true,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 435.0234819576144,
+          "min_ms": 424.561751075089,
+          "max_ms": 527.4063302204013
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 24.982600938528776,
+          "min_ms": 24.32686323300004,
+          "max_ms": 29.42634094506502
+        }
+      },
+      "median_sda_to_mirror_ratio": 17.41305811304501,
+      "row_counts": {
+        "sda": 25,
+        "mirror": 25
+      }
+    },
+    "ssurgo_components_100_mukey": {
+      "query": "SELECT component.mukey, component.cokey, component.compname, component.comppct_r, component.albedodry_r, component.hydricrating, component.drainagecl, muaggatt.muname, muaggatt.wtdepannmin, muaggatt.flodfreqdcd, muaggatt.aws025wta, muaggatt.aws0150wta, muaggatt.hydgrpdcd, muaggatt.drclassdcd, component.taxclname, component.geomdesc, component.taxorder, component.taxsuborder FROM component INNER JOIN muaggatt ON component.mukey=muaggatt.mukey WHERE component.mukey IN ( 49315,55071,60882,66316,71492,76664,83258,104940,118308,124916,132076,146797,152658,159163,165263,172111,186774,190445,209002,279738,285769,291807,295970,323394,328838,333111,344485,349862,357848,366171,371754,379918,391100,399246,406132,410339,417772,425677,432949,456741,460290,464220,469217,475100,479523,484678,496668,504213,515010,522938,528230,537201,544060,551520,565528,571190,614151,641632,714026,784526,824181,1034780,1382745,1406099,1429084,1472247,1530343,1595546,1653772,1691284,1703249,1725969,1899741,2109119,2250500,2399865,2427426,2452712,2486667,2502787,2516655,2528568,2534794,2566696,2581129,2597753,2646851,2686483,2738962,2797990,2850878,2936680,3028700,3114640,3173261,3243264,3332307,3395493,3426317,3469086 ) ORDER BY mukey",
+      "trials": [
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:51:54.645856+00:00",
+            "headers_ms": 492.9008246399462,
+            "total_ms": 727.6399820111692,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:51:55.376584+00:00",
+            "headers_ms": 38.51301083341241,
+            "total_ms": 38.800782058387995,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:08.397051+00:00",
+            "headers_ms": 466.9273910112679,
+            "total_ms": 700.0037129037082,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:07.704762+00:00",
+            "headers_ms": 29.02895212173462,
+            "total_ms": 29.34216521680355,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:22.148605+00:00",
+            "headers_ms": 542.0252932235599,
+            "total_ms": 771.2334049865603,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:22.923044+00:00",
+            "headers_ms": 36.72879608348012,
+            "total_ms": 37.044188007712364,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:52:35.899730+00:00",
+            "headers_ms": 492.24467342719436,
+            "total_ms": 724.6779603883624,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:35.113434+00:00",
+            "headers_ms": 34.347651060670614,
+            "total_ms": 34.67438742518425,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:52:49.651183+00:00",
+            "headers_ms": 431.92670913413167,
+            "total_ms": 653.3478461205959,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:52:50.307655+00:00",
+            "headers_ms": 38.56035601347685,
+            "total_ms": 38.89002837240696,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": false,
+          "sda": {
+            "started_at": "2026-11-20T03:53:03.402589+00:00",
+            "headers_ms": 431.3324526883662,
+            "total_ms": 652.1270917728543,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:02.617453+00:00",
+            "headers_ms": 31.569103710353374,
+            "total_ms": 31.79779602214694,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        },
+        {
+          "sda_first": true,
+          "sda": {
+            "started_at": "2026-11-20T03:53:17.153624+00:00",
+            "headers_ms": 453.85374408215284,
+            "total_ms": 682.647910900414,
+            "status": 200,
+            "rows": 354,
+            "bytes": 90973,
+            "body_sha256": "d687e85b889537d0476711708a75344ffad9d80ca11923f98c4299d5235f29e7"
+          },
+          "mirror": {
+            "started_at": "2026-11-20T03:53:17.839470+00:00",
+            "headers_ms": 46.00509302690625,
+            "total_ms": 46.32548801600933,
+            "status": 200,
+            "rows": 354,
+            "bytes": 91141,
+            "body_sha256": "9dbb2908b981de42ae2da818df945c0e587e2d63e7d9eed6646c0b33ab711d03"
+          },
+          "exact_row_multiset_equal": false,
+          "equal_with_empty_geomdesc_as_null": true
+        }
+      ],
+      "summary": {
+        "sda": {
+          "samples": 7,
+          "median_ms": 700.0037129037082,
+          "min_ms": 652.1270917728543,
+          "max_ms": 771.2334049865603
+        },
+        "mirror": {
+          "samples": 7,
+          "median_ms": 37.044188007712364,
+          "min_ms": 29.34216521680355,
+          "max_ms": 46.32548801600933
+        }
+      },
+      "median_sda_to_mirror_ratio": 18.89645179313883,
+      "row_counts": {
+        "sda": 354,
+        "mirror": 354
+      }
+    }
+  },
+  "cold_acquisition": {
+    "sda": [
+      {
+        "started_at": "2026-11-20T03:53:31.235812+00:00",
+        "total_ms": 2955.083900131285,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:37.153635+00:00",
+        "total_ms": 3069.71937417984,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:47.153737+00:00",
+        "total_ms": 3284.036531113088,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:57.153890+00:00",
+        "total_ms": 3092.926135286689,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:54:07.153929+00:00",
+        "total_ms": 4212.075554765761,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      }
+    ],
+    "mirror": [
+      {
+        "started_at": "2026-11-20T03:53:34.200524+00:00",
+        "total_ms": 257.4592111632228,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:34.480299+00:00",
+        "total_ms": 262.9039539024234,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:50.451067+00:00",
+        "total_ms": 254.87969210371375,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:50.721657+00:00",
+        "total_ms": 261.15239318460226,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:54:11.374346+00:00",
+        "total_ms": 212.583193089813,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      }
+    ]
+  },
+  "warm_acquisition": {
+    "sda": [
+      {
+        "started_at": "2026-11-20T03:53:34.194256+00:00",
+        "total_ms": 5.5851079523563385,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:40.225903+00:00",
+        "total_ms": 4.991251975297928,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:50.441154+00:00",
+        "total_ms": 8.602749090641737,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:54:00.250757+00:00",
+        "total_ms": 8.763317950069904,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:54:11.369001+00:00",
+        "total_ms": 4.639651160687208,
+        "fetches": 5,
+        "response_origins": [
+          "https://sdmdataaccess.nrcs.usda.gov"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      }
+    ],
+    "mirror": [
+      {
+        "started_at": "2026-11-20T03:53:34.461121+00:00",
+        "total_ms": 7.90308928117156,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:34.746906+00:00",
+        "total_ms": 9.45509085431695,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:50.708970+00:00",
+        "total_ms": 5.322152748703957,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:53:50.986336+00:00",
+        "total_ms": 9.708468802273273,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      },
+      {
+        "started_at": "2026-11-20T03:54:11.588853+00:00",
+        "total_ms": 3.940040711313486,
+        "fetches": 5,
+        "response_origins": [
+          "http://soil-api:8080"
+        ],
+        "tables": {
+          "component": 26,
+          "chorizon": 104,
+          "chfrags": 79,
+          "chtexturegrp": 104,
+          "corestrictions": 8
+        }
+      }
+    ]
+  },
+  "cold_acquisition_summary": {
+    "sda": {
+      "samples": 5,
+      "median_ms": 3092.926135286689,
+      "min_ms": 2955.083900131285,
+      "max_ms": 4212.075554765761
+    },
+    "mirror": {
+      "samples": 5,
+      "median_ms": 257.4592111632228,
+      "min_ms": 212.583193089813,
+      "max_ms": 262.9039539024234
+    },
+    "median_sda_to_mirror_ratio": 12.013266572644977
+  },
+  "warm_acquisition_summary": {
+    "sda": {
+      "samples": 5,
+      "median_ms": 5.5851079523563385,
+      "min_ms": 4.639651160687208,
+      "max_ms": 8.763317950069904
+    },
+    "mirror": {
+      "samples": 5,
+      "median_ms": 7.90308928117156,
+      "min_ms": 3.940040711313486,
+      "max_ms": 9.708468802273273
+    },
+    "median_sda_to_mirror_ratio": 0.7066993366331296
+  },
+  "finished_at": "2026-11-20T03:54:11.598101+00:00",
+  "runtime": {
+    "host_cpu": {
+      "Architecture": "x86_64",
+      "CPU(s)": "48",
+      "Model name": "Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz",
+      "Thread(s) per core": "2",
+      "Core(s) per socket": "12",
+      "Socket(s)": "2"
+    },
+    "kernel": "6.8.0-146-generic",
+    "benchmark_client": "forest WEPPpy worker container",
+    "container_images": {
+      "wepppy-rq-worker": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+      "docker-soil-api-1": "sha256:4f32140002c67149797cce482fb0170ae7db8303ddf70b279e744f34f338f3c9",
+      "docker-soil-db-1": "sha256:b58d0db01959739ef2c8a0be9012702b8bf47d9a350b3b82e21c6843a6aec89c"
+    },
+    "worker_cpu_max": "max 100000",
+    "wepppy_checkout_head": "dff2f29f74158857da3b0c313e7ec7194501ed76",
+    "client_module_sha256": {
+      "wepppy/soils/ssurgo/source.py": "33e4b4af598bb03a05d6317113d3ea96b6aa4bd192fcac3c09ded46e3701b8d7",
+      "wepppy/soils/ssurgo/ssurgo.py": "a384f279102594ae481526aebf0f46ac9be1140f552de47ca1507cc91ca0e744"
+    },
+    "host_memory_kib": 131777580
+  },
+  "scope": "serial client-observed elapsed time from forest; local mirror HTTP and public USDA HTTPS",
+  "schedule": {
+    "http_trials_per_query": 7,
+    "http_cases": 11,
+    "http_concurrency": 1,
+    "sda_http_minimum_start_interval_seconds": 1.25,
+    "fresh_and_warm_collections_per_source": 5,
+    "sda_collection_minimum_start_interval_seconds": 10,
+    "fresh_collection_map_units": 8
+  },
+  "outcome": {
+    "completed_http_samples_per_source": 77,
+    "http_errors": 0,
+    "http_workloads_exact_value_multisets": 9,
+    "http_workloads_equivalent_after_geomdesc_empty_to_null": 11
+  }
+}

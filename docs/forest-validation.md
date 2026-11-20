@@ -113,3 +113,7 @@ and submits the two build and two preparation jobs to the normal queue.
 ```bash
 python scripts/run_forest_live_sda_failover.py coldcanary01
 ```
+
+The [paired latency benchmark](sda-performance-benchmark.md) measures live SDA
+and the national mirror from the same forest worker for HTTP requests and
+fresh or populated WEPPpy caches.
