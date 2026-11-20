@@ -50,6 +50,7 @@ still deployment prerequisites.
 - [x] (2026-11-20 UTC) Verify prepared soil inputs for two selected SSURGO fragment ties and one restriction control. All 228 model-input payloads match.
 - [x] (2026-11-20 UTC) Verify a paired live SDA and mirror multi-OFE prescribed-fire canary across 68 hillslopes and 240 segments. Read back treatment on the same 93 segments and compare prepared soil and management inputs.
 - [ ] Extend geographic coverage and assess other treatment workflows.
+- [x] (2026-11-20 UTC) Verify live cold USDA fallback and fresh mirror recovery on the forest normal queue. Both phases match the reference base soil and all 76 prepared inputs.
 - [x] Start new soil API/database services in forest dev Compose.
 - [x] Integrate protected Compose change and activate shared forest client defaults; four normal-queue canary jobs pass.
 - [ ] Later scope: forest1 and production activation.
@@ -439,6 +440,9 @@ case. Full live compatibility and broader prepared-run parity remain open.
 The paired prescribed-fire canary matched prepared model inputs at both stages
 across 68 hillslopes, with the same treatment effects on 93 segments. See
 [live assessment](live-sda-parity.md#prescribed-fire-multi-ofe-canary).
+The forest canary also verified live USDA retrieval after a project-only
+connection refusal and fresh mirror selection after restoring the endpoint.
+See [forest validation](forest-validation.md#cold-live-sda-failover-and-mirror-recovery).
 
 The rollout policy is revised; no runtime default changed in this documentation
 checkpoint. Next implement the mirror-first contract, broader importer and Compose

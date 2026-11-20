@@ -92,6 +92,7 @@
     "artifacts/assessment/live-sda-base-parity.json",
     "artifacts/assessment/live-sda-prepared-tie-parity.json",
     "artifacts/assessment/live-sda-mofe-treatment-parity.json",
+    "artifacts/forest/live-sda-failover.json",
     "artifacts/assessment/soildb-source.json",
     "artifacts/wepppy-parity/reference-repeatability.json",
     "artifacts/wepppy-parity/reference-run-b.json"
