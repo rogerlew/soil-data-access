@@ -73,3 +73,13 @@ Fresh acquisition took 12.0× as long through live USDA as through the
 mirror. Warm measurements overlapped and recorded no additional retrievals.
 These results describe serial client latency on forest. Server-only
 execution times and public-service capacity remain unmeasured.
+
+## Connection timing
+
+Three follow-up requests used the same zero-row SSURGO fragment query from the
+same worker. The [receipt](../artifacts/assessment/forest-sda-latency.json)
+preserves curl's cumulative timings. The USDA public HTTPS path took 317–607 ms
+to reach the start of request transfer, including DNS, TCP and TLS setup.
+Another 148–262 ms elapsed before the first byte, including the public
+network round trip and server work. The mirror took 21–27 ms for the complete
+response. These timings leave USDA's internal query execution time unknown.

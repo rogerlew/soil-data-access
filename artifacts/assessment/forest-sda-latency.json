@@ -2451,5 +2451,72 @@
     "http_errors": 0,
     "http_workloads_exact_value_multisets": 9,
     "http_workloads_equivalent_after_geomdesc_empty_to_null": 11
+  },
+  "connection_timing_probe": {
+    "date_utc": "2026-11-20",
+    "client": "curl in the same forest WEPPpy worker container, new connection per request",
+    "query": "ssurgo_fetch_chfrags",
+    "format": "JSON+COLUMNNAME",
+    "time_unit": "seconds since request start",
+    "results": {
+      "sda": [
+        {
+          "http_status": 200,
+          "dns_complete": 0.287226,
+          "tcp_connected": 0.361956,
+          "tls_complete": 0.606514,
+          "ready_to_transfer": 0.607343,
+          "first_byte": 0.755183,
+          "complete": 0.755396
+        },
+        {
+          "http_status": 200,
+          "dns_complete": 0.002526,
+          "tcp_connected": 0.077212,
+          "tls_complete": 0.316173,
+          "ready_to_transfer": 0.316632,
+          "first_byte": 0.579031,
+          "complete": 0.57925
+        },
+        {
+          "http_status": 200,
+          "dns_complete": 0.002763,
+          "tcp_connected": 0.076821,
+          "tls_complete": 0.321017,
+          "ready_to_transfer": 0.321402,
+          "first_byte": 0.514303,
+          "complete": 0.514513
+        }
+      ],
+      "mirror": [
+        {
+          "http_status": 200,
+          "dns_complete": 0.001222,
+          "tcp_connected": 0.001436,
+          "tls_complete": null,
+          "ready_to_transfer": 0.001585,
+          "first_byte": 0.021141,
+          "complete": 0.021219
+        },
+        {
+          "http_status": 200,
+          "dns_complete": 0.001038,
+          "tcp_connected": 0.001276,
+          "tls_complete": null,
+          "ready_to_transfer": 0.001415,
+          "first_byte": 0.025551,
+          "complete": 0.025607
+        },
+        {
+          "http_status": 200,
+          "dns_complete": 0.001282,
+          "tcp_connected": 0.001516,
+          "tls_complete": null,
+          "ready_to_transfer": 0.001669,
+          "first_byte": 0.027324,
+          "complete": 0.027386
+        }
+      ]
+    }
   }
 }
