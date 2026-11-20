@@ -132,6 +132,10 @@ consumer tests; then update the matrix and close milestone 1. National import,
 PostgreSQL semantic execution, security review, and service load testing remain
 later gates. No USDA load testing is authorized by this assessment.
 
+The November 20, 2026 UTC [live assessment](live-sda-parity.md) records the
+reviewed second capture, surveyed source vintages and the forest comparison.
+The broader compatibility gate remains open.
+
 ## Sources
 
 - [USDA SSURGO Portal](https://www.nrcs.usda.gov/resources/data-and-reports/ssurgo-portal)

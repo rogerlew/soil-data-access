@@ -1,0 +1,283 @@
+{
+  "observed_at": "2026-11-20T03:20:57.603686+00:00",
+  "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+  "mirror_release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1",
+  "catalog": {
+    "query": "SELECT areasymbol,saversion,saverest FROM sacatalog WHERE areasymbol IN ('AK615','CO654','GU640','ID604','MT635','ND055','PA025','US','VA059') ORDER BY areasymbol",
+    "response_sha256": "e41ce6eddb880ff24b9bb1d856ef0bef5afd2236e322375de866a974ef8c6a14",
+    "ssurgo_survey_by_mukey": {
+      "49315": "AK615",
+      "465534": "GU640",
+      "784526": "PA025",
+      "1415043": "CO654",
+      "1703249": "MT635",
+      "2250500": "VA059",
+      "2566696": "ND055",
+      "2850878": "ID604"
+    },
+    "archive": {
+      "AK615": [
+        23,
+        "2026-08-28T15:15:07"
+      ],
+      "CO654": [
+        9,
+        "2026-09-02T16:54:18"
+      ],
+      "GU640": [
+        11,
+        "2026-09-11T21:15:28"
+      ],
+      "ID604": [
+        22,
+        "2026-08-31T22:19:52"
+      ],
+      "MT635": [
+        27,
+        "2026-09-15T20:25:27"
+      ],
+      "ND055": [
+        32,
+        "2026-09-04T15:37:25"
+      ],
+      "PA025": [
+        25,
+        "2026-09-09T11:35:32"
+      ],
+      "VA059": [
+        24,
+        "2026-08-25T14:11:13"
+      ],
+      "US": [
+        3,
+        "2016-10-13T12:28:22"
+      ]
+    },
+    "usda": {
+      "AK615": [
+        23,
+        "2026-08-28T15:15:07"
+      ],
+      "CO654": [
+        9,
+        "2026-09-02T16:54:18"
+      ],
+      "GU640": [
+        11,
+        "2026-09-11T21:15:28"
+      ],
+      "ID604": [
+        22,
+        "2026-08-31T22:19:52"
+      ],
+      "MT635": [
+        27,
+        "2026-09-15T20:25:27"
+      ],
+      "ND055": [
+        32,
+        "2026-09-04T15:37:25"
+      ],
+      "PA025": [
+        25,
+        "2026-09-09T11:35:32"
+      ],
+      "US": [
+        3,
+        "2016-10-13T12:28:22"
+      ],
+      "VA059": [
+        24,
+        "2026-08-25T14:11:13"
+      ]
+    }
+  },
+  "datasets": {
+    "SSURGO": {
+      "component": {
+        "request_key_count": 8,
+        "request_keys_sha256": "60a1f7bf5cc2f54ba2b4efa2141ec00b3b1cd68ba721fff31078a4991559f9fc",
+        "usda_rows": 26,
+        "mirror_rows": 26,
+        "usda_sha256": "6ccbf586a6943a2eb44ab8ca214770d456e7c5dd08394d7dd9160190e16679aa",
+        "mirror_sha256": "e28527a649eb4d8aea4ac74adbcad1fc35ed942888b88b2bae21bcee343c3921",
+        "usda_only": 2,
+        "mirror_only": 2,
+        "differing_cells": {
+          "geomdesc": 2
+        }
+      },
+      "chorizon": {
+        "request_key_count": 26,
+        "request_keys_sha256": "3a9d99699b657082851d541da703d38c8f19e5ad3c5075b2783f3b451c22a6b1",
+        "usda_rows": 104,
+        "mirror_rows": 104,
+        "usda_sha256": "57dc602bab32ef56fd87f04007fef8c17e1a872b6345463315e50edd2ded7d20",
+        "mirror_sha256": "1650b365c7614aac002cb06145d90c546c72fad291e5ea73f634eb9d0c685bc8",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "chfrags": {
+        "request_key_count": 104,
+        "request_keys_sha256": "1afaadc11d720abf4a1f96cea0864eacb322d82ae451c9286dcbd16612788ba6",
+        "usda_rows": 180,
+        "mirror_rows": 180,
+        "usda_sha256": "20bf2d604922dd150c7a717fb709364cd9493ec3103e507ddc96010994203efc",
+        "mirror_sha256": "8cde8c9deec2797b55e6a3895d19affbed2cd6a756e904fa22ed552dd9bb03b0",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "chtexturegrp": {
+        "request_key_count": 104,
+        "request_keys_sha256": "1afaadc11d720abf4a1f96cea0864eacb322d82ae451c9286dcbd16612788ba6",
+        "usda_rows": 167,
+        "mirror_rows": 167,
+        "usda_sha256": "40d3c42e24da1bc0148da6e05546ef97f5eceeb737404d1622e23d6271a57fd0",
+        "mirror_sha256": "40d3c42e24da1bc0148da6e05546ef97f5eceeb737404d1622e23d6271a57fd0",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "corestrictions": {
+        "request_key_count": 26,
+        "request_keys_sha256": "3a9d99699b657082851d541da703d38c8f19e5ad3c5075b2783f3b451c22a6b1",
+        "usda_rows": 9,
+        "mirror_rows": 9,
+        "usda_sha256": "16787a3c131c56b253a1be1099339a2006cb816aa5412d7cec500eb0d1891846",
+        "mirror_sha256": "71c92e4f6ffb43530b3e137abbba8a541b201a3cdba3cc3149cf7d4e5d7328e0",
+        "usda_only": 0,
+        "mirror_only": 0
+      }
+    },
+    "STATSGO2": {
+      "component": {
+        "request_key_count": 4,
+        "request_keys_sha256": "f4925adb2da4100338ab828433c741df2817804cb45d0b616a58a37004478686",
+        "usda_rows": 74,
+        "mirror_rows": 74,
+        "usda_sha256": "356fab0d491229fbe3c2cddd7aa7775533023013e20a4c967fc71c1830a471aa",
+        "mirror_sha256": "ae0c8d782972aab360be1b2ceb32a0a32c42bf60acc19ae42d1dd4081a755be2",
+        "usda_only": 63,
+        "mirror_only": 63,
+        "differing_cells": {
+          "geomdesc": 63
+        }
+      },
+      "chorizon": {
+        "request_key_count": 74,
+        "request_keys_sha256": "68fd82e2cb00e66484add49b34118a2e55ea96920af262628ce918c13a043be9",
+        "usda_rows": 238,
+        "mirror_rows": 238,
+        "usda_sha256": "c233655d4f4f8027cba5171a18442cdb70f4e12e12de5f586f91516cd4de09a8",
+        "mirror_sha256": "c233655d4f4f8027cba5171a18442cdb70f4e12e12de5f586f91516cd4de09a8",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "chfrags": {
+        "request_key_count": 238,
+        "request_keys_sha256": "6927f4045a1d3a88acb90dd11a40f58c9e08c01837f10d86d3c05b018f2a3dfe",
+        "usda_rows": 325,
+        "mirror_rows": 325,
+        "usda_sha256": "2543447ec578a06f048d9961a0a09da35309e01d130c76584df36f105fdd070f",
+        "mirror_sha256": "2543447ec578a06f048d9961a0a09da35309e01d130c76584df36f105fdd070f",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "chtexturegrp": {
+        "request_key_count": 238,
+        "request_keys_sha256": "6927f4045a1d3a88acb90dd11a40f58c9e08c01837f10d86d3c05b018f2a3dfe",
+        "usda_rows": 332,
+        "mirror_rows": 332,
+        "usda_sha256": "1652c831f77879af39b71095dd55701ef059507145261058dd37fadef9645d9b",
+        "mirror_sha256": "1652c831f77879af39b71095dd55701ef059507145261058dd37fadef9645d9b",
+        "usda_only": 0,
+        "mirror_only": 0
+      },
+      "corestrictions": {
+        "request_key_count": 74,
+        "request_keys_sha256": "68fd82e2cb00e66484add49b34118a2e55ea96920af262628ce918c13a043be9",
+        "usda_rows": 39,
+        "mirror_rows": 39,
+        "usda_sha256": "01a12d0f899a77a7ed97649ec52c5c4e2aed567d2b1b009dbe8108aa876d2cf1",
+        "mirror_sha256": "01a12d0f899a77a7ed97649ec52c5c4e2aed567d2b1b009dbe8108aa876d2cf1",
+        "usda_only": 0,
+        "mirror_only": 0
+      }
+    }
+  },
+  "ties": {
+    "chfrags": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (85308733) ORDER BY chkey",
+      "usda": {
+        "table": [
+          [
+            "chkey",
+            "fragvol_r"
+          ],
+          [
+            "85308733",
+            "5"
+          ],
+          [
+            "85308733",
+            "1"
+          ]
+        ],
+        "sha256": "ff18f2e3680b3d2ecf9bcbbaf2894465e77253be1188c332b912be57d2c43fae"
+      },
+      "mirror": {
+        "table": [
+          [
+            "chkey",
+            "fragvol_r"
+          ],
+          [
+            "85308733",
+            "1"
+          ],
+          [
+            "85308733",
+            "5"
+          ]
+        ],
+        "sha256": "a1fd698c74b5dba2f56f3a4ad3a9858536f852584eed9d007860100d86ad24c2"
+      }
+    },
+    "corestrictions": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (27881215) ORDER BY cokey",
+      "usda": {
+        "table": [
+          [
+            "cokey",
+            "reskind"
+          ],
+          [
+            "27881215",
+            "Lithic bedrock"
+          ],
+          [
+            "27881215",
+            "Paralithic bedrock"
+          ]
+        ],
+        "sha256": "1a31fd4857d68ba37e6976a21d50cde9c3c532b14de42979f2c203022fce0cb0"
+      },
+      "mirror": {
+        "table": [
+          [
+            "cokey",
+            "reskind"
+          ],
+          [
+            "27881215",
+            "Paralithic bedrock"
+          ],
+          [
+            "27881215",
+            "Lithic bedrock"
+          ]
+        ],
+        "sha256": "955bdc3841a3f2a0837234d815fb68118d008b40caf23e64068c17b751797118"
+      }
+    }
+  }
+}

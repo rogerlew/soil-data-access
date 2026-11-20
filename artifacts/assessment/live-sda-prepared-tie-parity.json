@@ -1,0 +1,579 @@
+{
+  "scope": "Live SDA and national mirror, ordinary WEPPpy single-soil build and preparation in disposable worker-container directories",
+  "runtime": {
+    "worker_image": "sha256:659eb59a98ce2e69a74cd36538b9e392c8e33d66de3c8ee5303e02bd243d01a0",
+    "wepppy_checkout_head": "dff2f29f74158857da3b0c313e7ec7194501ed76",
+    "wepppy_mount_file_hashes": {
+      "wepppy/nodb/core/soils.py": "42de5560ab10ca477e1508611bce95b82771b2e65f7dcb8c5c3967dcaeb8e665",
+      "wepppy/nodb/core/wepp.py": "2449d03128966b5a051fc0cc1520a7f93cfd39d3bd7a6dad60903af0a0c257ac",
+      "wepppy/nodb/core/wepp_prep_service.py": "1fb39f7919258c1c9d1f79753281755431ec269104f3db438c585c404b5cad6e",
+      "wepppy/soils/ssurgo/ssurgo.py": "a384f279102594ae481526aebf0f46ac9be1140f552de47ca1507cc91ca0e744",
+      "wepppy/soils/ssurgo/source.py": "33e4b4af598bb03a05d6317113d3ea96b6aa4bd192fcac3c09ded46e3701b8d7"
+    },
+    "template_file_hashes": {
+      "watershed.nodb": "87256a7f2d6373dc4f82703e56923a137271e5948d7addd7eb4bd655532c6032",
+      "watershed/hillslopes.parquet": "638d9f760d5c0bd26df3338f641980836c204a5478dc5632f4f66e97f0ec680f",
+      "watershed/channels.parquet": "0b8e2955139f9940e83958502ba2ae938e75ad119de0e029c000867766262290"
+    },
+    "nodb_config": "0.cfg",
+    "mode": "Single",
+    "worker_concurrency": 1,
+    "queued": false
+  },
+  "archive_candidate_sample_count": 100,
+  "candidate_screen": {
+    "chfrags": {
+      "query": "SELECT chkey, fragvol_r FROM chfrags WHERE chkey IN (83328557,83574194,83646383,83755309,83812035,83815615,84284940,84435174,84457122,84747174,84750882,84817666,85350727,86118579,86168792,86355963,86473164,86492780,86576543,86725778,86799978,87028587,87218927,87372490,87417349,87463513,87664427,87914157,87937843,88053003,88079782) ORDER BY chkey",
+      "observed_at": "2026-11-20T03:25:05.533821+00:00",
+      "usda_sha256": "33442e3158132a5aa7d0f059f5c08b99fd5ce92f8cbf821aef6512ef79effe15",
+      "mirror_sha256": "71ab0b227572b84db295100eb6d14cd4891d16609533ac9e7793614ad5c23c2f",
+      "sample_count": 31,
+      "differences": [
+        {
+          "mukey": 460290,
+          "cokey": 27932494,
+          "query_key": 83755309,
+          "top": true,
+          "horizon": {
+            "cokey": 27932494,
+            "chkey": 83755309,
+            "hzdept_r": 0,
+            "hzdepb_r": 25,
+            "ksat_r": 9.0,
+            "desgnmaster": "H",
+            "sandtotal_r": 39.8,
+            "claytotal_r": 22.5,
+            "cec7_r": 12.5
+          },
+          "archive_values": [
+            10,
+            11,
+            2
+          ],
+          "usda_values": [
+            "2",
+            "11",
+            "10"
+          ],
+          "mirror_values": [
+            "10",
+            "11",
+            "2"
+          ],
+          "same_multiset": true
+        },
+        {
+          "mukey": 344485,
+          "cokey": 28812487,
+          "query_key": 86576543,
+          "top": true,
+          "horizon": {
+            "cokey": 28812487,
+            "chkey": 86576543,
+            "hzdept_r": 0,
+            "hzdepb_r": 13,
+            "ksat_r": 9.0,
+            "desgnmaster": "A",
+            "sandtotal_r": 39.2,
+            "claytotal_r": 23.5,
+            "cec7_r": 22.5
+          },
+          "archive_values": [
+            2,
+            1,
+            1
+          ],
+          "usda_values": [
+            "1",
+            "1",
+            "2"
+          ],
+          "mirror_values": [
+            "2",
+            "1",
+            "1"
+          ],
+          "same_multiset": true
+        }
+      ]
+    },
+    "chtexturegrp": {
+      "query": "SELECT chkey, texture FROM chtexturegrp WHERE chkey IN (83295208,83569906,83574194,83874964,84435174,84526849,85508396,85966135,86065013,86848701,87850951,87944619) ORDER BY chkey",
+      "observed_at": "2026-11-20T03:25:06.336944+00:00",
+      "usda_sha256": "9fec734411ea8cfd0a8e81a416d09ba0d981635f9901b21a7c9829555efd5b8e",
+      "mirror_sha256": "9fec734411ea8cfd0a8e81a416d09ba0d981635f9901b21a7c9829555efd5b8e",
+      "sample_count": 12,
+      "differences": []
+    },
+    "corestrictions": {
+      "query": "SELECT cokey, reskind FROM corestrictions WHERE cokey IN (27881215) ORDER BY cokey",
+      "observed_at": "2026-11-20T03:25:06.812930+00:00",
+      "usda_sha256": "1a31fd4857d68ba37e6976a21d50cde9c3c532b14de42979f2c203022fce0cb0",
+      "mirror_sha256": "955bdc3841a3f2a0837234d815fb68118d008b40caf23e64068c17b751797118",
+      "sample_count": 1,
+      "differences": [
+        {
+          "mukey": 2250500,
+          "cokey": 27881215,
+          "query_key": 27881215,
+          "top": false,
+          "horizon": null,
+          "archive_values": [
+            "Paralithic bedrock",
+            "Lithic bedrock"
+          ],
+          "usda_values": [
+            "Lithic bedrock",
+            "Paralithic bedrock"
+          ],
+          "mirror_values": [
+            "Paralithic bedrock",
+            "Lithic bedrock"
+          ],
+          "same_multiset": true
+        }
+      ]
+    }
+  },
+  "survey_catalog": {
+    "query": "SELECT mapunit.mukey, legend.areasymbol, sacatalog.saversion, sacatalog.saverest FROM mapunit JOIN legend ON legend.lkey=mapunit.lkey JOIN sacatalog ON sacatalog.areasymbol=legend.areasymbol WHERE mapunit.mukey IN (2250500,344485,460290) ORDER BY mapunit.mukey",
+    "usda_sha256": "b19d95a8dcc3ae57dd25d0d109a6d9e371bf2f9571a038081d61ba1fd735ec45",
+    "archive": {
+      "344485": [
+        "MT065",
+        23,
+        "2026-09-06T19:23:04"
+      ],
+      "460290": [
+        "CA620",
+        18,
+        "2026-09-01T15:06:42"
+      ],
+      "2250500": [
+        "VA059",
+        24,
+        "2026-08-25T14:11:13"
+      ]
+    },
+    "usda": {
+      "344485": [
+        "MT065",
+        23,
+        "2026-09-06T19:23:04"
+      ],
+      "460290": [
+        "CA620",
+        18,
+        "2026-09-01T15:06:42"
+      ],
+      "2250500": [
+        "VA059",
+        24,
+        "2026-08-25T14:11:13"
+      ]
+    }
+  },
+  "cases": {
+    "2250500": {
+      "tie": {
+        "table": "corestrictions",
+        "key": "cokey",
+        "value": 27881215,
+        "field": "reskind"
+      },
+      "prepared_pairs": 76,
+      "different_prepared_files": {
+        "sha256": 76,
+        "canonical_sha256": 76,
+        "model_input_sha256": 0
+      },
+      "unique_canonical_diffs": [
+        [
+          "--- usda\n",
+          "+++ mirror\n",
+          "@@ -22 +22 @@\n",
+          "-# type: Lithic bedrock",
+          "+# type: Paralithic bedrock"
+        ]
+      ],
+      "usda": {
+        "source": {
+          "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+          "profile": "legacy-xml",
+          "release": null
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:26:17.926948+00:00",
+            "response_sha256": "1066e4797530eb84fcf1b9f5f43e0c98ee3105da1b9d6a0d7593628047d7c7de"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:26:18.404636+00:00",
+            "response_sha256": "128a3ccacf61bfd7b0e51fa434afef912c7b820d34abe16c6d578d6d59c97095"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:26:18.846860+00:00",
+            "response_sha256": "3b2396a13ed0007522306f35452f11a9c4dc817a65fb26841af70765486dbd46"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:26:19.315007+00:00",
+            "response_sha256": "8e576bd7903bd636dd0d5d41a96904fea980a62b0e10c92f660d707e66cc7dd8"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:26:19.920453+00:00",
+            "response_sha256": "3e1d01afac8e7fcf8c2970cd6fabdaa125b003ba1f5be365868442c25b415bd7"
+          }
+        ],
+        "selected_component": 27881215,
+        "cache_selection": "Lithic bedrock",
+        "base": {
+          "sha256": "059f95126240b191cac7ed03b6f817bfe4731e571d3222036d4ada386c4191b4",
+          "canonical_sha256": "c8848f2c81bbbd3dd9575e6027454030adbed7dc7a0bb7aaeef631be760b142c",
+          "model_input_sha256": "31deb2582dac0de72f4e8c86c06882b2741be503d81e906152c6f0707a9c1b2d"
+        },
+        "exported_horizons": [
+          83574194,
+          83574195,
+          83574196
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "065a2d78bf7fffcb8a232023a468045660d2dc68009ea8b55708d323e20470da": 76
+          },
+          "canonical_sha256": {
+            "9144010c1fef728f0091eae8659d4013e4efc5b84bd54f3d402650505d60e180": 76
+          },
+          "model_input_sha256": {
+            "0e245abbfeb8e3e16a7f836a300477ddf53cecbf868172ebbf36d27933ce659b": 76
+          }
+        }
+      },
+      "mirror": {
+        "source": {
+          "endpoint": "http://soil-api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:26:33.757017+00:00",
+            "response_sha256": "07af48160a1b8d350a474b21d43feb00c3db0e94e4f5ba563bdf420a65a8481e"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:26:33.784328+00:00",
+            "response_sha256": "d72d07c029e5b7250f827ad85639fc51fa816cbd041b692b17f4f8d669a6bd7e"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:26:33.809704+00:00",
+            "response_sha256": "955bdc3841a3f2a0837234d815fb68118d008b40caf23e64068c17b751797118"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:26:33.835930+00:00",
+            "response_sha256": "4e4273ebcb58c00908b3d2495d30e2ebdcd3752fd49631ae0660494eabeb9971"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:26:33.864064+00:00",
+            "response_sha256": "142f7f551a8bcdf7e6c9d0ea67088c003a16c5b42784de1b0328f39cfcff1b60"
+          }
+        ],
+        "selected_component": 27881215,
+        "cache_selection": "Paralithic bedrock",
+        "base": {
+          "sha256": "2846ba173b5aebbe959a1d340e8fb61618456cf4eccf1b23f8cb8ddd4f2a3183",
+          "canonical_sha256": "dcbac608c34b763cc3c5e7f5f89f695c5fba479b8b73d4d9c87beb3ed39a7f2d",
+          "model_input_sha256": "31deb2582dac0de72f4e8c86c06882b2741be503d81e906152c6f0707a9c1b2d"
+        },
+        "exported_horizons": [
+          83574194,
+          83574195,
+          83574196
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "b224c160f6802782ebbf2cda25f3c4987dcd069fecfeab4ba5cab20206c20474": 76
+          },
+          "canonical_sha256": {
+            "38bd253b2174c1dc96b94f1176648ee10ce4c6b38aea6389a954160c73ae1b03": 76
+          },
+          "model_input_sha256": {
+            "0e245abbfeb8e3e16a7f836a300477ddf53cecbf868172ebbf36d27933ce659b": 76
+          }
+        }
+      }
+    },
+    "344485": {
+      "tie": {
+        "table": "chfrags",
+        "key": "chkey",
+        "value": 86576543,
+        "field": "fragvol_r"
+      },
+      "prepared_pairs": 76,
+      "different_prepared_files": {
+        "sha256": 76,
+        "canonical_sha256": 0,
+        "model_input_sha256": 0
+      },
+      "unique_canonical_diffs": [],
+      "usda": {
+        "source": {
+          "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+          "profile": "legacy-xml",
+          "release": null
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:26:46.556899+00:00",
+            "response_sha256": "76fe4ed05dd0b342a2bc566c9120c8740fe250b437e852621191b77d532e0437"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:26:47.122427+00:00",
+            "response_sha256": "02e36305fe3b4e7d73e6ad39099f78d00a0eef71fbfb038baedc349087e2b20a"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:26:47.667026+00:00",
+            "response_sha256": "53d433dba9f5f28f415403a8c6129972bb9b684a57bd88d6db5e79fca565b1a9"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:26:48.224370+00:00",
+            "response_sha256": "4a18079fd9aae8d2c22eab7aa9ca1d3a1472267b558e74ac5272148e2c195cfe"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:26:48.796178+00:00",
+            "response_sha256": "6af5cdb8bb4360384c5a56de709c652a9984d602be36f65edd0a62d3e3b4b1f5"
+          }
+        ],
+        "selected_component": 28812487,
+        "cache_selection": 1.0,
+        "base": {
+          "sha256": "91f0d460ed03967b652b8a2c9518cb08977976adb81bacfa57c27d41b1798cef",
+          "canonical_sha256": "24b41d6ad894f2bfdd1731c3e26061d09bb72cef0bad07e009dc8e1d2af0ac61",
+          "model_input_sha256": "7517edc9922085b7d8a0126ecb6df6e8db086f0c70d886d46321070332359069"
+        },
+        "exported_horizons": [
+          86576543,
+          86576542,
+          86576540,
+          86576541
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "f9bcd5df5bafa8a3b402d7419cbd8c805139d1874481deb742c99c380ff8adb9": 76
+          },
+          "canonical_sha256": {
+            "74a1585b78924107914b223133886666e7fc9de591221353d763be52dc4a3b91": 76
+          },
+          "model_input_sha256": {
+            "ae2aa2fbc5df1b9a4690cc3e520355ffaf8afe664eee289d7c95274caeee1496": 76
+          }
+        }
+      },
+      "mirror": {
+        "source": {
+          "endpoint": "http://soil-api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:27:00.917086+00:00",
+            "response_sha256": "8dd767051ffb8b157e4767b4810a99cd7dc260a6ed894554b279c322beab3c23"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:27:00.935874+00:00",
+            "response_sha256": "ee5f9d14d4974f0af97262e1f7e84d72de52039a956ba042485573770958c239"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:27:00.951968+00:00",
+            "response_sha256": "fbbfe18e4bb68e412d82dd5bf0aadbc3fa1a619d22caecf483ffe3ca55664b3d"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:27:00.968218+00:00",
+            "response_sha256": "5f407386eda8d53eb3eb0847cb7bc0467b0bf7429c5986cfa7e096cc80b9481b"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:27:00.984019+00:00",
+            "response_sha256": "b14c07c6c272487e3a5da9fdc5f417ecd8f8f2d2d325d8267f62ee5ccca4742c"
+          }
+        ],
+        "selected_component": 28812487,
+        "cache_selection": 2.0,
+        "base": {
+          "sha256": "4892253856dcdeb932bedc61bfb0a751fc47906609c3734c8456d6e05db36796",
+          "canonical_sha256": "24b41d6ad894f2bfdd1731c3e26061d09bb72cef0bad07e009dc8e1d2af0ac61",
+          "model_input_sha256": "7517edc9922085b7d8a0126ecb6df6e8db086f0c70d886d46321070332359069"
+        },
+        "exported_horizons": [
+          86576543,
+          86576542,
+          86576540,
+          86576541
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "14a4e0a67e992795724c07737f72cd1b57d6a4efd1e6fb7e08b5813af4faa36c": 76
+          },
+          "canonical_sha256": {
+            "74a1585b78924107914b223133886666e7fc9de591221353d763be52dc4a3b91": 76
+          },
+          "model_input_sha256": {
+            "ae2aa2fbc5df1b9a4690cc3e520355ffaf8afe664eee289d7c95274caeee1496": 76
+          }
+        }
+      }
+    },
+    "460290": {
+      "tie": {
+        "table": "chfrags",
+        "key": "chkey",
+        "value": 83755309,
+        "field": "fragvol_r"
+      },
+      "prepared_pairs": 76,
+      "different_prepared_files": {
+        "sha256": 76,
+        "canonical_sha256": 0,
+        "model_input_sha256": 0
+      },
+      "unique_canonical_diffs": [],
+      "usda": {
+        "source": {
+          "endpoint": "https://sdmdataaccess.nrcs.usda.gov/Tabular/post.rest",
+          "profile": "legacy-xml",
+          "release": null
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:27:13.496200+00:00",
+            "response_sha256": "f37b47dffed6135a9238e5bbbce6161af661c204793a860d4fbdc0890c296285"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:27:14.005572+00:00",
+            "response_sha256": "862b8a4e094040a9d580667e0a4f0122791a4f6508cbe51fd1b2a794d2a68cbe"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:27:14.673522+00:00",
+            "response_sha256": "215447816fb89cac9fe478e9c353006ca16f65c66f935eac94108942ef40a224"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:27:15.138383+00:00",
+            "response_sha256": "38db6e13ae373100cd7f67648fa3f0c2726ed25914a87ff65874af2ed427c69c"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:27:15.604845+00:00",
+            "response_sha256": "dba6005d2ccc831eefaeb968c20ae693c00da52e58fbf910794f996df209475f"
+          }
+        ],
+        "selected_component": 27932494,
+        "cache_selection": 2.0,
+        "base": {
+          "sha256": "4ea0fd643ed3d2e7e14995bf6dbb830febd3d6d78ea54fa3cf5714081444f830",
+          "canonical_sha256": "c0e6c12c6d32bc6f39df24b864e1bf5c8894cc87a30c9054b1557c291c190b71",
+          "model_input_sha256": "3c7bd5fb7e4eb70b1fb39431d348fb3b55c93cfa689de8890d37903289d0d1cf"
+        },
+        "exported_horizons": [
+          83755309,
+          83755310
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "224db7c4f297bbea479eb40805a0791ae923ebba9ce19194640642fb54e14cdf": 76
+          },
+          "canonical_sha256": {
+            "8822b3023f57dfcaf9fc515ef20066c7f5d1b35b45398366722c54ce0e8e784c": 76
+          },
+          "model_input_sha256": {
+            "8ab1e6271d8dd6f45e4d7c4d2c5dceb8e0a06ac56c0e1d4d321ded555bd9acd8": 76
+          }
+        }
+      },
+      "mirror": {
+        "source": {
+          "endpoint": "http://soil-api:8080/Tabular/post.rest",
+          "profile": "wepppy-json-v1",
+          "release": "forest-us-ssurgo-20261001-statsgo2-20161013-v1"
+        },
+        "fetches": [
+          {
+            "table": "component",
+            "observed_at": "2026-11-20T03:27:27.259645+00:00",
+            "response_sha256": "6951608063d3b12db14a4a72ad1a92a2237d8678e3f817fa0efc31951a4acacf"
+          },
+          {
+            "table": "chorizon",
+            "observed_at": "2026-11-20T03:27:27.281952+00:00",
+            "response_sha256": "40a64d053a2778fc813215f43d74ca3c21ee39d8ab1f2f0d23db00104019bad1"
+          },
+          {
+            "table": "corestrictions",
+            "observed_at": "2026-11-20T03:27:27.305025+00:00",
+            "response_sha256": "86fc17f00ac28cc586fb874e5e5f08509f9b2fc6efaa43937622d285928af4e7"
+          },
+          {
+            "table": "chfrags",
+            "observed_at": "2026-11-20T03:27:27.328993+00:00",
+            "response_sha256": "368a2abe274eae042e4116f00af98e37fe47d0885d17f94ab6907849336bebc0"
+          },
+          {
+            "table": "chtexturegrp",
+            "observed_at": "2026-11-20T03:27:27.348784+00:00",
+            "response_sha256": "9586b3397403f1e4ddaccf8e031700432a256cee375179b9508ea1a027e6741b"
+          }
+        ],
+        "selected_component": 27932494,
+        "cache_selection": 10.0,
+        "base": {
+          "sha256": "46f5d50f584d69e284da396b5ededba85c265c98b1d61ab4e91ec5f739df30e3",
+          "canonical_sha256": "c0e6c12c6d32bc6f39df24b864e1bf5c8894cc87a30c9054b1557c291c190b71",
+          "model_input_sha256": "3c7bd5fb7e4eb70b1fb39431d348fb3b55c93cfa689de8890d37903289d0d1cf"
+        },
+        "exported_horizons": [
+          83755309,
+          83755310
+        ],
+        "prepared_count": 76,
+        "prepared_hashes": {
+          "sha256": {
+            "bf5fe8ee0e643686a115c2111724fe3c0e2774ad9cc84b84c31f3a9c9723c1e8": 76
+          },
+          "canonical_sha256": {
+            "8822b3023f57dfcaf9fc515ef20066c7f5d1b35b45398366722c54ce0e8e784c": 76
+          },
+          "model_input_sha256": {
+            "8ab1e6271d8dd6f45e4d7c4d2c5dceb8e0a06ac56c0e1d4d321ded555bd9acd8": 76
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="mukey" type="xs:string" minOccurs="0" />
+                <xs:element name="cokey" type="xs:string" minOccurs="0" />
+                <xs:element name="compname" type="xs:string" minOccurs="0" />
+                <xs:element name="comppct_r" type="xs:string" minOccurs="0" />
+                <xs:element name="albedodry_r" type="xs:string" minOccurs="0" />
+                <xs:element name="hydricrating" type="xs:string" minOccurs="0" />
+                <xs:element name="drainagecl" type="xs:string" minOccurs="0" />
+                <xs:element name="muname" type="xs:string" minOccurs="0" />
+                <xs:element name="wtdepannmin" type="xs:string" minOccurs="0" />
+                <xs:element name="flodfreqdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="aws025wta" type="xs:string" minOccurs="0" />
+                <xs:element name="aws0150wta" type="xs:string" minOccurs="0" />
+                <xs:element name="hydgrpdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="drclassdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="taxclname" type="xs:string" minOccurs="0" />
+                <xs:element name="geomdesc" type="xs:string" minOccurs="0" />
+                <xs:element name="taxorder" type="xs:string" minOccurs="0" />
+                <xs:element name="taxsuborder" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <mukey>465534</mukey>
+    <cokey>29248556</cokey>
+    <compname>Akina</compname>
+    <comppct_r>65</comppct_r>
+    <albedodry_r>0.16</albedodry_r>
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Akina-Badland complex, 15 to 30 percent slopes, MLRA 192</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>3.04</aws025wta>
+    <aws0150wta>18.79</aws0150wta>
+    <hydgrpdcd>C</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Very-fine, kaolinitic, isohyperthermic Inceptic Haplustox</taxclname>
+    <geomdesc>hillslopes on islands</geomdesc>
+    <taxorder>Oxisols</taxorder>
+    <taxsuborder>Ustox</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>465534</mukey>
+    <cokey>29248557</cokey>
+    <compname>Atate</compname>
+    <comppct_r>2</comppct_r>
+    <albedodry_r>0.16</albedodry_r>
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Akina-Badland complex, 15 to 30 percent slopes, MLRA 192</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>3.04</aws025wta>
+    <aws0150wta>18.79</aws0150wta>
+    <hydgrpdcd>C</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Very-fine, kaolinitic, isohyperthermic Oxic Haplustalfs</taxclname>
+    <geomdesc>islands, plateaus, ridges</geomdesc>
+    <taxorder>Alfisols</taxorder>
+    <taxsuborder>Ustalfs</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>465534</mukey>
+    <cokey>29248558</cokey>
+    <compname>Togcha</compname>
+    <comppct_r>2</comppct_r>
+    <albedodry_r>0.16</albedodry_r>
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Akina-Badland complex, 15 to 30 percent slopes, MLRA 192</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>3.04</aws025wta>
+    <aws0150wta>18.79</aws0150wta>
+    <hydgrpdcd>C</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Very-fine, mixed, isohyperthermic Ultic Paleustalfs</taxclname>
+    <geomdesc>islands, plateaus, ridges</geomdesc>
+    <taxorder>Alfisols</taxorder>
+    <taxsuborder>Ustalfs</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>465534</mukey>
+    <cokey>29248559</cokey>
+    <compname>Badland</compname>
+    <comppct_r>30</comppct_r>
+    <albedodry_r />
+    <hydricrating>Unranked</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Akina-Badland complex, 15 to 30 percent slopes, MLRA 192</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>3.04</aws025wta>
+    <aws0150wta>18.79</aws0150wta>
+    <hydgrpdcd>C</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname />
+    <geomdesc>islands, ravines, rotational slides</geomdesc>
+    <taxorder />
+    <taxsuborder />
+  </Table>
+  <Table>
+    <mukey>465534</mukey>
+    <cokey>29248560</cokey>
+    <compname>Agfayan</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r>0.09</albedodry_r>
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Akina-Badland complex, 15 to 30 percent slopes, MLRA 192</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>3.04</aws025wta>
+    <aws0150wta>18.79</aws0150wta>
+    <hydgrpdcd>C</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Clayey, montmorillonitic, isohyperthermic, shallow Udic Haplustolls</taxclname>
+    <geomdesc>islands, plateaus, ridges</geomdesc>
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+</NewDataSet>

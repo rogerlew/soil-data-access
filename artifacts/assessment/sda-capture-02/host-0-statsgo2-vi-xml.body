@@ -1,0 +1,554 @@
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="mukey" type="xs:string" minOccurs="0" />
+                <xs:element name="cokey" type="xs:string" minOccurs="0" />
+                <xs:element name="compname" type="xs:string" minOccurs="0" />
+                <xs:element name="comppct_r" type="xs:string" minOccurs="0" />
+                <xs:element name="albedodry_r" type="xs:string" minOccurs="0" />
+                <xs:element name="hydricrating" type="xs:string" minOccurs="0" />
+                <xs:element name="drainagecl" type="xs:string" minOccurs="0" />
+                <xs:element name="muname" type="xs:string" minOccurs="0" />
+                <xs:element name="wtdepannmin" type="xs:string" minOccurs="0" />
+                <xs:element name="flodfreqdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="aws025wta" type="xs:string" minOccurs="0" />
+                <xs:element name="aws0150wta" type="xs:string" minOccurs="0" />
+                <xs:element name="hydgrpdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="drclassdcd" type="xs:string" minOccurs="0" />
+                <xs:element name="taxclname" type="xs:string" minOccurs="0" />
+                <xs:element name="geomdesc" type="xs:string" minOccurs="0" />
+                <xs:element name="taxorder" type="xs:string" minOccurs="0" />
+                <xs:element name="taxsuborder" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276916</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>7</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276919</cokey>
+    <compname>Jealousy</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Fine, smectitic, isohyperthermic Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276922</cokey>
+    <compname>Rock outcrop</compname>
+    <comppct_r>7</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl />
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname />
+    <geomdesc />
+    <taxorder />
+    <taxsuborder />
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276915</cokey>
+    <compname>Victory</compname>
+    <comppct_r>4</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276918</cokey>
+    <compname>Jealousy</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Fine, smectitic, isohyperthermic Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276921</cokey>
+    <compname>Rock outcrop</compname>
+    <comppct_r>3</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl />
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname />
+    <geomdesc />
+    <taxorder />
+    <taxsuborder />
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276924</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>4</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276927</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>6</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276920</cokey>
+    <compname>Rock outcrop</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl />
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname />
+    <geomdesc />
+    <taxorder />
+    <taxsuborder />
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276923</cokey>
+    <compname>Victory</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276926</cokey>
+    <compname>Victory</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276929</cokey>
+    <compname>Victory</compname>
+    <comppct_r>2</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276909</cokey>
+    <compname>Jealousy</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Fine, smectitic, isohyperthermic Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276912</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>4</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276932</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276925</cokey>
+    <compname>Cramer</compname>
+    <comppct_r>2</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Clayey, mixed, active, isohyperthermic, shallow Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276928</cokey>
+    <compname>Cramer</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Clayey, mixed, active, isohyperthermic, shallow Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276917</cokey>
+    <compname>Victory</compname>
+    <comppct_r>3</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276911</cokey>
+    <compname>Victory</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276914</cokey>
+    <compname>Southgate</compname>
+    <comppct_r>17</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, active, isohyperthermic Lithic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276931</cokey>
+    <compname>Victory</compname>
+    <comppct_r>2</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276934</cokey>
+    <compname>Cramer</compname>
+    <comppct_r>3</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Clayey, mixed, active, isohyperthermic, shallow Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276910</cokey>
+    <compname>Victory</compname>
+    <comppct_r>17</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Loamy-skeletal, mixed, superactive, isohyperthermic Typic Haplustepts</taxclname>
+    <geomdesc />
+    <taxorder>Inceptisols</taxorder>
+    <taxsuborder>Ustepts</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276913</cokey>
+    <compname>Rock outcrop</compname>
+    <comppct_r>6</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl />
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname />
+    <geomdesc />
+    <taxorder />
+    <taxsuborder />
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276930</cokey>
+    <compname>Cramer</compname>
+    <comppct_r>3</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Clayey, mixed, active, isohyperthermic, shallow Typic Haplustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+  <Table>
+    <mukey>1390211</mukey>
+    <cokey>14276933</cokey>
+    <compname>Parasol</compname>
+    <comppct_r>1</comppct_r>
+    <albedodry_r />
+    <hydricrating>No</hydricrating>
+    <drainagecl>Well drained</drainagecl>
+    <muname>Victory-Southgate-Rock outcrop (s9699)</muname>
+    <wtdepannmin />
+    <flodfreqdcd>None</flodfreqdcd>
+    <aws025wta>2.66</aws025wta>
+    <aws0150wta>6.55</aws0150wta>
+    <hydgrpdcd>D</hydgrpdcd>
+    <drclassdcd>Well drained</drclassdcd>
+    <taxclname>Fine, smectitic, isohyperthermic Typic Argiustolls</taxclname>
+    <geomdesc />
+    <taxorder>Mollisols</taxorder>
+    <taxsuborder>Ustolls</taxsuborder>
+  </Table>
+</NewDataSet>

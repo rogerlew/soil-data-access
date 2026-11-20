@@ -46,11 +46,13 @@ still deployment prerequisites.
 - [x] Load broader source data; validate import mechanics and bounded independent projections.
 - [x] Implement mirror-first deployment defaults, bounded SDA fallback and selection provenance.
 - [x] Run focused forest worker, bounded performance and runtime recovery acceptance in Compose.
-- [ ] Deferred until SDA recovery: comprehensive geographic/live source parity.
+- [x] (2026-11-20 UTC) Compare live SDA and the pinned mirror across five query families for eight SSURGO and four STATSGO2 map units. See [live assessment](live-sda-parity.md).
+- [x] (2026-11-20 UTC) Verify prepared soil inputs for two selected SSURGO fragment ties and one restriction control. All 228 model-input payloads match.
+- [ ] Extend geographic, multi-OFE, and treatment coverage.
 - [x] Start new soil API/database services in forest dev Compose.
 - [x] Integrate protected Compose change and activate shared forest client defaults; four normal-queue canary jobs pass.
 - [ ] Later scope: forest1 and production activation.
-- [ ] Deferred: capture live SDA success/empty/error/XML fixtures after recovery.
+- [x] (2026-11-20 UTC) Retain reviewed SDA success, empty, error, null/decimal, metadata and XML observations.
 - [ ] Deferred: establish full SDA/public-client/spatial compatibility before claiming it.
 
 ## Context and Orientation
@@ -81,6 +83,13 @@ Environment-specific host/routing/storage ownership is /workdir/open-wepp-org,
 which manages Talos/Kubernetes; do not assume those nodes run Docker Compose.
 
 ## Surprises & Discoveries
+
+The recovered SDA service uses an empty string for some component `geomdesc`
+values stored as null in the mirror. Both paths yield null in the WEPPpy cache.
+For two SSURGO keys, the raw rows agree and incomplete ordering yields different
+first rows in the cache. The sampled base model-input lines are identical. The
+prepared follow-up found two more fragment selection differences on the first
+exported horizon. Both cases produced identical prepared model-input lines.
 
 The development-image paired build failed two base diagnostic-comment values by
 about 2e-15; Python/libc/Rosetta differ from the frozen reference. Retain the failure.
@@ -137,6 +146,12 @@ had none; the collector now rejects that condition before opening SQLite. See
 docs/corpus-snapshot-contract.md for the incident and regression coverage.
 
 ## Decision Log
+
+2026-11-20 UTC: Use matching USDA survey versions and timestamps for this bounded
+comparison. Retain the observed duplicate order and cache selections for review.
+Keep the mirror profile and source precision intact. Retain the three prepared
+cases as bounded evidence and preserve current selection semantics because
+the observed differences did not alter prepared model-input lines.
 
 2026-11-18 operator correction: nationwide SSURGO AND STATSGO2 are required for the shared default. Regional-only activation did not meet the intended outage-recovery requirement. Full live SDA parity remains deferred; nationwide data loading does not. See docs/nationwide-recovery-plan.md for execution and project migration.
 
@@ -411,6 +426,13 @@ recovery guarantee. Retain a tested prior local release once deployed. Do not
 remove persistent volumes as routine cleanup.
 
 ## Outcomes & Retrospective
+
+2026-11-20 UTC: Twelve sampled map units had the same validity decisions across
+legacy SDA, bounded SDA XML and mirror JSON. All eleven valid mirror base soils
+matched the legacy model-input lines, with a restriction diagnostic difference
+for one soil. The targeted NoDb follow-up verified 228 prepared file pairs
+for three SSURGO cases. The bedrock diagnostic carried through the control
+case. Full live compatibility and broader prepared-run parity remain open.
 
 The rollout policy is revised; no runtime default changed in this documentation
 checkpoint. Next implement the mirror-first contract, broader importer and Compose
